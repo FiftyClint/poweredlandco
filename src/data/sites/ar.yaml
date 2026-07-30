@@ -127,6 +127,76 @@ pageCopy:
       of cost. If you are not sure where your land stands, that is the reason to
       ask rather than a reason to stay quiet.
 
+value:
+  intro: >-
+    This is the first thing nearly everyone asks and it deserves a real answer
+    rather than a brush off. We will not quote you a price before looking at
+    your property, because a number given that early is invented. What we can do
+    is explain how the number gets arrived at, so you can judge any offer you
+    receive, from us or from anybody else.
+  points:
+    - title: Power drives the price far more than acreage does
+      body: >-
+        This is the part that surprises people. Two Arkansas farms of the same
+        size, the same soil, the same road frontage, can be worth very different
+        amounts for this use, purely because one sits near transmission with
+        capacity on it and the other does not. Land value here is really the
+        value of an electrical connection that happens to have dirt attached.
+    - title: What your neighbor got tells you less than you think
+      body: >-
+        Word travels in a county and a figure from down the road becomes the
+        benchmark. Be careful with that. Their parcel may have been closer to a
+        substation, larger, flatter, out of the floodplain, or simply bought at a
+        different point in a project. Comparing per acre prices between two
+        properties is only meaningful if the electrical situation is comparable,
+        and it usually is not.
+    - title: An option payment and a purchase price are different things
+      body: >-
+        People often hear one number and assume it is the other. An option pays
+        you for the right to buy later, and you keep it whether or not the sale
+        happens. The purchase price is what you get if it does. Both are
+        negotiated, sometimes the option counts toward the price and sometimes it
+        does not, and you should always be clear which figure is being discussed.
+    - title: What makes a property worth more
+      body: >-
+        Being nearer usable capacity. Being in one block rather than split by a
+        road or a creek. Ground that is flat, drains well, and sits outside the
+        floodplain, since preparation costs come straight off what anyone can
+        pay. Clear title and a decision maker who can actually sign. None of that
+        is exotic, it is just what reduces the buyer's risk, and reduced risk
+        shows up in the offer.
+
+livingWithIt:
+  - title: You can usually keep farming during an option
+    body: >-
+      An option period frequently runs a year or more, and through it the land
+      stays yours and stays in production. Row crop, pasture, a cash rent
+      arrangement with a tenant, all of it can normally continue. Say what you
+      plant and when, get it written into the agreement, and make sure any
+      tenant is part of the conversation early rather than late.
+  - title: What you keep is negotiable, and worth raising first
+    body: >-
+      A project takes a defined footprint, not necessarily everything you own.
+      The house, the ground around it, a family cemetery, the back forty you
+      hunt, a stand of timber you would not part with. Bring those up at the
+      start. Designing around them is straightforward early and genuinely
+      difficult once a layout has been drawn.
+  - title: Construction is loud, long, and then it stops
+    body: >-
+      Be realistic about this rather than surprised by it. Building one of these
+      means heavy truck traffic on county roads for an extended stretch, dust,
+      and work crews in an area that is not used to them. Once it is running, a
+      data center is quiet compared to most industry, with no smokestacks and
+      very little traffic, though there is equipment noise and there are lights
+      at night.
+  - title: The county will have opinions
+    body: >-
+      There is genuine public debate in Arkansas about these projects, mostly
+      about electricity and water use, and you will hear it locally. Some of
+      your neighbors will be glad about the tax base and some will not be glad
+      at all. We would rather you weigh that with your eyes open than hear it
+      first at a county meeting after you have signed something.
+
 utilitiesNote: >-
   Arkansas is split between several large utilities and a wide network of rural
   cooperatives, and the capacity picture is genuinely different between them.
@@ -166,21 +236,13 @@ utilities:
 
 incentives:
   summary: >-
-    Arkansas created a sales and use tax exemption for qualified data centers in
-    2023, under Act 819, which sits in the state code at section 26-52-456. The
-    legislature widened it in 2025 under Act 548, lowering the investment level a
-    project has to reach and broadening what the exemption covers. Cryptocurrency
-    mining operations are specifically left out. Arkansas also changed how energy
-    projects are permitted, and several large data center projects have been
-    announced in the state since. The part that matters to you is simple and
-    often misunderstood. The tax exemption belongs to the company building the
-    data center, not to you as the landowner. You do not apply for anything, you
-    do not receive a credit, and it does not by itself change what your land is
-    worth. What it does mean is that well funded companies have a live reason to
-    be looking at Arkansas ground right now, which is a large part of why we are.
-    Programs change and the details run well beyond what a paragraph can carry,
-    so treat this as background rather than advice, and check anything that would
-    affect a decision with your own accountant.
+    Arkansas exempts qualified data centers from sales and use tax, under Act
+    819 of 2023, widened by Act 548 of 2025. Here is the part that matters to
+    you, and it is the opposite of what most people assume. The exemption goes
+    to the company building the data center. You do not apply for it, you do not
+    receive it, and it does not by itself change what your land is worth. What
+    it does is give well funded buyers a concrete reason to be looking at
+    Arkansas ground, which is why there is activity here at all.
   sources:
     - label: Arkansas Code section 26-52-456, data centers
       url: https://law.justia.com/codes/arkansas/title-26/subtitle-5/chapter-52/subchapter-4/section-26-52-456/

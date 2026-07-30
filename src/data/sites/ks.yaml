@@ -127,6 +127,75 @@ pageCopy:
       comes down to what preparation would cost. Uncertainty about where your
       ground falls is precisely the reason to ask instead of assuming.
 
+value:
+  intro: >-
+    Everybody leads with this and it deserves a straight response instead of a
+    deflection. No figure gets quoted here, because a price named before anyone
+    has examined a specific property is fiction. What follows is how the number
+    is actually built, which should let you judge any approach you get, ours
+    included.
+  points:
+    - title: The wires decide the price, not the deed acreage
+      body: >-
+        Two half sections in the same township, same soil rating, same access,
+        can land in completely different places on value. One has usable
+        capacity within reach and the other does not. For this purpose you are
+        not really selling ground, you are selling proximity to an electrical
+        system that can carry a very large load.
+    - title: Section prices and auction results are poor guides
+      body: >-
+        Kansas landowners have decades of practice reading comparable sales, and
+        that instinct works against you here. What ground brought at auction
+        last fall reflects farming value. A figure from a neighbor reflects that
+        neighbor's distance to capacity, their parcel shape, and where a
+        particular project happened to be in its planning. Neither transfers.
+    - title: Wind lease income is not the comparison either
+      body: >-
+        Plenty of operators here have a per turbine figure in mind and reach for
+        it. The structures are not alike. A wind lease pays annually for a small
+        footprint over decades while you keep farming around it. A purchase is
+        once, for the ground. An option is a payment for time. Comparing them
+        directly will mislead you in both directions.
+    - title: What pushes an offer up
+      body: >-
+        Shorter distance to capacity that is genuinely available. One contiguous
+        block instead of pieces separated by a highway or a rail line. Level,
+        well drained ground outside the floodplain, since every dollar of
+        earthwork comes off the price. Water rights and any existing leases
+        understood and documented. Somebody who can actually sign. All of it
+        reduces a buyer's risk, and lower risk is what raises an offer.
+
+livingWithIt:
+  - title: Farming continues through an option period
+    body: >-
+      These windows commonly run a year or several, and the ground stays yours
+      and stays in production throughout. Wheat, milo, cattle, a cash rent
+      tenant, all of it carries on. Put the crop year into the agreement, sort
+      out who owns a standing crop if a sale closes mid season, and bring your
+      tenant in early given Kansas notice requirements around farm tenancies.
+  - title: Water rights are a separate asset, so decide about them
+    body: >-
+      They do not automatically travel with the dirt in this state, and that
+      catches people out. Work out which rights attach to which ground, what the
+      use history looks like, and what you want to happen to them, before you
+      are deep in a negotiation. Selling ground while keeping water is possible.
+      So is the reverse. What is costly is leaving it unaddressed.
+  - title: You decide what stays yours
+    body: >-
+      A facility needs a defined footprint rather than every acre on your deed.
+      The homestead, the shelterbelt, the quarter with the pivot, ground your
+      family will not part with for reasons that are not financial. Raise all of
+      that at the beginning. It is easy to plan around before a layout exists
+      and awkward afterward.
+  - title: Expect a loud build and then a quiet neighbor
+    body: >-
+      Construction means sustained heavy traffic on section roads, dust, and
+      crews in a place unaccustomed to them, over a long stretch. Afterward these
+      facilities are undemanding neighbors by industrial standards, with no
+      emissions and light traffic, though equipment noise and night lighting are
+      real. Public meetings in Kansas about these projects draw crowds, mostly
+      over water, and your neighbors will have views worth knowing about first.
+
 utilitiesNote: >-
   Service territory is assigned in Kansas rather than chosen, and the state
   incentive obliges a data center to buy power for ten years from whichever
@@ -168,23 +237,13 @@ utilities:
 
 incentives:
   summary: >-
-    Kansas passed Senate Bill 98 in 2025, creating a sales and use tax exemption
-    for qualified data centers that runs for twenty years. Qualifying is not
-    automatic. A project has to reach a large investment level within a set
-    period, add a minimum number of jobs, commit to conserving and reusing
-    water, and commit to buying its electricity for ten years from the utility
-    holding the certified territory where the facility sits. That last condition
-    is the one worth understanding as a landowner, because it means the identity
-    of the utility serving your ground is written directly into the state
-    incentive. It is part of why we ask which provider bills you. Now the part
-    people most often have backwards. This exemption is claimed by the company
-    constructing and running the data center. It is not something you apply for,
-    not a credit that comes to you, and not by itself a change in what your
-    property is worth. Its real effect on you is indirect and still significant.
-    Serious buyers now have a concrete financial reason to be evaluating Kansas
-    sites. Rules get amended and the statute is far more detailed than this
-    summary, so treat it as orientation rather than guidance, and run anything
-    that would shape a decision past your own accountant.
+    Kansas exempts qualified data centers from sales and use tax for twenty
+    years under Senate Bill 98, passed in 2025. Two things about it are worth
+    your attention. The exemption belongs to the operator, not to you, so there
+    is nothing here for you to claim and it does not change your land value on
+    its own. But qualifying requires buying power for ten years from the utility
+    certified for that ground, which is why we ask who bills you, and it is a
+    real reason serious buyers are evaluating Kansas sites right now.
   sources:
     - label: Kansas Department of Commerce, SB 98 data center sales tax exemption
       url: https://www.kansascommerce.gov/program/business-incentives-and-services/sb-98-data-center-sales-tax-exemption/

@@ -9,12 +9,19 @@ import { statePath } from '../../lib/nav.mjs';
 /**
  * The state page. This is the page the whole site exists to rank.
  *
- * The direct answer paragraph is rendered first, before anything else, because
- * it has to answer "how do I sell my land for a data center in [State]" inside
- * the first 150 words. Everything below it is supporting detail.
+ * Order matters here and it is deliberate. The first version of this page led
+ * with utility territories and incentive statutes, which is what an
+ * infrastructure person finds interesting. It is not what the person who owns
+ * the ground came to find out.
  *
- * Every word on this page comes from the state data file. Nothing is hardcoded
- * per state, which is what keeps 18 of these consistent and maintainable.
+ * So it now runs in the order landowners actually ask: what is it worth, can I
+ * keep using it, what will it do to my place, is whoever contacted me real.
+ * Utilities and incentives are still here, because they are genuine
+ * differentiation and they help the page get found, but they sit below the
+ * questions people actually have.
+ *
+ * The direct answer stays first and has to land inside the first 150 words.
+ * Every word comes from the state data file.
  */
 const site = currentSite();
 const path = statePath(site);
@@ -34,7 +41,7 @@ const utilityGroups = [
 
 <Base
   title={`How to Sell Your Land for a Data Center in ${site.stateName}`}
-  description={`A plain answer for ${site.stateName} landowners: what data center developers look for, which utilities serve the areas that qualify, and how to find out whether your property fits.`}
+  description={`A plain answer for ${site.stateName} landowners: what your land could be worth and why, whether you can keep farming it, what a project actually does to your place, and how to tell a real buyer from a letter.`}
   path={path}
   schemas={[
     faqPageSchema(site, site.faq),
@@ -55,6 +62,47 @@ const utilityGroups = [
   <div class="page section--tight">
     <div class="split">
       <div class="split__main stack-lg">
+        {/* First, because it is the first thing anyone asks. */}
+        <section aria-labelledby="value-heading">
+          <h2 id="value-heading">What your land could be worth</h2>
+          <p>{site.value.intro}</p>
+          <div class="answers">
+            {
+              site.value.points.map((point) => (
+                <article class="answer">
+                  <h3>{point.title}</h3>
+                  <p>{point.body}</p>
+                </article>
+              ))
+            }
+          </div>
+        </section>
+
+        <section aria-labelledby="living-heading">
+          <h2 id="living-heading">What it means for your place</h2>
+          <div class="answers">
+            {
+              site.livingWithIt.map((point) => (
+                <article class="answer">
+                  <h3>{point.title}</h3>
+                  <p>{point.body}</p>
+                </article>
+              ))
+            }
+          </div>
+        </section>
+
+        <section aria-labelledby="faq-heading">
+          <h2 id="faq-heading">Questions from {site.stateName} landowners</h2>
+          <Faq entries={site.faq} level={3} />
+        </section>
+
+        <hr />
+
+        {/*
+          Below the rule: useful reference, and part of why this page gets
+          found, but not what brought anyone here.
+        */}
         <section aria-labelledby="utilities-heading">
           <h2 id="utilities-heading">Who provides power in {site.stateName}</h2>
           <p>{site.utilitiesNote}</p>
@@ -105,11 +153,6 @@ const utilityGroups = [
           <h2 id="regions-heading">
             Parts of {site.stateName} we watch most closely
           </h2>
-          <p>
-            These are areas where the power situation tends to be favorable. Land
-            outside them can still work, so do not rule yourself out based on
-            this list.
-          </p>
           <div class="regions">
             {
               site.regions.map((region) => (
@@ -127,11 +170,6 @@ const utilityGroups = [
         <FormSlot heading={`See if your ${site.stateName} land qualifies`} />
       </aside>
     </div>
-  </div>
-
-  <div class="page section">
-    <h2>Questions from {site.stateName} landowners</h2>
-    <Faq entries={site.faq} level={3} />
   </div>
 </Base>
 
@@ -155,6 +193,26 @@ const utilityGroups = [
 
   .split__main {
     max-width: 42rem;
+  }
+
+  .answers {
+    display: grid;
+    gap: var(--s5);
+    margin-top: var(--s5);
+  }
+
+  .answer {
+    padding-left: var(--s5);
+    border-left: 3px solid var(--accent-tint);
+  }
+
+  .answer h3 {
+    font-size: var(--text-lg);
+    margin-bottom: var(--s2);
+  }
+
+  .answer p {
+    margin-bottom: 0;
   }
 
   .utility-group {

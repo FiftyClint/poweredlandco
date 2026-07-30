@@ -133,6 +133,28 @@ const stateContent = z.object({
 
   trustPoints,
 
+  /**
+   * What the land might be worth and why. This is the first question every
+   * landowner asks, so it gets its own section high on the page.
+   *
+   * It explains how value is arrived at. It never states a price. We do not
+   * publish figures we would have to invent, and a number quoted before anyone
+   * has looked at a specific property is not a real number anyway.
+   */
+  value: z.object({
+    intro: nonEmpty('value intro', 1200),
+    points: z.array(blurb).min(3).max(4),
+  }),
+
+  /**
+   * Living with it. Whether the ground stays usable, what a build actually does
+   * to the place, and how the neighbors take it.
+   *
+   * These are the questions asked at the kitchen table rather than in a
+   * boardroom, and the first version of these sites did not answer them.
+   */
+  livingWithIt: z.array(blurb).min(3).max(4),
+
   /** Why the serving utility matters here. Differs by state more than it looks. */
   utilitiesNote: nonEmpty('utilities note', 900),
 
