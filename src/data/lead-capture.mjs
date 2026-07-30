@@ -22,6 +22,42 @@ const CRMX_EMBED = ``;
 const LEAD_WEBHOOK = ``;
 
 /*
+ * WHERE LEADS ARE GOING (decided, built at deploy time)
+ * =====================================================
+ *
+ * Notion database "PoweredLandCo Landowner Leads", under Business Operations
+ * Hub, is the destination. Its fields match this form exactly.
+ *
+ *   database    b892f146-ee8d-4e30-b56f-17b8f727f6b0
+ *   data source e12b4776-22db-4dca-9390-cc0b0a58a620
+ *
+ * It is separate from the existing "Data Center Leads" database on purpose.
+ * That one is a CGF pipeline with Electric Bill, Grant Opportunity and CGF
+ * Representative fields, and states that do not overlap ours. Merging the two
+ * would make both harder to use.
+ *
+ * At deploy a small server function will map a submission onto that schema and
+ * also upsert a CRMX contact. The value mapping is not one to one, so it is
+ * written down here rather than rediscovered later:
+ *
+ *   electric_service  yes | no | unsure   -> Yes | No | Not sure
+ *   decision_maker    sole | shared | no  -> Sole decision maker |
+ *                                            Shared decision |
+ *                                            Not the decision maker
+ *   timeline          ready | open | curious -> Ready now | Open to offers |
+ *                                               Just curious
+ *   nearby            power-lines   -> Large power lines
+ *                     substation    -> Electric substation
+ *                     gas-line      -> Gas line
+ *                     interstate    -> Interstate or highway
+ *                     water         -> River or water
+ *                     none-unsure   -> None or not sure
+ *
+ * The function must not set Screening. The "New leads" view filters on
+ * Screening being empty, which is what makes untouched leads visible.
+ */
+
+/*
  * Below this line is wiring. Nothing here needs to be edited.
  * Environment variables win over the values above so a preview deployment can
  * point at a test destination without editing the repo.

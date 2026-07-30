@@ -126,6 +126,18 @@ The form is one screen. Only name, phone and email are required. "Not sure" is a
 acceptable answer to every question that has one, and we never ask for a parcel
 number or any other technical identifier.
 
+**Destination.** Leads go to the Notion database "PoweredLandCo Landowner
+Leads" under Business Operations Hub, and to a CRMX contact. A deploy-time
+server function does both. The IDs and the full value mapping are recorded at
+the top of `src/data/lead-capture.mjs` so it does not have to be rediscovered.
+
+We are not embedding a CRMX or Notion form. Both are iframes running someone
+else's code, which would take away control of type size, labels, tap targets
+and the wording of every option, add third-party requests to pages that
+currently score 100 on performance, and put accessibility outside our control.
+GoHighLevel also has no create-form API at any permission level, so a CRMX form
+could only ever be built by hand in their UI.
+
 ## Legal pages
 
 **Privacy and terms have not been reviewed by an attorney.** That is a decision
