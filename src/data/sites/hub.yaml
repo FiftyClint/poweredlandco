@@ -67,6 +67,15 @@ pageCopy:
       to keep talking. If you decide to stop, you stop. Most conversations end
       with us saying the property does not fit, and we would rather tell you that
       quickly than keep you waiting.
+  articles:
+    intro: >-
+      Short, plain explanations of the things landowners actually ask us about.
+      Written for the person who owns the ground, not for investors, and with no
+      advice about what you ought to do with your property.
+    empty: >-
+      We are writing the first set now. Until they are up, the questions page
+      answers most of what people ask us, and you are welcome to send a question
+      of your own using the form below.
   qualify:
     intro: >-
       Data centers are unusual buyers. They care far more about what is next to

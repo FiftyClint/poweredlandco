@@ -4,6 +4,290 @@ domain: kansasdatacenterland.com
 stateName: Kansas
 stateAbbr: KS
 accent: olive
-# Full site. Content is written at checkpoint 2 (AR, KS) and checkpoint 3 (rest).
-# Flip to "live" once the content is written and Clint has reviewed it.
-status: pending
+status: live
+
+hero:
+  headline: Own Kansas ground near a substation or a wind farm?
+  subhead: >-
+    We purchase and option Kansas property for data center development, using
+    our own capital. Send us the county and we will look at what is around you
+    and give you a direct answer.
+
+directAnswer: >-
+  The quickest route is to let someone check the electrical picture around your
+  property, since that is what settles almost every Kansas case. Nothing needs
+  to be prepared first. No survey, no engineer, no legal description. Give us
+  the county, an approximate acreage, and whatever you happen to notice nearby,
+  whether that is a switchyard, a row of turbines, or a big line crossing the
+  section. We run it against public records ourselves and come back inside a few
+  days. Where it works, the conversation is about purchasing the ground or
+  paying you for an option while the details get confirmed. Where it does not,
+  you get told why, in words that mean something. Nothing is billed to you at
+  any stage.
+
+trustPoints:
+  - title: Kansas ground gets judged on Kansas terms
+    body: >-
+      Which certified territory your property falls in genuinely matters here,
+      more than in most states, and we track that. You are not getting a generic
+      review with the state name dropped in.
+  - title: Our capital, our risk
+    body: >-
+      We are the party writing the check. Nobody at this company earns a
+      percentage of a deal, and your property does not get circulated to a list
+      of third parties. Either we want it and say so, or we do not.
+  - title: We answer quickly, including when the answer is no
+    body: >-
+      A great deal of Kansas ground will not carry a project of this kind. Being
+      told that inside a week is worth more to you than a polite maybe that
+      drags on. Nothing is charged and nothing is owed either way.
+
+pageCopy:
+  howItWorks:
+    intro: >-
+      Between the wind build out and the newer interest in computing sites,
+      Kansas landowners have fielded a lot of approaches over the years, and
+      have learned to be careful about which ones are serious. Laying out the
+      sequence plainly seems fairer than asking you to take it on trust.
+    steps:
+      - >-
+        Give us a county, an approximate size, and anything you have noticed
+        around the place. Where you are unsure, please just write that. A
+        straight admission is worth more to us than a confident guess we might
+        build on.
+      - >-
+        The property gets run against transmission and substation records, road
+        and terrain data, and flood mapping for that township. Every bit of it
+        is publicly available and the work is ours. Most of the answer emerges
+        right here.
+      - >-
+        A property that looks capable earns a phone call. You hear what turned
+        up, what remains uncertain, and what a purchase or an option would
+        actually mean for your operation and your family.
+      - >-
+        Where the site holds up, written terms follow. Where it does not, you
+        get a reason, whether that turns out to be the distance to usable
+        capacity, how the parcel is laid out, or ground that would cost too much
+        to make ready.
+    closing: >-
+      At no stage does any of that require money from you, a signature to keep
+      the conversation going, or your ground held off the market while you make
+      up your mind. Walk away whenever you like. The majority of these
+      conversations close with us saying it does not work, and reaching that
+      point fast is the goal.
+  articles:
+    intro: >-
+      Plain writing for Kansas landowners about certified territories, what wind
+      infrastructure means for a computing site, and how to weigh an offer on
+      ground your family has farmed for generations.
+    empty: >-
+      Nothing is up yet while the first Kansas pieces get written. The questions
+      page handles most of what we get asked in this state in the meantime, and
+      a direct question is always welcome.
+  qualify:
+    intro: >-
+      A quarter section that grows good wheat and a quarter section that suits a
+      computing facility are judged by completely different standards. Below is
+      the actual order of questions we work through on Kansas property, most
+      decisive first.
+    criteria:
+      - >-
+        Everything starts here. We are looking for high voltage capacity within
+        reach, and in Kansas that question is bound up with which utility holds
+        the certified territory your ground sits in, because the state ties its
+        data center incentive to buying power from that provider. Turbines,
+        switchyards, and heavy lines crossing your sections are all worth
+        mentioning.
+      - >-
+        Room to place structures, equipment yards, and buffers inside one
+        boundary. Kansas has an advantage here, since section lines and large
+        contiguous holdings are common, though a highway, a rail spur, or a
+        creek running through the middle still complicates a layout without
+        necessarily ending it.
+      - >-
+        Cooling water is helpful and much less critical than most people assume,
+        with some designs needing very little of it. A rural water district tap,
+        a reliable well, or a creek all count for something. In this state it is
+        seldom what decides the outcome, though groundwater rules are worth
+        understanding early.
+      - >-
+        Long haul fiber across Kansas broadly tracks the interstates and the
+        railroads. Sitting near one of those corridors is a plus. Because
+        extending fiber is generally faster and cheaper than creating electrical
+        capacity, it ranks well below the power question in practice.
+      - >-
+        Building one of these means sustained heavy truck traffic for a long
+        stretch. Reaching the property from a paved highway rather than several
+        miles of section road makes a measurable difference, as does ground that
+        is level, drains properly, and sits clear of the floodplain. That shows
+        up directly in the numbers anyone can put in front of you.
+    closing: >-
+      No property satisfies every one of those and none is expected to. In
+      Kansas the electrical answer carries most of the weight and the remainder
+      comes down to what preparation would cost. Uncertainty about where your
+      ground falls is precisely the reason to ask instead of assuming.
+
+utilitiesNote: >-
+  Service territory is assigned in Kansas rather than chosen, and the state
+  incentive obliges a data center to buy power for ten years from whichever
+  utility holds the certified area it sits in. That makes your provider a
+  material fact rather than a detail. Your bill answers it, and if you would
+  rather not look, the county usually tells us anyway.
+
+utilities:
+  - name: Evergy
+    kind: investor-owned
+    note: >-
+      Serves much of eastern and south central Kansas, including Topeka,
+      Wichita, Lawrence, and the Kansas side of the Kansas City area.
+  - name: Sunflower Electric Power Corporation
+    kind: generation
+    note: >-
+      Wholesale generation and transmission for member cooperatives across
+      central and western Kansas.
+  - name: Kansas Electric Power Cooperative
+    kind: generation
+    note: >-
+      Wholesale generation and transmission for distribution cooperatives across
+      much of the eastern two thirds of the state.
+  - name: Midwest Energy
+    kind: cooperative
+    note: >-
+      Serves a large part of north central and northwest Kansas, and is unusual
+      in providing both electricity and natural gas.
+  - name: Member distribution cooperatives
+    kind: cooperative
+    note: >-
+      Local cooperatives deliver power across most rural Kansas counties and are
+      supplied by Sunflower or Kansas Electric Power Cooperative.
+  - name: City owned utilities
+    kind: municipal
+    note: >-
+      Kansas has an unusually large number of municipal electric systems,
+      including cities such as McPherson, Winfield, and Garden City.
+
+incentives:
+  summary: >-
+    Kansas passed Senate Bill 98 in 2025, creating a sales and use tax exemption
+    for qualified data centers that runs for twenty years. Qualifying is not
+    automatic. A project has to reach a large investment level within a set
+    period, add a minimum number of jobs, commit to conserving and reusing
+    water, and commit to buying its electricity for ten years from the utility
+    holding the certified territory where the facility sits. That last condition
+    is the one worth understanding as a landowner, because it means the identity
+    of the utility serving your ground is written directly into the state
+    incentive. It is part of why we ask which provider bills you. Now the part
+    people most often have backwards. This exemption is claimed by the company
+    constructing and running the data center. It is not something you apply for,
+    not a credit that comes to you, and not by itself a change in what your
+    property is worth. Its real effect on you is indirect and still significant.
+    Serious buyers now have a concrete financial reason to be evaluating Kansas
+    sites. Rules get amended and the statute is far more detailed than this
+    summary, so treat it as orientation rather than guidance, and run anything
+    that would shape a decision past your own accountant.
+  sources:
+    - label: Kansas Department of Commerce, SB 98 data center sales tax exemption
+      url: https://www.kansascommerce.gov/program/business-incentives-and-services/sb-98-data-center-sales-tax-exemption/
+      accessed: '2026-07-30'
+    - label: Kansas Secretary of State, 2025 session laws, Chapter 124, Senate Bill 98
+      url: https://sos.ks.gov/publications/sessionlaws/2025/Chapter-124-SB-98.html
+      accessed: '2026-07-30'
+    - label: Kansas Department of Revenue, Notice 25-03, sales tax exemption for data centers
+      url: https://www.ksrevenue.gov/taxnotices/notice25-03.pdf
+      accessed: '2026-07-30'
+    - label: Kansas Corporation Commission, electric certified areas map
+      url: https://www.kcc.ks.gov/images/PDFs/maps/ks_electric_certified_areas.pdf
+      accessed: '2026-07-30'
+
+regions:
+  - title: The Kansas City edge
+    body: >-
+      Wyandotte, Johnson, and Miami counties benefit from existing fiber, a
+      metropolitan workforce, and connections already built for large users.
+      Ground is dearer and harder to assemble than further west, so the parcels
+      that work here tend to be ones nobody has consolidated yet.
+  - title: Along Interstate 70
+    body: >-
+      Douglas, Shawnee, and the counties running west toward Salina pair highway
+      access with fiber that follows the same route and reasonably dense
+      electrical infrastructure. This corridor is often the practical middle
+      ground between metropolitan pricing and remote locations.
+  - title: Wind country in the southwest
+    body: >-
+      Ford, Gray, Finney, and neighboring counties saw substantial generation
+      built out over the past two decades, and generation brings transmission
+      with it. That is a different starting position from most rural ground,
+      where the wires simply are not there. Terrain is level and holdings are
+      large.
+  - title: South central Kansas
+    body: >-
+      Sedgwick, Butler, Harvey, and Reno counties surround the Wichita
+      industrial base, which means electrical systems sized for manufacturing
+      rather than for households. Rail is good and the land flattens out quickly
+      once you leave the city.
+  - title: The north central plains
+    body: >-
+      Ellis, Russell, Barton, and Saline counties sit where the interstate,
+      pipelines, and long standing energy activity overlap. Population is thin
+      and parcels are big, which suits a project needing space and quiet
+      neighbors more than it suits one needing a large local workforce.
+
+faq:
+  - question: Which utility serves me, and why do you keep asking?
+    answer: >-
+      Kansas assigns exclusive certified territories, so your address determines
+      your provider rather than you choosing one. It matters more here than in
+      most states because the state incentive requires a data center to buy
+      power for ten years from the utility certified for that ground. Your
+      electric bill tells us who that is. If you would rather not dig it out, the
+      county is usually enough for us to work it out ourselves.
+
+  - question: There are turbines on my place already. Does that help or hurt?
+    answer: >-
+      Usually it helps, and not for the reason people expect. Wind development
+      brings substations and transmission into country that otherwise would not
+      have them, and that infrastructure is the valuable part. Existing lease
+      arrangements do need looking at, since they may commit portions of the
+      ground or restrict what can be built where. Send us what you have signed
+      and we will read it before either of us gets ahead of ourselves.
+
+  - question: I farm this ground. Would I have to stop?
+    answer: >-
+      Not necessarily, and not usually all at once. A facility occupies a defined
+      footprint rather than every acre you own, and an option period can run for
+      a year or more while you continue farming exactly as you do now. Where a
+      purchase does happen, timing around a crop year is a normal thing to
+      negotiate. Raise it early and it is straightforward to accommodate.
+
+  - question: Is water going to be a problem in western Kansas?
+    answer: >-
+      It is a fair question and a live one across the High Plains. Some designs
+      use very little water, and the state incentive itself requires operators to
+      commit to conserving, reusing, and replacing water. That does not settle
+      every local concern, and we would not tell you it does. What we can say is
+      that water is examined seriously as part of screening rather than treated
+      as an afterthought.
+
+  - question: What would you actually pay me?
+    answer: >-
+      Not something we will invent before looking. For this use the electrical
+      situation drives value far more than acreage does, which is why two
+      neighbors can be in genuinely different positions. After screening we can
+      discuss real figures, and if someone quotes you a per acre number before
+      seeing your ground, treat that as information about them.
+
+  - question: Do you want ground in eastern Kansas or western Kansas?
+    answer: >-
+      Both, for different reasons. The east offers fiber and workforce, the west
+      offers space and infrastructure that generation built. What we are not
+      doing is limiting ourselves to the counties that are already in the
+      newspapers. Send yours regardless of where it sits.
+
+  - question: How fast does this move?
+    answer: >-
+      Screening takes a few days. Beyond that the property and your own timing
+      set the pace. Options tend to move faster because not everything has to be
+      resolved before anyone signs, which is one reason landowners frequently
+      start there. Outright purchases run longer since more must be verified
+      first. You will get an honest schedule once we understand the property
+      rather than an optimistic one now.

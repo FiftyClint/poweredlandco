@@ -8,6 +8,7 @@ import { breadcrumbSchema } from '../../../lib/schema.mjs';
 const site = currentSite();
 const articles = await articlesFor(site);
 const where = site.type === 'hub' ? '' : ` in ${site.stateName}`;
+const copy = site.pageCopy.articles;
 ---
 
 <Base
@@ -24,10 +25,7 @@ const where = site.type === 'hub' ? '' : ` in ${site.stateName}`;
   <div class="page section">
     <p class="eyebrow">Articles</p>
     <h1 class="measure">Written for landowners</h1>
-    <p class="lede measure">
-      Short, plain explanations of the things landowners actually ask us about.
-      No jargon, and no advice about what you should do with your property.
-    </p>
+    <p class="lede measure">{copy.intro}</p>
   </div>
 
   <div class="page section--tight">
@@ -51,11 +49,7 @@ const where = site.type === 'hub' ? '' : ` in ${site.stateName}`;
       ) : (
         <div class="empty measure">
           <h2>Nothing published here yet</h2>
-          <p>
-            We are writing the first set of articles now. In the meantime, the
-            questions page covers most of what landowners ask us, and you are
-            welcome to send us a question directly.
-          </p>
+          <p>{copy.empty}</p>
         </div>
       )
     }

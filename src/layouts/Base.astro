@@ -63,7 +63,15 @@ const currentPath = Astro.url.pathname.replace(/\/$/, '') || '/';
     <meta property="og:url" content={canonical} />
     <meta property="og:site_name" content={BRAND.name} />
     <meta property="og:locale" content="en_US" />
-    <meta name="twitter:card" content="summary_large_image" />
+    {
+      site.images?.og && (
+        <Fragment>
+          <meta property="og:image" content={`${base}${site.images.og.src}`} />
+          <meta property="og:image:alt" content={site.images.og.alt} />
+        </Fragment>
+      )
+    }
+    <meta name="twitter:card" content={site.images?.og ? 'summary_large_image' : 'summary'} />
 
     <meta name="theme-color" content={site.palette.base} />
     <link rel="sitemap" href="/sitemap-index.xml" />

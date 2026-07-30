@@ -1,0 +1,48 @@
+---
+/**
+ * A full width photograph between sections.
+ *
+ * Renders nothing at all when the site has no banner image, which is currently
+ * every site. The sites ship without photography by decision, so this exists so
+ * that adding a picture later means editing a data file rather than a template.
+ *
+ * When an image does arrive it must be a real photograph of land or
+ * infrastructure. Never a stock photo of people presented as our team.
+ */
+const { image } = Astro.props;
+---
+
+{
+  image && (
+    <figure class="band">
+      <img
+        src={image.src}
+        alt={image.alt}
+        loading="lazy"
+        decoding="async"
+        width="1600"
+        height="600"
+      />
+      {image.credit && <figcaption class="small muted">{image.credit}</figcaption>}
+    </figure>
+  )
+}
+
+<style>
+  .band {
+    margin: 0;
+  }
+
+  .band img {
+    width: 100%;
+    height: clamp(14rem, 30vw, 24rem);
+    object-fit: cover;
+  }
+
+  .band figcaption {
+    max-width: var(--page-max);
+    margin: var(--s2) auto 0;
+    padding-inline: var(--s5);
+    text-align: right;
+  }
+</style>

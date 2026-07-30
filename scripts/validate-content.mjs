@@ -36,7 +36,7 @@ const CLAIM_PATTERNS = [
     // on ordinary sentences like "most land does not qualify", and a validator
     // that cries wolf is a validator people learn to ignore.
     label: 'ranking claim',
-    re: /\b(?:the|world'?s|nation'?s|country'?s|state'?s)\s+(?:largest|biggest|leading|fastest[-\s]growing|number one|top)\b/gi,
+    re: /\b(?:the|world'?s|nation'?s|country'?s|state'?s)\s+(?:largest|biggest|leading|fastest[-\s]growing|number one)\b/gi,
   },
 ];
 

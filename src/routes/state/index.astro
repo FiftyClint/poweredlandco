@@ -4,6 +4,7 @@ import Hero from '../../components/Hero.astro';
 import FormSlot from '../../components/FormSlot.astro';
 import StepList from '../../components/StepList.astro';
 import Button from '../../components/Button.astro';
+import ImageBand from '../../components/ImageBand.astro';
 import { currentSite } from '../../data/sites.mjs';
 import { PROCESS_STEPS } from '../../data/process.mjs';
 import { breadcrumbSchema } from '../../lib/schema.mjs';
@@ -42,6 +43,8 @@ const steps = PROCESS_STEPS.map((title, index) => ({
       </div>
     </div>
   </section>
+
+  <ImageBand image={site.images?.banner} />
 
   <section class="section section--sunken">
     <div class="page">

@@ -19,7 +19,7 @@ import { parse } from 'node-html-parser';
 
 const ROOT = new URL('..', import.meta.url).pathname;
 const DIST = join(ROOT, 'dist');
-const OUT = process.argv[2] || join(ROOT, 'preview', 'checkpoint-1.html');
+const OUT = process.argv[2] || join(ROOT, 'preview', 'checkpoint-2.html');
 
 if (!existsSync(DIST)) {
   console.error('No dist/. Run `npm run build:all` first.');
@@ -28,13 +28,39 @@ if (!existsSync(DIST)) {
 
 /** Pages to include, in review order. */
 const PAGES = [
-  { site: 'hub', path: '/', label: 'Home', note: 'The page most landowners will land on.' },
-  { site: 'hub', path: '/how-it-works', label: 'How It Works' },
-  { site: 'hub', path: '/what-makes-land-qualify', label: 'What Qualifies' },
-  { site: 'hub', path: '/states', label: 'States' },
-  { site: 'hub', path: '/faq', label: 'Questions' },
-  { site: 'hub', path: '/about', label: 'About' },
-  { site: 'hub', path: '/articles', label: 'Articles' },
+  {
+    site: 'ar',
+    path: '/',
+    label: 'AR home',
+    note: 'Arkansas home page. Compare the wording against Kansas: no two sites share a sentence.',
+  },
+  {
+    site: 'ar',
+    path: '/arkansas',
+    label: 'AR state page',
+    note: 'The page the Arkansas site exists to rank. It answers the question in the first paragraph.',
+  },
+  { site: 'ar', path: '/how-it-works', label: 'AR how it works' },
+  { site: 'ar', path: '/what-makes-land-qualify', label: 'AR what qualifies' },
+  { site: 'ar', path: '/faq', label: 'AR questions' },
+  {
+    site: 'ks',
+    path: '/',
+    label: 'KS home',
+    note: 'Kansas home page. Different accent tone, same layout, completely different copy.',
+  },
+  {
+    site: 'ks',
+    path: '/kansas',
+    label: 'KS state page',
+    note: 'Leads on certified utility territories, which is the fact that matters most in Kansas.',
+  },
+  { site: 'ks', path: '/how-it-works', label: 'KS how it works' },
+  { site: 'ks', path: '/what-makes-land-qualify', label: 'KS what qualifies' },
+  { site: 'ks', path: '/faq', label: 'KS questions' },
+  { site: 'hub', path: '/', label: 'Hub home', note: 'The page most landowners will land on.' },
+  { site: 'hub', path: '/states', label: 'Hub states' },
+  { site: 'hub', path: '/about', label: 'Hub about' },
   {
     site: 'hub',
     path: '/privacy',
@@ -47,7 +73,6 @@ const PAGES = [
     label: 'Terms',
     note: 'Read the section on what we are and are not. That is the part that matters.',
   },
-  { site: 'hub', path: '/thank-you', label: 'Thank You', note: 'Seen after the form is sent.' },
   {
     site: 'va',
     path: '/',
@@ -121,13 +146,13 @@ const payload = JSON.stringify(documents)
   .replace(/\u2028/g, '\\u2028')
   .replace(/\u2029/g, '\\u2029');
 
-const out = `<title>PoweredLandCo checkpoint 1 preview</title>
+const out = `<title>PoweredLandCo checkpoint 2 preview</title>
 
 <div class="shell">
   <header class="bar">
     <div class="bar__id">
       <strong>PoweredLandCo</strong>
-      <span>Checkpoint 1 preview</span>
+      <span>Checkpoint 2 preview</span>
     </div>
 
     <div class="bar__controls">

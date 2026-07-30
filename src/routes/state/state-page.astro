@@ -57,12 +57,7 @@ const utilityGroups = [
       <div class="split__main stack-lg">
         <section aria-labelledby="utilities-heading">
           <h2 id="utilities-heading">Who provides power in {site.stateName}</h2>
-          <p>
-            The utility serving your area matters, because it determines who
-            would need to deliver power to a project on your land. You do not
-            need to know any of this before contacting us. It is here because
-            landowners often ask.
-          </p>
+          <p>{site.utilitiesNote}</p>
           {
             utilityGroups.map((group) => (
               <div class="utility-group">

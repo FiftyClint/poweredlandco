@@ -50,7 +50,7 @@ There are three site types:
 | Type | Pages | Which |
 | --- | --- | --- |
 | `hub` | Home, States, plus the shared pages | poweredlandco.com |
-| `state` | Home, the state page, plus the shared pages | 14 active states |
+| `state` | Home, the state page, plus the shared pages | AR and KS live, 12 more to come |
 | `parked` | One page | NY, GA, VA, IL |
 
 `integrations/site-routes.mjs` injects only the routes a site's type needs, so a

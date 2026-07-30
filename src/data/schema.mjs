@@ -37,6 +37,28 @@ const source = z.object({
     .regex(/^\d{4}-\d{2}-\d{2}$/, 'source accessed date must be YYYY-MM-DD'),
 });
 
+/**
+ * An optional photograph.
+ *
+ * Every image slot in the system is optional and renders nothing when unset.
+ * The sites ship with no photography today by decision, so these exist purely
+ * so that adding pictures later is a data file change rather than a redesign.
+ */
+const image = z.object({
+  src: nonEmpty('image src', 300),
+  alt: nonEmpty('image alt text', 300),
+  credit: nonEmpty('image credit', 200).optional(),
+});
+
+const images = z
+  .object({
+    /** Shown when the site is shared in a text message or on social. */
+    og: image.optional(),
+    /** Full width band between sections on the home page. */
+    banner: image.optional(),
+  })
+  .default({});
+
 const utility = z.object({
   name: nonEmpty('utility name', 200),
   kind: z.enum(['investor-owned', 'cooperative', 'municipal', 'generation']),
@@ -61,6 +83,15 @@ const pageCopySchema = z.object({
       .array(nonEmpty('step body', 800))
       .length(PROCESS_STEPS.length, `provide exactly ${PROCESS_STEPS.length} step descriptions`),
     closing: nonEmpty('how it works closing', 1200),
+  }),
+  /**
+   * The articles index. Needed per site because until articles are published
+   * this page is nothing but its own introduction and an empty state, and two
+   * sites carrying the same two paragraphs is a duplicate document.
+   */
+  articles: z.object({
+    intro: nonEmpty('articles intro', 800),
+    empty: nonEmpty('articles empty state', 800),
   }),
   qualify: z.object({
     intro: nonEmpty('qualify intro', 1200),
@@ -102,6 +133,9 @@ const stateContent = z.object({
 
   trustPoints,
 
+  /** Why the serving utility matters here. Differs by state more than it looks. */
+  utilitiesNote: nonEmpty('utilities note', 900),
+
   utilities: z.array(utility).min(1, 'list at least one utility'),
 
   incentives: z.object({
@@ -131,6 +165,7 @@ const base = z.object({
    * schema until the content is written.
    */
   status: z.enum(['live', 'pending']),
+  images,
 });
 
 const hubSite = base.extend({
