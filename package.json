@@ -1,0 +1,39 @@
+{
+  "name": "poweredlandco",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "SITE=${SITE:-hub} astro dev",
+    "build": "astro build",
+    "build:all": "node scripts/build-all.mjs",
+    "preview": "astro preview",
+    "generate-article": "node scripts/generate-article.mjs",
+    "lint:copy": "node scripts/lint-copy.mjs",
+    "lint:content": "node scripts/validate-content.mjs",
+    "lint:duplicates": "node scripts/check-duplicate-copy.mjs",
+    "check": "npm run lint:copy && npm run lint:content && npm run lint:duplicates",
+    "verify:form": "node scripts/verify-form.mjs",
+    "audit:a11y": "node scripts/audit-a11y.mjs",
+    "audit:lighthouse": "node scripts/audit-lighthouse.mjs",
+    "verify": "npm run build:all && npm run check && npm run audit:a11y && npm run verify:form"
+  },
+  "dependencies": {
+    "@astrojs/mdx": "^7.0.5",
+    "@astrojs/rss": "^4.0.19",
+    "@astrojs/sitemap": "^3.7.3",
+    "@fontsource-variable/source-sans-3": "^5.3.0",
+    "astro": "^7.1.6",
+    "yaml": "^2.9.0"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.10.2",
+    "chrome-launcher": "^1.2.1",
+    "lighthouse": "^13.4.1",
+    "node-html-parser": "^9.0.1",
+    "playwright": "^1.50.0"
+  }
+}

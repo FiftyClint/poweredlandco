@@ -1,0 +1,63 @@
+---
+/**
+ * A link from the hub out to one state site. `site` is a site data record.
+ *
+ * Parked states are shown too, but marked, so a landowner in a state we have
+ * not launched still finds a way to reach us instead of hitting nothing.
+ */
+const { site } = Astro.props;
+const parked = site.type === 'parked';
+---
+
+<a class:list={['state-card', parked && 'state-card--parked']} href={`https://${site.domain}`}>
+  <span class="state-card__name">{site.stateName}</span>
+  <span class="state-card__domain">{site.domain}</span>
+  {parked && <span class="state-card__tag">Opening soon</span>}
+</a>
+
+<style>
+  .state-card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--s1);
+    padding: var(--s4) var(--s5);
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: var(--radius-lg);
+    text-decoration: none;
+    color: var(--ink);
+    min-height: 5.5rem;
+    justify-content: center;
+  }
+
+  .state-card:hover {
+    border-color: var(--accent);
+    background: var(--accent-tint);
+    color: var(--ink);
+  }
+
+  .state-card__name {
+    font-size: var(--text-lg);
+    font-weight: 700;
+  }
+
+  .state-card__domain {
+    font-size: 0.9375rem;
+    color: var(--ink-muted);
+    word-break: break-word;
+  }
+
+  .state-card__tag {
+    margin-top: var(--s2);
+    align-self: flex-start;
+    font-size: 0.875rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+  }
+
+  .state-card--parked .state-card__name {
+    color: var(--ink-muted);
+  }
+</style>

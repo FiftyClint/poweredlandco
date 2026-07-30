@@ -1,0 +1,239 @@
+---
+import '../styles/global.css';
+import Wordmark from '../components/Wordmark.astro';
+import { currentSite, siteUrl } from '../data/sites.mjs';
+import { BRAND, LEGAL_POSITIONING } from '../data/brand.mjs';
+import { primaryNav, footerNav, networkLink } from '../lib/nav.mjs';
+import { organizationSchema, webPageSchema } from '../lib/schema.mjs';
+
+/**
+ * The single layout for every page on all 19 domains.
+ *
+ * Sites differ only in the three accent custom properties set on <html> below.
+ * Layout, spacing, components and structure are identical everywhere, which is
+ * what keeps 19 sites maintainable by one person.
+ */
+const {
+  title,
+  description,
+  path,
+  schemas = [],
+  ogType = 'website',
+} = Astro.props;
+
+const site = currentSite();
+const base = siteUrl(site);
+const canonical = `${base}${path === '/' ? '' : path}`;
+const nav = primaryNav(site);
+const network = networkLink(site);
+const year = new Date().getFullYear();
+
+const jsonLd = [
+  organizationSchema(site),
+  webPageSchema({ site, title, description, path }),
+  ...schemas,
+];
+
+const currentPath = Astro.url.pathname.replace(/\/$/, '') || '/';
+---
+
+<!doctype html>
+<html
+  lang="en"
+  style={`--accent:${site.palette.base};--accent-dark:${site.palette.dark};--accent-tint:${site.palette.tint}`}
+>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+
+    <link
+      rel="preload"
+      href="/fonts/source-sans-3-latin.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+
+    <meta property="og:type" content={ogType} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:site_name" content={BRAND.name} />
+    <meta property="og:locale" content="en_US" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <meta name="theme-color" content={site.palette.base} />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+
+    {
+      jsonLd.map((schema) => (
+        <script
+          type="application/ld+json"
+          set:html={JSON.stringify(schema)}
+        />
+      ))
+    }
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <header class="site-header">
+      <div class="page site-header__inner">
+        <a class="site-header__brand" href="/" aria-label={`${BRAND.name} home`}>
+          <Wordmark />
+        </a>
+
+        <nav aria-label="Main">
+          <ul class="site-nav">
+            {
+              nav.map((item) => (
+                <li>
+                  <a
+                    href={item.href}
+                    aria-current={currentPath === item.href ? 'page' : undefined}
+                  >
+                    {item.label}
+                  </a>
+                </li>
+              ))
+            }
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <slot />
+    </main>
+
+    <footer class="site-footer">
+      <div class="page">
+        <div class="site-footer__top">
+          <div class="site-footer__brand">
+            <Wordmark />
+            <p class="small muted">
+              <a href={`mailto:${BRAND.email}`}>{BRAND.email}</a>
+            </p>
+            {
+              network && (
+                <p class="small">
+                  <a href={network.href}>Visit {network.label}</a>
+                </p>
+              )
+            }
+          </div>
+
+          <nav aria-label="Footer">
+            <ul class="site-footer__nav">
+              {
+                footerNav(site).map((item) => (
+                  <li>
+                    <a href={item.href}>{item.label}</a>
+                  </li>
+                ))
+              }
+            </ul>
+          </nav>
+        </div>
+
+        <!--
+          Required verbatim on every page. Asserted by scripts/lint-copy.mjs.
+          Do not reword.
+        -->
+        <p class="site-footer__legal">{LEGAL_POSITIONING}</p>
+
+        <p class="small muted">
+          Copyright {year} {BRAND.name}. Information on this site is general and
+          is not legal, tax, or financial advice.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
+
+<style>
+  .site-header {
+    background: var(--surface);
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .site-header__inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--s3) var(--s5);
+    padding-block: var(--s4);
+  }
+
+  .site-header__brand {
+    text-decoration: none;
+  }
+
+  .site-nav,
+  .site-footer__nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--s3) var(--s5);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .site-nav a {
+    display: inline-block;
+    padding-block: var(--s2);
+    font-size: 1.0625rem;
+    font-weight: 600;
+    color: var(--ink);
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+  }
+
+  .site-nav a:hover,
+  .site-nav a[aria-current='page'] {
+    color: var(--accent-dark);
+    border-bottom-color: var(--accent);
+  }
+
+  .site-footer {
+    margin-top: var(--s9);
+    padding-block: var(--s7) var(--s6);
+    background: var(--surface);
+    border-top: 1px solid var(--rule);
+  }
+
+  .site-footer__top {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: var(--s6);
+    margin-bottom: var(--s6);
+  }
+
+  .site-footer__brand p {
+    margin: var(--s3) 0 0;
+  }
+
+  .site-footer__nav {
+    gap: var(--s2) var(--s5);
+    max-width: 26rem;
+  }
+
+  .site-footer__nav a {
+    font-size: 1.0625rem;
+    color: var(--ink);
+  }
+
+  .site-footer__legal {
+    max-width: var(--measure);
+    padding-top: var(--s5);
+    border-top: 1px solid var(--rule);
+    font-size: 1rem;
+    color: var(--ink-muted);
+  }
+</style>

@@ -1,0 +1,70 @@
+---
+/**
+ * The one button in the system. Large tap target, high contrast, no icon, no
+ * animation. The primary label across the whole network is
+ * "See if your land qualifies".
+ */
+const {
+  href,
+  variant = 'primary',
+  type = 'button',
+  wide = false,
+  ...rest
+} = Astro.props;
+
+const Tag = href ? 'a' : 'button';
+const classes = ['btn', `btn--${variant}`, wide && 'btn--wide'];
+---
+
+<Tag class:list={classes} href={href} type={href ? undefined : type} {...rest}>
+  <slot />
+</Tag>
+
+<style>
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    /* Comfortably above the 44px minimum tap target. This audience is often on
+       a phone and often not steady with a touchscreen. */
+    min-height: 3.25rem;
+    padding: 0.75rem 1.75rem;
+    font-family: inherit;
+    font-size: 1.1875rem;
+    font-weight: 700;
+    line-height: 1.25;
+    text-align: center;
+    text-decoration: none;
+    border-radius: var(--radius);
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: background-color 120ms ease, border-color 120ms ease;
+  }
+
+  .btn--wide {
+    width: 100%;
+  }
+
+  .btn--primary {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #ffffff;
+  }
+
+  .btn--primary:hover {
+    background: var(--accent-dark);
+    border-color: var(--accent-dark);
+    color: #ffffff;
+  }
+
+  .btn--secondary {
+    background: transparent;
+    border-color: var(--accent);
+    color: var(--accent-dark);
+  }
+
+  .btn--secondary:hover {
+    background: var(--accent-tint);
+    color: var(--accent-dark);
+  }
+</style>

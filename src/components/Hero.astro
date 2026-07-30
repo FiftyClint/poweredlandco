@@ -1,0 +1,63 @@
+---
+import Button from './Button.astro';
+
+/**
+ * The one-screen value proposition. On phones the intake form sits directly
+ * beneath this, so the hero stays short on purpose: headline, one paragraph,
+ * one button. Nothing competes with the call to action.
+ */
+const { headline, subhead, ctaHref = '#qualify', ctaLabel = 'See if your land qualifies' } = Astro.props;
+---
+
+<section class="hero">
+  <div class="page hero__inner">
+    <div class="hero__body">
+      <h1>{headline}</h1>
+      <p class="hero__subhead">{subhead}</p>
+      <Button href={ctaHref}>{ctaLabel}</Button>
+      <p class="hero__reassure small">
+        No cost, no obligation, and no pressure. We answer either way.
+      </p>
+    </div>
+    <div class="hero__aside">
+      <slot />
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero {
+    background: var(--surface);
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .hero__inner {
+    display: grid;
+    gap: var(--s6);
+    padding-block: var(--s7);
+    align-items: start;
+  }
+
+  @media (min-width: 60rem) {
+    .hero__inner {
+      grid-template-columns: 1fr 1fr;
+      gap: var(--s8);
+      padding-block: var(--s8);
+    }
+  }
+
+  .hero__body {
+    max-width: 34rem;
+  }
+
+  .hero__subhead {
+    font-size: var(--text-lg);
+    color: var(--ink-muted);
+    margin-bottom: var(--s5);
+  }
+
+  .hero__reassure {
+    margin: var(--s4) 0 0;
+    color: var(--ink-muted);
+  }
+</style>

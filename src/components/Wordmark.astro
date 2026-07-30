@@ -1,0 +1,59 @@
+---
+/**
+ * Text wordmark with a small line mark. Deliberately not a serif wordmark on a
+ * dark field: that look is used by Clint's other brands and is off limits here.
+ *
+ * The mark reads as a horizon with a transmission line, which is the whole
+ * business in one glyph: rural land plus power.
+ */
+const { size = 'base' } = Astro.props;
+---
+
+<span class:list={['wordmark', size === 'lg' && 'wordmark--lg']}>
+  <svg
+    class="wordmark__mark"
+    viewBox="0 0 32 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="1.75"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    aria-hidden="true"
+    focusable="false"
+  >
+    <path d="M16 3v14" />
+    <path d="M10 7h12" />
+    <path d="M11.5 11h9" />
+    <path d="M1 21h30" />
+    <path d="M16 17l-4 4M16 17l4 4" />
+  </svg>
+  <span class="wordmark__text">Powered<span class="wordmark__co">LandCo</span></span>
+</span>
+
+<style>
+  .wordmark {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 700;
+    font-size: 1.25rem;
+    letter-spacing: -0.015em;
+    color: var(--ink);
+    line-height: 1;
+  }
+
+  .wordmark--lg {
+    font-size: 1.5rem;
+  }
+
+  .wordmark__mark {
+    width: 1.6em;
+    height: 1.2em;
+    flex: none;
+    color: var(--accent);
+  }
+
+  .wordmark__co {
+    color: var(--accent-dark);
+  }
+</style>

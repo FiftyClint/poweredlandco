@@ -1,0 +1,112 @@
+---
+import Base from '../../layouts/Base.astro';
+import FormSlot from '../../components/FormSlot.astro';
+import { currentSite } from '../../data/sites.mjs';
+import { QUALIFY_CRITERIA } from '../../data/process.mjs';
+import { breadcrumbSchema } from '../../lib/schema.mjs';
+
+const site = currentSite();
+const copy = site.pageCopy.qualify;
+const where = site.type === 'hub' ? '' : ` in ${site.stateName}`;
+
+const criteria = QUALIFY_CRITERIA.map((title, index) => ({
+  title,
+  body: copy.criteria[index],
+}));
+---
+
+<Base
+  title={`What Makes Land Qualify for a Data Center${where}`}
+  description={`Power, acreage, water, fiber, and road access explained in plain language, so you can tell whether your${where || ' rural'} land is worth asking about.`}
+  path="/what-makes-land-qualify"
+  schemas={[
+    breadcrumbSchema(site, [
+      { label: 'Home', path: '/' },
+      { label: 'What Makes Land Qualify', path: '/what-makes-land-qualify' },
+    ]),
+  ]}
+>
+  <div class="page section">
+    <p class="eyebrow">What qualifies</p>
+    <h1 class="measure">What makes land work for a data center</h1>
+    <p class="lede measure">{copy.intro}</p>
+  </div>
+
+  <div class="page section--tight">
+    <ol class="criteria">
+      {
+        criteria.map((item) => (
+          <li class="criteria__item">
+            <h2>{item.title}</h2>
+            <p>{item.body}</p>
+          </li>
+        ))
+      }
+    </ol>
+  </div>
+
+  <div class="page section">
+    <div class="measure">
+      <p>{copy.closing}</p>
+      <p>
+        This page is meant to help you decide whether to ask, not to talk you
+        out of it. We would rather look at a property that turns out to be wrong
+        than have you assume the answer and never send it.
+      </p>
+    </div>
+  </div>
+
+  <div class="page section--tight">
+    <div class="form-wrap">
+      <FormSlot heading="Let us take a look" />
+    </div>
+  </div>
+</Base>
+
+<style>
+  .criteria {
+    list-style: none;
+    counter-reset: criterion;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: var(--s6);
+    max-width: 44rem;
+  }
+
+  .criteria__item {
+    counter-increment: criterion;
+    padding-left: 3.5rem;
+    position: relative;
+  }
+
+  .criteria__item::before {
+    content: counter(criterion);
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: grid;
+    place-items: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background: var(--accent-tint);
+    border: 2px solid var(--accent);
+    color: var(--accent-dark);
+    font-weight: 700;
+    font-size: 1.1875rem;
+  }
+
+  .criteria__item h2 {
+    font-size: var(--text-xl);
+    margin-bottom: var(--s2);
+  }
+
+  .criteria__item p {
+    margin-bottom: 0;
+  }
+
+  .form-wrap {
+    max-width: 44rem;
+  }
+</style>

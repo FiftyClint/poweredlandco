@@ -1,0 +1,127 @@
+---
+import { render } from 'astro:content';
+import Base from '../../../layouts/Base.astro';
+import Prose from '../../../components/Prose.astro';
+import Disclaimer from '../../../components/Disclaimer.astro';
+import FormSlot from '../../../components/FormSlot.astro';
+import Button from '../../../components/Button.astro';
+import { currentSite } from '../../../data/sites.mjs';
+import { articlesFor, articleSlug, articlePath } from '../../../lib/articles.mjs';
+import { articleSchema, breadcrumbSchema } from '../../../lib/schema.mjs';
+import { statePath } from '../../../lib/nav.mjs';
+
+export async function getStaticPaths() {
+  const site = currentSite();
+  const articles = await articlesFor(site);
+  return articles.map((entry) => ({
+    params: { id: articleSlug(entry) },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const site = currentSite();
+const { Content } = await render(entry);
+const path = articlePath(entry);
+const sources = entry.data.sources ?? [];
+---
+
+<Base
+  title={entry.data.title}
+  description={entry.data.description}
+  path={path}
+  ogType="article"
+  schemas={[
+    articleSchema({ site, article: { ...entry.data }, path }),
+    breadcrumbSchema(site, [
+      { label: 'Home', path: '/' },
+      { label: 'Articles', path: '/articles' },
+      { label: entry.data.title, path },
+    ]),
+  ]}
+>
+  <article class="page section">
+    <p class="eyebrow">
+      <a href="/articles">Articles</a>
+    </p>
+    <h1 class="measure">{entry.data.title}</h1>
+    <p class="lede measure">{entry.data.description}</p>
+    {
+      entry.data.published && (
+        <p class="small muted">
+          Published {entry.data.published}
+          {entry.data.updated && ` and updated ${entry.data.updated}`}
+        </p>
+      )
+    }
+
+    <Prose>
+      <Content />
+    </Prose>
+
+    <Disclaimer />
+
+    {
+      sources.length > 0 && (
+        <section class="sources" aria-labelledby="sources-heading">
+          <h2 id="sources-heading">Where this information came from</h2>
+          <ul>
+            {sources.map((source) => (
+              <li>
+                <a href={source.url} rel="nofollow noopener">
+                  {source.label}
+                </a>
+                <span class="small muted"> checked {source.accessed}</span>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )
+    }
+
+    {
+      site.type === 'state' && (
+        <p class="next-step">
+          <Button href={statePath(site)} variant="secondary">
+            Selling land for a data center in {site.stateName}
+          </Button>
+        </p>
+      )
+    }
+  </article>
+
+  <div class="page section--tight">
+    <div class="form-wrap">
+      <FormSlot heading="See if your land qualifies" />
+    </div>
+  </div>
+</Base>
+
+<style>
+  .sources {
+    max-width: 40rem;
+    margin-top: var(--s7);
+    padding-top: var(--s5);
+    border-top: 1px solid var(--rule);
+  }
+
+  .sources h2 {
+    font-size: var(--text-lg);
+  }
+
+  .sources ul {
+    padding-left: var(--s5);
+  }
+
+  .sources li {
+    margin-bottom: var(--s3);
+  }
+
+  .next-step {
+    margin-top: var(--s7);
+  }
+
+  .form-wrap {
+    max-width: 44rem;
+  }
+</style>

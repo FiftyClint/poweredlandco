@@ -1,0 +1,117 @@
+---
+import Base from '../../layouts/Base.astro';
+import Prose from '../../components/Prose.astro';
+import { currentSite } from '../../data/sites.mjs';
+import { BRAND, LEGAL_POSITIONING } from '../../data/brand.mjs';
+import { breadcrumbSchema } from '../../lib/schema.mjs';
+
+/*
+ * TODO: LEGAL REVIEW REQUIRED BEFORE LAUNCH
+ *
+ * Standard template, not reviewed by an attorney. Items to confirm:
+ *   - That the no-brokerage language below matches the real estate licensing
+ *     rules of every state in the network. This is the highest risk item on
+ *     the site and should be reviewed state by state.
+ *   - Limitation of liability wording and whether it is enforceable in the
+ *     states we operate in.
+ *   - Governing law and venue. Currently left unspecified on purpose, because
+ *     naming the wrong one is worse than naming none.
+ */
+
+const site = currentSite();
+const updated = 'July 2026';
+---
+
+<Base
+  title="Terms of Use"
+  description={`The terms that apply when you use this ${BRAND.name} website or send us information about your property.`}
+  path="/terms"
+  schemas={[
+    breadcrumbSchema(site, [
+      { label: 'Home', path: '/' },
+      { label: 'Terms of Use', path: '/terms' },
+    ]),
+  ]}
+>
+  <div class="page section">
+    <h1>Terms of Use</h1>
+    <p class="muted">Last updated {updated}</p>
+
+    <Prose>
+      <h2>About this site</h2>
+      <p>
+        This website is operated by {BRAND.name}. By using it, you agree to the
+        terms below. If you do not agree with them, please do not use the site.
+      </p>
+
+      <h2>What we are, and what we are not</h2>
+      <p>{LEGAL_POSITIONING}</p>
+      <p>
+        We buy land and we option land for our own account. We do not provide
+        real estate services to you, we do not represent your interests in a
+        transaction, and we are not paid a commission on anything. You are free
+        to hire your own professional advisors at any point, and for a decision
+        of this size you probably should.
+      </p>
+
+      <h2>Information on this site is general</h2>
+      <p>
+        The pages and articles here are written to help landowners understand a
+        process most people go through only once. They are general information
+        and are not legal, tax, financial, or engineering advice. Rules and
+        programs change, and what applies to one property may not apply to
+        another. Do not rely on this site as the basis for a decision without
+        checking it with your own attorney or accountant.
+      </p>
+
+      <h2>No offer is made here</h2>
+      <p>
+        Nothing on this site is an offer to buy your property or a commitment of
+        any kind. Any actual offer from us would come in writing, signed, and
+        after a conversation. Submitting a form does not create an agreement
+        between us and does not obligate either of us to do anything.
+      </p>
+
+      <h2>Information you send us</h2>
+      <p>
+        When you send us information, you confirm that you are permitted to
+        share it and that it is accurate as far as you know. We understand that
+        a landowner may not know the answer to every question, and that is fine.
+        Saying you are not sure is always acceptable. Deliberately false
+        information is not, since we make decisions and spend money based on
+        what you tell us.
+      </p>
+      <p>
+        Our privacy policy explains what we do with what you send.
+      </p>
+
+      <h2>Limits</h2>
+      <p>
+        We work to keep this site accurate and available, but we do not
+        guarantee that it is free of errors or that it will always be reachable.
+        To the extent the law allows, we are not liable for losses arising from
+        your use of the site or from reliance on general information published
+        here.
+      </p>
+
+      <h2>Other sites</h2>
+      <p>
+        We link to outside sources, including utilities and government agencies,
+        so you can check facts for yourself. We do not control those sites and
+        are not responsible for their content.
+      </p>
+
+      <h2>Changes</h2>
+      <p>
+        We may update these terms. When we do, the date at the top of this page
+        changes.
+      </p>
+
+      <h2>Contact</h2>
+      <p>
+        Questions about these terms can go to
+        <a href={`mailto:${BRAND.email}`}>{BRAND.email}</a>.
+      </p>
+    </Prose>
+  </div>
+</Base>

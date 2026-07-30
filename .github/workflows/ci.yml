@@ -1,0 +1,41 @@
+name: CI
+
+on:
+  push:
+    branches: ['**']
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+
+      - run: npm ci
+
+      - name: Build every live site
+        run: npm run build:all
+
+      # The three content guards. These are the ones that keep a 19 site network
+      # from drifting into duplicate copy or broker language.
+      - name: Copy, content and duplicate checks
+        run: npm run check
+
+      - name: Install Chromium for browser checks
+        run: npx playwright install --with-deps chromium
+
+      - name: Accessibility audit
+        run: npm run audit:a11y
+
+      - name: Intake form end to end
+        run: npm run verify:form
+
+      # Lighthouse is deliberately not gated here. Performance scores on shared
+      # CI runners swing enough to fail a build that is genuinely fine, and a
+      # check that cries wolf gets ignored or removed. Run `npm run
+      # audit:lighthouse` locally before a release instead.

@@ -1,0 +1,9 @@
+key: ok
+type: state
+domain: oklahomadatacenterland.com
+stateName: Oklahoma
+stateAbbr: OK
+accent: loam
+# Full site. Content is written at checkpoint 2 (AR, KS) and checkpoint 3 (rest).
+# Flip to "live" once the content is written and Clint has reviewed it.
+status: pending

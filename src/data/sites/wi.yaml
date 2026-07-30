@@ -1,0 +1,9 @@
+key: wi
+type: state
+domain: wisconsindatacenterland.com
+stateName: Wisconsin
+stateAbbr: WI
+accent: pine
+# Full site. Content is written at checkpoint 2 (AR, KS) and checkpoint 3 (rest).
+# Flip to "live" once the content is written and Clint has reviewed it.
+status: pending

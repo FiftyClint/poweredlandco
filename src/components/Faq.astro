@@ -1,0 +1,48 @@
+---
+/**
+ * FAQ list. Takes `entries` as [{ question, answer }] from the site data file.
+ *
+ * Rendered as plain headings and paragraphs rather than collapsed accordions.
+ * Accordions hide answers behind a tap and require JavaScript to be useful;
+ * this audience is better served by simply being able to read the page. It
+ * also means every answer is present in the HTML for search and AI crawlers.
+ */
+/*
+ * `level` sets the heading level for each question. It has to be a prop
+ * because this component is used in two different places in the document
+ * outline: directly under the h1 on the FAQ page, and under an h2 section
+ * heading on the state page. Hardcoding h3 skips a level in the first case,
+ * which is a real screen reader problem and a Lighthouse failure.
+ */
+const { entries, level = 2 } = Astro.props;
+const Heading = `h${level}`;
+---
+
+<div class="faq">
+  {
+    entries.map((entry) => (
+      <article class="faq__item">
+        <Heading>{entry.question}</Heading>
+        <p>{entry.answer}</p>
+      </article>
+    ))
+  }
+</div>
+
+<style>
+  .faq {
+    display: grid;
+    gap: var(--s6);
+    max-width: 44rem;
+  }
+
+  .faq__item :where(h2, h3, h4) {
+    font-size: var(--text-xl);
+    margin-bottom: var(--s2);
+  }
+
+  .faq__item p {
+    margin-bottom: 0;
+    color: var(--ink-muted);
+  }
+</style>

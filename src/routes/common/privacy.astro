@@ -1,0 +1,122 @@
+---
+import Base from '../../layouts/Base.astro';
+import Prose from '../../components/Prose.astro';
+import { currentSite } from '../../data/sites.mjs';
+import { BRAND } from '../../data/brand.mjs';
+import { breadcrumbSchema } from '../../lib/schema.mjs';
+
+/*
+ * TODO: LEGAL REVIEW REQUIRED BEFORE LAUNCH
+ *
+ * This is a standard template written to describe what the site actually does.
+ * It has not been reviewed by an attorney. Before any domain goes live it needs
+ * a lawyer to confirm the disclosures against the states we operate in and
+ * against how CRMX and Make.com actually store and process submissions.
+ *
+ * Known items for that review:
+ *   - Whether any state we operate in requires additional notice for lead data.
+ *   - Retention period. The wording below is deliberately non-committal.
+ *   - Whether a "do not sell my personal information" notice is required.
+ */
+
+const site = currentSite();
+const updated = 'July 2026';
+---
+
+<Base
+  title="Privacy Policy"
+  description={`How ${BRAND.name} collects, uses, and protects the information you send through this site.`}
+  path="/privacy"
+  schemas={[
+    breadcrumbSchema(site, [
+      { label: 'Home', path: '/' },
+      { label: 'Privacy Policy', path: '/privacy' },
+    ]),
+  ]}
+>
+  <div class="page section">
+    <h1>Privacy Policy</h1>
+    <p class="muted">Last updated {updated}</p>
+
+    <Prose>
+      <h2>What we collect</h2>
+      <p>
+        When you fill out a form on this site, we collect what you type into it:
+        your name, phone number, email address, and the details you give us about
+        your property. We do not ask for a Social Security number, a bank
+        account, or any payment information, and you should never send those to
+        us.
+      </p>
+      <p>
+        Like most websites, our hosting provider records basic technical
+        information such as the type of device and browser used to load a page.
+        We do not use this to identify you.
+      </p>
+
+      <h2>Why we collect it</h2>
+      <p>
+        We use what you send us for two purposes. First, to evaluate whether
+        your property fits what we are looking for. Second, to contact you about
+        it. That is the whole list.
+      </p>
+
+      <h2>Who we share it with</h2>
+      <p>
+        We do not sell your information. We do not trade it, and we do not
+        provide it to anyone marketing unrelated products to you.
+      </p>
+      <p>
+        We do use outside services to run our business, including a customer
+        relationship system that stores contact records and an email provider
+        that delivers our messages. Those companies process information on our
+        behalf and are not permitted to use it for their own purposes. If we
+        move toward a transaction on your property, we may need to share
+        relevant details with parties directly involved in that transaction,
+        such as a title company or an attorney.
+      </p>
+      <p>
+        We may also disclose information where the law requires it.
+      </p>
+
+      <h2>How long we keep it</h2>
+      <p>
+        We keep property and contact records for as long as they are useful to
+        the work described above. If you want your information removed, email us
+        and we will remove it.
+      </p>
+
+      <h2>Cookies</h2>
+      <p>
+        This site does not use advertising cookies and does not track you across
+        other websites. If we add analytics later, this page will be updated
+        before we do.
+      </p>
+
+      <h2>Your choices</h2>
+      <p>
+        You can ask us what we hold about you, ask us to correct it, or ask us to
+        delete it. Email <a href={`mailto:${BRAND.email}`}>{BRAND.email}</a> and
+        we will take care of it. You can also ask us to stop contacting you at
+        any time, and we will.
+      </p>
+
+      <h2>Children</h2>
+      <p>
+        This site is meant for adults who own or manage land. It is not directed
+        at children and we do not knowingly collect information from them.
+      </p>
+
+      <h2>Changes</h2>
+      <p>
+        If we change this policy, we will update the date at the top of this
+        page.
+      </p>
+
+      <h2>Contact</h2>
+      <p>
+        Questions about this policy can go to
+        <a href={`mailto:${BRAND.email}`}>{BRAND.email}</a>.
+      </p>
+    </Prose>
+  </div>
+</Base>

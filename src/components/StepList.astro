@@ -1,0 +1,80 @@
+---
+/**
+ * Numbered steps. Takes `steps` as [{ title, body }].
+ *
+ * The numbers are drawn with CSS counters rather than typed into the copy, so
+ * a step can be added or reordered without editing text and without the
+ * duplicate-copy checker seeing a number it might mistake for a claim.
+ */
+/*
+ * `level` sets the heading level of each step, for the same reason as in
+ * Faq.astro: this renders directly under the h1 on the How It Works page and
+ * under an h2 on the home pages, and a fixed level skips one of them.
+ */
+const { steps, level = 3 } = Astro.props;
+const Heading = `h${level}`;
+---
+
+<ol class="steps">
+  {
+    steps.map((step) => (
+      <li class="steps__item">
+        <Heading>{step.title}</Heading>
+        <p>{step.body}</p>
+      </li>
+    ))
+  }
+</ol>
+
+<style>
+  .steps {
+    counter-reset: step;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: var(--s5);
+  }
+
+  @media (min-width: 52rem) {
+    .steps {
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--s6);
+    }
+  }
+
+  .steps__item {
+    counter-increment: step;
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: var(--radius-lg);
+    padding: var(--s5);
+    padding-top: var(--s6);
+    position: relative;
+  }
+
+  .steps__item::before {
+    content: counter(step);
+    position: absolute;
+    top: calc(var(--s5) * -0.5);
+    left: var(--s5);
+    display: grid;
+    place-items: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background: var(--accent);
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1.25rem;
+  }
+
+  .steps__item :where(h2, h3, h4) {
+    font-size: var(--text-xl);
+    margin-bottom: var(--s2);
+  }
+
+  .steps__item p {
+    margin-bottom: 0;
+  }
+</style>

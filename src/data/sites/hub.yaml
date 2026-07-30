@@ -1,0 +1,165 @@
+key: hub
+type: hub
+domain: poweredlandco.com
+accent: forest
+status: live
+
+hero:
+  headline: Do you own rural land that could power a data center?
+  subhead: >-
+    We buy and option rural land for data center development. We are the buyer,
+    not a middleman. Tell us about your land and we will tell you honestly
+    whether it fits.
+
+# The three reasons a landowner should take us seriously. Written per site,
+# because three identical paragraphs across the network is exactly the kind of
+# duplication that gets a site network discounted.
+trustPoints:
+  - title: We use our own money
+    body: >-
+      When we buy land or take an option on it, the funds are ours and the risk
+      is ours. We are not arranging a transaction between you and a third party,
+      and nobody here is paid a commission on whether you say yes.
+  - title: We do the homework
+    body: >-
+      Working out whether a property can support a data center is our job. You
+      will not be asked to pay for a survey, hire an engineer, or produce a map
+      before we are willing to have a conversation with you.
+  - title: We give you a straight answer
+    body: >-
+      Most land does not qualify, and when yours does not we will say so and
+      tell you what was missing. A clear no costs you nothing and it beats being
+      strung along by someone hoping the situation changes.
+
+# Prose for How It Works and What Makes Land Qualify. The short labels for each
+# step and criterion are shared across the network and live in
+# src/data/process.mjs. Everything here is written fresh for each site.
+pageCopy:
+  howItWorks:
+    intro: >-
+      Most landowners have never sold land for this purpose before and have no
+      idea where to start. That is normal. The process below is the whole thing,
+      start to finish, and almost all of the work sits on our side of the table.
+      You do not need to prepare anything before you contact us.
+    steps:
+      - >-
+        Fill out the short form with your county, a rough acreage, and anything
+        you happen to know about what is near the property. If you are not sure
+        about something, say so. Not sure is a real answer and we would rather
+        have it than a guess presented as fact.
+      - >-
+        We pull transmission maps, substation locations, road data, floodplain
+        maps, and terrain from public records and see how your property lines up.
+        This is the part that takes real work, and it is ours to do. You will not
+        be asked to hire a surveyor or gather documents.
+      - >-
+        If the property looks like it could support a project, we call you. It is
+        a conversation, not a pitch. We walk you through what we saw, what we are
+        still unsure about, and what a purchase or an option would actually look
+        like for you.
+      - >-
+        When it fits, we put real terms in writing. When it does not, we tell you
+        that directly and explain what was missing, whether that was distance
+        from power, terrain, or something else. You get a real answer either way,
+        and it costs you nothing.
+    closing: >-
+      There is no point in the process where you owe us money or sign something
+      to keep talking. If you decide to stop, you stop. Most conversations end
+      with us saying the property does not fit, and we would rather tell you that
+      quickly than keep you waiting.
+  qualify:
+    intro: >-
+      Data centers are unusual buyers. They care far more about what is next to
+      your land than about the land itself. A beautiful property with no power
+      nearby will not work, and a plain field near a strong transmission line
+      might be exactly right. Here is what actually matters, in order.
+    criteria:
+      - >-
+        This is the one that decides most outcomes. A data center needs a large
+        and steady supply of electricity, which means being close to high voltage
+        transmission lines or a substation with room to grow. If you can see big
+        steel towers or a fenced electrical yard from your property, that is
+        worth telling us about.
+      - >-
+        Enough contiguous ground to place buildings, equipment yards, and setbacks
+        without fighting the property line. Long narrow strips and parcels split
+        by a road or a creek are harder to use than the same acreage in one
+        block. We would still rather look at it than have you rule yourself out.
+      - >-
+        Many facilities use water for cooling, so a dependable supply helps. This
+        does not mean you need a river. A rural water district, a good well, or a
+        nearby creek can all matter. Some designs use very little water, so this
+        is rarely the deciding factor on its own.
+      - >-
+        Fiber optic cable carries the actual data. Routes commonly follow
+        interstates, railroads, and major highways, so land near those corridors
+        tends to score better. Fiber is usually easier and cheaper to extend than
+        electric capacity, so it is a smaller obstacle than power.
+      - >-
+        Construction requires heavy trucks and a lot of them. A property reached
+        by a paved county road or state highway is simpler than one at the end of
+        several miles of dirt. Terrain matters here too, since flat and dry
+        ground costs far less to prepare than steep or wet ground.
+    closing: >-
+      Almost no property checks every box, and we do not expect one to. Power is
+      the item that most often decides the answer, and the rest is a question of
+      cost and effort. If you are unsure where your land stands, that is the
+      reason to ask rather than a reason not to.
+
+faq:
+  - question: What does PoweredLandCo actually do?
+    answer: >-
+      We find rural land that can support a data center, then we buy it or we
+      option it. Data centers need a lot of electricity, so the land that works
+      is usually near transmission lines or a substation. We put our own money
+      into the land and we develop the site. We are the buyer.
+
+  - question: Are you going to try to sell my land for me?
+    answer: >-
+      No. We are not a real estate company and we do not work on commission. If
+      your land fits what we are looking for, we make you an offer to buy it or
+      to option it. If it does not fit, we tell you that and we are done. There
+      is no fee to you either way.
+
+  - question: What is an option, and how is it different from a sale?
+    answer: >-
+      An option means we pay you money up front for the right to buy your land
+      later, usually within one to three years. You keep the land and you keep
+      the option money whether or not we go through with the purchase. Landowners
+      often prefer this because they get paid something now while we do the work
+      of confirming the site will function.
+
+  - question: Do I need to know anything technical to talk to you?
+    answer: >-
+      No. You do not need a survey, a parcel number, an engineer, or a map. Tell
+      us the county, roughly how many acres you have, and whether you know of
+      anything nearby like power lines or a substation. Unsure is a fine answer
+      to every question we ask. We do the research ourselves using public
+      records.
+
+  - question: How much land do you need?
+    answer: >-
+      It depends far more on the power situation than on the acreage. Land near
+      strong transmission capacity can work at a smaller size than land that is
+      far from it. Rather than guess, send us what you have and we will look. We
+      would rather review a property that turns out to be too small than miss one
+      that would have worked.
+
+  - question: What happens after I fill out the form?
+    answer: >-
+      We screen your property against public data on power, access, and terrain.
+      That usually takes a few days. If it looks promising we call you to talk it
+      through. If it does not, we tell you why in plain language so you know
+      where you stand.
+
+  - question: Will you share my information with anyone?
+    answer: >-
+      We use what you send us to evaluate your property and to contact you. We do
+      not sell your information. Our privacy policy explains this in full.
+
+  - question: What if I am not ready to sell right now?
+    answer: >-
+      That is common and it is fine. Many landowners contact us to understand
+      what their property might be worth for this use before deciding anything.
+      There is no obligation and no cost. If the timing is wrong, we will note it
+      and follow up when you ask us to.

@@ -1,0 +1,452 @@
+---
+import { currentSite, liveStateSites } from '../data/sites.mjs';
+import {
+  crmxEmbed,
+  leadWebhook,
+  usingFallbackForm,
+  ACRE_HINT,
+  ELECTRIC_OPTIONS,
+  NEARBY_OPTIONS,
+  DECISION_OPTIONS,
+  TIMELINE_OPTIONS,
+} from '../data/lead-capture.mjs';
+
+/**
+ * The intake form.
+ *
+ * Renders the CRMX embed once Clint supplies it. Until then it renders our own
+ * form, which posts directly to the Make.com webhook and is fully functional.
+ *
+ * Design rules that are not negotiable:
+ *   - One screen. No multi-step wizard, no progress bar.
+ *   - "Not sure" is an acceptable answer to every question that has one.
+ *   - We never ask for a parcel number, a legal description, or any other
+ *     technical identifier. If we need it, we look it up ourselves.
+ *   - Only name, phone and email are required. Every other field is optional,
+ *     because a half-filled form from a real landowner beats no form at all.
+ */
+const { id = 'qualify', heading = 'See if your land qualifies' } = Astro.props;
+
+const site = currentSite();
+const embed = crmxEmbed();
+const webhook = leadWebhook();
+const showFallback = usingFallbackForm();
+
+// The hub serves every state, so it asks. A state site already knows.
+const stateChoices = liveStateSites().map((s) => s.stateName);
+const knownState = site.type === 'hub' ? null : site.stateName;
+---
+
+<!--
+  data-boilerplate marks functional interface that is identical across the
+  network by necessity: it is the same form everywhere, so the same field labels
+  appear everywhere. scripts/check-duplicate-copy.mjs skips these subtrees.
+
+  This attribute is for interface only. It must never be placed on editorial
+  prose to get copy past the duplicate checker. If body text repeats across
+  sites, the fix is to write different text, not to mark it boilerplate.
+-->
+<section
+  class="form-slot"
+  id={id}
+  aria-labelledby={`${id}-heading`}
+  data-boilerplate
+>
+  <h2 id={`${id}-heading`}>{heading}</h2>
+  <p class="lede">
+    Tell us about your property. There is no cost and no obligation. If it does
+    not fit, we will tell you plainly.
+  </p>
+
+  {
+    embed ? (
+      <div class="form-slot__embed" set:html={embed} />
+    ) : (
+      <form
+        class="lead-form"
+        method="post"
+        action={webhook || undefined}
+        data-lead-form
+      >
+        {/* Bots fill hidden fields. People never see this one. */}
+        <div class="lead-form__trap" aria-hidden="true">
+          <label for={`${id}-website`}>Leave this field empty</label>
+          <input
+            id={`${id}-website`}
+            type="text"
+            name="website"
+            tabindex="-1"
+            autocomplete="off"
+          />
+        </div>
+        <input type="hidden" name="form_loaded_at" value="" data-loaded-at />
+        <input type="hidden" name="source_site" value={site.domain} />
+        <input type="hidden" name="redirect_to" value="/thank-you" />
+        {knownState && <input type="hidden" name="state" value={knownState} />}
+
+        <div class="lead-form__grid">
+          <p class="field">
+            <label for={`${id}-name`}>Your name <span class="req">Required</span></label>
+            <input id={`${id}-name`} name="name" type="text" autocomplete="name" required />
+          </p>
+
+          <p class="field">
+            <label for={`${id}-phone`}>Phone <span class="req">Required</span></label>
+            <input
+              id={`${id}-phone`}
+              name="phone"
+              type="tel"
+              inputmode="tel"
+              autocomplete="tel"
+              required
+            />
+          </p>
+
+          <p class="field">
+            <label for={`${id}-email`}>Email <span class="req">Required</span></label>
+            <input
+              id={`${id}-email`}
+              name="email"
+              type="email"
+              inputmode="email"
+              autocomplete="email"
+              required
+            />
+          </p>
+
+          {
+            !knownState && (
+              <p class="field">
+                <label for={`${id}-state`}>Which state is the land in?</label>
+                <select id={`${id}-state`} name="state">
+                  <option value="">Choose a state</option>
+                  {stateChoices.map((name) => (
+                    <option value={name}>{name}</option>
+                  ))}
+                  <option value="other">Another state</option>
+                </select>
+              </p>
+            )
+          }
+
+          <p class="field">
+            <label for={`${id}-county`}>County</label>
+            <input id={`${id}-county`} name="county" type="text" autocomplete="off" />
+          </p>
+
+          <p class="field">
+            <label for={`${id}-acres`}>About how many acres?</label>
+            <input id={`${id}-acres`} name="acres" type="text" aria-describedby={`${id}-acres-hint`} />
+            <span class="hint" id={`${id}-acres-hint`}>{ACRE_HINT}</span>
+          </p>
+        </div>
+
+        <fieldset class="field-group">
+          <legend>Does the property have electric service now?</legend>
+          <div class="choices">
+            {
+              ELECTRIC_OPTIONS.map((option) => (
+                <label class="choice">
+                  <input type="radio" name="electric_service" value={option.value} />
+                  <span>{option.label}</span>
+                </label>
+              ))
+            }
+          </div>
+        </fieldset>
+
+        <fieldset class="field-group">
+          <legend>Is there anything like this nearby that you know of?</legend>
+          <span class="hint">Check any that apply. Guessing is fine.</span>
+          <div class="choices choices--stack">
+            {
+              NEARBY_OPTIONS.map((option) => (
+                <label class="choice">
+                  <input type="checkbox" name="nearby" value={option.value} />
+                  <span>{option.label}</span>
+                </label>
+              ))
+            }
+          </div>
+        </fieldset>
+
+        <fieldset class="field-group">
+          <legend>Are you the one who decides whether to sell?</legend>
+          <div class="choices choices--stack">
+            {
+              DECISION_OPTIONS.map((option) => (
+                <label class="choice">
+                  <input type="radio" name="decision_maker" value={option.value} />
+                  <span>{option.label}</span>
+                </label>
+              ))
+            }
+          </div>
+        </fieldset>
+
+        <fieldset class="field-group">
+          <legend>Where are you in your thinking?</legend>
+          <div class="choices choices--stack">
+            {
+              TIMELINE_OPTIONS.map((option) => (
+                <label class="choice">
+                  <input type="radio" name="timeline" value={option.value} />
+                  <span>{option.label}</span>
+                </label>
+              ))
+            }
+          </div>
+        </fieldset>
+
+        <p class="field">
+          <label for={`${id}-notes`}>Anything else we should know?</label>
+          <textarea id={`${id}-notes`} name="notes" rows="4"></textarea>
+        </p>
+
+        <button class="btn btn--primary btn--wide" type="submit">
+          See if my land qualifies
+        </button>
+
+        <p
+          class="lead-form__status"
+          data-form-status
+          role="status"
+          aria-live="polite"
+          hidden
+        ></p>
+
+        <p class="small muted lead-form__note">
+          We use this only to evaluate your property and to contact you. We do
+          not sell your information.
+        </p>
+      </form>
+    )
+  }
+</section>
+
+{
+  showFallback && (
+    <script is:inline>
+      /*
+       * The only client-side script in the project.
+       *
+       * Two jobs: stamp the time the form was rendered so the webhook can
+       * discard submissions completed impossibly fast, and keep the visitor on
+       * the page after submitting instead of dumping them on a raw webhook
+       * response.
+       *
+       * With JavaScript off, the timestamp stays empty and the form submits
+       * natively to the webhook. Both paths work.
+       */
+      (function () {
+        var forms = document.querySelectorAll('[data-lead-form]');
+        Array.prototype.forEach.call(forms, function (form) {
+          var stamp = form.querySelector('[data-loaded-at]');
+          if (stamp) stamp.value = String(Date.now());
+
+          form.addEventListener('submit', function (event) {
+            if (!form.action) return;
+            event.preventDefault();
+
+            var status = form.querySelector('[data-form-status]');
+            var button = form.querySelector('button[type="submit"]');
+            if (button) {
+              button.disabled = true;
+              button.textContent = 'Sending';
+            }
+
+            fetch(form.action, { method: 'POST', body: new FormData(form) })
+              .then(function (response) {
+                if (!response.ok) throw new Error('Request failed');
+                form.reset();
+                if (status) {
+                  status.hidden = false;
+                  status.className = 'lead-form__status is-good';
+                  status.textContent =
+                    'Thank you. We have your information and will be in touch after we look at your property.';
+                }
+                if (button) button.remove();
+              })
+              .catch(function () {
+                if (button) {
+                  button.disabled = false;
+                  button.textContent = 'See if my land qualifies';
+                }
+                if (status) {
+                  status.hidden = false;
+                  status.className = 'lead-form__status is-bad';
+                  status.textContent =
+                    'That did not go through. Please try once more, or email us and we will pick it up from there.';
+                }
+              });
+          });
+        });
+      })();
+    </script>
+  )
+}
+
+<style>
+  .form-slot {
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: var(--radius-lg);
+    padding: var(--s5);
+  }
+
+  @media (min-width: 46rem) {
+    .form-slot {
+      padding: var(--s6);
+    }
+  }
+
+  .form-slot > h2 {
+    margin-bottom: var(--s2);
+  }
+
+  .form-slot > .lede {
+    margin-bottom: var(--s5);
+  }
+
+  .lead-form__grid {
+    display: grid;
+    gap: var(--s4);
+  }
+
+  @media (min-width: 40rem) {
+    .lead-form__grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  .field {
+    display: flex;
+    flex-direction: column;
+    gap: var(--s2);
+    margin: 0;
+  }
+
+  label,
+  legend {
+    font-weight: 600;
+    font-size: 1.0625rem;
+  }
+
+  .req {
+    font-weight: 400;
+    font-size: 0.9375rem;
+    color: var(--ink-muted);
+  }
+
+  input[type='text'],
+  input[type='tel'],
+  input[type='email'],
+  select,
+  textarea {
+    font-family: inherit;
+    font-size: 1.125rem;
+    /* Never below 16px: iOS zooms the page on focus for anything smaller. */
+    line-height: 1.4;
+    padding: 0.7rem 0.75rem;
+    min-height: 3rem;
+    color: var(--ink);
+    background: var(--surface);
+    border: 1.5px solid var(--rule-strong);
+    border-radius: var(--radius);
+    width: 100%;
+  }
+
+  textarea {
+    resize: vertical;
+  }
+
+  input:focus,
+  select:focus,
+  textarea:focus {
+    border-color: var(--accent);
+  }
+
+  .hint {
+    font-size: 0.9375rem;
+    color: var(--ink-muted);
+  }
+
+  .field-group {
+    margin: var(--s5) 0 0;
+    padding: 0;
+    border: 0;
+  }
+
+  .field-group legend {
+    padding: 0;
+    margin-bottom: var(--s2);
+  }
+
+  .choices {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--s2) var(--s5);
+    margin-top: var(--s3);
+  }
+
+  .choices--stack {
+    flex-direction: column;
+    gap: var(--s2);
+  }
+
+  .choice {
+    display: flex;
+    align-items: center;
+    gap: var(--s3);
+    font-weight: 400;
+    /* Generous hit area so a shaky tap still lands. */
+    min-height: 2.75rem;
+    cursor: pointer;
+  }
+
+  .choice input {
+    width: 1.375rem;
+    height: 1.375rem;
+    accent-color: var(--accent);
+    flex: none;
+    margin: 0;
+  }
+
+  .lead-form .field:has(textarea),
+  .lead-form > .field {
+    margin-top: var(--s5);
+  }
+
+  .lead-form button[type='submit'] {
+    margin-top: var(--s6);
+  }
+
+  .lead-form__status {
+    margin-top: var(--s4);
+    padding: var(--s3) var(--s4);
+    border-radius: var(--radius);
+    border-left: 4px solid var(--accent);
+    background: var(--accent-tint);
+    font-weight: 600;
+  }
+
+  .lead-form__status.is-bad {
+    border-left-color: #8c2f1d;
+    background: #f7eae7;
+  }
+
+  .lead-form__note {
+    margin-top: var(--s4);
+    margin-bottom: 0;
+  }
+
+  /* Off screen rather than display:none so bots that skip hidden inputs still
+     see it, while nobody using the page ever encounters it. */
+  .lead-form__trap {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+</style>

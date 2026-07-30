@@ -1,0 +1,13 @@
+key: ny
+type: parked
+domain: newyorkdatacenterland.com
+stateName: New York
+stateAbbr: NY
+accent: slate
+status: live
+
+intro: >-
+  New York landowners sit in an unusual position. Demand for computing capacity
+  in the Northeast is real, and so are the constraints on getting power to a new
+  site. We are working through which parts of the state are worth pursuing
+  before we put a full site in front of anyone.

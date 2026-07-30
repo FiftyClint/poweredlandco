@@ -1,0 +1,212 @@
+---
+import Base from '../../layouts/Base.astro';
+import FormSlot from '../../components/FormSlot.astro';
+import Faq from '../../components/Faq.astro';
+import { currentSite } from '../../data/sites.mjs';
+import { faqPageSchema, breadcrumbSchema } from '../../lib/schema.mjs';
+import { statePath } from '../../lib/nav.mjs';
+
+/**
+ * The state page. This is the page the whole site exists to rank.
+ *
+ * The direct answer paragraph is rendered first, before anything else, because
+ * it has to answer "how do I sell my land for a data center in [State]" inside
+ * the first 150 words. Everything below it is supporting detail.
+ *
+ * Every word on this page comes from the state data file. Nothing is hardcoded
+ * per state, which is what keeps 18 of these consistent and maintainable.
+ */
+const site = currentSite();
+const path = statePath(site);
+
+const utilityGroups = [
+  { kind: 'investor-owned', label: 'Investor owned utilities' },
+  { kind: 'cooperative', label: 'Rural electric cooperatives' },
+  { kind: 'municipal', label: 'Municipal utilities' },
+  { kind: 'generation', label: 'Generation and transmission' },
+]
+  .map((group) => ({
+    ...group,
+    items: site.utilities.filter((u) => u.kind === group.kind),
+  }))
+  .filter((group) => group.items.length > 0);
+---
+
+<Base
+  title={`How to Sell Your Land for a Data Center in ${site.stateName}`}
+  description={`A plain answer for ${site.stateName} landowners: what data center developers look for, which utilities serve the areas that qualify, and how to find out whether your property fits.`}
+  path={path}
+  schemas={[
+    faqPageSchema(site, site.faq),
+    breadcrumbSchema(site, [
+      { label: 'Home', path: '/' },
+      { label: site.stateName, path },
+    ]),
+  ]}
+>
+  <div class="page section">
+    <p class="eyebrow">{site.stateName}</p>
+    <h1 class="measure">
+      How to sell your land for a data center in {site.stateName}
+    </h1>
+    <p class="lede measure">{site.directAnswer}</p>
+  </div>
+
+  <div class="page section--tight">
+    <div class="split">
+      <div class="split__main stack-lg">
+        <section aria-labelledby="utilities-heading">
+          <h2 id="utilities-heading">Who provides power in {site.stateName}</h2>
+          <p>
+            The utility serving your area matters, because it determines who
+            would need to deliver power to a project on your land. You do not
+            need to know any of this before contacting us. It is here because
+            landowners often ask.
+          </p>
+          {
+            utilityGroups.map((group) => (
+              <div class="utility-group">
+                <h3>{group.label}</h3>
+                <ul class="utility-list">
+                  {group.items.map((utility) => (
+                    <li>
+                      <span class="utility-list__name">{utility.name}</span>
+                      {utility.note && <span class="muted"> {utility.note}</span>}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))
+          }
+        </section>
+
+        <section aria-labelledby="incentives-heading">
+          <h2 id="incentives-heading">
+            Where {site.stateName} stands on data center incentives
+          </h2>
+          <p>{site.incentives.summary}</p>
+          <p class="small muted">
+            Programs change. Confirm anything that matters to your decision with
+            your own advisor before acting on it.
+          </p>
+          <details class="sources">
+            <summary>Sources for this section</summary>
+            <ul>
+              {
+                site.incentives.sources.map((source) => (
+                  <li>
+                    <a href={source.url} rel="nofollow noopener">
+                      {source.label}
+                    </a>
+                    <span class="small muted"> checked {source.accessed}</span>
+                  </li>
+                ))
+              }
+            </ul>
+          </details>
+        </section>
+
+        <section aria-labelledby="regions-heading">
+          <h2 id="regions-heading">
+            Parts of {site.stateName} we watch most closely
+          </h2>
+          <p>
+            These are areas where the power situation tends to be favorable. Land
+            outside them can still work, so do not rule yourself out based on
+            this list.
+          </p>
+          <div class="regions">
+            {
+              site.regions.map((region) => (
+                <article class="card">
+                  <h3>{region.title}</h3>
+                  <p>{region.body}</p>
+                </article>
+              ))
+            }
+          </div>
+        </section>
+      </div>
+
+      <aside class="split__aside">
+        <FormSlot heading={`See if your ${site.stateName} land qualifies`} />
+      </aside>
+    </div>
+  </div>
+
+  <div class="page section">
+    <h2>Questions from {site.stateName} landowners</h2>
+    <Faq entries={site.faq} level={3} />
+  </div>
+</Base>
+
+<style>
+  .split {
+    display: grid;
+    gap: var(--s7);
+  }
+
+  @media (min-width: 64rem) {
+    .split {
+      grid-template-columns: 1fr 24rem;
+      align-items: start;
+    }
+
+    .split__aside {
+      position: sticky;
+      top: var(--s5);
+    }
+  }
+
+  .split__main {
+    max-width: 42rem;
+  }
+
+  .utility-group {
+    margin-top: var(--s5);
+  }
+
+  .utility-group h3 {
+    font-size: var(--text-lg);
+    margin-bottom: var(--s2);
+  }
+
+  .utility-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .utility-list li {
+    padding: var(--s2) 0;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .utility-list__name {
+    font-weight: 600;
+  }
+
+  .regions {
+    display: grid;
+    gap: var(--s4);
+    margin-top: var(--s5);
+  }
+
+  .sources {
+    margin-top: var(--s4);
+  }
+
+  .sources summary {
+    cursor: pointer;
+    font-weight: 600;
+    padding: var(--s2) 0;
+  }
+
+  .sources ul {
+    padding-left: var(--s5);
+  }
+
+  .sources li {
+    margin-bottom: var(--s2);
+  }
+</style>

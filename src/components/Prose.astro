@@ -1,0 +1,63 @@
+---
+/**
+ * Typographic wrapper for long-form content: article bodies, the privacy
+ * policy, the terms. Constrains the measure and sets vertical rhythm on
+ * elements that come from markdown and therefore carry no classes.
+ */
+---
+
+<div class="prose">
+  <slot />
+</div>
+
+<style>
+  .prose {
+    max-width: 40rem;
+  }
+
+  .prose :global(h2) {
+    margin-top: var(--s7);
+  }
+
+  .prose :global(h3) {
+    margin-top: var(--s6);
+  }
+
+  .prose :global(ul),
+  .prose :global(ol) {
+    margin: 0 0 var(--s4);
+    padding-left: var(--s5);
+  }
+
+  .prose :global(li) {
+    margin-bottom: var(--s2);
+  }
+
+  .prose :global(blockquote) {
+    margin: var(--s5) 0;
+    padding-left: var(--s5);
+    border-left: 3px solid var(--accent);
+    color: var(--ink-muted);
+  }
+
+  .prose :global(table) {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: var(--s5);
+    font-size: 1.0625rem;
+  }
+
+  .prose :global(th),
+  .prose :global(td) {
+    text-align: left;
+    padding: var(--s3);
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .prose :global(code) {
+    font-size: 0.9375em;
+    background: var(--surface-sunken);
+    padding: 0.1em 0.35em;
+    border-radius: 3px;
+  }
+</style>

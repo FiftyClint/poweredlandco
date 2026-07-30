@@ -1,0 +1,130 @@
+---
+import Base from '../../layouts/Base.astro';
+import Hero from '../../components/Hero.astro';
+import FormSlot from '../../components/FormSlot.astro';
+import StepList from '../../components/StepList.astro';
+import Button from '../../components/Button.astro';
+import { currentSite, liveStateSites } from '../../data/sites.mjs';
+import { breadcrumbSchema } from '../../lib/schema.mjs';
+
+const site = currentSite();
+const states = liveStateSites();
+
+const steps = [
+  {
+    title: 'You tell us about the land',
+    body: 'County, rough acreage, and anything you happen to know about what is nearby. A few minutes, no paperwork, no parcel numbers.',
+  },
+  {
+    title: 'We check it against public records',
+    body: 'We look at transmission capacity, substations, roads, terrain, and water using public data. You do not have to gather anything.',
+  },
+  {
+    title: 'We call you if it looks workable',
+    body: 'A real conversation about what your property could support and what a purchase or an option would look like.',
+  },
+  {
+    title: 'We make an offer, or we tell you why not',
+    body: 'If it fits, we put terms in front of you. If it does not, we say so and explain what was missing. Either way you get an answer.',
+  },
+];
+---
+
+<Base
+  title="PoweredLandCo | We buy and option rural land for data centers"
+  description="We are a principal buyer and site developer for data center land. Tell us about your rural property and we will tell you plainly whether it qualifies. No cost, no obligation."
+  path="/"
+  schemas={[breadcrumbSchema(site, [{ label: 'Home', path: '/' }])]}
+>
+  <Hero headline={site.hero.headline} subhead={site.hero.subhead}>
+    <FormSlot />
+  </Hero>
+
+  <section class="section">
+    <div class="page">
+      <p class="eyebrow">Who you are dealing with</p>
+      <h2 class="measure">We are the buyer, not a middleman</h2>
+      <div class="grid grid--3">
+        {
+          site.trustPoints.map((point) => (
+            <div class="card">
+              <h3>{point.title}</h3>
+              <p>{point.body}</p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--sunken">
+    <div class="page">
+      <p class="eyebrow">How it works</p>
+      <h2 class="measure">Four steps, and we do most of the work</h2>
+      <StepList steps={steps} />
+      <p style="margin-top: var(--s6)">
+        <Button href="/how-it-works" variant="secondary">
+          Read more about the process
+        </Button>
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="page">
+      <p class="eyebrow">Where we work</p>
+      <h2 class="measure">Find the site for your state</h2>
+      <p class="lede measure">
+        Each state has its own site with local utilities, regions, and answers
+        for that state. Pick yours to get started.
+      </p>
+      <ul class="state-list">
+        {
+          states.map((state) => (
+            <li>
+              <a href={`https://${state.domain}`}>{state.stateName}</a>
+            </li>
+          ))
+        }
+      </ul>
+      <p style="margin-top: var(--s6)">
+        <Button href="/states" variant="secondary">See every state</Button>
+      </p>
+    </div>
+  </section>
+
+  <section class="section section--tint">
+    <div class="page">
+      <div class="closer">
+        <h2>Not sure if your land is worth asking about?</h2>
+        <p class="lede">
+          Ask anyway. Checking costs you nothing, and the properties that turn
+          out to work are often ones the owner assumed were ordinary.
+        </p>
+        <Button href="#qualify">See if your land qualifies</Button>
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .state-list {
+    list-style: none;
+    margin: var(--s5) 0 0;
+    padding: 0;
+    display: grid;
+    gap: var(--s2) var(--s5);
+    grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr));
+  }
+
+  .state-list a {
+    display: inline-block;
+    padding-block: var(--s2);
+    font-size: var(--text-lg);
+    font-weight: 600;
+  }
+
+  .closer {
+    max-width: 40rem;
+  }
+</style>

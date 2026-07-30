@@ -1,0 +1,90 @@
+---
+import Base from '../../layouts/Base.astro';
+import Hero from '../../components/Hero.astro';
+import FormSlot from '../../components/FormSlot.astro';
+import StepList from '../../components/StepList.astro';
+import Button from '../../components/Button.astro';
+import { currentSite } from '../../data/sites.mjs';
+import { PROCESS_STEPS } from '../../data/process.mjs';
+import { breadcrumbSchema } from '../../lib/schema.mjs';
+import { statePath } from '../../lib/nav.mjs';
+
+const site = currentSite();
+const steps = PROCESS_STEPS.map((title, index) => ({
+  title,
+  body: site.pageCopy.howItWorks.steps[index],
+}));
+---
+
+<Base
+  title={`Sell Your Land for a Data Center in ${site.stateName}`}
+  description={`We buy and option rural ${site.stateName} land for data center development. Tell us about your property and we will tell you plainly whether it qualifies. No cost, no obligation.`}
+  path="/"
+  schemas={[breadcrumbSchema(site, [{ label: 'Home', path: '/' }])]}
+>
+  <Hero headline={site.hero.headline} subhead={site.hero.subhead}>
+    <FormSlot />
+  </Hero>
+
+  <section class="section">
+    <div class="page">
+      <p class="eyebrow">Who you are dealing with</p>
+      <h2 class="measure">We are the buyer, not a middleman</h2>
+      <div class="grid grid--3">
+        {
+          site.trustPoints.map((point) => (
+            <div class="card">
+              <h3>{point.title}</h3>
+              <p>{point.body}</p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--sunken">
+    <div class="page">
+      <p class="eyebrow">How it works</p>
+      <h2 class="measure">Four steps, and we do most of the work</h2>
+      <StepList steps={steps} />
+      <p style="margin-top: var(--s6)">
+        <Button href="/how-it-works" variant="secondary">
+          Read more about the process
+        </Button>
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="page">
+      <div class="measure">
+        <p class="eyebrow">{site.stateName}</p>
+        <h2>Selling land for a data center in {site.stateName}</h2>
+        <p class="lede">{site.directAnswer}</p>
+        <Button href={statePath(site)} variant="secondary">
+          More about {site.stateName}
+        </Button>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--tint">
+    <div class="page">
+      <div class="closer">
+        <h2>Not sure if your land is worth asking about?</h2>
+        <p class="lede">
+          Ask anyway. Checking costs you nothing, and the properties that turn
+          out to work are often ones the owner assumed were ordinary.
+        </p>
+        <Button href="#qualify">See if your land qualifies</Button>
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .closer {
+    max-width: 40rem;
+  }
+</style>

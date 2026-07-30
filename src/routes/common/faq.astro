@@ -1,0 +1,49 @@
+---
+import Base from '../../layouts/Base.astro';
+import Faq from '../../components/Faq.astro';
+import FormSlot from '../../components/FormSlot.astro';
+import { currentSite } from '../../data/sites.mjs';
+import { faqPageSchema, breadcrumbSchema } from '../../lib/schema.mjs';
+
+const site = currentSite();
+const entries = site.faq;
+const where = site.type === 'hub' ? '' : ` in ${site.stateName}`;
+---
+
+<Base
+  title={`Questions About Selling Land for a Data Center${where}`}
+  description={`Straight answers about options, purchases, what we need from you, and what happens to your information when you contact us about${where || ' rural'} land.`}
+  path="/faq"
+  schemas={[
+    faqPageSchema(site, entries),
+    breadcrumbSchema(site, [
+      { label: 'Home', path: '/' },
+      { label: 'Questions', path: '/faq' },
+    ]),
+  ]}
+>
+  <div class="page section">
+    <p class="eyebrow">Questions</p>
+    <h1 class="measure">Questions landowners ask us</h1>
+    <p class="lede measure">
+      If your question is not here, send it with the form at the bottom of this
+      page and we will answer it directly.
+    </p>
+  </div>
+
+  <div class="page section--tight">
+    <Faq entries={entries} level={2} />
+  </div>
+
+  <div class="page section">
+    <div class="form-wrap">
+      <FormSlot heading="Ask us about your land" />
+    </div>
+  </div>
+</Base>
+
+<style>
+  .form-wrap {
+    max-width: 44rem;
+  }
+</style>

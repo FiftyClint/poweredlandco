@@ -1,0 +1,120 @@
+---
+import '../../styles/global.css';
+import Wordmark from '../../components/Wordmark.astro';
+import { currentSite, siteUrl } from '../../data/sites.mjs';
+import { BRAND, LEGAL_POSITIONING } from '../../data/brand.mjs';
+import { organizationSchema } from '../../lib/schema.mjs';
+
+/**
+ * The entire site for a state we hold but have not launched.
+ *
+ * One page, brand, and a way to reach us. Deliberately not built on the full
+ * layout: there is no navigation because there is nowhere to navigate to, and a
+ * header full of dead links would be worse than none.
+ *
+ * It is not a coming-soon holding page with nothing behind it either. A
+ * landowner who arrives here gets a real email address and a real explanation.
+ */
+const site = currentSite();
+const title = `${BRAND.name} | ${site.stateName}`;
+const description = `${BRAND.name} buys and options rural land for data center development. Our ${site.stateName} site is on the way. Reach us by email in the meantime.`;
+---
+
+<!doctype html>
+<html
+  lang="en"
+  style={`--accent:${site.palette.base};--accent-dark:${site.palette.dark};--accent-tint:${site.palette.tint}`}
+>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={siteUrl(site)} />
+    <link
+      rel="preload"
+      href="/fonts/source-sans-3-latin.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={siteUrl(site)} />
+    <meta property="og:site_name" content={BRAND.name} />
+    <meta name="theme-color" content={site.palette.base} />
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify(organizationSchema(site))}
+    />
+  </head>
+
+  <body class="parked">
+    <main class="parked__inner">
+      <Wordmark size="lg" />
+
+      <h1>{site.stateName}</h1>
+
+      <p class="lede">{site.intro}</p>
+
+      <p>
+        Email us about your land and we will look at it. No cost, no obligation,
+        and a real answer either way.
+      </p>
+
+      <p class="parked__contact">
+        <a href={`mailto:${BRAND.email}`}>{BRAND.email}</a>
+      </p>
+    </main>
+
+    <!--
+      The hub link and the positioning sentence live outside <main> because they
+      are chrome, identical on every site by design. On a full site they sit in
+      the footer for the same reason. Keeping them out of <main> is also what
+      lets scripts/check-duplicate-copy.mjs compare the parts of these four
+      pages that are actually supposed to differ.
+    -->
+    <footer class="parked__footer">
+      <p class="small">
+        <a href={`https://${BRAND.hubDomain}`}>Visit {BRAND.name}</a>
+      </p>
+      <p class="parked__legal small">{LEGAL_POSITIONING}</p>
+    </footer>
+  </body>
+</html>
+
+<style>
+  .parked {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--s7);
+    padding: var(--s7) var(--s5);
+  }
+
+  .parked__inner,
+  .parked__footer {
+    width: 100%;
+    max-width: 34rem;
+  }
+
+  .parked__inner h1 {
+    margin-top: var(--s6);
+  }
+
+  .parked__contact {
+    margin-top: var(--s6);
+    font-size: var(--text-lg);
+    font-weight: 700;
+  }
+
+  .parked__legal {
+    margin-top: var(--s7);
+    padding-top: var(--s5);
+    border-top: 1px solid var(--rule);
+    color: var(--ink-muted);
+  }
+</style>

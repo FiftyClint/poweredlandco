@@ -1,0 +1,84 @@
+---
+import Base from '../../layouts/Base.astro';
+import StateCard from '../../components/StateCard.astro';
+import FormSlot from '../../components/FormSlot.astro';
+import { currentSite, liveStateSites } from '../../data/sites.mjs';
+import { breadcrumbSchema } from '../../lib/schema.mjs';
+
+const site = currentSite();
+const states = liveStateSites();
+const active = states.filter((s) => s.type === 'state');
+const parked = states.filter((s) => s.type === 'parked');
+---
+
+<Base
+  title="States Where We Buy Land for Data Centers"
+  description="Every state where we are actively looking for rural land for data center development, each with its own site covering local utilities, regions, and answers."
+  path="/states"
+  schemas={[
+    breadcrumbSchema(site, [
+      { label: 'Home', path: '/' },
+      { label: 'States', path: '/states' },
+    ]),
+  ]}
+>
+  <div class="page section">
+    <p class="eyebrow">Where we work</p>
+    <h1 class="measure">Pick your state</h1>
+    <p class="lede measure">
+      Each state has its own site. The utilities, the regions, and the rules are
+      different in every one, so the answers are too. Choose yours and you will
+      land on the page written for it.
+    </p>
+  </div>
+
+  {
+    active.length > 0 && (
+      <div class="page section--tight">
+        <h2>Where we are actively looking</h2>
+        <div class="state-grid">
+          {active.map((state) => (
+            <StateCard site={state} />
+          ))}
+        </div>
+      </div>
+    )
+  }
+
+  {
+    parked.length > 0 && (
+      <div class="page section">
+        <h2>Opening soon</h2>
+        <p class="lede measure">
+          We hold these domains and expect to work in these states. There is no
+          full site yet, but if you own land in one of them you can still reach
+          us using the form below and we will look at it.
+        </p>
+        <div class="state-grid">
+          {parked.map((state) => (
+            <StateCard site={state} />
+          ))}
+        </div>
+      </div>
+    )
+  }
+
+  <div class="page section">
+    <div class="form-wrap">
+      <FormSlot heading="Not sure which state site to use?" />
+    </div>
+  </div>
+</Base>
+
+<style>
+  .state-grid {
+    display: grid;
+    gap: var(--s4);
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+    margin-top: var(--s5);
+  }
+
+  .form-wrap {
+    max-width: 44rem;
+  }
+</style>

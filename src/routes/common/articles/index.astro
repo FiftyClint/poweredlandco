@@ -1,0 +1,113 @@
+---
+import Base from '../../../layouts/Base.astro';
+import FormSlot from '../../../components/FormSlot.astro';
+import { currentSite } from '../../../data/sites.mjs';
+import { articlesFor, articlePath } from '../../../lib/articles.mjs';
+import { breadcrumbSchema } from '../../../lib/schema.mjs';
+
+const site = currentSite();
+const articles = await articlesFor(site);
+const where = site.type === 'hub' ? '' : ` in ${site.stateName}`;
+---
+
+<Base
+  title={`Articles for Landowners${where}`}
+  description={`Plain language articles about selling or leasing rural land for data center development${where}, written for landowners rather than investors.`}
+  path="/articles"
+  schemas={[
+    breadcrumbSchema(site, [
+      { label: 'Home', path: '/' },
+      { label: 'Articles', path: '/articles' },
+    ]),
+  ]}
+>
+  <div class="page section">
+    <p class="eyebrow">Articles</p>
+    <h1 class="measure">Written for landowners</h1>
+    <p class="lede measure">
+      Short, plain explanations of the things landowners actually ask us about.
+      No jargon, and no advice about what you should do with your property.
+    </p>
+  </div>
+
+  <div class="page section--tight">
+    {
+      articles.length > 0 ? (
+        <ul class="article-list">
+          {articles.map((entry) => (
+            <li>
+              <article class="card">
+                <h2>
+                  <a href={articlePath(entry)}>{entry.data.title}</a>
+                </h2>
+                <p>{entry.data.description}</p>
+                {entry.data.published && (
+                  <p class="small muted">{entry.data.published}</p>
+                )}
+              </article>
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <div class="empty measure">
+          <h2>Nothing published here yet</h2>
+          <p>
+            We are writing the first set of articles now. In the meantime, the
+            questions page covers most of what landowners ask us, and you are
+            welcome to send us a question directly.
+          </p>
+        </div>
+      )
+    }
+  </div>
+
+  <div class="page section">
+    <div class="form-wrap">
+      <FormSlot heading="Have a question about your land?" />
+    </div>
+  </div>
+</Base>
+
+<style>
+  .article-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: var(--s5);
+    max-width: 44rem;
+  }
+
+  .article-list h2 {
+    font-size: var(--text-xl);
+    margin-bottom: var(--s2);
+  }
+
+  .article-list h2 a {
+    text-decoration: none;
+    color: var(--ink);
+  }
+
+  .article-list h2 a:hover {
+    color: var(--accent-dark);
+    text-decoration: underline;
+  }
+
+  .article-list p:last-child {
+    margin-bottom: 0;
+  }
+
+  .empty {
+    padding: var(--s6);
+    background: var(--surface-sunken);
+    border-radius: var(--radius-lg);
+  }
+
+  .empty p:last-child {
+    margin-bottom: 0;
+  }
+
+  .form-wrap {
+    max-width: 44rem;
+  }
+</style>

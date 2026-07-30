@@ -1,0 +1,96 @@
+---
+import Base from '../../layouts/Base.astro';
+import FormSlot from '../../components/FormSlot.astro';
+import { currentSite } from '../../data/sites.mjs';
+import { BRAND, LEGAL_POSITIONING } from '../../data/brand.mjs';
+import { breadcrumbSchema } from '../../lib/schema.mjs';
+
+const site = currentSite();
+---
+
+<Base
+  title={`About ${BRAND.name} | A principal buyer of data center land`}
+  description="We buy and option rural land for data center development using our own capital. We are not a brokerage and we do not represent sellers. Here is who we are and how to reach us."
+  path="/about"
+  schemas={[
+    breadcrumbSchema(site, [
+      { label: 'Home', path: '/' },
+      { label: 'About', path: '/about' },
+    ]),
+  ]}
+>
+  <div class="page section">
+    <p class="eyebrow">About us</p>
+    <h1 class="measure">Who we are</h1>
+
+    <div class="measure stack">
+      <p class="lede">
+        {BRAND.name} acquires and develops rural land for data center use. We
+        look for property that can support the power, space, and access these
+        facilities need, and when we find it we buy the land or we take an
+        option on it.
+      </p>
+
+      <p>
+        We are principals. The money we put into a property is ours, and we
+        carry the risk of whether a site works out. That is a meaningful
+        difference from the people who normally contact landowners about their
+        property, and it changes the conversation. We have no reason to talk you
+        into anything, because we are the ones who have to live with the
+        purchase.
+      </p>
+
+      <!--
+        Required verbatim. Also rendered in the footer of every page.
+        scripts/lint-copy.mjs asserts both. Do not reword.
+      -->
+      <p class="callout">{LEGAL_POSITIONING}</p>
+
+      <p>
+        What that means for you in practice: we do not take a commission, we do
+        not advertise your land to anyone else, and there is no fee of any kind
+        for talking to us. If your property does not fit what we need, we do not
+        earn anything by pretending otherwise, so we will simply tell you.
+      </p>
+
+      <h2>How we evaluate property</h2>
+      <p>
+        We start with public records. Transmission and substation data, road
+        networks, floodplain maps, and terrain tell us most of what we need to
+        know before anyone visits. That work is ours, not yours. You will never
+        be asked to pay for a survey or an engineering study in order to have a
+        conversation with us.
+      </p>
+
+      <h2>How to reach us</h2>
+      <p>
+        Email is the fastest way to reach a person here.
+        <a href={`mailto:${BRAND.email}`}>{BRAND.email}</a>
+      </p>
+      <p>
+        You can also use the form below. It reaches the same place, and it gives
+        us enough to start looking at your property before we reply.
+      </p>
+    </div>
+  </div>
+
+  <div class="page section--tight">
+    <div class="form-wrap">
+      <FormSlot heading="Tell us about your land" />
+    </div>
+  </div>
+</Base>
+
+<style>
+  .callout {
+    padding: var(--s4) var(--s5);
+    background: var(--accent-tint);
+    border-left: 4px solid var(--accent);
+    border-radius: 0 var(--radius) var(--radius) 0;
+    font-weight: 600;
+  }
+
+  .form-wrap {
+    max-width: 44rem;
+  }
+</style>
