@@ -35,8 +35,18 @@ const PAGES = [
   { site: 'hub', path: '/faq', label: 'Questions' },
   { site: 'hub', path: '/about', label: 'About' },
   { site: 'hub', path: '/articles', label: 'Articles' },
-  { site: 'hub', path: '/privacy', label: 'Privacy', note: 'Template. Needs a lawyer before launch.' },
-  { site: 'hub', path: '/terms', label: 'Terms', note: 'Template. Needs a lawyer before launch.' },
+  {
+    site: 'hub',
+    path: '/privacy',
+    label: 'Privacy',
+    note: 'Written conservatively. Not reviewed by an attorney, by decision.',
+  },
+  {
+    site: 'hub',
+    path: '/terms',
+    label: 'Terms',
+    note: 'Read the section on what we are and are not. That is the part that matters.',
+  },
   { site: 'hub', path: '/thank-you', label: 'Thank You', note: 'Seen after the form is sent.' },
   {
     site: 'va',

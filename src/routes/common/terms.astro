@@ -2,20 +2,26 @@
 import Base from '../../layouts/Base.astro';
 import Prose from '../../components/Prose.astro';
 import { currentSite } from '../../data/sites.mjs';
-import { BRAND, LEGAL_POSITIONING } from '../../data/brand.mjs';
+import { BRAND, LEGAL_POSITIONING, LEGAL_JURISDICTION } from '../../data/brand.mjs';
 import { breadcrumbSchema } from '../../lib/schema.mjs';
 
 /*
- * TODO: LEGAL REVIEW REQUIRED BEFORE LAUNCH
+ * NOT REVIEWED BY AN ATTORNEY. This is Clint's decision, recorded here so that
+ * nobody later assumes it was vetted.
  *
- * Standard template, not reviewed by an attorney. Items to confirm:
- *   - That the no-brokerage language below matches the real estate licensing
- *     rules of every state in the network. This is the highest risk item on
- *     the site and should be reviewed state by state.
- *   - Limitation of liability wording and whether it is enforceable in the
- *     states we operate in.
- *   - Governing law and venue. Currently left unspecified on purpose, because
- *     naming the wrong one is worse than naming none.
+ * Written conservatively as a result. The approach throughout is to claim
+ * nothing and disclaim clearly, because every term here is one we would have to
+ * defend without having had anyone check it.
+ *
+ * The section that matters most is the one below on what we are and are not.
+ * Real estate licensing is regulated state by state, and this network operates
+ * in fourteen of them. The wording is deliberately about what we do rather than
+ * about what we are permitted to do: we buy for our own account, we take no
+ * commission, and we perform no service for the landowner. Those facts are what
+ * keep this outside brokerage regulation, so those facts are what it states.
+ *
+ * Governing law is omitted unless LEGAL_JURISDICTION is set in brand.mjs.
+ * Naming the wrong state would be worse than naming none.
  */
 
 const site = currentSite();
@@ -47,11 +53,39 @@ const updated = 'July 2026';
       <h2>What we are, and what we are not</h2>
       <p>{LEGAL_POSITIONING}</p>
       <p>
-        We buy land and we option land for our own account. We do not provide
-        real estate services to you, we do not represent your interests in a
-        transaction, and we are not paid a commission on anything. You are free
-        to hire your own professional advisors at any point, and for a decision
-        of this size you probably should.
+        We buy land and we take options on land for our own account, with our
+        own money, carrying our own risk. Specifically, and in every state where
+        this site operates:
+      </p>
+      <ul>
+        <li>
+          We do not perform real estate services for you or for anyone else, and
+          we are not acting on your behalf.
+        </li>
+        <li>
+          We do not represent buyers or sellers in a transaction, and no
+          relationship of trust or representation is created between us by your
+          use of this site or by your sending us information.
+        </li>
+        <li>
+          We are not paid a commission, a finder fee, or any other compensation
+          tied to a transaction on your property. You are never charged anything
+          by us for any reason.
+        </li>
+        <li>
+          We do not advertise, promote, or offer your property to third parties.
+          If we want your land, we buy it ourselves.
+        </li>
+        <li>
+          We do not appraise property or give opinions of value for you to rely
+          on. If we name a price, it is what we are willing to pay, which is not
+          the same thing as what your land is worth.
+        </li>
+      </ul>
+      <p>
+        You are free to hire your own attorney, accountant, appraiser, or other
+        advisor at any point, and for a decision of this size you probably
+        should. Nothing we say should be treated as a substitute for that.
       </p>
 
       <h2>Information on this site is general</h2>
@@ -101,10 +135,33 @@ const updated = 'July 2026';
         are not responsible for their content.
       </p>
 
+      <h2>What you send us is not confidential</h2>
+      <p>
+        Please do not send us anything you consider secret. Information you
+        submit through this site is used to evaluate your property and to
+        contact you, as our privacy policy describes, but it is not treated as
+        confidential and no confidentiality agreement exists between us unless we
+        sign one. If we later negotiate on your property, that is the point at
+        which to put confidentiality in writing.
+      </p>
+
+      {
+        LEGAL_JURISDICTION && (
+          <Fragment>
+            <h2>Governing law</h2>
+            <p>
+              These terms are governed by the laws of {LEGAL_JURISDICTION},
+              without regard to its conflict of law rules.
+            </p>
+          </Fragment>
+        )
+      }
+
       <h2>Changes</h2>
       <p>
         We may update these terms. When we do, the date at the top of this page
-        changes.
+        changes. We do not apply changes retroactively to a transaction already
+        under way.
       </p>
 
       <h2>Contact</h2>

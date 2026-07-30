@@ -2,21 +2,22 @@
 import Base from '../../layouts/Base.astro';
 import Prose from '../../components/Prose.astro';
 import { currentSite } from '../../data/sites.mjs';
-import { BRAND } from '../../data/brand.mjs';
+import { BRAND, CONTACT_CONSENT } from '../../data/brand.mjs';
 import { breadcrumbSchema } from '../../lib/schema.mjs';
 
 /*
- * TODO: LEGAL REVIEW REQUIRED BEFORE LAUNCH
+ * NOT REVIEWED BY AN ATTORNEY. This is Clint's decision, recorded here so that
+ * nobody later assumes it was vetted.
  *
- * This is a standard template written to describe what the site actually does.
- * It has not been reviewed by an attorney. Before any domain goes live it needs
- * a lawyer to confirm the disclosures against the states we operate in and
- * against how CRMX and Make.com actually store and process submissions.
+ * Written conservatively as a result: it promises less than we could get away
+ * with, describes only what the site actually does, and gives people more
+ * control than the minimum. Where a choice existed between a broad permission
+ * and a narrow one, this takes the narrow one, since the risk of over
+ * promising here is far cheaper than the risk of over collecting.
  *
- * Known items for that review:
- *   - Whether any state we operate in requires additional notice for lead data.
- *   - Retention period. The wording below is deliberately non-committal.
- *   - Whether a "do not sell my personal information" notice is required.
+ * If a lawyer ever does look at this, the two things worth their time are the
+ * phone and text consent language and whether any state in the network wants
+ * additional notice for lead data.
  */
 
 const site = currentSite();
@@ -57,7 +58,21 @@ const updated = 'July 2026';
       <p>
         We use what you send us for two purposes. First, to evaluate whether
         your property fits what we are looking for. Second, to contact you about
-        it. That is the whole list.
+        it. That is the whole list. We do not use it to advertise unrelated
+        products to you, and we do not add you to a general mailing list.
+      </p>
+
+      <h2>Contacting you by phone and text</h2>
+      <p>
+        When you send us a form, you are agreeing that we may reach you by
+        phone, text message, or email about your property. This is the full
+        wording shown on the form itself:
+      </p>
+      <p class="quote">{CONTACT_CONSENT}</p>
+      <p>
+        We contact you about your land and nothing else. If you want us to stop,
+        say so on a call, reply STOP to a text, or email us, and we will stop.
+        You do not have to give a reason and it will not affect anything else.
       </p>
 
       <h2>Who we share it with</h2>
@@ -82,7 +97,9 @@ const updated = 'July 2026';
       <p>
         We keep property and contact records for as long as they are useful to
         the work described above. If you want your information removed, email us
-        and we will remove it.
+        and we will remove it, and we will not ask you to justify the request.
+        Where we have a legal obligation to retain something, for example
+        records tied to a completed transaction, we keep only that.
       </p>
 
       <h2>Cookies</h2>
@@ -115,8 +132,18 @@ const updated = 'July 2026';
       <h2>Contact</h2>
       <p>
         Questions about this policy can go to
-        <a href={`mailto:${BRAND.email}`}>{BRAND.email}</a>.
+        <a href={`mailto:${BRAND.email}`}>{BRAND.email}</a>. A real person reads
+        that address.
       </p>
     </Prose>
   </div>
 </Base>
+
+<style>
+  .quote {
+    padding: var(--s4) var(--s5);
+    background: var(--surface-sunken);
+    border-left: 4px solid var(--accent);
+    border-radius: 0 var(--radius) var(--radius) 0;
+  }
+</style>

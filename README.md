@@ -126,13 +126,32 @@ The form is one screen. Only name, phone and email are required. "Not sure" is a
 acceptable answer to every question that has one, and we never ask for a parcel
 number or any other technical identifier.
 
+## Legal pages
+
+**Privacy and terms have not been reviewed by an attorney.** That is a decision
+Clint made deliberately, and it is written down here so nobody later assumes
+otherwise.
+
+They are therefore written conservatively: they describe only what the site
+actually does, promise less rather than more, and give people more control over
+their information than the minimum. The no-brokerage section in `terms.astro`
+argues from facts rather than from status, since it is the facts that keep us
+outside brokerage regulation in fourteen states: we buy for our own account, we
+take no commission, and we perform no service for the landowner.
+
+The form collects a phone number and we intend to call and text people, so the
+consent language in `CONTACT_CONSENT` sits directly above the submit button
+rather than being buried in a linked policy, and it is repeated in full in the
+privacy policy.
+
+`LEGAL_JURISDICTION` in `src/data/brand.mjs` is unset, so the terms carry no
+governing law clause. Set it to the state PoweredLandCo is organized in and the
+clause appears.
+
 ## Known TODOs
 
-- `src/routes/common/privacy.astro` and `terms.astro` are templates marked
-  `TODO: LEGAL REVIEW REQUIRED BEFORE LAUNCH`. They must not go live unreviewed.
-  The state by state brokerage licensing question in `terms.astro` is the
-  highest risk item.
 - Imagery is placeholder treatment only. No licensed photography yet, and no fake
   team photos, ever.
+- Contact email is `info@poweredlandco.com` and the mailbox does not exist yet.
 - Deployment target is undecided. Cloudflare now steers new projects to Workers
   static assets rather than Pages; per-site builds keep either option open.

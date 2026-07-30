@@ -1,5 +1,6 @@
 ---
 import { currentSite, liveStateSites } from '../data/sites.mjs';
+import { CONTACT_CONSENT } from '../data/brand.mjs';
 import {
   crmxEmbed,
   leadWebhook,
@@ -202,6 +203,13 @@ const knownState = site.type === 'hub' ? null : site.stateName;
           <label for={`${id}-notes`}>Anything else we should know?</label>
           <textarea id={`${id}-notes`} name="notes" rows="4"></textarea>
         </p>
+
+        {/*
+          Directly above the button on purpose. A consent disclosure buried in
+          a linked policy is not a disclosure, and this is the moment the
+          landowner is actually handing over a phone number.
+        */}
+        <p class="lead-form__consent small">{CONTACT_CONSENT}</p>
 
         <button class="btn btn--primary btn--wide" type="submit">
           See if my land qualifies
@@ -417,8 +425,16 @@ const knownState = site.type === 'hub' ? null : site.stateName;
     margin-top: var(--s5);
   }
 
+  .lead-form__consent {
+    margin: var(--s6) 0 var(--s4);
+    padding: var(--s3) var(--s4);
+    background: var(--surface-sunken);
+    border-radius: var(--radius);
+    color: var(--ink-muted);
+  }
+
   .lead-form button[type='submit'] {
-    margin-top: var(--s6);
+    margin-top: 0;
   }
 
   .lead-form__status {

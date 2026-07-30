@@ -27,6 +27,30 @@ export const LEGAL_POSITIONING =
   'PoweredLandCo is a principal buyer and site developer. We are not a licensed real estate brokerage and we do not represent sellers.';
 
 /**
+ * Consent language shown directly above the submit button and repeated in the
+ * privacy policy.
+ *
+ * This exists because the form collects a phone number and we intend to call
+ * and text people who fill it in. Federal rules on contacting consumers by
+ * phone and text expect the disclosure to be clear, visible at the point of
+ * submission, and paired with an easy way to stop. The last sentence is the
+ * standard wording that consent is not a condition of anything, which matters
+ * because we are asking people to hand over a phone number before they have
+ * agreed to anything at all.
+ */
+export const CONTACT_CONSENT =
+  'By sending this, you agree that we may contact you by phone, text message, or email about your property. Message and data rates may apply. You can tell us to stop at any time and we will. Agreeing is not a condition of any sale or purchase.';
+
+/**
+ * Jurisdiction for the governing law clause in the terms.
+ *
+ * Left null on purpose. Naming the wrong state is worse than naming none, and
+ * this should be the state PoweredLandCo is actually organized in. Set it and
+ * the clause appears; leave it and the clause stays out.
+ */
+export const LEGAL_JURISDICTION = null;
+
+/**
  * Words that must never appear in site copy. We are principals, and using any
  * of these risks implying an unlicensed brokerage relationship.
  */
