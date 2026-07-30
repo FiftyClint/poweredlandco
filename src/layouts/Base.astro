@@ -170,6 +170,19 @@ const currentPath = Astro.url.pathname.replace(/\/$/, '') || '/';
     padding-block: var(--s4);
   }
 
+  /*
+   * On a phone the six nav items wrap to two rows, and every pixel the header
+   * spends pushes the intake form further down. Tightened here rather than
+   * hidden behind a menu button, because this audience does badly with icons
+   * that conceal navigation.
+   */
+  @media (max-width: 46rem) {
+    .site-header__inner {
+      gap: var(--s2) var(--s4);
+      padding-block: var(--s3);
+    }
+  }
+
   .site-header__brand {
     text-decoration: none;
   }
@@ -192,6 +205,17 @@ const currentPath = Astro.url.pathname.replace(/\/$/, '') || '/';
     color: var(--ink);
     text-decoration: none;
     border-bottom: 2px solid transparent;
+  }
+
+  @media (max-width: 46rem) {
+    .site-nav {
+      gap: var(--s2) var(--s4);
+    }
+
+    .site-nav a {
+      padding-block: var(--s1);
+      font-size: 1rem;
+    }
   }
 
   .site-nav a:hover,

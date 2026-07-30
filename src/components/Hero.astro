@@ -33,9 +33,18 @@ const { headline, subhead, ctaHref = '#qualify', ctaLabel = 'See if your land qu
 
   .hero__inner {
     display: grid;
-    gap: var(--s6);
-    padding-block: var(--s7);
+    gap: var(--s4);
+    /* Tight on a phone so the intake form sits as close to the fold as it can
+       without pushing the value proposition off the top. */
+    padding-block: var(--s5);
     align-items: start;
+  }
+
+  @media (min-width: 40rem) {
+    .hero__inner {
+      gap: var(--s6);
+      padding-block: var(--s7);
+    }
   }
 
   @media (min-width: 60rem) {
