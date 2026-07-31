@@ -6,7 +6,7 @@
  * The mark reads as a horizon with a transmission line, which is the whole
  * business in one glyph: rural land plus power.
  */
-const { size = 'base' } = Astro.props;
+const { size = 'base', state = null } = Astro.props;
 ---
 
 <span class:list={['wordmark', size === 'lg' && 'wordmark--lg']}>
@@ -28,6 +28,14 @@ const { size = 'base' } = Astro.props;
     <path d="M16 17l-4 4M16 17l4 4" />
   </svg>
   <span class="wordmark__text">Powered<span class="wordmark__co">LandCo</span></span>
+  {
+    state && (
+      <Fragment>
+        <span class="wordmark__sep" aria-hidden="true">·</span>
+        <span class="wordmark__state">{state}</span>
+      </Fragment>
+    )
+  }
 </span>
 
 <style>
@@ -55,5 +63,25 @@ const { size = 'base' } = Astro.props;
 
   .wordmark__co {
     color: var(--accent-dark);
+  }
+
+  /*
+   * The state sits next to the company name so that someone arriving from
+   * arkansasdatacenterland.com sees that state confirmed immediately.
+   *
+   * PoweredLandCo stays the identity rather than the state name becoming the
+   * brand. "Arkansas Data Center Land" as a masthead would read like a
+   * marketplace, and being mistaken for a listing service is the one thing this
+   * business cannot afford.
+   */
+  .wordmark__sep {
+    color: var(--rule-strong);
+    font-weight: 400;
+  }
+
+  .wordmark__state {
+    font-weight: 600;
+    color: var(--ink-muted);
+    white-space: nowrap;
   }
 </style>

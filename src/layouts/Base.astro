@@ -92,7 +92,7 @@ const currentPath = Astro.url.pathname.replace(/\/$/, '') || '/';
     <header class="site-header">
       <div class="page site-header__inner">
         <a class="site-header__brand" href="/" aria-label={`${BRAND.name} home`}>
-          <Wordmark />
+          <Wordmark state={site.type === 'hub' ? null : site.stateName} />
         </a>
 
         <nav aria-label="Main">

@@ -52,15 +52,17 @@ const utilityGroups = [
   ]}
 >
   <div class="page section">
-    <p class="eyebrow">{site.stateName}</p>
-    <h1 class="measure">
-      How to sell your land for a data center in {site.stateName}
-    </h1>
-    <p class="lede measure">{site.directAnswer}</p>
-  </div>
-
-  <div class="page section--tight">
     <div class="split">
+      <div class="split__intro">
+        <p class="eyebrow">{site.stateName}</p>
+        <h1>How to sell your land for a data center in {site.stateName}</h1>
+        <p class="lede">{site.directAnswer}</p>
+      </div>
+
+      <aside class="split__aside">
+        <FormSlot heading={`See if your ${site.stateName} land qualifies`} />
+      </aside>
+
       <div class="split__main stack-lg">
         {/* First, because it is the first thing anyone asks. */}
         <section aria-labelledby="value-heading">
@@ -165,23 +167,48 @@ const utilityGroups = [
           </div>
         </section>
       </div>
-
-      <aside class="split__aside">
-        <FormSlot heading={`See if your ${site.stateName} land qualifies`} />
-      </aside>
     </div>
   </div>
 </Base>
 
 <style>
+  /*
+   * The form used to sit after every section, which put it 79 percent of the
+   * way down this page on a phone. On the one page landowners actually land on
+   * from a search. It now comes directly after the opening answer on a phone,
+   * and sits in a sticky right rail from the top on a wide screen, which also
+   * fills the dead space that was there.
+   */
   .split {
     display: grid;
-    gap: var(--s7);
+    gap: var(--s6);
+    grid-template-areas:
+      'intro'
+      'form'
+      'body';
+  }
+
+  .split__intro {
+    grid-area: intro;
+    max-width: 42rem;
+  }
+
+  .split__aside {
+    grid-area: form;
+  }
+
+  .split__main {
+    grid-area: body;
+    max-width: 42rem;
   }
 
   @media (min-width: 64rem) {
     .split {
-      grid-template-columns: 1fr 24rem;
+      grid-template-columns: minmax(0, 1fr) 24rem;
+      grid-template-areas:
+        'intro form'
+        'body  form';
+      column-gap: var(--s7);
       align-items: start;
     }
 
@@ -189,10 +216,6 @@ const utilityGroups = [
       position: sticky;
       top: var(--s5);
     }
-  }
-
-  .split__main {
-    max-width: 42rem;
   }
 
   .answers {
