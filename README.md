@@ -160,6 +160,27 @@ privacy policy.
 governing law clause. Set it to the state PoweredLandCo is organized in and the
 clause appears.
 
+## Deploying
+
+One Cloudflare Worker per live site, static files uploaded finished. Cloudflare
+never builds anything, which keeps build minutes out of the picture and means
+nobody can bypass the content guards on the way to a live domain.
+
+Cloudflare rather than the alternatives for specific reasons, all verified
+rather than assumed: GitHub Pages forbids using it to run a business and allows
+one custom domain per repository, Vercel's free tier prohibits commercial use
+outright, and Netlify's free tier can suspend a site mid-month on a credit cap.
+Cloudflare serves static assets free and unmetered on every plan. Their paid
+tiers are billed per domain with no volume discount, so at nineteen domains Pro
+would be roughly $4,560 a year and Business roughly $45,600, for features this
+project does not use.
+
+Nothing is locked in. Each build is plain static files in `dist/<key>/` and
+deploys anywhere.
+
+`docs/DEPLOY.md` has the step by step for Clint. `npm run deploy -- --dry-run`
+shows what would happen without credentials.
+
 ## Known TODOs
 
 - Imagery is placeholder treatment only. No licensed photography yet, and no fake
