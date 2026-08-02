@@ -73,6 +73,22 @@ correct and means they are stored properly.
 **Tell me when you reach this point.** I publish the sites, and then you do
 Part 3.
 
+### The workers.dev subdomain
+
+A brand new Cloudflare account has no `workers.dev` subdomain, and nothing can
+publish until one exists. This account's is **clint-bfa.workers.dev**, set on
+2026-08-02.
+
+That gives every site a temporary address, for example
+`poweredlandco-ar.clint-bfa.workers.dev`, which is how a deploy gets checked
+before any DNS is touched. Those addresses keep working after the real domains
+are attached and are handy for confirming a change reached production.
+
+Do **not** use the "Create application" or "Set up your application" flow in the
+Cloudflare dashboard. It connects the repository and has Cloudflare run the
+build, which skips the content guards and only ever builds one site rather than
+the full set. Publishing happens from GitHub Actions.
+
 ---
 
 ## Part 3. Point one domain at Cloudflare
