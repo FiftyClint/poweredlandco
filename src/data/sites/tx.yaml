@@ -1,9 +1,13 @@
 key: tx
-type: state
+type: parked
 domain: texasdatacenterland.com
 stateName: Texas
 stateAbbr: TX
 accent: loam
-# Full site. Content is written at checkpoint 2 (AR, KS) and checkpoint 3 (rest).
-# Flip to "live" once the content is written and Clint has reviewed it.
-status: pending
+status: live
+
+intro: >-
+  Texas is large enough that almost nothing true about the state is
+  reliably true about your particular piece of it. So we would rather talk
+  about your ground than about Texas. Tell us the county, roughly how many
+  acres, and anything you have noticed nearby, and we will look.

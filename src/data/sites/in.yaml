@@ -1,9 +1,13 @@
 key: in
-type: state
+type: parked
 domain: indianadatacenterland.com
 stateName: Indiana
 stateAbbr: IN
 accent: olive
-# Full site. Content is written at checkpoint 2 (AR, KS) and checkpoint 3 (rest).
-# Flip to "live" once the content is written and Clint has reviewed it.
-status: pending
+status: live
+
+intro: >-
+  Most questions we get from Indiana landowners start the same way.
+  Somebody got in touch about their ground and they are not sure what to
+  make of it. That is a reasonable place to start. Tell us what you have
+  and what you were told, and we will give you our read.

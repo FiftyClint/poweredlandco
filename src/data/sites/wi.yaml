@@ -1,9 +1,13 @@
 key: wi
-type: state
+type: parked
 domain: wisconsindatacenterland.com
 stateName: Wisconsin
 stateAbbr: WI
 accent: pine
-# Full site. Content is written at checkpoint 2 (AR, KS) and checkpoint 3 (rest).
-# Flip to "live" once the content is written and Clint has reviewed it.
-status: pending
+status: live
+
+intro: >-
+  Wisconsin landowners tend to ask us two things: whether their ground is
+  even a candidate, and what happens to the rest of the farm if it is. Both
+  are fair questions and both have real answers. Tell us where the property
+  is and we will work through them with you.

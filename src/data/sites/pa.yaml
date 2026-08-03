@@ -1,9 +1,13 @@
 key: pa
-type: state
+type: parked
 domain: pennsylvaniadatacenterland.com
 stateName: Pennsylvania
 stateAbbr: PA
 accent: slate
-# Full site. Content is written at checkpoint 2 (AR, KS) and checkpoint 3 (rest).
-# Flip to "live" once the content is written and Clint has reviewed it.
-status: pending
+status: live
+
+intro: >-
+  Pennsylvania ground can be close to serious power and still be awkward to
+  build on, or the other way round entirely. That is not something anybody
+  can tell from a map, and working it out is most of what we do. Tell us
+  where your land is and we will check it.

@@ -1,9 +1,13 @@
 key: ms
-type: state
+type: parked
 domain: mississippidatacenterland.com
 stateName: Mississippi
 stateAbbr: MS
 accent: pine
-# Full site. Content is written at checkpoint 2 (AR, KS) and checkpoint 3 (rest).
-# Flip to "live" once the content is written and Clint has reviewed it.
-status: pending
+status: live
+
+intro: >-
+  Plenty of Mississippi land sits close to the things a computing project
+  needs and plenty of it does not, and the difference is rarely obvious
+  from the road. We would rather look than guess. Tell us where your
+  property is and what is near it, and we will come back to you.

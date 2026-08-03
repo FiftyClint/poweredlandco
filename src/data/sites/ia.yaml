@@ -1,9 +1,13 @@
 key: ia
-type: state
+type: parked
 domain: iowadatacenterland.com
 stateName: Iowa
 stateAbbr: IA
 accent: olive
-# Full site. Content is written at checkpoint 2 (AR, KS) and checkpoint 3 (rest).
-# Flip to "live" once the content is written and Clint has reviewed it.
-status: pending
+status: live
+
+intro: >-
+  Iowa ground has been in demand for one thing or another for a long time,
+  and computing facilities are the newest. If you have had an approach, or
+  you are simply wondering what makes one parcel interesting and the next
+  one not, send us the county and we will tell you what we see.

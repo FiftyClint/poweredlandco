@@ -1,9 +1,13 @@
 key: ok
-type: state
+type: parked
 domain: oklahomadatacenterland.com
 stateName: Oklahoma
 stateAbbr: OK
 accent: loam
-# Full site. Content is written at checkpoint 2 (AR, KS) and checkpoint 3 (rest).
-# Flip to "live" once the content is written and Clint has reviewed it.
-status: pending
+status: live
+
+intro: >-
+  Oklahoma landowners are used to being approached about what sits under
+  their ground. This is about what sits on top of it, and the things that
+  matter are different. Tell us where the property is and what you have
+  noticed around it, and we will say whether it is worth pursuing.
