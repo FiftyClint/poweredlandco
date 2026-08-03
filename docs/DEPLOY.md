@@ -247,9 +247,19 @@ To create the second one:
 
 ### Then the script does the tedious part
 
-`npm run setup:zones` adds every remaining domain to Cloudflare, clears the
-registrar's parking records, and prints the nameservers to set at GoDaddy.
-Run it with `--dry-run` first; it says what it would do and changes nothing.
+The domain script runs from GitHub, not from anybody's laptop, because the token
+lives in repository secrets and nowhere else.
+
+1. Go to `github.com/FiftyClint/poweredlandco` and click **Actions**.
+2. Click **Domains** in the left menu.
+3. Click **Run workflow**.
+4. Leave the mode on **dry-run** the first time and click the green button.
+5. When it finishes, open the run and read the output. It says exactly which
+   records it would delete, and changes nothing.
+6. If it looks right, run it again with the mode set to **apply**.
+
+It adds every remaining domain to Cloudflare, clears the registrar's parking
+records, and prints the nameservers to set at GoDaddy.
 
 At GoDaddy, **My Products** lets you tick several domains and set nameservers on
 all of them in one action, so that stays one job rather than eighteen.

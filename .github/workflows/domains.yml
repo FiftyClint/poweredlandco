@@ -1,0 +1,52 @@
+name: Domains
+
+# Adds domains to Cloudflare and clears the registrar's parking records.
+#
+# Separate from Deploy on purpose. Publishing a site happens on every push and
+# must be boring and automatic. Changing DNS deletes things, so it happens only
+# when somebody asks for it, and it defaults to saying what it would do rather
+# than doing it.
+#
+# It also has to run here rather than on a laptop, because CLOUDFLARE_ZONE_TOKEN
+# lives in repository secrets and nowhere else.
+
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'dry-run reports what would change. apply actually changes it.'
+        type: choice
+        options: [dry-run, apply]
+        default: dry-run
+      only:
+        description: 'Optional single site key, for example ar. Blank means every live site.'
+        type: string
+        default: ''
+
+concurrency:
+  group: domains
+  cancel-in-progress: false
+
+jobs:
+  domains:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+
+      - run: npm ci
+
+      - name: Set up domains
+        run: |
+          node scripts/setup-zones.mjs \
+            ${{ inputs.mode == 'dry-run' && '--dry-run' || '' }} \
+            ${{ inputs.only != '' && format('--only {0}', inputs.only) || '' }}
+        env:
+          # Scoped to All Domains. Cannot publish a Worker, which is the point:
+          # a mistake here cannot take the sites down.
+          CLOUDFLARE_ZONE_TOKEN: ${{ secrets.CLOUDFLARE_ZONE_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
