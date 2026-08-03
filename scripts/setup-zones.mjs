@@ -71,9 +71,29 @@ if (targets.length === 0) {
  * Our own records are created by wrangler when the Worker's custom domain is
  * attached, so there is nothing here worth keeping.
  */
+/*
+ * Addresses that mean "this record exists so Cloudflare has something to proxy",
+ * not "the site is here". When a Worker is attached to a custom domain,
+ * Cloudflare creates a proxied record pointing at one of these and serves the
+ * Worker itself. The address is never contacted.
+ *
+ * This list is why the dry run default earned its place. The first real run
+ * offered to delete two AAAA records on arkansasdatacenterland.com pointing at
+ * 100::, which were not the registrar's leftovers at all. They were the records
+ * Cloudflare had created for the live custom domain, and deleting them would
+ * have taken the site off the internet while every check still reported green.
+ */
+const PROXY_PLACEHOLDERS = new Set(['100::', '192.0.2.1', '192.0.2.0']);
+
+const isCloudflareManaged = (record) =>
+  record.proxied === true && PROXY_PLACEHOLDERS.has((record.content ?? '').trim());
+
 const isRegistrarRecord = (record, domain) => {
   const name = record.name.toLowerCase();
   const apex = domain.toLowerCase();
+
+  /* Cloudflare's own. Removing these unattaches a working domain. */
+  if (isCloudflareManaged(record)) return false;
 
   if (name === `_domainconnect.${apex}` && record.type === 'CNAME') return true;
 
@@ -163,7 +183,8 @@ for (const site of targets) {
   }
 
   for (const record of kept) {
-    console.log(`  kept     ${record.type} ${record.name}`);
+    const why = isCloudflareManaged(record) ? ' (Cloudflare serves the Worker here)' : '';
+    console.log(`  kept     ${record.type} ${record.name}${why}`);
   }
 
   console.log('');
