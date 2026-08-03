@@ -53,8 +53,11 @@ const LEAD_WEBHOOK = ``;
  *                     water         -> River or water
  *                     none-unsure   -> None or not sure
  *
- * The function must not set Screening. The "New leads" view filters on
- * Screening being empty, which is what makes untouched leads visible.
+ * The function must not set Screening, so a submission can never overwrite a
+ * decision already made about that lead. Note that leaving it out does not
+ * leave it empty: Notion fills a status property with the first option in its
+ * "to do" group, so every row arrives as "Not started". The "New leads" view
+ * groups by Screening rather than filtering on it being empty.
  *
  * That function now exists. It is workers/site/index.mjs, it answers at
  * /api/lead on every site's own domain, and workers/site/lead-to-notion.mjs

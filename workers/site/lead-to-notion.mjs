@@ -205,9 +205,15 @@ export function buildLeadProperties(fields, options = {}) {
   if (notes) properties.Notes = { rich_text: richText(notes) };
 
   /*
-   * Screening is deliberately never set. The "New leads" view shows rows whose
-   * Screening is empty, so writing a value here would hide every new lead from
-   * the only view Clint looks at.
+   * Screening is deliberately never set, so a submission can never overwrite a
+   * decision somebody has already made about that lead.
+   *
+   * Worth knowing, because the first version of this got it wrong: leaving it
+   * out does not produce an empty Screening. Notion fills a status property
+   * with the first option in its "to do" group, so every new row arrives as
+   * "Not started" whatever we send. The New leads view therefore groups by
+   * Screening rather than filtering on it being empty, which is a filter that
+   * matches nothing and silently hides every lead.
    */
 
   return { properties, notes, unmapped };

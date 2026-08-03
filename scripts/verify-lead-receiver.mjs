@@ -150,12 +150,18 @@ check('notes are kept verbatim', () =>
   assert.equal(props.Notes.rich_text[0].text.content, 'Big power lines cross the north side.'));
 
 /*
- * The "New leads" view shows rows whose Screening is empty. Setting it here
- * would file every new lead as already handled, which is a lead lost in the
- * only way that leaves no trace at all.
+ * Setting Screening here would let a submission overwrite a decision somebody
+ * has already made about that lead.
+ *
+ * This assertion is worth keeping but it is not sufficient, and believing it
+ * was is how the first live lead ended up invisible. Notion fills a status
+ * property with the first option in its "to do" group regardless of what we
+ * send, so a row always arrives as "Not started" rather than empty. A view
+ * filtering on Screening being empty therefore matches nothing. Nothing
+ * testable from here catches that; it took submitting a real form and looking
+ * at the view Clint actually opens.
  */
-check('Screening is never set, so the lead shows up in New leads', () =>
-  assert.equal(props.Screening, undefined));
+check('Screening is left alone', () => assert.equal(props.Screening, undefined));
 
 check('nothing is flagged as spam', () => assert.equal(props['Spam signal'], undefined));
 

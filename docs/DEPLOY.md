@@ -309,9 +309,13 @@ configure, and nothing has to be remembered when a new state goes live.
 `workers/site/lead-to-notion.mjs` maps form values onto the database schema. Two
 rules in there are load bearing:
 
-- **It never sets Screening.** The New leads view shows rows whose Screening is
-  empty, so writing a value would hide every new lead from the only view anyone
-  looks at.
+- **It never sets Screening,** so a submission cannot overwrite a decision
+  already made about that lead. Worth knowing: leaving it out does not leave it
+  empty. Notion fills a status property with the first option in its "to do"
+  group, so a row always arrives as "Not started". The New leads view groups by
+  Screening rather than filtering on it being empty, which is a filter that
+  matches nothing and hides every lead. That bug reached production and was
+  only found by submitting a real form and opening the view.
 - **An unrecognised answer never costs the lead.** Notion rejects the entire
   page if a select value is not already an option, which would throw away the
   name and phone number along with it. Anything that cannot be mapped
