@@ -113,6 +113,17 @@ console.log('');
 
 const needNameservers = [];
 const failed = [];
+const throttled = [];
+
+/*
+ * Cloudflare caps how many zones an account can hold in the pending state, and
+ * answers 1118 once you reach it. It clears itself as earlier domains activate.
+ *
+ * Not a failure, so it does not fail the run. Reporting it as one would train
+ * everybody to ignore a red cross on this workflow, which is the last thing you
+ * want on the job that edits DNS.
+ */
+const isZoneLimit = (error) => error.errors?.some((e) => e.code === 1118);
 
 for (const site of targets) {
   console.log(`${site.domain}`);
@@ -137,8 +148,13 @@ for (const site of targets) {
       zone = await createZone(site.domain);
       console.log('  added to Cloudflare');
     } catch (error) {
-      console.log(`  could not be added: ${error.message}`);
-      failed.push(site.domain);
+      if (isZoneLimit(error)) {
+        console.log('  waiting: Cloudflare will not hold any more pending domains yet');
+        throttled.push(site.domain);
+      } else {
+        console.log(`  could not be added: ${error.message}`);
+        failed.push(site.domain);
+      }
       console.log('');
       continue;
     }
@@ -208,9 +224,28 @@ if (needNameservers.length > 0) {
   console.log('');
 }
 
+if (throttled.length > 0) {
+  console.log('---');
+  console.log('');
+  console.log('Cloudflare would not accept these yet, because an account can only');
+  console.log('hold so many domains that are waiting on their nameservers:');
+  console.log('');
+  for (const domain of throttled) console.log(`  ${domain}`);
+  console.log('');
+  console.log('Nothing is wrong. Change the nameservers on the domains above, wait');
+  console.log('for them to go active, then run this again and these will go in.');
+  console.log('');
+}
+
+/*
+ * console.log rather than console.error even for failures. Actions interleaves
+ * the two streams by arrival rather than by order written, so an error printed
+ * to stderr lands in the middle of unrelated output and reads as though it
+ * belongs to whatever is next to it. One stream keeps the log readable.
+ */
 if (failed.length > 0) {
-  console.error(`Problems with: ${[...new Set(failed)].join(', ')}`);
-  process.exit(1);
+  console.log(`Problems with: ${[...new Set(failed)].join(', ')}`);
+  process.exitCode = 1;
 }
 
 console.log('Done. Once a domain shows as active, attach it to its Worker in the');
