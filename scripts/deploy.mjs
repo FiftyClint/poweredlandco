@@ -133,6 +133,20 @@ const routesFor = async (site) => {
   }
 };
 
+/**
+ * The one line of a wrangler failure worth printing.
+ *
+ * Its output is long and mostly account tables. The ERROR line names the API
+ * call and the reason, which is the part that says what to fix.
+ */
+const lastError = (result) => {
+  const text = `${result.stdout ?? ''}\n${result.stderr ?? ''}`;
+  // eslint-disable-next-line no-control-regex
+  const plain = text.replace(/\[[0-9;]*m/g, '');
+  const line = plain.split('\n').find((l) => l.includes('[ERROR]') || l.includes('code:'));
+  return (line ?? 'no error line found in wrangler output').trim();
+};
+
 const failed = [];
 
 for (const site of targets) {
@@ -144,7 +158,8 @@ for (const site of targets) {
     continue;
   }
 
-  const { routes, note } = await routesFor(site);
+  const { routes, note: initialNote } = await routesFor(site);
+  let note = initialNote;
   const config = configFor(site, routes);
 
   process.stdout.write(`  ${site.key.padEnd(5)} ${site.domain.padEnd(34)} `);
@@ -160,7 +175,38 @@ for (const site of targets) {
 
   writeFileSync(CONFIG_PATH, JSON.stringify(config, null, 2));
 
-  const result = spawnSync('npx', ['wrangler', 'deploy', '-c', CONFIG_PATH], { encoding: 'utf8' });
+  const run = () => spawnSync('npx', ['wrangler', 'deploy', '-c', CONFIG_PATH], { encoding: 'utf8' });
+
+  let result = run();
+
+  /*
+   * Attaching a domain and publishing a site are separate jobs, and only one of
+   * them is urgent. If the domain wiring fails, the site must still go out.
+   *
+   * This is not hypothetical. The first time a domain went live, wrangler
+   * uploaded the Worker, then failed applying the routes because the API token
+   * could not manage Workers Routes on a zone. The deploy went red over a
+   * domain that was already attached by hand and working, which is the tail
+   * wagging the dog.
+   *
+   * So a failure with routes declared is retried without them. The site
+   * publishes, any custom domain already attached is left exactly as it is, and
+   * the run says plainly that the wiring needs attention.
+   */
+  if (result.status !== 0 && routes.length > 0) {
+    const firstAttempt = result;
+    writeFileSync(CONFIG_PATH, JSON.stringify(configFor(site, []), null, 2));
+    result = run();
+
+    if (result.status === 0) {
+      note = 'published, domain wiring needs a wider token';
+      console.log('');
+      console.log('    Could not attach the domain, so it was published without it.');
+      console.log('    Any domain already attached is untouched. See DEPLOY.md Part 6.');
+      console.log(`    ${lastError(firstAttempt)}`);
+      process.stdout.write(`  ${''.padEnd(5)} ${''.padEnd(34)} `);
+    }
+  }
 
   if (result.status !== 0) {
     console.log('FAILED');
