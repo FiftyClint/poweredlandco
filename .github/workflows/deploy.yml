@@ -41,8 +41,22 @@ jobs:
       - name: Intake form end to end
         run: npm run verify:form
 
+      # A lead capture network with nowhere to send a lead is worse than no
+      # site, because the form tells people it worked. This blocks that.
+      - name: Lead destination configured
+        run: npm run check:leads
+        env:
+          PUBLIC_LEAD_WEBHOOK: ${{ secrets.PUBLIC_LEAD_WEBHOOK }}
+          PUBLIC_CRMX_EMBED: ${{ secrets.PUBLIC_CRMX_EMBED }}
+
       # Cloudflare receives finished files and never builds anything, so no
       # build minutes are metered and the checks above cannot be skipped.
+      - name: Rebuild with the live lead destination
+        run: npm run build:all
+        env:
+          PUBLIC_LEAD_WEBHOOK: ${{ secrets.PUBLIC_LEAD_WEBHOOK }}
+          PUBLIC_CRMX_EMBED: ${{ secrets.PUBLIC_CRMX_EMBED }}
+
       - name: Deploy to Cloudflare
         run: npm run deploy
         env:

@@ -147,6 +147,43 @@ await browser.close();
 await server.close();
 webhook.close();
 
+// ---- The case the first version of this script did not cover ----------------
+//
+// Everything above supplies a webhook, so it only ever tested the happy path.
+// The default configuration has no destination at all, and in that state the
+// form used to report success for a submission that went nowhere. That is the
+// failure worth guarding hardest against, so it is tested explicitly.
+
+console.log('\nNo destination configured');
+
+const bare = spawnSync('npx', ['astro', 'build'], {
+  env: { ...process.env, SITE: 'hub', PUBLIC_LEAD_WEBHOOK: '', PUBLIC_CRMX_EMBED: '' },
+  encoding: 'utf8',
+});
+if (bare.status !== 0) {
+  console.error(bare.stdout, bare.stderr);
+  process.exit(1);
+}
+
+const bareServer = await serveDir(`${new URL('..', import.meta.url).pathname}dist/hub`);
+const bareBrowser = await chromium.launch(launchOptions());
+const barePage = await bareBrowser.newPage({ viewport: { width: 390, height: 844 } });
+await barePage.goto(`${bareServer.origin}/`, { waitUntil: 'load' });
+
+const formCount = await barePage.locator('form.lead-form').count();
+check('no form is rendered when nothing would receive it', formCount === 0);
+check(
+  'an email address is offered instead',
+  (await barePage.locator('.form-slot__email a[href^="mailto:"]').count()) > 0,
+);
+check(
+  'no success message can appear, because there is nothing to submit',
+  (await barePage.locator('[data-form-status]').count()) === 0,
+);
+
+await bareBrowser.close();
+await bareServer.close();
+
 console.log('');
 if (failures.length > 0) {
   console.error(`Form verification FAILED: ${failures.length} check(s) failed.`);

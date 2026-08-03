@@ -76,6 +76,22 @@ export const leadWebhook = () => fromEnv('PUBLIC_LEAD_WEBHOOK') || LEAD_WEBHOOK.
 export const usingFallbackForm = () => crmxEmbed().length === 0;
 
 /**
+ * Whether a submitted form actually reaches somewhere.
+ *
+ * This exists because of a real failure. With no CRMX embed and no webhook, the
+ * form had no action, so the browser posted it back to the page itself, the
+ * page returned 200, and the script reported "Thank you. We have your
+ * information." to a landowner whose details had gone nowhere at all.
+ *
+ * Losing a lead is bad. Telling somebody you have their information when you do
+ * not is worse, and it is the exact opposite of what every other word on these
+ * sites promises. So a form with no destination is never rendered, and
+ * scripts/check-lead-destination.mjs stops a site with no destination from
+ * being deployed at all.
+ */
+export const hasLeadDestination = () => crmxEmbed().length > 0 || leadWebhook().length > 0;
+
+/**
  * Form options. These live here rather than in the component so the wording of
  * a choice can be adjusted without touching markup.
  *

@@ -1,10 +1,12 @@
 ---
 import { currentSite, liveStateSites } from '../data/sites.mjs';
 import { CONTACT_CONSENT } from '../data/brand.mjs';
+import { BRAND } from '../data/brand.mjs';
 import {
   crmxEmbed,
   leadWebhook,
   usingFallbackForm,
+  hasLeadDestination,
   ACRE_HINT,
   ELECTRIC_OPTIONS,
   NEARBY_OPTIONS,
@@ -31,7 +33,8 @@ const { id = 'qualify', heading = 'See if your land qualifies' } = Astro.props;
 const site = currentSite();
 const embed = crmxEmbed();
 const webhook = leadWebhook();
-const showFallback = usingFallbackForm();
+const reachable = hasLeadDestination();
+const showFallback = usingFallbackForm() && reachable;
 
 // The hub serves every state, so it asks. A state site already knows.
 const stateChoices = liveStateSites().map((s) => s.stateName);
@@ -60,7 +63,28 @@ const knownState = site.type === 'hub' ? null : site.stateName;
   </p>
 
   {
-    embed ? (
+    !reachable ? (
+      /*
+       * No destination configured, so no form. Showing one here would collect
+       * details and then tell the person we had them, which is a lie a
+       * landowner would only discover by never hearing back.
+       */
+      <div class="form-slot__email">
+        <p>
+          The quickest way to reach us right now is email. Send the county your
+          land is in, roughly how many acres, and anything you have noticed
+          nearby such as power lines or a substation. That is enough for us to
+          check it against public records and come back to you.
+        </p>
+        <p class="form-slot__address">
+          <a href={`mailto:${BRAND.email}`}>{BRAND.email}</a>
+        </p>
+        <p class="small muted">
+          There is no cost and no obligation, and a real person reads that
+          address.
+        </p>
+      </div>
+    ) : embed ? (
       <div class="form-slot__embed" set:html={embed} />
     ) : (
       <form
@@ -458,6 +482,21 @@ const knownState = site.type === 'hub' ? null : site.stateName;
 
   /* Off screen rather than display:none so bots that skip hidden inputs still
      see it, while nobody using the page ever encounters it. */
+  .form-slot__email {
+    padding: var(--s5);
+    background: var(--accent-tint);
+    border-radius: var(--radius);
+  }
+
+  .form-slot__address {
+    font-size: var(--text-lg);
+    font-weight: 700;
+  }
+
+  .form-slot__email p:last-child {
+    margin-bottom: 0;
+  }
+
   .lead-form__trap {
     position: absolute;
     left: -9999px;
