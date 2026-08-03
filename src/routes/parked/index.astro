@@ -1,23 +1,32 @@
 ---
 import '../../styles/global.css';
 import Wordmark from '../../components/Wordmark.astro';
+import FormSlot from '../../components/FormSlot.astro';
 import { currentSite, siteUrl } from '../../data/sites.mjs';
 import { BRAND, LEGAL_POSITIONING } from '../../data/brand.mjs';
 import { organizationSchema } from '../../lib/schema.mjs';
 
 /**
- * The entire site for a state we hold but have not launched.
+ * The entire site for a state we hold but have not built out.
  *
- * One page, brand, and a way to reach us. Deliberately not built on the full
+ * One page, brand, and the intake form. Deliberately not built on the full
  * layout: there is no navigation because there is nowhere to navigate to, and a
  * header full of dead links would be worse than none.
  *
- * It is not a coming-soon holding page with nothing behind it either. A
- * landowner who arrives here gets a real email address and a real explanation.
+ * The form is the point. An earlier version of this page offered an email
+ * address and explained that we were still studying the state, which meant four
+ * live domains collected nothing and told every visitor we were not ready. A
+ * landowner who arrives here can now say what they have in the same way they
+ * could on a full state site, and it lands in the same database. Which states
+ * are worth building out properly is then a question the submissions answer.
+ *
+ * FormSlot carries its own data-boilerplate marker, so the duplicate copy
+ * checker ignores it and the only text compared across these pages is the
+ * per-state intro, which is the part that has to differ.
  */
 const site = currentSite();
 const title = `${BRAND.name} | ${site.stateName}`;
-const description = `${BRAND.name} buys and options rural land for data center development. Our ${site.stateName} site is on the way. Reach us by email in the meantime.`;
+const description = `${BRAND.name} buys and options rural land in ${site.stateName} for data center development. Tell us about your property and we will look at it.`;
 ---
 
 <!doctype html>
@@ -58,14 +67,7 @@ const description = `${BRAND.name} buys and options rural land for data center d
 
       <p class="lede">{site.intro}</p>
 
-      <p>
-        Email us about your land and we will look at it. No cost, no obligation,
-        and a real answer either way.
-      </p>
-
-      <p class="parked__contact">
-        <a href={`mailto:${BRAND.email}`}>{BRAND.email}</a>
-      </p>
+      <FormSlot id="qualify" heading="Tell us about your land" />
     </main>
 
     <!--
@@ -105,10 +107,8 @@ const description = `${BRAND.name} buys and options rural land for data center d
     margin-top: var(--s6);
   }
 
-  .parked__contact {
+  .parked__inner :global(.form-slot) {
     margin-top: var(--s6);
-    font-size: var(--text-lg);
-    font-weight: 700;
   }
 
   .parked__legal {
