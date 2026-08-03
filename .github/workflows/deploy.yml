@@ -38,6 +38,12 @@ jobs:
       - name: Accessibility audit
         run: npm run audit:a11y
 
+      # Runs with no secrets in the environment on purpose. It stubs Notion and
+      # asserts what happens to a lead when the save fails, which is the case a
+      # real token would hide.
+      - name: Lead receiver
+        run: npm run verify:receiver
+
       - name: Intake form end to end
         run: npm run verify:form
 
@@ -46,19 +52,34 @@ jobs:
       - name: Lead destination configured
         run: npm run check:leads
         env:
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
           PUBLIC_LEAD_WEBHOOK: ${{ secrets.PUBLIC_LEAD_WEBHOOK }}
           PUBLIC_CRMX_EMBED: ${{ secrets.PUBLIC_CRMX_EMBED }}
 
       # Cloudflare receives finished files and never builds anything, so no
       # build minutes are metered and the checks above cannot be skipped.
+      #
+      # NOTION_TOKEN is read here only to decide whether the form can be shown.
+      # Its value never enters a built file: the receiver reads it at runtime
+      # from a Cloudflare Worker secret instead.
       - name: Rebuild with the live lead destination
         run: npm run build:all
         env:
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
           PUBLIC_LEAD_WEBHOOK: ${{ secrets.PUBLIC_LEAD_WEBHOOK }}
           PUBLIC_CRMX_EMBED: ${{ secrets.PUBLIC_CRMX_EMBED }}
+
+      # Last chance to catch a credential leaking into a page a visitor can read.
+      - name: No secret reached the built files
+        run: npm run check:secrets
+        env:
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
 
       - name: Deploy to Cloudflare
         run: npm run deploy
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}

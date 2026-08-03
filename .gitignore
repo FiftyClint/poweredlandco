@@ -6,3 +6,7 @@ dist/
 .env
 .env.*
 !.env.example
+
+# Written per site by scripts/deploy.mjs and removed when it finishes.
+wrangler.generated.jsonc
+.wrangler/

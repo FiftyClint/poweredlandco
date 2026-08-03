@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import { spawnSync } from 'node:child_process';
-import { existsSync } from 'node:fs';
+import { existsSync, writeFileSync, rmSync } from 'node:fs';
 import { liveSites, allSites } from '../src/data/sites.node.mjs';
 
 /**
@@ -17,11 +17,18 @@ import { liveSites, allSites } from '../src/data/sites.node.mjs';
  * anything, so no build minutes are metered and the checks stay in CI where we
  * can see them fail.
  *
+ * Each Worker also carries the small script in workers/site/ so the site can
+ * answer its own form submissions at /api/lead. Cloudflare serves the built
+ * files directly and only runs that script for /api/ paths, so the pages stay
+ * exactly as static as they were. NOTION_TOKEN is pushed as a per-Worker secret
+ * so the token lives on Cloudflare and never in a built file.
+ *
  *   node scripts/deploy.mjs            deploy every live site
  *   node scripts/deploy.mjs --only ar  deploy one
  *   node scripts/deploy.mjs --dry-run  print the commands without running them
  *
- * Needs CLOUDFLARE_API_TOKEN and CLOUDFLARE_ACCOUNT_ID in the environment.
+ * Needs CLOUDFLARE_API_TOKEN and CLOUDFLARE_ACCOUNT_ID in the environment, and
+ * NOTION_TOKEN if the sites are built to use the built-in receiver.
  */
 
 const args = process.argv.slice(2);
@@ -62,6 +69,37 @@ if (pending.length > 0) {
 }
 console.log('');
 
+const notionToken = (process.env.NOTION_TOKEN ?? '').trim();
+if (!dryRun && !notionToken) {
+  console.log('NOTION_TOKEN is not set, so no lead receiver secret will be pushed.');
+  console.log('Only do this deliberately. The sites will serve, but /api/lead will');
+  console.log('answer with an error rather than saving a submission.');
+  console.log('');
+}
+
+/*
+ * Written fresh for each site and deleted afterwards. A config file rather than
+ * command line flags because run_worker_first and not_found_handling have no
+ * flag equivalents, and those two settings are what keep the pages served
+ * straight from disk while form posts still reach the Worker.
+ */
+const CONFIG_PATH = './wrangler.generated.jsonc';
+
+const configFor = (site) => ({
+  $schema: './node_modules/wrangler/config-schema.json',
+  name: workerName(site),
+  main: 'workers/site/index.mjs',
+  compatibility_date: '2026-07-01',
+  assets: {
+    directory: `dist/${site.key}`,
+    binding: 'ASSETS',
+    // Serve the designed 404 page instead of Cloudflare's bare one.
+    not_found_handling: '404-page',
+    // Everything except /api/ is served from disk without waking the Worker.
+    run_worker_first: ['/api/*'],
+  },
+});
+
 const failed = [];
 
 for (const site of targets) {
@@ -73,35 +111,60 @@ for (const site of targets) {
     continue;
   }
 
-  const command = [
-    'wrangler',
-    'deploy',
-    '--name',
-    workerName(site),
-    '--assets',
-    dir,
-    '--compatibility-date',
-    '2026-07-01',
-  ];
+  const config = configFor(site);
 
   process.stdout.write(`  ${site.key.padEnd(5)} ${site.domain.padEnd(34)} `);
 
   if (dryRun) {
-    console.log(`\n    npx ${command.join(' ')}`);
+    console.log('');
+    console.log(`    ${JSON.stringify(config)}`);
+    console.log(`    npx wrangler deploy -c ${CONFIG_PATH}`);
+    if (notionToken) console.log(`    npx wrangler secret put NOTION_TOKEN -c ${CONFIG_PATH}`);
     continue;
   }
 
-  const result = spawnSync('npx', command, { encoding: 'utf8' });
+  writeFileSync(CONFIG_PATH, JSON.stringify(config, null, 2));
 
-  if (result.status === 0) {
-    console.log('deployed');
-  } else {
+  const result = spawnSync('npx', ['wrangler', 'deploy', '-c', CONFIG_PATH], { encoding: 'utf8' });
+
+  if (result.status !== 0) {
     console.log('FAILED');
     console.error(result.stdout);
     console.error(result.stderr);
     failed.push(site.key);
+    continue;
+  }
+
+  if (!notionToken) {
+    console.log('deployed, no receiver secret');
+    continue;
+  }
+
+  /*
+   * Pushed after the deploy because a secret cannot be set on a Worker that
+   * does not exist yet. On a brand new site that leaves a few seconds where
+   * /api/lead answers 503, which the form reports honestly as a failure rather
+   * than thanking anybody.
+   */
+  const secret = spawnSync(
+    'npx',
+    ['wrangler', 'secret', 'put', 'NOTION_TOKEN', '-c', CONFIG_PATH],
+    { encoding: 'utf8', input: notionToken },
+  );
+
+  if (secret.status === 0) {
+    console.log('deployed');
+  } else {
+    console.log('DEPLOYED, SECRET FAILED');
+    // The token goes in on stdin and never appears in the output, so this is
+    // safe to print into a CI log.
+    console.error(secret.stdout);
+    console.error(secret.stderr);
+    failed.push(site.key);
   }
 }
+
+rmSync(CONFIG_PATH, { force: true });
 
 console.log('');
 if (failed.length > 0) {

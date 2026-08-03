@@ -55,6 +55,15 @@ const LEAD_WEBHOOK = ``;
  *
  * The function must not set Screening. The "New leads" view filters on
  * Screening being empty, which is what makes untouched leads visible.
+ *
+ * That function now exists. It is workers/site/index.mjs, it answers at
+ * /api/lead on every site's own domain, and workers/site/lead-to-notion.mjs
+ * holds the mapping above in executable form. Because it runs on the same
+ * domain as the pages, the form posts to a relative path and the built HTML is
+ * identical on all nineteen sites.
+ *
+ * The Notion token is a Cloudflare Worker secret, pushed by scripts/deploy.mjs
+ * from the NOTION_TOKEN repository secret. It is never in the built files.
  */
 
 /*
@@ -70,7 +79,31 @@ const fromEnv = (key) => {
 
 export const crmxEmbed = () => fromEnv('PUBLIC_CRMX_EMBED') || CRMX_EMBED.trim();
 
-export const leadWebhook = () => fromEnv('PUBLIC_LEAD_WEBHOOK') || LEAD_WEBHOOK.trim();
+/**
+ * Where the form posts when nothing else is configured.
+ *
+ * A relative path on purpose. The receiver runs on each site's own domain, so
+ * one built page is correct on all nineteen and there is no cross-origin
+ * request to configure, break, or forget when a state goes live.
+ */
+export const LEAD_ENDPOINT = '/api/lead';
+
+/**
+ * Whether the built-in receiver will actually be there to answer.
+ *
+ * The Worker can only write to Notion if it has a token, and it only gets one
+ * if NOTION_TOKEN is present at deploy time. Reading it here, at build time on
+ * the build machine, is how the pages know whether a form would work.
+ *
+ * Only the presence of the value is ever read. The token itself is never
+ * returned from this module and so can never end up in a built page.
+ */
+const receiverConfigured = () => (process.env?.NOTION_TOKEN ?? '').trim().length > 0;
+
+export const leadWebhook = () =>
+  fromEnv('PUBLIC_LEAD_WEBHOOK') ||
+  LEAD_WEBHOOK.trim() ||
+  (receiverConfigured() ? LEAD_ENDPOINT : '');
 
 /** True when we are rendering our own form rather than the CRMX embed. */
 export const usingFallbackForm = () => crmxEmbed().length === 0;

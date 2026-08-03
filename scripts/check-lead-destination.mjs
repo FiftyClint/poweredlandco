@@ -1,5 +1,10 @@
 #!/usr/bin/env node
-import { hasLeadDestination, crmxEmbed, leadWebhook } from '../src/data/lead-capture.mjs';
+import {
+  hasLeadDestination,
+  crmxEmbed,
+  leadWebhook,
+  LEAD_ENDPOINT,
+} from '../src/data/lead-capture.mjs';
 
 /**
  * Refuses to deploy sites whose intake form has nowhere to send a submission.
@@ -19,7 +24,11 @@ import { hasLeadDestination, crmxEmbed, leadWebhook } from '../src/data/lead-cap
  */
 
 if (hasLeadDestination()) {
-  const via = crmxEmbed() ? 'CRMX embed' : 'webhook';
+  const via = crmxEmbed()
+    ? 'CRMX embed'
+    : leadWebhook() === LEAD_ENDPOINT
+      ? `built-in receiver at ${LEAD_ENDPOINT}, which writes to the Notion database`
+      : 'configured webhook';
   console.log(`Lead destination check passed. Submissions go to the ${via}.`);
   process.exit(0);
 }
@@ -28,21 +37,25 @@ console.error(
   [
     'Lead destination check FAILED.',
     '',
-    'No CRMX embed and no webhook are configured, so nothing would receive a',
-    'form submission. Deploying in this state would put a lead capture site',
-    'online with no lead capture.',
+    'Nothing would receive a form submission, so deploying now would put a',
+    'lead capture site online with no lead capture.',
     '',
     'The sites are still usable meanwhile: FormSlot shows an email address',
     'rather than a form, so a landowner reaches a real person instead of a',
     'thank you message that is not true.',
     '',
-    'To fix, set one of these:',
-    '  PUBLIC_LEAD_WEBHOOK   an address that accepts the submission',
-    '  PUBLIC_CRMX_EMBED     the embed code from a CRMX form',
+    'Set one of these:',
+    '  NOTION_TOKEN          turns on the built-in receiver, which writes',
+    '                        straight into the Landowner Leads database. This',
+    '                        is the normal path. In GitHub Actions it comes',
+    '                        from the repository secret of the same name.',
+    '  PUBLIC_LEAD_WEBHOOK   send submissions somewhere else instead',
+    '  PUBLIC_CRMX_EMBED     replace our form with a CRMX one',
     '',
-    'or fill in the matching constant at the top of src/data/lead-capture.mjs.',
-    '',
-    `Currently: crmxEmbed=${crmxEmbed().length} chars, leadWebhook=${leadWebhook().length} chars.`,
+    'Currently:',
+    `  NOTION_TOKEN          ${process.env.NOTION_TOKEN ? 'set' : 'not set'}`,
+    `  PUBLIC_LEAD_WEBHOOK   ${process.env.PUBLIC_LEAD_WEBHOOK ? 'set' : 'not set'}`,
+    `  PUBLIC_CRMX_EMBED     ${crmxEmbed().length > 0 ? 'set' : 'not set'}`,
   ].join('\n'),
 );
 process.exit(1);

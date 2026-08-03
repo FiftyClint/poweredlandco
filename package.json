@@ -17,11 +17,13 @@
     "lint:duplicates": "node scripts/check-duplicate-copy.mjs",
     "check": "npm run lint:copy && npm run lint:content && npm run lint:duplicates",
     "verify:form": "node scripts/verify-form.mjs",
+    "verify:receiver": "node scripts/verify-lead-receiver.mjs",
     "audit:a11y": "node scripts/audit-a11y.mjs",
     "audit:lighthouse": "node scripts/audit-lighthouse.mjs",
-    "verify": "npm run build:all && npm run check && npm run audit:a11y && npm run verify:form",
+    "verify": "npm run build:all && npm run check && npm run audit:a11y && npm run verify:receiver && npm run verify:form",
     "deploy": "node scripts/deploy.mjs",
-    "check:leads": "node scripts/check-lead-destination.mjs"
+    "check:leads": "node scripts/check-lead-destination.mjs",
+    "check:secrets": "node scripts/check-built-secrets.mjs"
   },
   "dependencies": {
     "@astrojs/mdx": "^7.0.5",

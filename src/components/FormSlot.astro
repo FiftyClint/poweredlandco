@@ -287,7 +287,12 @@ const knownState = site.type === 'hub' ? null : site.stateName;
               button.textContent = 'Sending';
             }
 
-            fetch(form.action, { method: 'POST', body: new FormData(form) })
+            var body = new FormData(form);
+            // Tells the receiver a script is handling the answer, so it replies
+            // with JSON instead of redirecting the whole page to /thank-you.
+            body.append('client', 'script');
+
+            fetch(form.action, { method: 'POST', body: body })
               .then(function (response) {
                 if (!response.ok) throw new Error('Request failed');
                 form.reset();

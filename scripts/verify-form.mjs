@@ -157,7 +157,15 @@ webhook.close();
 console.log('\nNo destination configured');
 
 const bare = spawnSync('npx', ['astro', 'build'], {
-  env: { ...process.env, SITE: 'hub', PUBLIC_LEAD_WEBHOOK: '', PUBLIC_CRMX_EMBED: '' },
+  env: {
+    ...process.env,
+    SITE: 'hub',
+    PUBLIC_LEAD_WEBHOOK: '',
+    PUBLIC_CRMX_EMBED: '',
+    // Also unset, because a token in the environment turns on the built-in
+    // receiver and this section is specifically about having no destination.
+    NOTION_TOKEN: '',
+  },
   encoding: 'utf8',
 });
 if (bare.status !== 0) {
@@ -183,6 +191,95 @@ check(
 
 await bareBrowser.close();
 await bareServer.close();
+
+// ---- The shape the sites are actually deployed in ---------------------------
+//
+// In production there is no PUBLIC_LEAD_WEBHOOK. The form posts to /api/lead on
+// its own domain, answered by the Worker in workers/site/. That Worker is
+// tested on its own in scripts/verify-lead-receiver.mjs. What is checked here
+// is the join between the two, which is the part a refactor breaks silently.
+
+console.log('\nProduction shape, posting to the built-in receiver');
+
+const live = spawnSync('npx', ['astro', 'build'], {
+  env: {
+    ...process.env,
+    SITE: 'hub',
+    PUBLIC_LEAD_WEBHOOK: '',
+    PUBLIC_CRMX_EMBED: '',
+    NOTION_TOKEN: 'secret_test_token',
+  },
+  encoding: 'utf8',
+});
+if (live.status !== 0) {
+  console.error(live.stdout, live.stderr);
+  process.exit(1);
+}
+
+const liveServer = await serveDir(`${new URL('..', import.meta.url).pathname}dist/hub`);
+const liveBrowser = await chromium.launch(launchOptions());
+const livePage = await liveBrowser.newPage({ viewport: { width: 390, height: 844 } });
+
+/*
+ * The Worker is not running here, so the request is intercepted and answered
+ * the way a successful save would be. That keeps this about the browser side of
+ * the contract, without needing Cloudflare or Notion to run a test.
+ */
+let intercepted = null;
+await livePage.route('**/api/lead', async (route) => {
+  intercepted = { url: route.request().url(), body: route.request().postData() ?? '' };
+  await route.fulfill({ status: 200, contentType: 'application/json', body: '{"ok":true}' });
+});
+
+await livePage.goto(`${liveServer.origin}/`, { waitUntil: 'load' });
+
+const action = await livePage.locator('form.lead-form').first().getAttribute('action');
+check('the form posts to the receiver on its own domain', action === '/api/lead', `(${action})`);
+
+const fill = async () => {
+  await livePage.fill('input[name="name"]', 'Test Landowner');
+  await livePage.fill('input[name="phone"]', '620 555 0134');
+  await livePage.fill('input[name="email"]', 'test@example.com');
+  await livePage.click('button[type="submit"]');
+  await livePage.waitForFunction(
+    () => document.querySelector('[data-form-status]')?.hidden === false,
+    { timeout: 10000 },
+  );
+};
+
+await fill();
+
+check('the submission actually reached /api/lead', intercepted !== null);
+check(
+  'it is marked as coming from the script, so the visitor stays on the page',
+  (intercepted?.body ?? '').includes('client'),
+);
+check(
+  'the visitor sees a confirmation only after the receiver answers',
+  /thank you/i.test(await livePage.locator('[data-form-status]').innerText()),
+);
+
+/*
+ * The whole point of the rewrite. If the receiver cannot save the lead, the
+ * visitor has to be told, not thanked.
+ */
+await livePage.unroute('**/api/lead');
+await livePage.route('**/api/lead', (route) =>
+  route.fulfill({ status: 502, contentType: 'application/json', body: '{"error":"no"}' }),
+);
+await livePage.reload({ waitUntil: 'load' });
+await fill();
+
+const failedStatus = await livePage.locator('[data-form-status]').innerText();
+check('a failed save is never reported as a thank you', !/thank you/i.test(failedStatus));
+check('the visitor is told plainly it did not go through', /did not go through/i.test(failedStatus));
+check(
+  'and the button comes back so they can try again',
+  (await livePage.locator('button[type="submit"]').count()) === 1,
+);
+
+await liveBrowser.close();
+await liveServer.close();
 
 console.log('');
 if (failures.length > 0) {

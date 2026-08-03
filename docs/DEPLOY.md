@@ -70,6 +70,32 @@ changes, so you never have to do it by hand.
 You should now see two secrets listed. You cannot read them back, which is
 correct and means they are stored properly.
 
+### The Notion secret, which is where leads land
+
+Done on 2026-08-03. Recorded here because it is the piece that makes the form
+worth having, and because it will need doing again if the token is ever
+replaced.
+
+A third repository secret named `NOTION_TOKEN` holds the access token for the
+Notion connection called **PoweredLandCo Leads**, created in the **CGF**
+workspace and given access to the **PoweredLandCo Landowner Leads** database.
+It has permission to read and to add rows, and nothing else. If it ever needs
+replacing, make a new connection at `notion.so/my-integrations`, connect it to
+that database, and update the secret. Nothing in the code changes.
+
+Three things are worth knowing about it:
+
+- The token is never in a page anybody downloads. GitHub hands it to
+  Cloudflare, Cloudflare stores it against each Worker, and the Worker reads it
+  when a form is submitted. `npm run check:secrets` scans every built file for
+  it before anything is uploaded and stops the deploy if it finds it.
+- Without it, the sites still publish, but the form is replaced by an email
+  address. That is deliberate. A form with nowhere to send a submission would
+  thank a landowner for details that went nowhere.
+- The connection must be attached to the database itself, not only created.
+  A token that exists but has not been connected fails with a confusing
+  "not found" rather than a permissions error.
+
 **Tell me when you reach this point.** I publish the sites, and then you do
 Part 3.
 
@@ -167,6 +193,18 @@ That last one matters. **Tell me when you have submitted it and I will confirm
 the lead arrived** in the Notion database. If it did not, I would much rather
 find that out from your test than from a landowner who gave up.
 
+What you should see when you send it:
+
+- The page stays where it is and a green message appears saying we have your
+  information.
+- A new row appears in **PoweredLandCo Landowner Leads**, in the **New leads**
+  view, within a second or two.
+
+If instead you get "That did not go through", the site is telling you the truth
+and the lead was not saved. Send me a screenshot rather than trying repeatedly.
+The message only ever appears when the save actually failed, so it is worth
+acting on.
+
 ---
 
 ## Part 6. The other eighteen
@@ -211,7 +249,51 @@ anyone bypassing the duplicate-copy and vocabulary checks.
 
 `scripts/deploy.mjs` deploys one Worker per live site. Worker names are derived
 from the site key and must stay stable, because renaming one detaches its
-custom domain.
+custom domain. It writes a throwaway `wrangler.generated.jsonc` per site rather
+than passing flags, because `run_worker_first` and `not_found_handling` have no
+command line equivalent.
 
 `npm run deploy -- --dry-run` prints the commands without running them, and
 needs no credentials.
+
+### How a lead actually gets from the form into Notion
+
+Each Worker carries `workers/site/index.mjs` alongside the built files.
+Cloudflare serves the pages straight from disk and only wakes that script for
+paths under `/api/`, so a visitor reading a page never runs any of it. A form
+post to `/api/lead` is the only request that reaches it.
+
+The receiver lives on each site's own domain rather than on one shared address,
+which is why the form action is the relative path `/api/lead`. One built page is
+then correct on all nineteen domains, there is no cross-origin request to
+configure, and nothing has to be remembered when a new state goes live.
+
+`workers/site/lead-to-notion.mjs` maps form values onto the database schema. Two
+rules in there are load bearing:
+
+- **It never sets Screening.** The New leads view shows rows whose Screening is
+  empty, so writing a value would hide every new lead from the only view anyone
+  looks at.
+- **An unrecognised answer never costs the lead.** Notion rejects the entire
+  page if a select value is not already an option, which would throw away the
+  name and phone number along with it. Anything that cannot be mapped
+  confidently goes into Notes as plain text instead.
+
+The honeypot and the submission-timing trap tick the **Spam signal** checkbox
+rather than discarding anything, and the New leads view filters those out. A
+password manager filling three fields at once is rare but real, and no landowner
+should vanish because of it.
+
+Two scripts guard this and both gate the deploy:
+
+- `npm run verify:receiver` runs the Worker in plain Node against a stubbed
+  Notion. It covers the cases where being wrong is expensive: a failed save
+  reported as a thank you, a lead lost to a validation error, Screening
+  accidentally set, an open redirect through `redirect_to`.
+- `npm run verify:form` drives a real browser through the built page and
+  asserts, among other things, that a 502 from the receiver produces an error
+  message rather than a confirmation.
+
+If leads stop arriving, `npx wrangler tail poweredlandco-ar` shows exactly what
+Notion objected to. The Worker logs the rejection in full and returns only a
+generic failure to the browser.
