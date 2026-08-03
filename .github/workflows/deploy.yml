@@ -77,6 +77,10 @@ jobs:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
 
+      # CLOUDFLARE_API_TOKEN is account scoped and can publish Workers but not
+      # touch a domain. Domain work uses CLOUDFLARE_ZONE_TOKEN and runs from
+      # scripts/setup-zones.mjs, deliberately not from here, so a domain problem
+      # can never stop a site being published.
       - name: Deploy to Cloudflare
         run: npm run deploy
         env:

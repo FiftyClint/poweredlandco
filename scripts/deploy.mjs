@@ -2,7 +2,6 @@
 import { spawnSync } from 'node:child_process';
 import { existsSync, writeFileSync, rmSync } from 'node:fs';
 import { liveSites, allSites } from '../src/data/sites.node.mjs';
-import { findZone } from './lib/cloudflare.mjs';
 
 /**
  * Deploys every live site to its own Cloudflare Worker.
@@ -30,6 +29,17 @@ import { findZone } from './lib/cloudflare.mjs';
  *
  * Needs CLOUDFLARE_API_TOKEN and CLOUDFLARE_ACCOUNT_ID in the environment, and
  * NOTION_TOKEN if the sites are built to use the built-in receiver.
+ *
+ * This script deliberately does not touch domains. Cloudflare's token editor
+ * allows one resource scope per token, either the whole account or all domains,
+ * and publishing a Worker needs the account scope. Domain work therefore lives
+ * in scripts/setup-zones.mjs behind a separate CLOUDFLARE_ZONE_TOKEN.
+ *
+ * That split is worth keeping even if Cloudflare ever allows both. An earlier
+ * version declared custom domain routes here, and the first time a domain went
+ * live the whole deploy went red over a domain that was already attached and
+ * serving. Publishing a site and pointing a domain at it are separate jobs with
+ * different urgencies, and only one of them should be able to fail a deploy.
  */
 
 const args = process.argv.slice(2);
@@ -86,7 +96,7 @@ if (!dryRun && !notionToken) {
  */
 const CONFIG_PATH = './wrangler.generated.jsonc';
 
-const configFor = (site, routes = []) => ({
+const configFor = (site) => ({
   $schema: './node_modules/wrangler/config-schema.json',
   name: workerName(site),
   main: 'workers/site/index.mjs',
@@ -99,53 +109,7 @@ const configFor = (site, routes = []) => ({
     // Everything except /api/ is served from disk without waking the Worker.
     run_worker_first: ['/api/*'],
   },
-  ...(routes.length > 0 ? { routes } : {}),
 });
-
-/**
- * Whether this domain is ready to be attached to its Worker, and the routes to
- * do it with.
- *
- * A domain can only be attached once its nameservers actually point at
- * Cloudflare, which is the one step in this whole process that has to happen at
- * the registrar. Asking Cloudflare rather than tracking it by hand means a
- * domain wires itself up on the first deploy after it goes active, with nothing
- * to remember and nothing to click.
- *
- * Every failure here is deliberately non-fatal. A token without permission to
- * read zones, or a domain that has not been added yet, must not stop the site
- * being published. Publishing still works; only the custom domain waits.
- */
-const routesFor = async (site) => {
-  try {
-    const zone = await findZone(site.domain);
-    if (!zone) return { routes: [], note: 'not added to Cloudflare yet' };
-    if (zone.status !== 'active') return { routes: [], note: `nameservers ${zone.status}` };
-    return {
-      routes: [
-        { pattern: site.domain, custom_domain: true },
-        { pattern: `www.${site.domain}`, custom_domain: true },
-      ],
-      note: 'custom domain',
-    };
-  } catch (error) {
-    return { routes: [], note: 'domain check skipped' };
-  }
-};
-
-/**
- * The one line of a wrangler failure worth printing.
- *
- * Its output is long and mostly account tables. The ERROR line names the API
- * call and the reason, which is the part that says what to fix.
- */
-const lastError = (result) => {
-  const text = `${result.stdout ?? ''}\n${result.stderr ?? ''}`;
-  // eslint-disable-next-line no-control-regex
-  const plain = text.replace(/\[[0-9;]*m/g, '');
-  const line = plain.split('\n').find((l) => l.includes('[ERROR]') || l.includes('code:'));
-  return (line ?? 'no error line found in wrangler output').trim();
-};
 
 const failed = [];
 
@@ -158,15 +122,12 @@ for (const site of targets) {
     continue;
   }
 
-  const { routes, note: initialNote } = await routesFor(site);
-  let note = initialNote;
-  const config = configFor(site, routes);
+  const config = configFor(site);
 
   process.stdout.write(`  ${site.key.padEnd(5)} ${site.domain.padEnd(34)} `);
 
   if (dryRun) {
     console.log('');
-    console.log(`    ${note}`);
     console.log(`    ${JSON.stringify(config)}`);
     console.log(`    npx wrangler deploy -c ${CONFIG_PATH}`);
     if (notionToken) console.log(`    npx wrangler secret put NOTION_TOKEN -c ${CONFIG_PATH}`);
@@ -175,38 +136,7 @@ for (const site of targets) {
 
   writeFileSync(CONFIG_PATH, JSON.stringify(config, null, 2));
 
-  const run = () => spawnSync('npx', ['wrangler', 'deploy', '-c', CONFIG_PATH], { encoding: 'utf8' });
-
-  let result = run();
-
-  /*
-   * Attaching a domain and publishing a site are separate jobs, and only one of
-   * them is urgent. If the domain wiring fails, the site must still go out.
-   *
-   * This is not hypothetical. The first time a domain went live, wrangler
-   * uploaded the Worker, then failed applying the routes because the API token
-   * could not manage Workers Routes on a zone. The deploy went red over a
-   * domain that was already attached by hand and working, which is the tail
-   * wagging the dog.
-   *
-   * So a failure with routes declared is retried without them. The site
-   * publishes, any custom domain already attached is left exactly as it is, and
-   * the run says plainly that the wiring needs attention.
-   */
-  if (result.status !== 0 && routes.length > 0) {
-    const firstAttempt = result;
-    writeFileSync(CONFIG_PATH, JSON.stringify(configFor(site, []), null, 2));
-    result = run();
-
-    if (result.status === 0) {
-      note = 'published, domain wiring needs a wider token';
-      console.log('');
-      console.log('    Could not attach the domain, so it was published without it.');
-      console.log('    Any domain already attached is untouched. See DEPLOY.md Part 6.');
-      console.log(`    ${lastError(firstAttempt)}`);
-      process.stdout.write(`  ${''.padEnd(5)} ${''.padEnd(34)} `);
-    }
-  }
+  const result = spawnSync('npx', ['wrangler', 'deploy', '-c', CONFIG_PATH], { encoding: 'utf8' });
 
   if (result.status !== 0) {
     console.log('FAILED');
@@ -217,7 +147,7 @@ for (const site of targets) {
   }
 
   if (!notionToken) {
-    console.log(`deployed (${note}), no receiver secret`);
+    console.log('deployed, no receiver secret');
     continue;
   }
 
@@ -234,7 +164,7 @@ for (const site of targets) {
   );
 
   if (secret.status === 0) {
-    console.log(`deployed (${note})`);
+    console.log('deployed');
   } else {
     console.log('DEPLOYED, SECRET FAILED');
     // The token goes in on stdin and never appears in the output, so this is

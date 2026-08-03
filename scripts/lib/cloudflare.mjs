@@ -21,9 +21,26 @@ class CloudflareError extends Error {
   }
 }
 
+/**
+ * The domain token, which is a different credential from the deploy token.
+ *
+ * Cloudflare's token editor allows one resource scope per token: either the
+ * whole account or all domains, not both. Publishing a Worker needs the
+ * account scope and managing a zone needs the domain scope, so one token cannot
+ * do both jobs.
+ *
+ * Two tokens is the better shape regardless. The deploy token cannot touch DNS,
+ * and this one cannot publish anything, so a mistake with either has a bounded
+ * blast radius and publishing can never be taken down by domain work.
+ */
 const token = () => {
-  const value = (process.env.CLOUDFLARE_API_TOKEN ?? '').trim();
-  if (!value) throw new Error('CLOUDFLARE_API_TOKEN is not set.');
+  const value = (process.env.CLOUDFLARE_ZONE_TOKEN ?? '').trim();
+  if (!value) {
+    throw new Error(
+      'CLOUDFLARE_ZONE_TOKEN is not set. It is a separate token from ' +
+        'CLOUDFLARE_API_TOKEN, scoped to All Domains. See docs/DEPLOY.md Part 6.',
+    );
+  }
   return value;
 };
 

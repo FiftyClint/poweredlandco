@@ -215,29 +215,37 @@ Doing Part 3 and Part 4 by hand eighteen more times is about five hours of
 clicking, so most of it is now a script. What is left for a person is one token
 change and one bulk action at GoDaddy.
 
-### Widen the Cloudflare token, once
+### A second Cloudflare token
 
-The existing token can publish Workers but cannot add domains or edit DNS.
-Editing a token does **not** change its value, so the GitHub secret stays as it
-is and nothing needs re-pasting.
+Cloudflare's token editor allows **one resource scope per token**: either
+**Entire Account** or **All Domains**, never both. Publishing a Worker needs the
+account scope and managing a domain needs the domain scope, so one token cannot
+do both jobs. Attempting to widen the existing token silently drops its Workers
+permissions and breaks every deploy.
+
+So there are two tokens, and neither can do the other's work. That is a better
+arrangement anyway: a mistake with the domain token cannot take publishing down.
+
+| Secret | Scope | Used by |
+| --- | --- | --- |
+| `CLOUDFLARE_API_TOKEN` | Entire Account | wrangler, to publish sites |
+| `CLOUDFLARE_ZONE_TOKEN` | All Domains | `setup-zones.mjs`, to manage domains |
+
+To create the second one:
 
 1. Go to **dash.cloudflare.com**.
-2. Click your profile icon top right, then **My Profile**.
-3. Click **API Tokens** in the left menu.
-4. Find the token you made earlier and click **Edit** next to it.
-5. Under **Permissions**, click **Add more** three times and set:
-   - **Zone** / **Zone** / **Edit**
-   - **Zone** / **DNS** / **Edit**
-   - **Zone** / **Workers Routes** / **Edit**
-6. Under **Zone Resources**, set it to **Include** / **All zones from an
-   account** / your account.
-7. Leave the two Workers permissions that are already there alone.
-8. Click **Continue to summary**.
-9. **Send me a screenshot of the summary before you click save.** Cloudflare
-   renames these fairly often and a wrong one fails in a confusing way.
-10. Click **Save**.
+2. Profile icon top right, then **My Profile**, then **API Tokens**.
+3. Click **Create Token**, then scroll down to **Create Custom Token**.
+4. Name it `PoweredLandCo domains`.
+5. Set the scope dropdown to **All Domains**.
+6. Add **Zone / Edit**, **DNS / Edit**, and **Workers Routes / Edit**.
+7. **Continue to summary**, then **Create Token**.
+8. Copy it. This is the only time it is shown.
+9. In GitHub: **Settings**, **Secrets and variables**, **Actions**,
+   **New repository secret**.
+10. Name `CLOUDFLARE_ZONE_TOKEN`, paste the value, **Add secret**.
 
-### Then the script does the rest
+### Then the script does the tedious part
 
 `npm run setup:zones` adds every remaining domain to Cloudflare, clears the
 registrar's parking records, and prints the nameservers to set at GoDaddy.
@@ -246,9 +254,10 @@ Run it with `--dry-run` first; it says what it would do and changes nothing.
 At GoDaddy, **My Products** lets you tick several domains and set nameservers on
 all of them in one action, so that stays one job rather than eighteen.
 
-After that, nothing else is needed. `scripts/deploy.mjs` asks Cloudflare whether
-each domain's nameservers have taken effect, and attaches the domain to its
-Worker on the first deploy after they have. A domain wires itself up.
+Attaching each domain to its Worker is still Part 4 in the dashboard, six clicks
+per domain, because that single step needs both scopes at once. Clearing the
+parking records first is what makes it succeed, and that was the part that would
+otherwise have been four record deletions times nineteen domains.
 
 Worker names match the site key, so `kansasdatacenterland.com` serves from
 `poweredlandco-ks` and `poweredlandco.com` from `poweredlandco-hub`.

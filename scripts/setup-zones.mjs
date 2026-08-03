@@ -9,11 +9,23 @@ import { liveSites, allSites } from '../src/data/sites.node.mjs';
  * two nameservers to paste into GoDaddy, and clears out the registrar records
  * that would otherwise keep the domain pointing at a parking page.
  *
- * The one step this cannot do is change the nameservers, because that happens
- * at the registrar and the GoDaddy access here is limited to looking domains
- * up. GoDaddy does let you select several domains in My Products and set
- * nameservers on all of them at once, so that stays one action rather than one
- * per domain.
+ * Two steps this cannot do.
+ *
+ * Changing the nameservers happens at the registrar, and the GoDaddy access
+ * here is limited to looking domains up. GoDaddy does let you select several
+ * domains in My Products and set nameservers on all of them at once, so that
+ * stays one action rather than one per domain.
+ *
+ * Attaching a domain to its Worker needs account scope and domain scope in the
+ * same credential, and Cloudflare's token editor allows only one scope per
+ * token. So that stays six clicks per domain in the dashboard, described in
+ * docs/DEPLOY.md. Clearing the parking records first is what makes those six
+ * clicks succeed, and it is the part that would otherwise be four deletions
+ * times nineteen domains.
+ *
+ * Uses CLOUDFLARE_ZONE_TOKEN, which is a different credential from the one that
+ * publishes the sites. Neither can do the other's job, so a mistake with either
+ * cannot take down what the other is responsible for.
  *
  *   node scripts/setup-zones.mjs --dry-run      say what would change
  *   node scripts/setup-zones.mjs                do it
@@ -180,5 +192,7 @@ if (failed.length > 0) {
   process.exit(1);
 }
 
-console.log('Done. Domains whose status is active will be attached to their');
-console.log('Worker on the next deploy, with no further clicking.');
+console.log('Done. Once a domain shows as active, attach it to its Worker in the');
+console.log('Cloudflare dashboard: Compute, Workers & Pages, poweredlandco-<key>,');
+console.log('Settings, Domains & Routes, Add, Custom domain. Once for the domain');
+console.log('and once for www. See docs/DEPLOY.md Part 4.');
