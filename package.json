@@ -22,6 +22,7 @@
     "audit:lighthouse": "node scripts/audit-lighthouse.mjs",
     "verify": "npm run build:all && npm run check && npm run audit:a11y && npm run verify:receiver && npm run verify:form",
     "deploy": "node scripts/deploy.mjs",
+    "setup:zones": "node scripts/setup-zones.mjs",
     "check:leads": "node scripts/check-lead-destination.mjs",
     "check:secrets": "node scripts/check-built-secrets.mjs"
   },

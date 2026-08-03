@@ -2,6 +2,7 @@
 import { spawnSync } from 'node:child_process';
 import { existsSync, writeFileSync, rmSync } from 'node:fs';
 import { liveSites, allSites } from '../src/data/sites.node.mjs';
+import { findZone } from './lib/cloudflare.mjs';
 
 /**
  * Deploys every live site to its own Cloudflare Worker.
@@ -85,7 +86,7 @@ if (!dryRun && !notionToken) {
  */
 const CONFIG_PATH = './wrangler.generated.jsonc';
 
-const configFor = (site) => ({
+const configFor = (site, routes = []) => ({
   $schema: './node_modules/wrangler/config-schema.json',
   name: workerName(site),
   main: 'workers/site/index.mjs',
@@ -98,7 +99,39 @@ const configFor = (site) => ({
     // Everything except /api/ is served from disk without waking the Worker.
     run_worker_first: ['/api/*'],
   },
+  ...(routes.length > 0 ? { routes } : {}),
 });
+
+/**
+ * Whether this domain is ready to be attached to its Worker, and the routes to
+ * do it with.
+ *
+ * A domain can only be attached once its nameservers actually point at
+ * Cloudflare, which is the one step in this whole process that has to happen at
+ * the registrar. Asking Cloudflare rather than tracking it by hand means a
+ * domain wires itself up on the first deploy after it goes active, with nothing
+ * to remember and nothing to click.
+ *
+ * Every failure here is deliberately non-fatal. A token without permission to
+ * read zones, or a domain that has not been added yet, must not stop the site
+ * being published. Publishing still works; only the custom domain waits.
+ */
+const routesFor = async (site) => {
+  try {
+    const zone = await findZone(site.domain);
+    if (!zone) return { routes: [], note: 'not added to Cloudflare yet' };
+    if (zone.status !== 'active') return { routes: [], note: `nameservers ${zone.status}` };
+    return {
+      routes: [
+        { pattern: site.domain, custom_domain: true },
+        { pattern: `www.${site.domain}`, custom_domain: true },
+      ],
+      note: 'custom domain',
+    };
+  } catch (error) {
+    return { routes: [], note: 'domain check skipped' };
+  }
+};
 
 const failed = [];
 
@@ -111,12 +144,14 @@ for (const site of targets) {
     continue;
   }
 
-  const config = configFor(site);
+  const { routes, note } = await routesFor(site);
+  const config = configFor(site, routes);
 
   process.stdout.write(`  ${site.key.padEnd(5)} ${site.domain.padEnd(34)} `);
 
   if (dryRun) {
     console.log('');
+    console.log(`    ${note}`);
     console.log(`    ${JSON.stringify(config)}`);
     console.log(`    npx wrangler deploy -c ${CONFIG_PATH}`);
     if (notionToken) console.log(`    npx wrangler secret put NOTION_TOKEN -c ${CONFIG_PATH}`);
@@ -136,7 +171,7 @@ for (const site of targets) {
   }
 
   if (!notionToken) {
-    console.log('deployed, no receiver secret');
+    console.log(`deployed (${note}), no receiver secret`);
     continue;
   }
 
@@ -153,7 +188,7 @@ for (const site of targets) {
   );
 
   if (secret.status === 0) {
-    console.log('deployed');
+    console.log(`deployed (${note})`);
   } else {
     console.log('DEPLOYED, SECRET FAILED');
     // The token goes in on stdin and never appears in the output, so this is

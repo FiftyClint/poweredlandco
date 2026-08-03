@@ -211,9 +211,47 @@ acting on.
 
 Only after Arkansas is confirmed working end to end.
 
-Repeat Part 3 and Part 4 for each remaining domain. The Worker name matches the
-state, so `kansasdatacenterland.com` connects to `poweredlandco-ks`, and
-`poweredlandco.com` connects to `poweredlandco-hub`.
+Doing Part 3 and Part 4 by hand eighteen more times is about five hours of
+clicking, so most of it is now a script. What is left for a person is one token
+change and one bulk action at GoDaddy.
+
+### Widen the Cloudflare token, once
+
+The existing token can publish Workers but cannot add domains or edit DNS.
+Editing a token does **not** change its value, so the GitHub secret stays as it
+is and nothing needs re-pasting.
+
+1. Go to **dash.cloudflare.com**.
+2. Click your profile icon top right, then **My Profile**.
+3. Click **API Tokens** in the left menu.
+4. Find the token you made earlier and click **Edit** next to it.
+5. Under **Permissions**, click **Add more** three times and set:
+   - **Zone** / **Zone** / **Edit**
+   - **Zone** / **DNS** / **Edit**
+   - **Zone** / **Workers Routes** / **Edit**
+6. Under **Zone Resources**, set it to **Include** / **All zones from an
+   account** / your account.
+7. Leave the two Workers permissions that are already there alone.
+8. Click **Continue to summary**.
+9. **Send me a screenshot of the summary before you click save.** Cloudflare
+   renames these fairly often and a wrong one fails in a confusing way.
+10. Click **Save**.
+
+### Then the script does the rest
+
+`npm run setup:zones` adds every remaining domain to Cloudflare, clears the
+registrar's parking records, and prints the nameservers to set at GoDaddy.
+Run it with `--dry-run` first; it says what it would do and changes nothing.
+
+At GoDaddy, **My Products** lets you tick several domains and set nameservers on
+all of them in one action, so that stays one job rather than eighteen.
+
+After that, nothing else is needed. `scripts/deploy.mjs` asks Cloudflare whether
+each domain's nameservers have taken effect, and attaches the domain to its
+Worker on the first deploy after they have. A domain wires itself up.
+
+Worker names match the site key, so `kansasdatacenterland.com` serves from
+`poweredlandco-ks` and `poweredlandco.com` from `poweredlandco-hub`.
 
 Right now the ones ready to connect are:
 
