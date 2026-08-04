@@ -1,13 +1,338 @@
 key: va
-type: parked
+type: state
 domain: virginiadatacenterland.com
 stateName: Virginia
 stateAbbr: VA
 accent: slate
 status: live
 
-intro: >-
-  Virginia is the most established data center market in the country, so
-  most landowners here have already heard something about it. What is worth
-  knowing is whether your own ground fits, and that comes down to power and
-  access. Tell us about it and we will tell you plainly either way.
+hero:
+  headline: Own Virginia ground outside the Northern Virginia corridor?
+  subhead: >-
+    We purchase and option Virginia property for data center development. Tell
+    us where your land is and what runs near it, and we will tell you plainly
+    whether it fits.
+
+directAnswer: >-
+  Start by having somebody check the electrical picture around your property
+  before you talk price with anyone. In Virginia that means finding out whether
+  you sit in Dominion Energy Virginia territory, Appalachian Power territory, or
+  one of the thirteen cooperatives, and what transmission runs near you. Send us
+  the county, a rough acreage, and anything you have noticed nearby such as a
+  substation or a line of steel towers. We check it against public records at no
+  cost and come back either way. If it does not fit we say so, and you have lost
+  an afternoon rather than a year.
+
+trustPoints:
+  - title: Being outside Loudoun is now the point
+    body: >-
+      For years the answer to where these projects go was the Northern Virginia
+      corridor, and the rest of the state was overlooked. That has changed.
+      Ground in Southside and along the southern border is being assembled
+      precisely because it is not in the corridor, and land there comes without
+      the competition and the grid constraints that came with it.
+  - title: We buy, we do not represent you
+    body: >-
+      Our interest sits on the other side of the table from yours and we would
+      rather say that at the start than have you work it out later. You are free
+      to have your own attorney read anything we send, and we would think less
+      of you if you did not.
+  - title: A straight answer either way
+    body: >-
+      Most Virginia property we look at does not suit these projects, usually
+      for reasons that have nothing to do with the quality of the land. When
+      that is the case we tell you and we stop. Nobody is served by us keeping a
+      landowner warm for something that is never coming.
+
+pageCopy:
+  howItWorks:
+    intro: >-
+      Virginia landowners have watched this industry from a distance for the
+      better part of two decades without much of it reaching their county.
+      Enough has moved south and west in the last few years that the question is
+      now worth asking about ordinary rural ground. Here is the whole process
+      from our side, which is shorter than most people expect.
+    steps:
+      - >-
+        Send us the county, roughly how many acres, and whatever you have
+        noticed around the place. Where you are not sure, write that. We would
+        far rather have an honest gap than a confident guess we then build on.
+      - >-
+        We look up what serves you and what runs near you. Public records carry
+        more than most landowners realise, and this part costs you nothing and
+        commits you to nothing.
+      - >-
+        If it looks workable we come back with what we see and what we would
+        want to do about it. If it does not, we say that instead, and we try to
+        explain why rather than going quiet.
+      - >-
+        Only then does anything become a document, and only with your attorney
+        having seen it first. Nothing before that point asks you for money, a
+        signature, or an exclusive arrangement of any kind.
+    closing: >-
+      Nowhere in that sequence do we ask you to pay for anything or to stop
+      talking to other people. If somebody approaches your Virginia land and
+      wants either of those before they have shown you what they see, that is
+      worth pausing over.
+  articles:
+    intro: >-
+      Plain writing for Virginia landowners about who serves your power, what
+      the move into Southside actually means for ordinary ground, and how to
+      read a letter that arrives about your property.
+    empty: >-
+      The first Virginia pieces are still being written. Until they appear, the
+      questions page covers most of what landowners here ask us, and the form
+      below reaches a person rather than a queue.
+  qualify:
+    intro: >-
+      Two farms in the same Virginia county, with the same soil and the same
+      road frontage, can be worlds apart for this purpose. What separates them
+      is almost never the part a landowner has spent a lifetime thinking about.
+      These are the things that actually decide it.
+    criteria:
+      - >-
+        Power comes first and everything else is secondary to it. We are looking
+        for meaningful transmission within reach, and in Virginia that question
+        runs through whether you sit in Dominion Energy Virginia territory,
+        Appalachian Power territory, or one of the cooperatives. A substation you
+        can see from the road is a strong sign. Large steel towers crossing the
+        property are another.
+      - >-
+        Contiguous acreage matters more than total acreage. A single block that
+        holds together is worth more here than the same number of acres split
+        across a road or a creek, because these buildings and their yards want to
+        sit in one piece.
+      - >-
+        Ground that drains and does not flood. Nothing about this is exotic. If
+        part of your place is wet most winters, that part is not what anybody is
+        looking at, though the rest of it may well be.
+      - >-
+        Reasonable access for heavy vehicles, which usually means a state
+        maintained road rather than a long private lane over a small bridge.
+      - >-
+        A county that has decided how it feels about this. Some Virginia
+        localities have worked through it and know what they want. Others have
+        not, and in those places the timeline belongs to the county rather than
+        to you or to us.
+    closing: >-
+      No property in Virginia satisfies all of those and none is expected to. We
+      are trying to work out whether the gaps are the kind that can be closed.
+      That is a judgement about your specific ground, which is why we would
+      rather look at it than talk in generalities.
+
+value:
+  intro: >-
+    Everybody asks this first and it deserves a direct response rather than a
+    deflection. We are not going to publish a per acre number for Virginia,
+    because a figure quoted before anyone has looked at your particular ground
+    is not a real figure, and repeating it would only mislead you. What we can do
+    is explain honestly what moves it, so that when a number does appear you can
+    tell whether it makes any sense.
+  points:
+    - title: Proximity to capacity does most of the work
+      body: >-
+        Two hundred acres a mile from a substation with room to grow and two
+        hundred acres fifteen miles from anything are not the same asset,
+        whatever the deed or the tax assessment says about them. The distance to
+        real electrical capacity, and whether that capacity has headroom, moves
+        the number further than any other single thing.
+    - title: One block beats the same acreage in pieces
+      body: >-
+        Ground that holds together as a single contiguous parcel is worth more
+        than the same acreage divided by a road, a creek, or an inholding
+        somebody else owns. Assembling pieces afterwards is slow, uncertain, and
+        priced accordingly.
+    - title: What the county has already decided
+      body: >-
+        A locality that has been through this before, has a settled position,
+        and knows how it handles the zoning is a different proposition to one
+        that has never considered it. That difference shows up as time, and time
+        shows up in what a project can pay.
+    - title: An option and a sale are different transactions
+      body: >-
+        Some Virginia landowners take a payment for a period of exclusivity
+        while a project works out whether it can build, and keep farming
+        throughout. Others sell outright. These carry different money, different
+        risk, and different tax treatment, and which suits you depends on things
+        about your family rather than about your land.
+
+livingWithIt:
+  - title: The farm keeps working during an option
+    body: >-
+      An option period commonly runs a year or more, and in nearly every case
+      the ground carries on being farmed or hayed exactly as before. Surveyors
+      and soil crews turn up occasionally, and they work around you rather than
+      the other way round.
+  - title: What actually gets built, and what it looks like
+    body: >-
+      A campus of this kind is large low buildings, a substation, and a great
+      deal of fencing and lighting. It is an industrial site and we are not going
+      to describe it as anything else. It is quieter than a highway and
+      considerably busier than a hayfield.
+  - title: Water is the question people ask second
+    body: >-
+      Newer designs use far less water than the ones that gave this industry its
+      reputation, and cooling approach is one of the first things worth asking a
+      developer about. It is a fair question, and anybody unwilling to answer it
+      plainly is telling you something.
+  - title: Your neighbours will find out and will have views
+    body: >-
+      In Southside Virginia this has been an open and sometimes uncomfortable
+      local conversation, with real opposition alongside real support. If you go
+      forward, you become part of that. Better to know it going in than to be
+      surprised at a county meeting.
+
+utilitiesNote: >-
+  Service territory in Virginia is assigned rather than chosen, with the State
+  Corporation Commission holding the boundaries, so your address decides your
+  provider. It matters because the utility determines what capacity exists near
+  you and how quickly more can be brought. Dominion Energy Virginia covers
+  roughly two thirds of the Commonwealth across central and eastern Virginia,
+  Appalachian Power covers the west, and thirteen cooperatives serve a great deal
+  of the rural ground in between. If you do not know which one you are in, your
+  electric bill says so, and it is worth telling us.
+
+utilities:
+  - name: Dominion Energy Virginia
+    kind: investor-owned
+    note: >-
+      Serves around two thirds of the Commonwealth, covering central and eastern
+      Virginia including Richmond, Virginia Beach, and the Northern Virginia
+      corridor.
+  - name: Appalachian Power
+    kind: investor-owned
+    note: >-
+      An American Electric Power company serving western Virginia, including the
+      Roanoke, Lynchburg, and Blacksburg areas, and involved in the Southside
+      projects now under way.
+  - name: Old Dominion Electric Cooperative
+    kind: generation
+    note: >-
+      Wholesale power for its member cooperatives across Virginia, Maryland, and
+      Delaware, rather than a retail provider you would be billed by directly.
+  - name: Northern Virginia Electric Cooperative
+    kind: cooperative
+    note: Serves parts of northern Virginia outside the investor-owned territory.
+  - name: Rappahannock Electric Cooperative
+    kind: cooperative
+    note: Serves a broad stretch of central and northern Virginia.
+  - name: Shenandoah Valley Electric Cooperative
+    kind: cooperative
+    note: Serves the Shenandoah Valley and the counties around it.
+  - name: Mecklenburg Electric Cooperative
+    kind: cooperative
+    note: Serves Southside counties along the North Carolina border.
+
+incentives:
+  summary: >-
+    Virginia exempts qualifying data center equipment from retail sales and use
+    tax, and that exemption shapes where these projects go. It covers servers,
+    networking equipment, enabling software, and the chillers and backup
+    generators that run them. To qualify, a data center must represent new
+    capital investment of at least 150 million dollars in the locality and create
+    at least 50 new jobs paying at least one and a half times the local
+    prevailing average wage. That job requirement falls to 25 in localities with
+    higher unemployment or in an enterprise zone. Before claiming anything, the
+    operator has to enter a memorandum of understanding with the Virginia
+    Economic Development Partnership setting out the investment, the jobs, the
+    timeline, and what has to be repaid if those are not met. The exemption is
+    currently written to run until 30 June 2035. Virginia has also added an
+    electricity consumption tax affecting these facilities, which is worth
+    understanding alongside the exemption rather than separately. None of this is
+    money that reaches you as a landowner. It matters because it is a large part
+    of why a developer wants Virginia ground at all, and because those investment
+    and job thresholds push projects towards larger sites in localities that
+    qualify for the lower job count.
+  sources:
+    - label: Code of Virginia, section 58.1-609.3, commercial and industrial exemptions
+      url: https://law.lis.virginia.gov/vacode/title58.1/chapter6/section58.1-609.3/
+      accessed: '2026-08-04'
+    - label: Virginia Economic Development Partnership, data center sales and use tax information packet
+      url: https://www.vedp.org/sites/default/files/2018-05/Data%20Center%20Sales%20and%20Use%20Tax.pdf
+      accessed: '2026-08-04'
+    - label: Hunton Andrews Kurth, Virginia adds an electricity consumption tax
+      url: https://www.hunton.com/insights/legal/virginia-adds-electricity-consumption-tax-but-stops-short-of-repealing-data-center-sales-tax-exemption
+      accessed: '2026-08-04'
+
+regions:
+  - title: Pittsylvania County and the Danville area
+    body: >-
+      The Southern Virginia Megasite at Berry Hill has drawn a multi decade
+      campus proposal from a national developer working with Appalachian Power,
+      approved by local leaders in 2026. Whatever anyone makes of it, it has
+      changed how this part of the state is regarded, and interest has spread to
+      surrounding ground rather than stopping at the megasite boundary.
+  - title: Mecklenburg County and the southern border
+    body: >-
+      Mecklenburg has hosted data centers for around fifteen years, starting with
+      Microsoft, and now has roughly a dozen of them. It is the part of Southside
+      with the longest experience of this, which shows in how the county handles
+      it and in what its tax base looks like next to its neighbours.
+  - title: The Southside counties in between
+    body: >-
+      Halifax, Charlotte, Lunenburg, and Brunswick sit between those two areas,
+      share much of the same character, and have drawn far less attention so far.
+      Ground here is worth checking rather than assuming, particularly where
+      transmission crosses it.
+  - title: The Roanoke and Lynchburg corridor
+    body: >-
+      Appalachian Power territory, with established transmission and a workforce
+      already used to industrial employment. Terrain does more of the deciding
+      here than elsewhere in the state, since a site needs a genuinely usable
+      flat block rather than acreage on a map.
+  - title: Beyond the Northern Virginia corridor
+    body: >-
+      Land inside the corridor has been priced for this use for years and the
+      grid there is heavily spoken for. Ground in the counties beyond it, still
+      within reach of the same transmission network, is where a good deal of the
+      current looking is happening.
+
+faq:
+  - question: Which utility serves me, and why does it keep coming up?
+    answer: >-
+      Virginia assigns exclusive service territories through the State
+      Corporation Commission, so your address determines your provider rather
+      than you choosing one. It keeps coming up because the utility decides what
+      capacity exists near your ground and how quickly more can be brought to it,
+      which is the single biggest factor in whether a project is possible. Your
+      electric bill names your provider, and telling us which it is saves a step.
+  - question: My land is nowhere near Loudoun County. Is it worth asking?
+    answer: >-
+      Yes, and more so than it would have been five years ago. Assembly has moved
+      into Southside and along the southern border precisely because those
+      counties have land and grid access the northern corridor no longer has
+      spare. Distance from Loudoun is not the disqualifier people assume it is.
+  - question: How many acres do you need?
+    answer: >-
+      There is no single number, and anybody who gives you one without seeing
+      your ground is guessing. What matters more is whether the acreage holds
+      together as one block and what sits near it electrically. Smaller
+      properties near real capacity are often more interesting than larger ones
+      that are not.
+  - question: Somebody already wrote to me about my land. What should I do?
+    answer: >-
+      Do not sign anything yet, and do not feel rushed by a deadline printed in
+      the letter. Find out who they are and whether they are buying for
+      themselves or on behalf of somebody unnamed. Have an attorney read whatever
+      they sent before you agree to it. That advice holds whether the letter came
+      from us or from anyone else.
+  - question: Would I have to sell, or is there another way?
+    answer: >-
+      Both exist. An option pays you for a period of exclusivity while a project
+      works out whether it can build, and you generally keep farming through it.
+      A purchase is a purchase. They carry different money, different certainty,
+      and different tax consequences, and the right one depends on your
+      circumstances rather than on your acreage.
+  - question: What does the sales tax exemption mean for me?
+    answer: >-
+      Directly, nothing. It applies to equipment a data center operator buys, not
+      to anything you own or sell. It matters indirectly, because it is a
+      substantial part of why developers want Virginia sites, and because its
+      investment and job thresholds push projects towards larger properties in
+      certain localities.
+  - question: What happens to the rest of my farm?
+    answer: >-
+      That depends on what is being looked at and how your place is laid out.
+      Plenty of arrangements involve part of a property while the rest carries on
+      as it was. It is a fair thing to raise early rather than late, and we would
+      rather hear it in the first conversation than the fifth.
