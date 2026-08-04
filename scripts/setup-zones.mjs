@@ -270,15 +270,36 @@ if (needNameservers.length > 0) {
   console.log('registrar. In GoDaddy you can select several domains at once in My');
   console.log('Products and set nameservers on all of them together.');
   console.log('');
+  /*
+   * Grouped by nameserver pair rather than listed per domain.
+   *
+   * Cloudflare assigns nameservers per zone, not per account, and a zone
+   * created later can get a different pair. An earlier version of this printed
+   * each domain with its own pair and then said they were "usually" the same,
+   * which is worse than useless: it invites you to enter one pair everywhere
+   * and gives you no way to see that you should not have. Grouping makes a
+   * second pair impossible to miss, and these values are read from Cloudflare
+   * rather than assumed.
+   */
+  const byPair = new Map();
   for (const { domain, nameservers } of needNameservers) {
-    console.log(`  ${domain}`);
-    for (const ns of nameservers) console.log(`      ${ns}`);
+    const key = nameservers.join('\n');
+    if (!byPair.has(key)) byPair.set(key, []);
+    byPair.get(key).push(domain);
   }
-  console.log('');
-  console.log('Cloudflare usually assigns the same pair to every domain on an');
-  console.log('account, so check whether they match before typing them nineteen');
-  console.log('times.');
-  console.log('');
+
+  if (byPair.size > 1) {
+    console.log(`These do NOT all use the same nameservers. There are ${byPair.size}`);
+    console.log('different pairs below. Enter the pair listed above each group, for');
+    console.log('the domains in that group only.');
+    console.log('');
+  }
+
+  for (const [key, domains] of byPair) {
+    for (const ns of key.split('\n')) console.log(`  ${ns}`);
+    for (const domain of domains) console.log(`      ${domain}`);
+    console.log('');
+  }
 }
 
 if (throttled.length > 0) {
