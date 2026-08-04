@@ -274,6 +274,24 @@ difference.
 A hostname that already has a DNS record is left completely alone, so a domain
 attached by hand in the dashboard is never disturbed by this.
 
+### Do not use "Add custom domain" in the dashboard
+
+There are two ways to send a hostname to a Worker and this project uses one of
+them. Adding a **custom domain** in the dashboard is the other. Mixing them
+produces this, which is what it looks like when you try:
+
+> Hostname 'example.com' already has externally managed DNS records (A, CNAME,
+> etc). Delete them first or try a different hostname.
+
+Cloudflare is refusing to overwrite records that are already there, whether the
+script put them there or the registrar's records were imported when the domain
+was added. Either way the answer is the same: close the dialog and run the
+Domains workflow on **apply**. It clears whatever the registrar left behind and
+points both the domain and its `www` form at the right Worker.
+
+The dashboard flow is not wrong, it is just the approach this project moved away
+from, because it needs account scope and the domain token only has zone scope.
+
 Worker names match the site key, so `kansasdatacenterland.com` serves from
 `poweredlandco-ks` and `poweredlandco.com` from `poweredlandco-hub`.
 
