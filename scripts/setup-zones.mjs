@@ -1,6 +1,15 @@
 #!/usr/bin/env node
-import { findZone, createZone, listDnsRecords, deleteDnsRecord } from './lib/cloudflare.mjs';
+import {
+  findZone,
+  createZone,
+  listDnsRecords,
+  deleteDnsRecord,
+  createProxiedRecord,
+  listWorkerRoutes,
+  createWorkerRoute,
+} from './lib/cloudflare.mjs';
 import { liveSites, allSites } from '../src/data/sites.node.mjs';
+import { workerName } from './lib/worker-name.mjs';
 
 /**
  * Takes domains from "registered at GoDaddy" to "ready to serve our site".
@@ -16,12 +25,12 @@ import { liveSites, allSites } from '../src/data/sites.node.mjs';
  * domains in My Products and set nameservers on all of them at once, so that
  * stays one action rather than one per domain.
  *
- * Attaching a domain to its Worker needs account scope and domain scope in the
- * same credential, and Cloudflare's token editor allows only one scope per
- * token. So that stays six clicks per domain in the dashboard, described in
- * docs/DEPLOY.md. Clearing the parking records first is what makes those six
- * clicks succeed, and it is the part that would otherwise be four deletions
- * times nineteen domains.
+ * Pointing a domain at its Worker used to be the other one, because a custom
+ * domain is an account level object and this token only has domain scope. A
+ * Worker route reaches the same place from the other side: a proxied record
+ * plus a route are both domain level, so this token can do it and the visitor
+ * cannot tell the difference. That turned sixteen rounds of dashboard clicking
+ * into one run.
  *
  * Uses CLOUDFLARE_ZONE_TOKEN, which is a different credential from the one that
  * publishes the sites. Neither can do the other's job, so a mistake with either
@@ -203,6 +212,54 @@ for (const site of targets) {
     console.log(`  kept     ${record.type} ${record.name}${why}`);
   }
 
+  /*
+   * Point the domain and its www form at the Worker.
+   *
+   * Both hostnames matter. The apex is what gets printed and linked, and www is
+   * what a good number of people type regardless of what you printed. A domain
+   * where only one of the two resolves looks broken to whoever guessed wrong,
+   * and this audience guesses www more often than most.
+   *
+   * A hostname that already has a record is left completely alone. That is how
+   * a domain attached by hand in the dashboard survives this script: the custom
+   * domain created its own record, we see it, and we do not touch it.
+   */
+  const apex = site.domain.toLowerCase();
+  const worker = workerName(site);
+  const existingNames = new Set(records.map((r) => r.name.toLowerCase()));
+
+  let routes = [];
+  try {
+    routes = await listWorkerRoutes(zone.id);
+  } catch (error) {
+    console.log(`  could not read its Worker routes: ${error.message}`);
+    failed.push(site.domain);
+    console.log('');
+    continue;
+  }
+  const routed = new Set(routes.map((r) => r.pattern.toLowerCase().replace(/\/\*$/, '')));
+
+  for (const host of [apex, `www.${apex}`]) {
+    if (existingNames.has(host)) {
+      console.log(`  serving  ${host}`);
+      continue;
+    }
+
+    if (dryRun) {
+      console.log(`  would point  ${host} at ${worker}`);
+      continue;
+    }
+
+    try {
+      await createProxiedRecord(zone.id, host);
+      if (!routed.has(host)) await createWorkerRoute(zone.id, `${host}/*`, worker);
+      console.log(`  pointed  ${host} at ${worker}`);
+    } catch (error) {
+      console.log(`  could not point ${host} at ${worker}: ${error.message}`);
+      failed.push(site.domain);
+    }
+  }
+
   console.log('');
 }
 
@@ -248,7 +305,7 @@ if (failed.length > 0) {
   process.exitCode = 1;
 }
 
-console.log('Done. Once a domain shows as active, attach it to its Worker in the');
-console.log('Cloudflare dashboard: Compute, Workers & Pages, poweredlandco-<key>,');
-console.log('Settings, Domains & Routes, Add, Custom domain. Once for the domain');
-console.log('and once for www. See docs/DEPLOY.md Part 4.');
+console.log('Done. Nothing needs attaching in the dashboard: every hostname above');
+console.log('either already had a record or has been pointed at its Worker here.');
+console.log('A domain still shown as pending starts serving on its own once its');
+console.log('nameservers take effect.');

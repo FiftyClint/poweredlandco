@@ -2,6 +2,7 @@
 import { spawnSync } from 'node:child_process';
 import { existsSync, writeFileSync, rmSync } from 'node:fs';
 import { liveSites, allSites } from '../src/data/sites.node.mjs';
+import { workerName } from './lib/worker-name.mjs';
 
 /**
  * Deploys every live site to its own Cloudflare Worker.
@@ -45,9 +46,6 @@ import { liveSites, allSites } from '../src/data/sites.node.mjs';
 const args = process.argv.slice(2);
 const dryRun = args.includes('--dry-run');
 const only = args.includes('--only') ? args[args.indexOf('--only') + 1] : null;
-
-/** Worker name for a site. Stable, because renaming one orphans its domain. */
-const workerName = (site) => `poweredlandco-${site.key}`;
 
 const targets = liveSites().filter((s) => !only || s.key === only);
 
@@ -188,7 +186,6 @@ if (dryRun) {
 } else {
   console.log(`Deployed ${targets.length} site(s).`);
   console.log('');
-  console.log('A Worker serves nothing at a real address until its domain is');
-  console.log('attached in the Cloudflare dashboard. That is a one time step per');
-  console.log('domain, described in docs/DEPLOY.md.');
+  console.log('A Worker serves nothing at a real address until a domain points at');
+  console.log('it. Run the Domains workflow to do that. See docs/DEPLOY.md.');
 }

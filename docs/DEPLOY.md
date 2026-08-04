@@ -264,10 +264,15 @@ records, and prints the nameservers to set at GoDaddy.
 At GoDaddy, **My Products** lets you tick several domains and set nameservers on
 all of them in one action, so that stays one job rather than eighteen.
 
-Attaching each domain to its Worker is still Part 4 in the dashboard, six clicks
-per domain, because that single step needs both scopes at once. Clearing the
-parking records first is what makes it succeed, and that was the part that would
-otherwise have been four record deletions times nineteen domains.
+It also points each domain, and its `www` form, at the right Worker. That was
+originally six clicks per domain in the dashboard, because a **custom domain** is
+an account level object and this token only has domain scope. A **Worker route**
+reaches the same place from the other side: a proxied record plus a route are
+both domain level, so this token can create them and a visitor cannot tell the
+difference.
+
+A hostname that already has a DNS record is left completely alone, so a domain
+attached by hand in the dashboard is never disturbed by this.
 
 Worker names match the site key, so `kansasdatacenterland.com` serves from
 `poweredlandco-ks` and `poweredlandco.com` from `poweredlandco-hub`.
