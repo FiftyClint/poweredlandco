@@ -244,6 +244,22 @@ incentives:
     its own. But qualifying requires buying power for ten years from the utility
     certified for that ground, which is why we ask who bills you, and it is a
     real reason serious buyers are evaluating Kansas sites right now.
+
+    The bar is high and that shapes which properties get looked at. A project
+    has to commit at least 250 million dollars of investment within five years
+    and create at least twenty jobs within two years of beginning operations.
+    It needs prior approval from the Kansas Fusion Center Oversight Board, which
+    can refuse a project it considers a threat to critical infrastructure, and
+    it has to start construction within ten years of signing its agreement with
+    the Secretary of Commerce. The Department of Commerce reviews the programme
+    every five years.
+
+    Two of those conditions reach your ground directly. The ten year power
+    purchase requirement means the certified territory your land sits in is not
+    a detail, it is part of whether a project can qualify at all. And a
+    qualifying operator has to follow practices that conserve, reuse, and
+    replace water, which is the condition most likely to come up at a county
+    meeting in western Kansas and is worth knowing before somebody raises it.
   sources:
     - label: Kansas Department of Commerce, SB 98 data center sales tax exemption
       url: https://www.kansascommerce.gov/program/business-incentives-and-services/sb-98-data-center-sales-tax-exemption/
@@ -257,6 +273,12 @@ incentives:
     - label: Kansas Corporation Commission, electric certified areas map
       url: https://www.kcc.ks.gov/images/PDFs/maps/ks_electric_certified_areas.pdf
       accessed: '2026-07-30'
+    - label: Kansas Legislature, supplemental note and summary for Senate Bill 98
+      url: https://kslegislature.gov/li/b2025_26/measures/documents/summary_sb_98_2025
+      accessed: '2026-08-04'
+    - label: Husch Blackwell, Kansas enacts a twenty year sales tax exemption for data centers
+      url: https://www.huschblackwell.com/newsandinsights/kansas-enacts-20-year-sales-tax-exemption-for-data-centers
+      accessed: '2026-08-04'
 
 regions:
   - title: The Kansas City edge
