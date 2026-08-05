@@ -1,13 +1,343 @@
 key: tx
-type: parked
+type: state
 domain: texasdatacenterland.com
 stateName: Texas
 stateAbbr: TX
 accent: loam
 status: live
 
-intro: >-
-  Texas is large enough that almost nothing true about the state is
-  reliably true about your particular piece of it. So we would rather talk
-  about your ground than about Texas. Tell us the county, roughly how many
-  acres, and anything you have noticed nearby, and we will look.
+hero:
+  headline: Own Texas ground with transmission crossing it?
+  subhead: >-
+    We purchase and option Texas property for data center development. Send us
+    the county and what you have noticed nearby, and we will check it against
+    public records and tell you what we find.
+
+directAnswer: >-
+  The first thing worth establishing is which grid your ground sits on, because
+  Texas has more than one. Most of the state is inside ERCOT, but the Panhandle,
+  El Paso, and a slice of East Texas are not, and that changes who has to agree
+  to a project and how long agreement takes. After that it is a question of what
+  transmission runs near you and which wires company holds your area. Send us
+  the county, a rough acreage, and anything you have seen around the place. We
+  do that lookup at no cost and tell you either way, including when the answer
+  is that your ground does not suit this.
+
+trustPoints:
+  - title: Texas is nineteen states wearing one hat
+    body: >-
+      A section in Ward County and a section in Van Zandt County have almost
+      nothing in common for this purpose, and advice written about Texas as a
+      whole is usually wrong about both. We would rather talk about your county
+      and your ground than about the state.
+  - title: We are the buyer, not your representative
+    body: >-
+      We sit on the opposite side of the table from you and we say so at the
+      outset rather than letting you discover it. Have your own attorney read
+      anything we put in front of you. We would be uneasy if you did not.
+  - title: We tell you when the answer is no
+    body: >-
+      Most ground we look at in Texas does not work, and usually for reasons a
+      landowner could never have guessed from walking it. When that happens we
+      say so and stop rather than keeping you on a list for something that is
+      not coming.
+
+pageCopy:
+  howItWorks:
+    intro: >-
+      Demand for large electrical connections in Texas has grown faster than
+      anywhere else in the country, and a good deal of it is looking at rural
+      ground. That has made the process worth understanding for landowners who
+      never expected to think about it. Here is ours, start to finish.
+    steps:
+      - >-
+        Tell us the county, roughly the acreage, and whatever you have noticed
+        around the place. If you are unsure about something, say so. An honest
+        gap is more useful to us than a confident guess.
+      - >-
+        We check which grid and which wires company you fall under and what
+        transmission runs nearby. This costs you nothing, commits you to
+        nothing, and mostly uses records that are already public.
+      - >-
+        If it looks workable, we come back with what we found and what we would
+        want to do next. If it does not, we tell you that and try to explain the
+        reason rather than simply going quiet on you.
+      - >-
+        Only after that does anything become paperwork, and only once your
+        attorney has read it. Nothing before that point asks you for money, for
+        a signature, or for exclusivity.
+    closing: >-
+      No part of that asks you to pay anything or to stop speaking to other
+      people. If somebody approaches your Texas land and wants either before
+      showing you what they have found, slow down.
+  articles:
+    intro: >-
+      Plain writing for Texas landowners about ERCOT and what sits outside it,
+      how the wires company differs from the retail provider, and what to do
+      when a letter arrives about your section.
+    empty: >-
+      The Texas pieces are still being written. In the meantime the questions
+      page answers most of what landowners here ask, and the form below reaches
+      a person rather than a queue.
+  qualify:
+    intro: >-
+      Two ranches in the same Texas county can be entirely different
+      propositions for this, and the thing that separates them is rarely
+      anything a landowner has spent time worrying about. These are the factors
+      that actually decide it.
+    criteria:
+      - >-
+        Transmission, first and by a wide margin. High voltage lines crossing or
+        adjoining the property, and a substation within reach, are what make a
+        site possible. Distribution lines along a county road are not the same
+        thing and will not carry a project like this.
+      - >-
+        Which grid you are on. Inside ERCOT the interconnection queue is
+        enormous and getting longer. Outside it, in the Panhandle or the eastern
+        edge, the process is different and involves parties who do not appear in
+        an ERCOT conversation at all.
+      - >-
+        Land that holds together. A contiguous block beats scattered acreage of
+        the same total size, because a campus and its yard want to occupy one
+        piece of ground rather than three.
+      - >-
+        Terrain that can actually be built on. Playa lakes, caliche outcrops,
+        steep draws, and floodplain all take acreage out of contention even when
+        the deed count looks generous.
+      - >-
+        Water and road access sufficient for construction, and a county that has
+        thought about industrial development before. Some Texas counties handle
+        this routinely. Others have never seen it and will take their own time.
+    closing: >-
+      Nothing satisfies all of that, and we do not expect it to. What we are
+      trying to work out is whether the gaps are closable. That judgement needs
+      your particular ground rather than a general rule, which is why we would
+      rather look.
+
+value:
+  intro: >-
+    This is the first question everywhere and it deserves a real answer instead
+    of a dodge. We will not publish a per acre figure for Texas. A number quoted
+    before anybody has looked at your ground is not a number, it is a guess with
+    a dollar sign on it, and in a state this varied it would be wrong more often
+    than right. What we can do is set out what actually moves it.
+  points:
+    - title: The line, not the acreage
+      body: >-
+        What sits near the property electrically drives this further than size,
+        soil, or frontage. A quarter section adjoining a substation with spare
+        capacity is a different asset to a full section twenty miles from any of
+        it, and the deed will not tell you which you own.
+    - title: Queue position is part of the value
+      body: >-
+        Requests for large connections in ERCOT rose sharply through 2025, which
+        means capacity near your ground may already be spoken for by somebody
+        further ahead in line. Ground where a project can actually get connected
+        in a reasonable time is worth more than ground that merely looks right.
+    - title: Contiguity and control
+      body: >-
+        One block under one ownership is worth more than the same acreage split
+        by a highway, a rail line, or a neighbour who has not decided anything
+        yet. Assembly after the fact is slow and gets priced as such.
+    - title: An option is not a sale
+      body: >-
+        Some landowners take payment for a period of exclusivity while a project
+        establishes whether it can be built, and keep running cattle or crops
+        throughout. Others sell. The money, the certainty, and the tax treatment
+        all differ, and which fits depends on your situation rather than your
+        acreage.
+
+livingWithIt:
+  - title: Grazing and cropping carry on through an option
+    body: >-
+      An option commonly runs a year or several, and the ground generally keeps
+      doing what it already does. Survey crews and soil testing turn up
+      occasionally and work around the operation rather than displacing it.
+  - title: What gets built is industrial, and we will not pretend otherwise
+    body: >-
+      Large low buildings, a substation, security fencing, and lighting at night.
+      Anybody describing it as blending into ranch country is selling you
+      something. It is quieter than an interstate and much busier than pasture.
+  - title: Water use is a fair question to ask early
+    body: >-
+      In dry parts of Texas this is the question that matters most to neighbours,
+      and designs vary enormously in how much water they need. Ask any developer
+      directly what their cooling approach is. An unwillingness to answer plainly
+      tells you something worth knowing.
+  - title: Mineral and wind interests do not simply disappear
+    body: >-
+      A great deal of Texas ground carries severed minerals, existing pooling
+      arrangements, or wind and solar leases. None of that automatically rules
+      out a project, but all of it has to be understood early, and it is better
+      raised by you at the start than found by a title company at the end.
+
+utilitiesNote: >-
+  Texas is unusual twice over. Most of the state runs on its own grid, ERCOT,
+  which is not synchronously connected to the rest of the country, while the
+  Panhandle, El Paso, and part of East Texas sit outside it. On top of that,
+  much of the state is deregulated, meaning the wires company that owns the poles
+  serving you is assigned by geography while the retailer you pay is chosen. For
+  our purposes the wires company is the one that matters, because it owns the
+  connection. Cooperatives and municipal utilities were largely left out of
+  deregulation and operate differently again. If you are not sure which applies
+  to you, the top of your electric bill usually names the wires company
+  separately from the retailer.
+
+utilities:
+  - name: Oncor Electric Delivery
+    kind: investor-owned
+    note: >-
+      The wires company across much of North and West Texas, including the
+      Dallas and Fort Worth area and a wide stretch of rural country beyond it.
+  - name: CenterPoint Energy
+    kind: investor-owned
+    note: The wires company for the Houston metropolitan area and its surrounds.
+  - name: AEP Texas
+    kind: investor-owned
+    note: >-
+      Serves South and West Texas, covering a large amount of thinly populated
+      country.
+  - name: Texas-New Mexico Power
+    kind: investor-owned
+    note: Serves pockets along the Gulf Coast and in West Texas.
+  - name: Southwestern Public Service Company
+    kind: investor-owned
+    note: >-
+      An Xcel Energy company serving the Panhandle and South Plains, which sit
+      outside ERCOT.
+  - name: Entergy Texas
+    kind: investor-owned
+    note: >-
+      Serves part of Southeast Texas, in territory outside the ERCOT
+      interconnection.
+  - name: Pedernales Electric Cooperative
+    kind: cooperative
+    note: >-
+      One of the larger cooperatives in the country, serving the Hill Country
+      and areas around Austin.
+  - name: Bluebonnet Electric Cooperative
+    kind: cooperative
+    note: Serves a broad rural area between Austin, Houston, and Bryan.
+  - name: Texas electric cooperatives generally
+    kind: cooperative
+    note: >-
+      Around 76 cooperatives serve much of rural Texas. Which one holds your
+      area matters, because it determines who you would actually be dealing with.
+
+incentives:
+  summary: >-
+    Texas exempts certain equipment used in qualifying data centers from state
+    sales and use tax under section 151.359 of the Tax Code. To qualify, a
+    facility generally has to occupy at least 100,000 square feet, involve
+    capital investment of at least 200 million dollars within five years, and
+    create at least 20 qualifying jobs in the county where it sits, not counting
+    jobs moved from another Texas county. The operator applies to the Comptroller
+    for certification and a registration number. The exemption runs ten years
+    from certification where the investment is at least 200 million and under 250
+    million dollars, with longer terms above that. It does not extend to office
+    equipment, janitorial supplies, or items used mainly for sales or
+    transportation. Separately and more recently, Senate Bill 6 took effect in
+    June 2025 and changed the terms on which large electrical loads connect
+    inside ERCOT. Facilities interconnecting after the end of 2025 have to
+    develop curtailment protocols and install equipment allowing ERCOT to
+    disconnect them remotely during grid emergencies. None of this money reaches
+    you as a landowner. It matters because it explains why developers want Texas
+    ground, and because the investment and square footage thresholds push
+    projects towards larger sites rather than small ones.
+  sources:
+    - label: Texas Tax Code section 151.359, property used in certain data centers
+      url: https://law.justia.com/codes/texas/tax-code/title-2/subtitle-e/chapter-151/subchapter-h/section-151-359/
+      accessed: '2026-08-04'
+    - label: Texas Tax Code section 151.359, full text
+      url: https://texas.public.law/statutes/tex._tax_code_section_151.359
+      accessed: '2026-08-04'
+    - label: McGuireWoods, Texas Senate Bill 6 expands oversight of large loads in ERCOT
+      url: https://www.mcguirewoods.com/client-resources/alerts/2025/7/texas-senate-bill-6-significantly-expands-regulatory-oversight-over-large-loads-in-ercot/
+      accessed: '2026-08-04'
+    - label: Utility Dive, ERCOT large load queue growth
+      url: https://www.utilitydive.com/news/ercots-large-load-queue-jumped-almost-300-last-year-official/808820/
+      accessed: '2026-08-04'
+
+regions:
+  - title: The Permian Basin and West Texas
+    body: >-
+      Existing heavy industrial load, generation nearby, and a planned 765
+      kilovolt transmission backbone intended to serve the region's growth. Land
+      is plentiful and the electrical picture is better than the population
+      density would suggest, which is an unusual combination.
+  - title: The Panhandle and South Plains
+    body: >-
+      Outside ERCOT, on the Southwest Power Pool, with substantial wind
+      generation already built and the transmission that came with it. Being on a
+      different grid changes who has to agree and how long it takes, in both
+      directions.
+  - title: The Abilene and Big Country area
+    body: >-
+      Central and west of the Metroplex, with transmission built out for wind and
+      enough distance from major population centres to keep land within reach.
+      This stretch has drawn genuine attention.
+  - title: The edges of the Metroplex
+    body: >-
+      Counties an hour or two out from Dallas and Fort Worth, in Oncor territory,
+      where there is still real acreage and existing transmission. Closer in the
+      land price has usually settled the question already.
+  - title: East Texas and the Gulf Coast
+    body: >-
+      Parts of this area sit outside ERCOT, and much of it carries existing
+      industrial and petrochemical load along with the infrastructure serving it.
+      Ground here works differently to the west and needs looking at on its own
+      terms.
+
+faq:
+  - question: What is ERCOT, and why do you keep asking about it?
+    answer: >-
+      ERCOT operates the grid covering most of Texas, and it is not
+      synchronously connected to the rest of the country. The Panhandle, El Paso,
+      and part of East Texas sit outside it. Whether your ground is inside or
+      outside changes who must approve a connection, how long that takes, and
+      which rules apply. It is the first thing we establish about any Texas
+      property.
+  - question: Who is my wires company, and how is it different from who bills me?
+    answer: >-
+      In deregulated parts of Texas the company that owns the poles and lines
+      serving you is fixed by geography, while the retailer you pay is one you
+      chose. Oncor, CenterPoint, AEP Texas, and Texas-New Mexico Power are wires
+      companies. For a project like this the wires company is what matters,
+      because it owns the connection. If you are on a cooperative or a municipal
+      utility, that distinction does not apply to you.
+  - question: How many acres do I need?
+    answer: >-
+      There is no fixed answer, and anybody offering one without seeing your
+      ground is guessing. Whether the acreage is contiguous, and what runs near
+      it electrically, matters far more than the total. Smaller places beside
+      real capacity beat larger ones that are miles from anything.
+  - question: I have wind turbines or an oil and gas lease. Does that rule me out?
+    answer: >-
+      Not automatically, and sometimes the opposite, since existing energy
+      infrastructure often means transmission is already nearby. What it does
+      mean is that the existing agreements have to be read carefully and early.
+      Tell us about them at the start rather than letting them surface later.
+  - question: Somebody wrote to me about my land. What should I do?
+    answer: >-
+      Do not sign, and do not be hurried by a deadline in the letter. Establish
+      who they are and whether they are buying for themselves or for a party they
+      have not named. Have an attorney read it before you agree to anything. That
+      applies just as much to a letter from us as from anyone else.
+  - question: Does the sales tax exemption put money in my pocket?
+    answer: >-
+      No. It applies to equipment a qualifying data center operator buys, not to
+      your land or your sale. It is relevant only because it helps explain why
+      developers look at Texas, and because its thresholds push interest towards
+      larger properties.
+  - question: What is Senate Bill 6 and does it affect me?
+    answer: >-
+      It is a 2025 law changing how large electrical loads connect inside ERCOT,
+      including requirements that new large facilities be capable of being
+      curtailed or disconnected remotely during a grid emergency. It applies to
+      the operator rather than to you, but it affects what developers are willing
+      to build and where, which reaches your ground indirectly.
+  - question: What happens to the rest of my place?
+    answer: >-
+      Often nothing. Many arrangements involve a portion of a property while the
+      remainder carries on grazing or cropping as before. It is a reasonable
+      thing to ask about in the first conversation, and we would rather you did.
