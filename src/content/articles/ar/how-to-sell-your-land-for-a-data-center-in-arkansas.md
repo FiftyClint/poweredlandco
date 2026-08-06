@@ -9,7 +9,8 @@ sources:
   - label: Arkansas Economic Development Commission, electric utilities
     url: https://www.arkansasedc.com/why-arkansas/infrastructure/electric-utilities
     accessed: '2026-07-30'
-status: draft
+published: '2026-08-04'
+status: published
 ---
 
 The short answer is that you find out whether your land is close enough to

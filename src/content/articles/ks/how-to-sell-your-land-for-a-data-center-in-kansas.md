@@ -12,7 +12,8 @@ sources:
   - label: Kansas Corporation Commission, electric certified areas map
     url: https://www.kcc.ks.gov/images/PDFs/maps/ks_electric_certified_areas.pdf
     accessed: '2026-07-30'
-status: draft
+published: '2026-08-04'
+status: published
 ---
 
 Everything begins with the electrical picture around your ground. Acreage,

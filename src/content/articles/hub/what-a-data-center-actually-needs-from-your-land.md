@@ -7,7 +7,8 @@ description: >-
   the ground, and why the answer depends more on what is next to your land than
   on the land itself.
 sources: []
-status: draft
+published: '2026-08-04'
+status: published
 ---
 
 If you own rural land and someone has told you it might be worth something to a

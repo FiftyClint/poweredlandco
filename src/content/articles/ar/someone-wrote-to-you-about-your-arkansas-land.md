@@ -9,7 +9,8 @@ sources:
   - label: Arkansas Advocate, understanding the data center boom and debate
     url: https://arkansasadvocate.com/2026/05/22/arkansas-explained-understanding-the-data-center-boom-and-debate/
     accessed: '2026-07-30'
-status: draft
+published: '2026-08-04'
+status: published
 ---
 
 If a letter turned up about your land, you are not alone and you are not being
