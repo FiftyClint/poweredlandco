@@ -336,3 +336,22 @@ faq:
       Plenty of arrangements involve part of a property while the rest carries on
       as it was. It is a fair thing to raise early rather than late, and we would
       rather hear it in the first conversation than the fifth.
+
+# Where the facts on this site actually move. Not rendered anywhere.
+# Checked by: npm run check:sources -- --watch
+watch:
+  - label: Virginia Legislative Information System
+    url: https://lis.virginia.gov/
+    kind: legislature
+  - label: Virginia State Corporation Commission
+    url: https://www.scc.virginia.gov/
+    kind: regulator
+  - label: Virginia Economic Development Partnership news
+    url: https://www.vedp.org/news
+    kind: economic-development
+  - label: Dominion Energy newsroom
+    url: https://news.dominionenergy.com/
+    kind: utility
+  - label: Cardinal News, Southside and Southwest Virginia
+    url: https://cardinalnews.org/
+    kind: news

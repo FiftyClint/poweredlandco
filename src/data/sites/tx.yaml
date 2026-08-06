@@ -341,3 +341,22 @@ faq:
       Often nothing. Many arrangements involve a portion of a property while the
       remainder carries on grazing or cropping as before. It is a reasonable
       thing to ask about in the first conversation, and we would rather you did.
+
+# Where the facts on this site actually move. Not rendered anywhere.
+# Checked by: npm run check:sources -- --watch
+watch:
+  - label: Texas Legislature Online
+    url: https://capitol.texas.gov/
+    kind: legislature
+  - label: Public Utility Commission of Texas
+    url: https://www.puc.texas.gov/
+    kind: regulator
+  - label: ERCOT news and market notices
+    url: https://www.ercot.com/news
+    kind: regulator
+  - label: Office of the Governor, economic development
+    url: https://gov.texas.gov/business
+    kind: economic-development
+  - label: Oncor newsroom
+    url: https://www.oncor.com/en/pages/newsroom.aspx
+    kind: utility

@@ -377,3 +377,22 @@ faq:
       often prefer to start there. A full purchase takes longer because more has
       to be confirmed first. We give you a realistic timeline once we know what
       we are working with, rather than a promise up front.
+
+# Where the facts on this site actually move. Not rendered anywhere.
+# Checked by: npm run check:sources -- --watch
+watch:
+  - label: Arkansas General Assembly, bill search
+    url: https://arkleg.state.ar.us/Bills/Search
+    kind: legislature
+  - label: Arkansas Public Service Commission
+    url: https://psc.arkansas.gov/
+    kind: regulator
+  - label: Arkansas Economic Development Commission news
+    url: https://www.arkansasedc.com/news
+    kind: economic-development
+  - label: Entergy Arkansas newsroom
+    url: https://www.entergynewsroom.com/
+    kind: utility
+  - label: Arkansas Advocate, energy and data center coverage
+    url: https://arkansasadvocate.com/
+    kind: news

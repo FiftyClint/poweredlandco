@@ -38,6 +38,27 @@ const source = z.object({
 });
 
 /**
+ * Where to look when checking what has changed in a state.
+ *
+ * Not rendered anywhere. This is working knowledge for whoever, or whatever,
+ * researches the next article: the specific places where the facts on these
+ * pages actually move. Which legislature, which regulator, which utilities.
+ *
+ * It lives per state rather than in one shared list because it is state
+ * knowledge, exactly like the utilities array is, and because the whole
+ * difficulty of keeping nineteen sites current is that each one changes for its
+ * own reasons.
+ *
+ * scripts/check-sources.mjs --watch verifies these still resolve, so the
+ * watchlist cannot quietly rot into a list of dead links either.
+ */
+const watchEntry = z.object({
+  label: nonEmpty('watch label', 200),
+  url: z.string().url('watch url must be a full URL'),
+  kind: z.enum(['legislature', 'regulator', 'utility', 'economic-development', 'news']),
+});
+
+/**
  * An optional photograph.
  *
  * Every image slot in the system is optional and renders nothing when unset.
@@ -188,6 +209,8 @@ const base = z.object({
    */
   status: z.enum(['live', 'pending']),
   images,
+  /** Optional. Absent on a site nobody is maintaining facts for yet. */
+  watch: z.array(watchEntry).default([]),
 });
 
 const hubSite = base.extend({

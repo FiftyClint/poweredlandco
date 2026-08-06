@@ -1,0 +1,42 @@
+name: Sources
+
+# Checks that every URL these sites cite still resolves.
+#
+# Separate from Deploy on purpose, and it must stay that way. The pages cite
+# state legislatures, utility commissions and law firms, and if this ran inside
+# the deploy then any of those having a bad afternoon would stop this network
+# publishing. Nobody else's uptime gets to block ours.
+#
+# Weekly, because citations rot on the timescale of government website
+# redesigns rather than of pushes.
+
+on:
+  schedule:
+    # Monday morning, so a dead citation is found at the start of a week
+    # rather than discovered by a landowner at the weekend.
+    - cron: '0 13 * * 1'
+  workflow_dispatch:
+    inputs:
+      watch:
+        description: 'Also check the per-state monitoring watchlists.'
+        type: boolean
+        default: true
+
+jobs:
+  sources:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+
+      - run: npm ci
+
+      # Fails only on 404 and 410. A timeout or a 500 is reported and forgiven,
+      # because a check that goes red for transient reasons is a check people
+      # learn to ignore.
+      - name: Check cited sources
+        run: node scripts/check-sources.mjs ${{ (github.event_name == 'schedule' || inputs.watch) && '--watch' || '' }}

@@ -372,3 +372,22 @@ faq:
       start there. Outright purchases run longer since more must be verified
       first. You will get an honest schedule once we understand the property
       rather than an optimistic one now.
+
+# Where the facts on this site actually move. Not rendered anywhere.
+# Checked by: npm run check:sources -- --watch
+watch:
+  - label: Kansas Legislature, bill and measure search
+    url: https://kslegislature.gov/li/
+    kind: legislature
+  - label: Kansas Corporation Commission
+    url: https://www.kcc.ks.gov/
+    kind: regulator
+  - label: Kansas Department of Commerce news
+    url: https://www.kansascommerce.gov/newsroom/
+    kind: economic-development
+  - label: Evergy newsroom
+    url: https://investors.evergy.com/news-releases
+    kind: utility
+  - label: Kansas Reflector
+    url: https://kansasreflector.com/
+    kind: news

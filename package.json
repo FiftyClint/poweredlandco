@@ -24,7 +24,8 @@
     "deploy": "node scripts/deploy.mjs",
     "setup:zones": "node scripts/setup-zones.mjs",
     "check:leads": "node scripts/check-lead-destination.mjs",
-    "check:secrets": "node scripts/check-built-secrets.mjs"
+    "check:secrets": "node scripts/check-built-secrets.mjs",
+    "check:sources": "node scripts/check-sources.mjs"
   },
   "dependencies": {
     "@astrojs/mdx": "^7.0.5",
