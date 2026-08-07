@@ -1,13 +1,339 @@
 key: mo
-type: parked
+type: state
 domain: missouridatacenterland.com
 stateName: Missouri
 stateAbbr: MO
 accent: forest
 status: live
 
-intro: >-
-  If you own land in Missouri and somebody has written to you about it, the
-  first useful question is not what they are offering. It is whether your
-  ground fits what they need at all. That part is answerable. Send us the
-  county and roughly how many acres and we will work through it.
+hero:
+  headline: Missouri sets the lowest bar of any state we work in.
+  subhead: >-
+    We purchase and option Missouri land for data center development. A project
+    here qualifies at a fraction of what neighbouring states demand, which puts
+    smaller sites and smaller counties genuinely in play.
+
+directAnswer: >-
+  Missouri is worth asking about even if your place is modest, because the state
+  sets its qualifying bar far below its neighbours. A new facility here needs 25
+  million dollars of investment and 10 jobs, where Kansas asks 250 million and
+  Texas asks 200 million. Smaller projects clear that, and smaller projects fit
+  on smaller ground. Beyond that it is the usual questions: which utility serves
+  you, what transmission runs nearby, and whether the acreage holds together.
+  Send us the county, a rough acreage, and what you have noticed around the
+  place. We check it against public records at no cost and answer either way.
+
+trustPoints:
+  - title: A lower bar changes which farms are in the conversation
+    body: >-
+      Most states in this region require an investment large enough that only
+      enormous campuses qualify, and enormous campuses need enormous tracts.
+      Missouri's threshold admits far smaller projects, and a smaller project can
+      sit on ground that would never have been considered across the state line.
+  - title: We buy for ourselves
+    body: >-
+      We are the party on the other side of the table, not somebody working on
+      your behalf, and we would rather be plain about it now. Take whatever we
+      send to your own attorney before you agree to any of it.
+  - title: We tell you when it does not work
+    body: >-
+      Most Missouri ground we look at will not suit this, usually for reasons
+      that have nothing to do with how good the farm is. When that is the answer
+      we give it and stop rather than leaving you waiting on a call that is not
+      coming.
+
+pageCopy:
+  howItWorks:
+    intro: >-
+      Missouri sits between two states with far more visible activity, and a
+      good number of landowners here assume that means it happens elsewhere. The
+      incentive structure argues otherwise. Here is how we go about answering the
+      question for a specific property.
+    steps:
+      - >-
+        Send us the county, roughly the acreage, and what you have noticed around
+        the place. Where you are unsure of something, say so. A flagged gap is
+        worth more to us than a confident guess.
+      - >-
+        We check which utility or cooperative serves you, what transmission is
+        near, and how your county's wage average affects the job test. That last
+        part matters here more than in most states. None of it costs you
+        anything.
+      - >-
+        If it looks workable we come back with what we found and what we would
+        want to do next. If it does not, we tell you that and give you the
+        reason.
+      - >-
+        Paperwork is the last thing that happens rather than the first. Your
+        attorney reads it before you put a pen anywhere near it, and up to that
+        moment the only thing we have asked of you is a description of your
+        place.
+    closing: >-
+      Notice what is missing from that list. At no stage do we ask you to fund a
+      survey, pay for a valuation, or promise not to speak to anybody else. When
+      a party wants one of those from a Missouri landowner before they have shown
+      any of their own work, that tells you most of what you need to know about
+      them.
+  articles:
+    intro: >-
+      Plain writing for Missouri landowners about why the state's qualifying
+      threshold matters to ordinary farms, how the cooperatives differ from
+      Ameren and Evergy, and what to do when a letter turns up.
+    empty: >-
+      The Missouri pieces are still being written. Until they are up, the
+      questions page answers most of what landowners here ask, and the form below
+      reaches a person rather than a queue.
+  qualify:
+    intro: >-
+      Two farms in the same Missouri county can sit on opposite sides of this,
+      and the difference is rarely the soil rating or the yield history. These
+      are the things that decide it.
+    criteria:
+      - >-
+        Transmission within reach, before anything else. High voltage line on or
+        beside the property, or a substation nearby, is what makes a site
+        possible. The line along the county road is a different thing and will
+        not carry this.
+      - >-
+        Your county's average wage, which is unusual to have to think about.
+        Missouri requires the jobs to pay at least 150 percent of the county
+        average, so a county with a higher average is a harder place to satisfy
+        that test than a lower one.
+      - >-
+        Acreage that holds together as one block. A contiguous piece beats the
+        same total divided by a road, a creek, or somebody else's forty in the
+        middle.
+      - >-
+        Ground that drains. Missouri has a lot of land that farms well and builds
+        badly, and bottom ground that takes water in a wet spring comes out of
+        the usable count whatever the deed says.
+      - >-
+        Access a construction convoy can use, and a county commission that has
+        considered industrial development before. Some Missouri counties have.
+        Many have not, and those will take their own time working it out.
+    closing: >-
+      Nothing meets all of that and nothing has to. What we are working out is
+      whether the gaps close, which is a question about your particular ground
+      rather than about Missouri, and it is why we would rather look than
+      generalise.
+
+value:
+  intro: >-
+    Everyone asks this first and it deserves a straight response. We are not
+    going to publish a per acre number for Missouri. A figure quoted before
+    anybody has looked at your ground is a guess wearing a dollar sign, and the
+    only thing it reliably does is set you up to be disappointed or taken
+    advantage of. What we can do is say precisely what moves it.
+  points:
+    - title: What the wires nearby can carry
+      body: >-
+        The electrical picture around the property does more than acreage, soil,
+        or frontage. Ground beside a substation with headroom is a different
+        asset to ground fifteen miles from any, and nothing in the deed or the
+        assessor's record separates them.
+    - title: A lower threshold widens the field of buyers
+      body: >-
+        Where a state demands 200 million dollars of investment, only a handful
+        of companies can play. Missouri's lower bar means more parties can
+        qualify, and more parties looking at a property is generally better for
+        whoever owns it.
+    - title: One block under one name
+      body: >-
+        Contiguous ground held by a single owner is worth more than the same
+        acreage assembled from three farms. Buying up neighbours afterwards is
+        slow and uncertain, and every party involved prices that in from the
+        start.
+    - title: An option and a sale are different offers
+      body: >-
+        Some landowners take a payment for a period of exclusivity while a
+        project works out whether it can build, and keep farming the whole time.
+        Others sell. The money, the certainty, and the tax treatment differ, and
+        which suits you is about your family rather than your acreage.
+
+livingWithIt:
+  - title: The crop goes in as usual during an option
+    body: >-
+      An option period commonly runs a year or more and the ground nearly always
+      keeps being farmed or grazed through it. Survey crews and soil borings
+      appear from time to time and work around the operation.
+  - title: What actually gets built
+    body: >-
+      Large low buildings, a substation, security fencing, and lighting at night.
+      It is an industrial site and we will not describe it as anything gentler.
+      Quieter than a highway, a great deal busier than pasture.
+  - title: Somebody will ask what it costs everyone else
+    body: >-
+      Whether large new loads raise other customers' bills is a live question in
+      Missouri as elsewhere, and it has been raised by people who have looked at
+      the numbers carefully. Expect it at a county commission meeting, and expect
+      it to be a fair question rather than an objection to brush off.
+  - title: Your neighbours decide more here than you might think
+    body: >-
+      Planning and zoning in much of rural Missouri is handled at county level by
+      people you know by name. That cuts both ways, and it is worth having
+      thought about before you are the item on the agenda.
+
+utilitiesNote: >-
+  Missouri divides roughly three ways. Ameren Missouri serves the eastern part of
+  the state including St. Louis and a wide arc of countryside. Evergy covers the
+  western side around Kansas City and a separate territory further south. Liberty
+  serves the southwest around Joplin. Behind all of that, Associated Electric
+  Cooperative supplies generation and transmission to the distribution
+  cooperatives that cover a very large share of rural Missouri, so if your ground
+  is genuinely rural a cooperative is a likely answer. That matters because the
+  cooperative and its generation partner, rather than an investor-owned utility,
+  are who a project has to work with. Your bill names your provider.
+
+utilities:
+  - name: Ameren Missouri
+    kind: investor-owned
+    note: >-
+      Serves eastern and central Missouri, including St. Louis and a wide stretch
+      of surrounding rural counties.
+  - name: Evergy
+    kind: investor-owned
+    note: >-
+      Serves western Missouri around Kansas City and a separate territory to the
+      south, as well as much of eastern Kansas.
+  - name: Liberty
+    kind: investor-owned
+    note: >-
+      Formerly Empire District, serving the southwest of the state around Joplin.
+  - name: Associated Electric Cooperative
+    kind: generation
+    note: >-
+      Generation and transmission for the distribution cooperatives across rural
+      Missouri, rather than a retail provider you would be billed by.
+  - name: Missouri's electric cooperatives
+    kind: cooperative
+    note: >-
+      Member-owned cooperatives covering a large majority of the state's land
+      area, which is most genuinely rural ground.
+
+incentives:
+  summary: >-
+    Missouri exempts qualifying data centers from state and local sales and use
+    tax, including tax on utilities, under section 144.810 of the Revised
+    Statutes. The programme is run by the Department of Economic Development
+    rather than granted automatically, and the operator has to be primarily
+    engaged in data processing and hosting or in internet publishing and search.
+
+    The number that matters is the threshold, and it is far lower than anywhere
+    around it. A new facility needs at least 25 million dollars of investment
+    within 36 months of conditional approval, and at least 10 new full-time jobs
+    in facility operations within the same period. Construction jobs and
+    part-time jobs do not count. For comparison, Kansas asks 250 million dollars,
+    Texas and Louisiana each ask 200 million, and Georgia asks between 100 and
+    250 million depending on county size.
+
+    There is a real condition attached in exchange. Those jobs have to pay at
+    least 150 percent of the average wage in the county where the facility sits,
+    which is a genuinely demanding test and one that gets harder in counties with
+    higher average wages rather than easier.
+
+    None of this money reaches you as a landowner. It matters because a lower bar
+    means smaller projects qualify, smaller projects fit on smaller ground, and
+    more companies can afford to be in the conversation about your land. It is
+    also, as elsewhere, publicly argued about, and analyses have questioned what
+    the state and local governments give up for it.
+  sources:
+    - label: Missouri Revised Statutes section 144.810, data storage centers
+      url: https://revisor.mo.gov/main/OneSection.aspx?section=144.810
+      accessed: '2026-08-04'
+    - label: Missouri Department of Economic Development, data center sales tax exemption program guidelines
+      url: https://ded.mo.gov/sites/g/files/zuston466/files/media/pdf/2025/02/Data_Center_Program_Guidelines_2023_0.pdf
+      accessed: '2026-08-04'
+    - label: Missouri Department of Economic Development, program summary
+      url: https://ded.mo.gov/sites/g/files/zuston466/files/media/pdf/2025/02/Data_Program_ProgramSummary_2023.pdf
+      accessed: '2026-08-04'
+    - label: Missouri Budget Project, data centers and state and local revenue
+      url: https://mobudget.org/wp-content/uploads/2026/04/Data-Centers-2026.pdf
+      accessed: '2026-08-04'
+
+regions:
+  - title: The counties around Kansas City
+    body: >-
+      Clay, Platte, Cass, Johnson and their neighbours, in Evergy territory, with
+      existing transmission and the workforce a wage test needs. Land here is
+      priced accordingly and the county wage averages make the job requirement
+      harder to satisfy than further out.
+  - title: The St. Louis ring
+    body: >-
+      St. Charles, Lincoln, Warren and Jefferson counties, on the Ameren side,
+      with real infrastructure and enough distance from the city that farms are
+      still farms. Similar wage arithmetic applies.
+  - title: The I-70 corridor between the two
+    body: >-
+      Boone, Callaway, Audrain and the country either side of the interstate, with
+      transmission linking the two metropolitan areas and land at a fraction of
+      what it costs at either end.
+  - title: Northern Missouri
+    body: >-
+      Largely cooperative served, thinly populated, with lower county wage
+      averages that make the jobs test easier to clear, and land prices to match.
+      The transmission picture varies sharply from one county to the next, so this
+      is country worth checking rather than assuming about.
+  - title: Southwest Missouri
+    body: >-
+      Around Springfield and Joplin, with Liberty and cooperative territory,
+      established industry, and existing transmission from a long history of
+      manufacturing and distribution.
+
+faq:
+  - question: Is Missouri's lower threshold really a good thing for me?
+    answer: >-
+      For most landowners, yes. A 25 million dollar bar means a project does not
+      have to be enormous to qualify, and a project that is not enormous does not
+      need an enormous tract. It brings ordinary farms into a conversation that
+      states like Kansas effectively reserve for very large properties.
+  - question: Why do you ask about my county's average wage?
+    answer: >-
+      Because Missouri requires the jobs at a qualifying facility to pay at least
+      150 percent of the county average. That makes a county with a lower average
+      wage an easier place to satisfy the test than a wealthier one, which is a
+      genuinely unusual piece of arithmetic and it works in favour of rural
+      counties.
+  - question: Am I on Ameren, Evergy, or a cooperative?
+    answer: >-
+      If your ground is genuinely rural, a cooperative is a likely answer, and
+      those are supplied by Associated Electric Cooperative. Ameren covers the
+      east, Evergy the west and a southern territory, Liberty the southwest. It
+      matters because whoever serves you owns the connection. Your bill says
+      which.
+  - question: How many acres do you need?
+    answer: >-
+      There is no single number and anybody offering one without seeing your
+      ground is guessing. Whether the acreage is contiguous, and what runs near it
+      electrically, matters far more than the total, and Missouri's lower
+      threshold means smaller places are worth asking about here.
+  - question: Somebody wrote to me about my land. What now?
+    answer: >-
+      Do not sign, and do not treat a deadline in the letter as binding on you.
+      Find out whether they are buying for themselves or for a party they have not
+      named. Have a Missouri attorney read it before you agree to anything. That
+      goes for a letter from us as much as from anyone else.
+  - question: Would I have to sell the whole farm?
+    answer: >-
+      Often not. Plenty of arrangements involve part of a property while the rest
+      carries on as it was. It is a reasonable thing to raise in the first
+      conversation and we would rather you did than leave it late.
+
+
+# Where the facts on this site actually move. Not rendered anywhere.
+# Checked by: npm run check:sources -- --watch
+watch:
+  - label: Missouri General Assembly
+    url: https://www.house.mo.gov/billcentral.aspx
+    kind: legislature
+  - label: Missouri Public Service Commission
+    url: https://psc.mo.gov/
+    kind: regulator
+  - label: Missouri Department of Economic Development, business incentives
+    url: https://ded.mo.gov/programs
+    kind: economic-development
+  - label: Ameren Missouri newsroom
+    url: https://www.ameren.com/missouri/news
+    kind: utility
+  - label: Missouri Independent
+    url: https://missouriindependent.com/
+    kind: news
