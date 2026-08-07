@@ -1,13 +1,345 @@
 key: ok
-type: parked
+type: state
 domain: oklahomadatacenterland.com
 stateName: Oklahoma
 stateAbbr: OK
 accent: loam
 status: live
 
-intro: >-
-  Oklahoma landowners are used to being approached about what sits under
-  their ground. This is about what sits on top of it, and the things that
-  matter are different. Tell us where the property is and what you have
-  noticed around it, and we will say whether it is worth pursuing.
+hero:
+  headline: Oklahoma puts no floor under project size. The grid decides.
+  subhead: >-
+    We purchase and option Oklahoma land for data center development. There is no
+    minimum investment to qualify here, so what your ground has to satisfy is the
+    transmission and nothing else.
+
+directAnswer: >-
+  Oklahoma works differently to the states around it. Everywhere else a project
+  has to hit a capital investment figure and a job count before the tax exemption
+  applies, and those figures push developers towards very large sites. Oklahoma
+  does not do that. Its exemption turns on what kind of business the operator is
+  and where its customers are, not on how much gets spent. So the constraint on
+  your ground is purely electrical: what transmission is near you, who serves it,
+  and whether the site works. Send us the county, a rough acreage, and what you
+  have noticed around the place. We check public records at no cost and answer
+  either way.
+
+trustPoints:
+  - title: No size floor means no arbitrary exclusion
+    body: >-
+      In Kansas a project needs a quarter of a billion dollars before the numbers
+      work, and that rules out any site too small to host one. Oklahoma sets no
+      such bar, which means a property is judged on whether it can be powered and
+      built, rather than on whether it can host something enormous.
+  - title: This is not a mineral conversation
+    body: >-
+      Most approaches an Oklahoma landowner has fielded were about what is under
+      the ground. This is about the surface, and almost none of the instincts
+      carry over. Nothing here is a lease on production, nothing pays a royalty,
+      and the questions that decide it are different.
+  - title: We are the buyer and we will say no
+    body: >-
+      We sit across the table from you rather than beside you. Take anything we
+      send to your own attorney. And when your ground does not work, which is the
+      usual answer, we will tell you plainly rather than keeping you on a list.
+
+pageCopy:
+  howItWorks:
+    intro: >-
+      Oklahoma has hosted large computing facilities for years without most
+      landowners here having any reason to think about it. What has changed is
+      how much new demand there is and how far out it is willing to look. Here is
+      how we go about answering the question for a particular place.
+    steps:
+      - >-
+        Send us the county, roughly the acreage, and what you have noticed around
+        the place. Mention any wind lease, pipeline, or producing well. Where you
+        are not certain, say so rather than guessing.
+      - >-
+        We look up who serves you, what transmission is near, and what the
+        existing energy infrastructure around you means for a connection. Nearly
+        all of it is public record and none of it costs you.
+      - >-
+        If it looks workable we tell you what we found and what we would want to
+        do next. If it does not, we say so and give you the reason rather than
+        going quiet on you.
+      - >-
+        Documents come last. Your attorney reads anything before you act on it,
+        and until that point we have asked you for nothing beyond a description
+        of the place.
+    closing: >-
+      Nothing in that sequence involves you paying for anything or agreeing not
+      to talk to anybody else. Where a party wants either from an Oklahoma
+      landowner before they have shown any of their own work, that is worth
+      pausing over.
+  articles:
+    intro: >-
+      Plain writing for Oklahoma landowners about how a surface deal differs from
+      the mineral arrangements most people here have seen, what the wind build
+      left behind that matters, and what to do when a letter arrives.
+    empty: >-
+      The Oklahoma pieces are still being written. Until they appear, the
+      questions page covers most of what landowners here ask us, and the form
+      below reaches a person rather than a queue.
+  qualify:
+    intro: >-
+      Two places in the same Oklahoma county can sit on opposite sides of this,
+      and what separates them is rarely anything a landowner has previously had
+      cause to weigh. These are the things that decide it.
+    criteria:
+      - >-
+        Transmission within reach, and in Oklahoma this is very nearly the whole
+        test. With no investment floor in the incentive, the grid is what does
+        the excluding. High voltage lines on or beside the property, or a
+        substation nearby, are what make a site possible.
+      - >-
+        What the wind build left near you. Oklahoma has a great deal of
+        transmission that exists because of wind generation, and ground that sits
+        near it inherits an advantage it did not pay for. This is worth checking
+        rather than assuming either way.
+      - >-
+        A block that holds together. Contiguous acreage under one ownership beats
+        the same total split by a section line road, a creek, or another owner's
+        quarter.
+      - >-
+        Ground that can actually be built on. Playa depressions, red clay that
+        moves, steep breaks, and floodplain all take acreage out of the count
+        regardless of the deed.
+      - >-
+        Existing surface agreements that are understood. Wind leases, pipeline
+        rights of way, and producing wells do not necessarily disqualify a place,
+        but they change what can be committed to and they have to be on the table
+        early.
+    closing: >-
+      No property clears all of that and none has to. What we are working out is
+      whether the gaps can be closed, and that is a judgement about your specific
+      ground rather than a rule about Oklahoma.
+
+value:
+  intro: >-
+    Everybody asks this first and it deserves a real answer. We are not going to
+    print a per acre number for Oklahoma. A figure offered before anyone has
+    looked at your ground is a guess, and quoting one would only distort what you
+    expect. What we can do is be exact about what moves it, so that when a number
+    does appear you can judge whether it is serious.
+  points:
+    - title: The connection, almost to the exclusion of everything else
+      body: >-
+        Because Oklahoma imposes no project size floor, the electrical picture is
+        doing nearly all the work in deciding whether a site is viable. Ground
+        near real capacity is a different asset to ground that is not, and the
+        gap between the two is wider here than in states where other constraints
+        also bind.
+    - title: Infrastructure you already live with can help
+      body: >-
+        A wind lease or a nearby switchyard is not automatically a complication.
+        Existing energy infrastructure often means transmission is close, which
+        is the thing that matters most. What it does require is that the existing
+        agreements are read properly before anything is promised.
+    - title: One block, one owner
+      body: >-
+        Contiguous ground under a single name is worth more than the same acreage
+        gathered from three neighbours. Assembling afterwards is slow and
+        uncertain, and everyone involved knows it, so the discount is applied at
+        the start.
+    - title: An option is a different thing to a sale
+      body: >-
+        Some landowners take payment for a period of exclusivity while a project
+        works out whether it can build, and keep running the place throughout.
+        Others sell. The money, the certainty, and the tax treatment all differ,
+        and which fits depends on your circumstances rather than your acreage.
+
+livingWithIt:
+  - title: The operation continues through an option
+    body: >-
+      An option period commonly runs a year or more, and the ground generally
+      keeps running cattle or crops as before. Survey and soil crews turn up
+      occasionally and work around whatever you are doing.
+  - title: What gets built is industrial
+    body: >-
+      Large low buildings, a substation, fencing, and lighting at night. We are
+      not going to describe it as anything softer than it is. Quieter than an
+      interstate, a great deal busier than pasture.
+  - title: Water will be the first question anybody local asks
+    body: >-
+      In much of Oklahoma groundwater is a serious and long-standing subject, and
+      cooling designs differ enormously in how much they need. Put the question to
+      any developer directly and early, and weigh how readily they answer it.
+  - title: This is a surface deal and your minerals are separate
+    body: >-
+      A surface arrangement does not convey minerals, and in a state where
+      severed mineral estates are common that distinction matters more than
+      usual. It is also the point where a landowner most often assumes something
+      that turns out to be untrue, so it is worth putting to your own attorney.
+
+utilitiesNote: >-
+  Oklahoma sits inside the Southwest Power Pool rather than the Texas grid next
+  door, which changes who has to agree to a large new connection and on what
+  timescale. Within the state, Oklahoma Gas and Electric serves the centre
+  including Oklahoma City, Public Service Company of Oklahoma serves the
+  northeast and parts of the south, and the Grand River Dam Authority serves a
+  stretch of the northeast as a state agency. A large share of rural ground is on
+  a member-owned cooperative, supplied by Western Farmers Electric Cooperative.
+  Which of those serves you determines who owns the connection, so telling us
+  saves a step. Your bill names them.
+
+utilities:
+  - name: Oklahoma Gas and Electric
+    kind: investor-owned
+    note: >-
+      Serves central Oklahoma including Oklahoma City and a wide surrounding
+      area, along with part of western Arkansas.
+  - name: Public Service Company of Oklahoma
+    kind: investor-owned
+    note: >-
+      An American Electric Power company serving the northeast around Tulsa and
+      parts of southern Oklahoma.
+  - name: Grand River Dam Authority
+    kind: municipal
+    note: >-
+      A state agency generating and transmitting power in northeastern Oklahoma,
+      including to industrial customers.
+  - name: Western Farmers Electric Cooperative
+    kind: generation
+    note: >-
+      Generation and transmission for the distribution cooperatives across rural
+      Oklahoma, rather than a retailer you would be billed by.
+  - name: Oklahoma's electric cooperatives
+    kind: cooperative
+    note: >-
+      Member-owned cooperatives serving a large share of the state's rural land
+      area.
+
+incentives:
+  summary: >-
+    Oklahoma's approach is unlike the other states in this network and the
+    difference matters to anybody with a modest amount of ground.
+
+    Everywhere else, the sales tax exemption is gated on capital investment and
+    job creation. Kansas asks 250 million dollars, Texas and Louisiana 200
+    million, Georgia between 100 and 250 million depending on county size,
+    Missouri 25 million. Those figures do more than decide who gets a tax break.
+    They push developers towards very large sites, because only a very large
+    project clears the bar.
+
+    Oklahoma does not work that way. Its exemption for machinery and equipment
+    used by businesses primarily engaged in computer services and data processing
+    turns on what the operator is and where its revenue comes from, with tests
+    tied to the share of sales made outside the state, rather than on how much
+    the project costs. The industry classification also decides how far the
+    exemption reaches: some classifications cover equipment only, while others
+    extend to electricity as well, which is a substantial difference for a
+    facility of this kind.
+
+    The practical consequence for a landowner is that no incentive rule is
+    excluding your property for being too small. What excludes ground in Oklahoma
+    is the grid, and only the grid.
+
+    None of this money reaches you. It matters because it shapes what size of
+    project will look at your land, and because these exemptions are under
+    scrutiny in a number of states at the moment, Oklahoma included, so the
+    position should not be assumed permanent.
+  sources:
+    - label: Oklahoma Administrative Code 710:65-13-54, exemption for computer services and data processing
+      url: https://www.law.cornell.edu/regulations/oklahoma/OAC-710-65-13-54
+      accessed: '2026-08-04'
+    - label: Oklahoma Incentive Evaluation Commission, computer services and data processing exemption evaluation
+      url: https://oklahoma.gov/content/dam/ok/en/omes/documents/iec/archive/support/2023/ComputerDataExemptionEvaluation11172023.pdf
+      accessed: '2026-08-04'
+    - label: Stateline, data center tax breaks under review in several states
+      url: https://stateline.org/2026/02/24/data-center-tax-breaks-are-on-the-chopping-block-in-some-states/
+      accessed: '2026-08-04'
+
+regions:
+  - title: The northeast and the Pryor corridor
+    body: >-
+      Large computing facilities have operated in this part of the state for
+      years, drawn by power and by the industrial park infrastructure around
+      Pryor. That history means the utilities, the workforce, and the county
+      governments here have done this before.
+  - title: Central Oklahoma beyond the metro
+    body: >-
+      Counties an hour or so out from Oklahoma City, in Oklahoma Gas and Electric
+      territory, with existing transmission and land that has not been priced for
+      this use.
+  - title: The western wind corridor
+    body: >-
+      A long band through western Oklahoma where transmission was built to move
+      wind generation east. Ground here often sits closer to serious capacity
+      than its remoteness would suggest, which is the single most useful thing to
+      know about this part of the state.
+  - title: The Panhandle
+    body: >-
+      Thinly populated, heavily built out for wind, and a long way from
+      everything, which cuts both ways. Land is inexpensive and transmission is
+      real, but distance from workforce and services does its own excluding.
+  - title: Southern and southeastern Oklahoma
+    body: >-
+      Between the Red River and the Kiamichi country, with cooperative and PSO
+      territory, cheaper land, and a transmission picture that varies sharply
+      county by county. Worth checking rather than assuming about.
+
+faq:
+  - question: Is my land too small for this in Oklahoma?
+    answer: >-
+      Possibly not, and Oklahoma is the state where that is most likely to be
+      true. Because there is no minimum investment figure attached to the
+      exemption here, no rule is pushing developers towards enormous tracts the
+      way it does in Kansas or Texas. What decides it is whether the site can be
+      powered and built.
+  - question: How is this different to a mineral lease?
+    answer: >-
+      Almost entirely. This concerns the surface, not what is beneath it. There
+      is no royalty, no production, and no pooling. A surface arrangement does not
+      convey your minerals, and if you have severed mineral interests that is a
+      point to put to your own attorney rather than to us.
+  - question: I have a wind lease. Does that end the conversation?
+    answer: >-
+      No, and it can help. Wind development brought transmission with it, and
+      transmission is the thing that matters most. What it does mean is that the
+      existing lease has to be read closely to see what it permits, so raise it
+      in the first conversation rather than later.
+  - question: Which utility serves me and why does it matter?
+    answer: >-
+      Oklahoma Gas and Electric covers the centre, Public Service Company of
+      Oklahoma the northeast and parts of the south, the Grand River Dam
+      Authority a stretch of the northeast, and cooperatives a great deal of the
+      rural ground. Whoever it is owns the connection, which is why we ask. Your
+      bill names them.
+  - question: Does being in the Southwest Power Pool rather than the Texas grid matter?
+    answer: >-
+      Yes, particularly if your land is near the state line and you have heard how
+      things work in Texas. Oklahoma is in the Southwest Power Pool, which has its
+      own interconnection process, its own queue, and its own timescales. Advice
+      about ERCOT does not transfer.
+  - question: Somebody wrote to me about my place. What should I do?
+    answer: >-
+      Do not sign and do not treat a deadline in the letter as real. Establish
+      whether they are buying for themselves or for somebody unnamed. Have an
+      Oklahoma attorney read it before you agree to anything, which applies to a
+      letter from us exactly as much as from anyone else.
+  - question: What happens to the rest of the place?
+    answer: >-
+      Frequently nothing. Plenty of arrangements involve a portion of a property
+      while the rest carries on as before. Raise it in the first conversation
+      rather than assuming, and we would rather you did.
+
+
+# Where the facts on this site actually move. Not rendered anywhere.
+# Checked by: npm run check:sources -- --watch
+watch:
+  - label: Oklahoma Legislature, bill search
+    url: https://www.oklegislature.gov/BillSearch.aspx
+    kind: legislature
+  - label: Oklahoma Corporation Commission
+    url: https://oklahoma.gov/occ.html
+    kind: regulator
+  - label: Oklahoma Department of Commerce, incentives
+    url: https://www.okcommerce.gov/incentives/
+    kind: economic-development
+  - label: Oklahoma Gas and Electric news
+    url: https://www.oge.com/wps/portal/ogepower/about-us/news
+    kind: utility
+  - label: Oklahoma Voice
+    url: https://oklahomavoice.com/
+    kind: news
