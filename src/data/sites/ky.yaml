@@ -1,13 +1,345 @@
 key: ky
-type: parked
+type: state
 domain: kentuckydatacenterland.com
 stateName: Kentucky
 stateAbbr: KY
 accent: forest
 status: live
 
-intro: >-
-  Kentucky land changes character over remarkably short distances, and so
-  does what a computing project can do with it. Whether yours works has
-  more to do with what runs near it than with the county name. Tell us
-  roughly where it sits and what you have noticed nearby.
+hero:
+  headline: Kentucky opened this to the whole state in 2025.
+  subhead: >-
+    We purchase and option Kentucky land for data center development. The
+    exemption started life confined to Jefferson County. It now reaches every
+    county, which is why ground outside Louisville is suddenly worth asking about.
+
+directAnswer: >-
+  The relevant change is recent and it is the reason to ask now rather than
+  later. Kentucky's data center tax exemption was originally written for Jefferson
+  County alone. In 2025 the legislature extended it statewide, with the
+  qualifying investment scaled to county population and a term reaching up to
+  fifty years for the largest projects. Ground in a rural Kentucky county went
+  from being outside the scheme entirely to being inside it, at a lower threshold
+  than Louisville faces. Tell us which Kentucky county you are in and roughly how
+  much ground you hold. We will tell you which investment tier that county sits
+  in and whether the parcel itself looks plausible. That review costs you nothing
+  and we give you the answer whichever way it lands.
+
+trustPoints:
+  - title: Your county was excluded until recently
+    body: >-
+      If somebody told you two years ago that this did not apply where you live,
+      they were right at the time and are wrong now. The exemption reached only
+      Jefferson County before the 2025 expansion. That change is what put rural
+      Kentucky ground into the conversation.
+  - title: The threshold falls with county population
+    body: >-
+      Like Georgia, Wisconsin and Pennsylvania, Kentucky scales the qualifying
+      investment to how populous the county is. Rural counties sit at the lower
+      end. The very longest exemption terms attach to the largest projects, at 450
+      million dollars and above.
+  - title: We are the buyer and we say no plainly
+    body: >-
+      We sit across the table from you, not beside you, and anything we send
+      should reach your attorney before it reaches your signature. Most Kentucky
+      ground we look at will not suit this, and you will hear that from us rather
+      than hearing nothing.
+
+pageCopy:
+  howItWorks:
+    intro: >-
+      Kentucky changed its rules recently enough that a good deal of what
+      landowners here have been told is out of date. Whether your own ground
+      matters is a specific question and it has a specific answer. This is how we
+      arrive at it.
+    steps:
+      - >-
+        Tell us the county and roughly the acreage, and say whether anyone has
+        approached you before. In Kentucky the timing of an approach tells us
+        something, because the rules moved in 2025.
+      - >-
+        We check who serves your power, what transmission runs near you, and where
+        your county falls against the population tiers. It is nearly all public
+        record and none of it costs you anything.
+      - >-
+        You get the reasoning rather than a verdict. Where the answer is no, we
+        name the specific thing that rules it out, which is worth having when the
+        next party writes to you.
+      - >-
+        Documents come last and your attorney reads them before you act. Until
+        that point the only thing we have asked for is a description of your
+        place.
+    closing: >-
+      None of that asks you for money or for a promise to stop talking to anybody
+      else. Where a party wants either from a Kentucky landowner before showing
+      what they have actually looked at, that deserves a slow response.
+  articles:
+    intro: >-
+      Plain writing for Kentucky landowners about what the 2025 statewide
+      expansion actually changed, how the county tiers work, and what to ask when
+      an approach arrives.
+    empty: >-
+      The Kentucky pieces are still being written. Until they are up, the
+      questions page covers most of what landowners here ask us, and the form
+      below reaches a person rather than a queue.
+  qualify:
+    intro: >-
+      Two farms in the same Kentucky county can be entirely different
+      propositions for this, and what separates them is rarely the pasture or the
+      tobacco base. These are the things that decide it.
+    criteria:
+      - >-
+        Transmission within reach, ahead of everything. High voltage lines on or
+        beside the ground, or a substation nearby, are what make a site possible.
+        The line along the road is distribution and will not carry this.
+      - >-
+        Terrain, which excludes a great deal of Kentucky. Much of this state is
+        genuinely beautiful and genuinely unbuildable at scale. A flat contiguous
+        block is worth far more than a larger acreage across knobs and hollows.
+      - >-
+        Your county's population, because the investment threshold is scaled to
+        it. Rural counties sit at the lower end, which since 2025 is an advantage
+        they did not previously have at all.
+      - >-
+        Ground that drains and is not karst. Sinkholes and cave systems run under
+        a large part of central and western Kentucky, and that is a construction
+        question rather than a farming one, so it may not be something you have
+        had reason to think about.
+      - >-
+        Access heavy equipment can use, and a county with some experience of
+        industrial development. Kentucky has plenty of counties with that history
+        and plenty without.
+    closing: >-
+      Nothing meets all of that and nothing needs to. What we are working out is
+      whether the gaps close, which is a judgement about your particular ground
+      rather than a rule about Kentucky.
+
+value:
+  intro: >-
+    It is the first question in every conversation and it deserves a straight
+    answer. There is no per acre figure printed on this page for Kentucky. In a
+    state where two farms sharing a fence line can differ completely in how much
+    of each is level and how much sits over hollow limestone, a number named
+    before anybody has walked the ground would mislead you rather than help you.
+    What we can be exact about is which characteristics move the number.
+  points:
+    - title: Flat, solid, contiguous ground is the scarce thing
+      body: >-
+        In Kentucky the constraint is rarely acreage. It is how much of that
+        acreage is level, drains properly, and sits over sound ground rather than
+        karst. A hundred acres meeting all three can be worth more than five
+        hundred that do not.
+    - title: The rules moved in your favour and that has not been priced in
+      body: >-
+        Rural Kentucky was outside this scheme until 2025. Markets take time to
+        adjust to a change like that, and ground that was never previously
+        considered for this use has not had the interest reflected in what people
+        assume it is worth.
+    - title: What the substation near you has left
+      body: >-
+        Proximity to a line is not the test. What matters is whether the
+        substation serving it has capacity remaining, and that is knowable rather
+        than a matter of opinion. It is among the first things we look up.
+    - title: An option and a sale carry different risk
+      body: >-
+        An option pays you for exclusivity while a project establishes whether it
+        can build, and you generally keep farming. A sale is final. Read what an
+        option says about extensions, because a fifty year exemption tends to come
+        with developers who think in long horizons.
+
+livingWithIt:
+  - title: The farm carries on through an option
+    body: >-
+      An option period commonly runs a year or more, and Kentucky ground almost
+      always stays in pasture or crop through it. Survey and soil crews appear
+      occasionally and work around whatever you are running.
+  - title: What gets built is industrial
+    body: >-
+      Large low buildings, a substation, fencing, and lighting through the night.
+      We are not going to describe it as blending into the ridgeline. Quieter than
+      a highway and considerably busier than a hayfield.
+  - title: The cost of the exemption is being argued about
+    body: >-
+      Analysts in this state have questioned the scale of revenue Kentucky may
+      forgo through these incentives, particularly after the statewide expansion.
+      Expect that argument locally, and expect it to be made by people who have
+      read the numbers rather than by people looking for something to object to.
+  - title: Water and karst are practical questions here
+    body: >-
+      Cooling design and water supply matter everywhere. In parts of Kentucky the
+      geology adds a second question about what happens underneath, which is worth
+      raising with any developer early rather than assuming somebody else has
+      thought about it.
+
+utilitiesNote: >-
+  Kentucky is served by a mix that matters for this. Louisville Gas and Electric
+  and Kentucky Utilities, under common ownership, cover a large share of the
+  centre and west. Kentucky Power serves the eastern coalfield counties. Duke
+  Energy Kentucky covers the northern tip near Cincinnati. Beyond those, member
+  owned cooperatives serve a great deal of rural Kentucky, supplied by East
+  Kentucky Power Cooperative in the east and Big Rivers Electric in the west.
+  Which one serves you determines who owns the connection and how quickly capacity
+  can be added, so it is the first thing we check. Your bill names them.
+
+utilities:
+  - name: Louisville Gas and Electric and Kentucky Utilities
+    kind: investor-owned
+    note: >-
+      Under common ownership, together serving Louisville, Lexington and a wide
+      stretch of central and western Kentucky.
+  - name: Kentucky Power
+    kind: investor-owned
+    note: >-
+      An American Electric Power company serving the eastern coalfield counties.
+  - name: Duke Energy Kentucky
+    kind: investor-owned
+    note: Serves the northern Kentucky counties across from Cincinnati.
+  - name: East Kentucky Power Cooperative
+    kind: generation
+    note: >-
+      Generation and transmission for member distribution cooperatives across
+      central and eastern Kentucky, rather than a retailer you are billed by.
+  - name: Big Rivers Electric
+    kind: generation
+    note: >-
+      Generation and transmission for member cooperatives in western Kentucky.
+  - name: Kentucky's rural electric cooperatives
+    kind: cooperative
+    note: >-
+      Member-owned distributors covering a large share of the state's rural land
+      area, which is where most farm ground sits.
+
+incentives:
+  summary: >-
+    Kentucky exempts qualified data center equipment from sales and use tax under
+    section 139.499 of the Revised Statutes, introduced through House Bill 8 in
+    2024 and substantially widened in 2025.
+
+    The change that matters to a rural landowner is geographic. As originally
+    enacted the exemption applied only to Jefferson County, meaning Louisville.
+    In 2025 the General Assembly extended it across the whole state, with the
+    definition of a qualified project keyed to the population of the county where
+    it sits. So ground that was categorically outside the scheme is now inside
+    it, and at a lower investment threshold than the largest counties face.
+
+    The exemption term reaches up to fifty years where a project invests at least
+    450 million dollars. It covers equipment and software, along with the systems
+    for electricity, cooling, water and security. It does not cover site
+    development, construction of the shell building, the electricity itself, or
+    office equipment. Projects require approval from the Kentucky Economic
+    Development Finance Authority rather than qualifying automatically.
+
+    It is also contested. Analysts in the state have questioned how much revenue
+    Kentucky may forgo, particularly following the statewide expansion, and that
+    argument is live rather than settled.
+
+    None of this money reaches you. It matters because the 2025 expansion is
+    precisely what made rural Kentucky ground relevant to this industry, and
+    because the county tiers determine what size of project can consider your
+    place.
+  sources:
+    - label: Kentucky Revised Statutes section 139.499, exemption for certain data center equipment
+      url: https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=55425
+      accessed: '2026-08-04'
+    - label: Stites and Harbison, Kentucky vastly expands data center tax incentives
+      url: https://www.stites.com/resources/client-alerts/kentucky-vastly-expands-data-center-tax-incentives/
+      accessed: '2026-08-04'
+    - label: Kentucky Department of Revenue, sales tax facts, June 2025 legislative updates
+      url: https://revenue.ky.gov/News/Publications/Sales%20Tax%20Newsletters/Sales%20Tax%20Facts%202025%20-%20Jun.pdf
+      accessed: '2026-08-04'
+    - label: Kentucky Center for Economic Policy, on the scale of the data center tax breaks
+      url: https://kypolicy.org/kentucky-data-center-tax-breaks/
+      accessed: '2026-08-04'
+
+regions:
+  - title: The Louisville area and the counties around it
+    body: >-
+      Where the exemption applied first and where the existing activity sits. Land
+      here is priced accordingly, and the county population puts it at the higher
+      end of the investment tiers.
+  - title: Northern Kentucky
+    body: >-
+      The counties across the river from Cincinnati, in Duke Energy territory,
+      with real transmission, interstate access, and industrial history. Ground
+      further south of the immediate river counties is where farms are still
+      farms.
+  - title: The western Pennyrile and Purchase counties
+    body: >-
+      Flatter than most of the state, served largely by cooperatives supplied
+      through Big Rivers, with existing generation and lower county populations
+      that put them in the more favourable tiers.
+  - title: The Bluegrass and central Kentucky
+    body: >-
+      Good transmission and proximity to Lexington, but also the most expensive
+      farm ground in the state and significant karst geology, which is a real
+      construction constraint rather than a footnote.
+  - title: The eastern coalfields
+    body: >-
+      Kentucky Power and cooperative territory with existing generation and
+      transmission from a long industrial history, and land at a fraction of
+      central Kentucky prices. Terrain does nearly all of the deciding here.
+
+faq:
+  - question: I was told this did not apply in my county. Was that wrong?
+    answer: >-
+      It was probably right when you were told it. Until 2025 the exemption
+      reached only Jefferson County. The General Assembly then extended it
+      statewide with thresholds scaled to county population. If your information
+      predates that change, it is out of date, and that is worth knowing before
+      your next conversation with anybody.
+  - question: Does my county's population matter?
+    answer: >-
+      Yes. The qualifying investment is keyed to it, and rural counties sit at
+      the lower end. The longest exemption terms, up to fifty years, attach to
+      the largest projects at 450 million dollars and above.
+  - question: My land is hilly. Does that rule me out?
+    answer: >-
+      Frequently, and we would rather be honest than encouraging. Terrain
+      excludes more Kentucky ground than anything else. What matters is whether a
+      genuinely flat contiguous block exists, and a smaller flat parcel beats a
+      much larger one across knobs every time.
+  - question: What is karst and why are you asking about it?
+    answer: >-
+      Limestone geology with sinkholes and cave systems, which runs under a large
+      part of central and western Kentucky. It rarely troubles farming, so it may
+      not be something you have thought about, but it is a serious question for
+      anybody putting up heavy buildings and it is better raised early.
+  - question: Who serves my power and why does it matter?
+    answer: >-
+      LG and E and Kentucky Utilities cover much of the centre and west, Kentucky
+      Power the eastern counties, Duke the northern tip, and cooperatives a great
+      deal of the rural ground, supplied by East Kentucky Power or Big Rivers.
+      Whoever it is owns the connection, which is why we ask. Your bill names
+      them.
+  - question: An approach arrived in the post. What now?
+    answer: >-
+      Do not sign, and treat any deadline in the letter as their problem rather
+      than yours. Ask whether they are buying for themselves or for somebody they
+      have not named, and ask when they last checked the Kentucky rules, since
+      those moved in 2025. Then take it to a Kentucky attorney, including if the
+      letter came from us.
+  - question: What happens to the rest of the farm?
+    answer: >-
+      Often nothing. Many arrangements involve part of a property while the rest
+      carries on as before. Raise it in the first conversation rather than
+      assuming, and we would rather you did.
+
+
+# Where the facts on this site actually move. Not rendered anywhere.
+# Checked by: npm run check:sources -- --watch
+watch:
+  - label: Kentucky General Assembly
+    url: https://apps.legislature.ky.gov/
+    kind: legislature
+  - label: Kentucky Public Service Commission
+    url: https://psc.ky.gov/
+    kind: regulator
+  - label: Kentucky Cabinet for Economic Development
+    url: https://ced.ky.gov/
+    kind: economic-development
+  - label: LG and E and KU newsroom
+    url: https://lge-ku.com/newsroom
+    kind: utility
+  - label: Kentucky Lantern
+    url: https://kentuckylantern.com/
+    kind: news
