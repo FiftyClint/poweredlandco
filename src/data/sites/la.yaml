@@ -1,14 +1,342 @@
 key: la
-type: parked
+type: state
 domain: louisianadatacenterland.com
 stateName: Louisiana
 stateAbbr: LA
 accent: pine
 status: live
 
-intro: >-
-  Louisiana landowners often hold ground that has already been looked at
-  for something else, whether a pipeline, a plant, or storage. Those
-  histories matter here, sometimes for you and sometimes against. Tell us
-  where the property is and what has happened on it, and we will look at it
-  properly.
+hero:
+  headline: The largest project in Louisiana landed in a rural delta parish.
+  subhead: >-
+    We purchase and option Louisiana land for data center development. What
+    happened in Richland Parish is the reason ordinary farm ground in this state
+    is worth a second look, and the reason your neighbours will have opinions.
+
+directAnswer: >-
+  Louisiana changed quickly and in a direction that favours rural ground. The
+  state's headline data center project went to Richland Parish, in the northeast
+  delta, not to Baton Rouge or the river corridor. So the first questions are
+  practical: which parish are you in, who serves your power, and what
+  transmission runs near you. Send us the parish, a rough acreage, and anything
+  you have noticed nearby, including any pipeline, well, or servitude history on
+  the place. We check it against public records at no cost and tell you what we
+  find, including when the answer is that it does not suit.
+
+trustPoints:
+  - title: Rural parishes are where this actually went
+    body: >-
+      The assumption that these projects want to be near a city has not held in
+      Louisiana. The state's largest went to farm country in the northeast, and
+      what followed it, in transmission and in attention, has changed how the
+      surrounding parishes are regarded.
+  - title: Your ground's history matters here more than most places
+    body: >-
+      A great deal of Louisiana land carries servitudes, mineral interests,
+      pipeline crossings, or old industrial use. None of that automatically
+      disqualifies a property and some of it helps, but all of it has to be
+      understood at the start rather than found at closing.
+  - title: We are the buyer and we say no plainly
+    body: >-
+      We are on the other side of the table from you. Take anything we send to
+      your own attorney. And when your ground does not suit this, which is the
+      usual outcome, we will tell you rather than keeping you waiting on
+      something that is not coming.
+
+pageCopy:
+  howItWorks:
+    intro: >-
+      Louisiana went from very little of this to a great deal of it in a short
+      time, and most landowners here are working out what it means from news
+      coverage rather than from anything specific to their own place. Here is how
+      we go about answering that for a particular property.
+    steps:
+      - >-
+        Tell us the parish, roughly the acreage, and what you have noticed around
+        the place. Mention any pipeline, well, or servitude you know of. Where
+        you are unsure, say so rather than guessing.
+      - >-
+        We look up your utility, the transmission near you, and what the parish
+        has already done about projects like this. Most of it is public record
+        and none of it costs you anything.
+      - >-
+        If it looks workable we come back with what we found and what we would
+        want to do next. If it does not, we say so and give you the reason
+        instead of going quiet.
+      - >-
+        Only then does anything become paperwork, and only once your attorney has
+        read it. Nothing before that point asks you for money, a signature, or
+        exclusivity.
+    closing: >-
+      None of that asks you to spend anything or to stop speaking to other
+      parties. If somebody approaches your Louisiana land wanting either before
+      they have shown you what they looked at, take your time over it.
+  articles:
+    intro: >-
+      Plain writing for Louisiana landowners about what the northeast parish
+      projects mean for ordinary farm ground, how servitudes and mineral
+      interests affect a sale, and what to do when a letter arrives.
+    empty: >-
+      The Louisiana pieces are still being written. Until then the questions page
+      covers most of what landowners here ask us, and the form below reaches a
+      person rather than a queue.
+  qualify:
+    intro: >-
+      Two farms in the same Louisiana parish can be entirely different
+      propositions for this, and what separates them is rarely the soil or the
+      yield history. These are the things that decide it.
+    criteria:
+      - >-
+        Transmission within reach, ahead of everything else. High voltage lines
+        crossing or bordering the property, or a substation nearby, are what make
+        a site possible at all. The line along the parish road will not carry
+        this.
+      - >-
+        Clean title and understood encumbrances. Louisiana ground frequently
+        carries mineral servitudes, pipeline rights of way, and old agreements
+        that outlived the people who signed them. These are workable but they
+        have to be on the table early.
+      - >-
+        A contiguous block. Acreage that holds together as one piece beats the
+        same total split across a bayou, a road, or another owner's tract.
+      - >-
+        Land that is genuinely buildable. Wetland, batture, and anything that
+        takes water in a wet year come out of the usable count regardless of what
+        the deed says, and in this state that can be a large share of a place.
+      - >-
+        Access a construction convoy can use, and a parish government that has
+        thought about this. Some Louisiana parishes have now been through it in
+        detail. Others have not and will take their own time deciding.
+    closing: >-
+      No property clears all of that and none needs to. What we are working out
+      is whether the gaps can be closed, and that is a judgement about your
+      specific ground rather than about Louisiana.
+
+value:
+  intro: >-
+    Everybody asks this first and it deserves an answer rather than a dodge. We
+    are not going to publish a per acre figure for Louisiana. A number offered
+    before anyone has looked at your particular ground is not information, and in
+    a state where two adjacent tracts can differ enormously in what is buildable
+    it would mislead more often than it helped. What we can do is be exact about
+    what moves it.
+  points:
+    - title: What the wires nearby can carry
+      body: >-
+        The electrical picture around the property does more than acreage or soil
+        rating. Ground beside a substation with headroom is a different asset to
+        ground fifteen miles from any, and nothing in the conveyance records
+        distinguishes them.
+    - title: How much of the acreage is actually usable
+      body: >-
+        In Louisiana the gap between deed acres and buildable acres is often
+        wide. Wetland delineation and elevation do more to the number here than
+        in most states, and a smaller place that is all usable can be worth more
+        than a larger one that is half water.
+    - title: What is already recorded against the land
+      body: >-
+        Mineral servitudes, pipeline rights of way, and existing agreements do not
+        necessarily reduce value and can indicate infrastructure is close. What
+        they do is affect certainty, and certainty is a large part of what a buyer
+        is paying for.
+    - title: An option is not a sale
+      body: >-
+        Some landowners take payment for a period of exclusivity while a project
+        establishes whether it can build, and keep farming throughout. Others
+        sell. The money, the certainty, and the tax treatment all differ, and
+        which suits you is about your circumstances rather than your acreage.
+
+livingWithIt:
+  - title: The place keeps farming during an option
+    body: >-
+      An option period commonly runs a year or more and the ground generally
+      carries on in row crop or pasture exactly as before. Survey and soil crews
+      appear occasionally and work around the operation.
+  - title: What gets built is industrial
+    body: >-
+      Large low buildings, a substation, fencing, and lighting through the night.
+      We are not going to tell you it blends into the treeline. Quieter than an
+      interstate, considerably busier than a field.
+  - title: Who pays for the power is an open argument here
+    body: >-
+      Louisiana is actively arguing about whether existing customers end up
+      carrying the cost of serving very large new loads, and it has reached the
+      governor's office. Expect the question at a parish meeting and expect it to
+      be asked seriously, because it is a serious question.
+  - title: Water and the aquifer will come up
+    body: >-
+      Cooling approaches differ enormously in how much water they need, and in
+      parts of this state groundwater is already a live subject. Ask any developer
+      directly what their cooling design is, early, and judge them partly on how
+      willingly they answer.
+
+utilitiesNote: >-
+  Most of Louisiana is served by Entergy Louisiana, with Cleco covering a
+  substantial stretch of the central and western part of the state and SWEPCO
+  serving the northwest around Shreveport. Rural ground in a number of parishes
+  is on a member-owned cooperative instead. Which one you are on matters because
+  that utility owns the connection and, in this state at the moment, because the
+  question of who pays to serve a very large new load is being argued out utility
+  by utility. Your bill names your provider, and telling us which it is saves a
+  step.
+
+utilities:
+  - name: Entergy Louisiana
+    kind: investor-owned
+    note: >-
+      Serves the largest share of the state and is the utility involved in the
+      northeast Louisiana data center development.
+  - name: Cleco Power
+    kind: investor-owned
+    note: Serves a broad stretch of central and western Louisiana.
+  - name: Southwestern Electric Power Company
+    kind: investor-owned
+    note: >-
+      An American Electric Power company serving northwest Louisiana around
+      Shreveport.
+  - name: Louisiana's electric cooperatives
+    kind: cooperative
+    note: >-
+      Member-owned cooperatives serving rural parishes across the state,
+      including areas the investor-owned utilities do not reach.
+  - name: DEMCO
+    kind: cooperative
+    note: >-
+      Dixie Electric Membership Corporation, serving parishes around the Baton
+      Rouge area.
+
+incentives:
+  summary: >-
+    Louisiana rebates state and local sales and use tax on qualifying data center
+    equipment and construction under Act 730 of 2024, codified at Revised Statute
+    47:305.73. To qualify, an operator has to intend at least 200 million dollars
+    of new capital investment in Louisiana between July 2024 and July 2029, and
+    create at least 50 new direct permanent jobs. Certification runs through
+    Louisiana Economic Development on a sworn attestation from the operator. The
+    rebate runs twenty years with an option to renew for a further ten.
+
+    Two things about how this has worked in practice are worth knowing.
+
+    The scale has been very large. The northeast Louisiana project has been
+    reported as securing sales tax relief measured in billions over its life,
+    approved at parish level in 2024, which gives some sense of why developers
+    are looking here rather than elsewhere.
+
+    It has also drawn substantial criticism, and you will hear it locally. The
+    programme has been described as carrying no wage standards, no routine
+    reporting requirements, and no automatic clawbacks if a company does not
+    deliver what it promised. Separately, the governor has acted on concerns that
+    existing utility customers could end up absorbing the cost of serving these
+    loads.
+
+    None of this money reaches you as a landowner. It matters because it explains
+    the level of interest in Louisiana ground, and because the argument around it
+    is the argument your parish will be having.
+  sources:
+    - label: Louisiana Revised Statute 47:305.73, exemptions for data center facility equipment
+      url: https://www.legis.la.gov/legis/LawPrint.aspx?d=1186787
+      accessed: '2026-08-04'
+    - label: NAIOP, Louisiana provides incentives for data center development
+      url: https://www.naiop.org/chapters/find-a-local-chapter/united-states-chapters/louisiana/gulf-coast/news/louisiana-provides-incentives-for-data-center-development
+      accessed: '2026-08-04'
+    - label: Invest in Louisiana, Louisiana's data center incentives
+      url: https://investlouisiana.org/louisianas-data-center-incentives-big-promises-bigger-questions/
+      accessed: '2026-08-04'
+    - label: Louisiana Illuminator, data center coverage
+      url: https://lailluminator.com/2026/05/07/data-center-2/
+      accessed: '2026-08-04'
+
+regions:
+  - title: The northeast parishes
+    body: >-
+      Richland and the parishes around it, in the delta farm country of northeast
+      Louisiana, where the state's headline project landed. Attention and
+      transmission have followed it outward rather than stopping at the project
+      boundary, which is the single biggest change to this state's picture.
+  - title: The I-20 corridor
+    body: >-
+      Running west from the northeast parishes through Monroe toward Shreveport,
+      with existing transmission, industrial history, and large agricultural
+      tracts on both sides.
+  - title: Central Louisiana
+    body: >-
+      Cleco territory around Alexandria and Rapides, with timber and farm ground,
+      established transmission, and land prices well below the southern part of
+      the state.
+  - title: The river corridor
+    body: >-
+      The industrial stretch between Baton Rouge and New Orleans has the heaviest
+      power infrastructure in the state, but land there is expensive, congested,
+      and largely spoken for by existing industry.
+  - title: The southwest parishes
+    body: >-
+      Around Lake Charles, with generation and transmission built for
+      petrochemical industry. Elevation and storm exposure do more of the
+      deciding here than anywhere else in the state.
+
+faq:
+  - question: Why does a project in Richland Parish matter to my land?
+    answer: >-
+      Because it settled the question of whether these projects will consider
+      rural Louisiana, and the answer turned out to be yes. Transmission and
+      attention followed it, and developers looking at Louisiana now start from a
+      different set of assumptions about where the ground is. It does not mean
+      your place works, but it means the question is worth asking.
+  - question: I have mineral servitudes and a pipeline crossing. Am I out?
+    answer: >-
+      Not automatically, and existing infrastructure sometimes indicates that
+      power and access are nearby. What it does mean is that the recorded
+      interests have to be read carefully and early, because they affect
+      certainty. Raise them in the first conversation rather than letting a title
+      examiner find them later.
+  - question: Which utility serves me and why do you ask?
+    answer: >-
+      Most of the state is Entergy Louisiana, with Cleco through the centre and
+      west and SWEPCO in the northwest, and cooperatives serving rural parishes.
+      It matters because that utility owns the connection, and because who pays
+      to serve very large new loads is currently being argued out here. Your bill
+      names your provider.
+  - question: Will this raise my power bill?
+    answer: >-
+      That is being actively contested in Louisiana rather than settled. There
+      have been formal concerns that existing customers could absorb costs tied
+      to serving these facilities, and the governor has acted on them. We are not
+      going to tell you it is a non-issue. It is the question to put to your
+      parish and to the utility.
+  - question: How many acres do you need?
+    answer: >-
+      There is no fixed number and anybody offering one without seeing your ground
+      is guessing. In Louisiana the more useful question is how many of your acres
+      are actually buildable, since deed acres and usable acres often differ
+      considerably here.
+  - question: Somebody wrote to me about my land. What should I do?
+    answer: >-
+      Do not sign, and do not treat a deadline in the letter as real. Find out
+      whether they are buying for themselves or for a party they have not named.
+      Have a Louisiana attorney read it first. That applies to a letter from us
+      exactly as much as from anybody else.
+  - question: What happens to the rest of the farm?
+    answer: >-
+      Often nothing. Many arrangements involve part of a property while the
+      remainder carries on as it was. It is a fair thing to raise at the start,
+      and we would rather hear it in the first conversation than the fifth.
+
+
+# Where the facts on this site actually move. Not rendered anywhere.
+# Checked by: npm run check:sources -- --watch
+watch:
+  - label: Louisiana State Legislature
+    url: https://legis.la.gov/legis/home.aspx
+    kind: legislature
+  - label: Louisiana Public Service Commission
+    url: https://www.lpsc.louisiana.gov/
+    kind: regulator
+  - label: Louisiana Economic Development
+    url: https://www.opportunitylouisiana.gov/
+    kind: economic-development
+  - label: Entergy newsroom
+    url: https://www.entergynewsroom.com/
+    kind: utility
+  - label: Louisiana Illuminator
+    url: https://lailluminator.com/
+    kind: news
