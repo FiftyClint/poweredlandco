@@ -1,13 +1,338 @@
 key: ia
-type: parked
+type: state
 domain: iowadatacenterland.com
 stateName: Iowa
 stateAbbr: IA
 accent: olive
 status: live
 
-intro: >-
-  Iowa ground has been in demand for one thing or another for a long time,
-  and computing facilities are the newest. If you have had an approach, or
-  you are simply wondering what makes one parcel interesting and the next
-  one not, send us the county and we will tell you what we see.
+hero:
+  headline: Iowa has done this for twenty years. It is only now reaching farm ground.
+  subhead: >-
+    We purchase and option Iowa land for data center development. The campuses
+    near the metros came first. What is happening now is developers looking at
+    ordinary row crop country, and not everybody is pleased about it.
+
+directAnswer: >-
+  Iowa is further along this road than any other state we work in, which cuts
+  both ways for a landowner. The utilities have connected facilities like this
+  repeatedly, the counties near the metros know the process, and the wind build
+  left transmission across a great deal of the state. What is new is developers
+  moving out of the metro edges and into farm country. So the questions are
+  whether transmission reaches you, whether your county has been through this,
+  and how your neighbours feel about it. Send us the county, a rough acreage, and
+  what you have noticed nearby. We check public records at no cost and answer
+  either way.
+
+trustPoints:
+  - title: The experience here is real and it is not all comfortable
+    body: >-
+      Iowa communities have lived alongside these facilities long enough to have
+      formed opinions, and in 2026 several rural areas pushed back publicly on
+      new development, with residents saying they were left out of decisions.
+      That is part of the picture and we would rather set it out than have you
+      discover it at a county meeting.
+  - title: Wind built the grid you would be connecting to
+    body: >-
+      Iowa has generated a larger share of its electricity from wind than any
+      other state, and the transmission that moves it is why so much of this
+      country is viable at all. Ground near that network inherits an advantage it
+      never paid for.
+  - title: We are buying, and we say no plainly
+    body: >-
+      We sit on the other side of the table from you. Take anything we send to
+      your own attorney first. And when your ground does not suit this, which is
+      the usual outcome, we tell you rather than leaving you waiting.
+
+pageCopy:
+  howItWorks:
+    intro: >-
+      Iowa landowners have watched this industry arrive, settle near the cities,
+      and now start looking further out. If a letter has reached your township or
+      you simply want to know where your place stands, this is how we go about
+      answering it.
+    steps:
+      - >-
+        Send us the county, roughly the acreage, and what you have noticed around
+        the place. Mention any wind lease or easement. Where you are unsure, say
+        so instead of guessing.
+      - >-
+        We look up who serves you, what transmission is nearby, and what your
+        county has already done about projects of this kind. Almost all of it is
+        public record and none of it costs you.
+      - >-
+        If it looks workable we come back with what we found and what we would
+        want to do next. If it does not, we tell you so and give you the reason.
+      - >-
+        Documents come at the end rather than the beginning. Your attorney reads
+        anything before you act on it, and until that point we have asked you for
+        nothing but a description of the place.
+    closing: >-
+      At no stage does any of that involve you paying for something or agreeing to
+      stop talking to other parties. Where somebody wants either from an Iowa
+      landowner before showing their own work, that is worth being slow about.
+  articles:
+    intro: >-
+      Plain writing for Iowa landowners about what two decades of these facilities
+      has actually meant here, how the wind build changed which ground is
+      connectable, and what to do when an approach arrives.
+    empty: >-
+      The Iowa pieces are still being written. Until they are up, the questions
+      page covers most of what landowners here ask us, and the form below reaches
+      a person rather than a queue.
+  qualify:
+    intro: >-
+      Two farms in the same Iowa township can be entirely different propositions
+      for this, and the difference is almost never the CSR rating or the tile.
+      These are the things that decide it.
+    criteria:
+      - >-
+        Transmission within reach, ahead of everything. High voltage lines on or
+        beside the ground, or a substation nearby, are what make a site possible.
+        The line down the gravel is a different thing and will not carry this.
+      - >-
+        Whether the wind network passes near you. A great deal of Iowa's
+        transmission exists to move wind generation, and proximity to it is often
+        the single fact that separates a viable quarter from one that is not.
+      - >-
+        Acreage that holds together. A contiguous block beats the same total
+        divided by a road, a creek, or a neighbour's eighty in the middle of it.
+      - >-
+        Ground that drains, which in Iowa means an honest account of how the tile
+        performs. Land that ponds in a wet spring comes out of the buildable
+        count whatever the deed says.
+      - >-
+        A county and township that have thought about this. Some Iowa counties
+        have handled these projects for years. Others are meeting the question for
+        the first time, and in 2026 several decided they did not care for it.
+    closing: >-
+      Nothing meets all of that and nothing needs to. What we are working out is
+      whether the gaps close, which is a judgement about your particular ground
+      rather than about Iowa.
+
+value:
+  intro: >-
+    Everybody asks this first and it deserves a direct answer. We are not going to
+    publish a per acre figure for Iowa. A number given before anybody has looked
+    at your ground is a guess, and in a state where good farmland already carries
+    a strong price it would mislead in both directions. What we can do is say
+    exactly what moves it.
+  points:
+    - title: What the wires nearby can carry
+      body: >-
+        The electrical picture around the property does more than acreage or soil
+        productivity. Ground beside a substation with headroom is a different
+        asset to ground fifteen miles from any, and nothing in the deed or the
+        assessor's record separates the two.
+    - title: Iowa land already has a floor under it
+      body: >-
+        Unlike much of the country, productive Iowa ground has a strong
+        alternative use and a well established market. That sets a real floor,
+        and it means a project has to be worth more than the farm to make sense
+        rather than merely worth something.
+    - title: One block under one name
+      body: >-
+        Contiguous ground held by a single owner is worth more than the same
+        acreage gathered from three farms. Assembling afterwards is slow and
+        uncertain, and every party involved prices that in from the beginning.
+    - title: An option is not a sale
+      body: >-
+        Some landowners take payment for a period of exclusivity while a project
+        works out whether it can build, and keep farming throughout. Others sell
+        outright. The money, the certainty, and the tax treatment differ, and
+        which suits you is a question about your family rather than your ground.
+
+livingWithIt:
+  - title: The crop goes in as normal during an option
+    body: >-
+      An option period commonly runs a year or more and the ground nearly always
+      keeps being farmed through it. Survey crews and soil borings appear
+      occasionally and work around the operation rather than interrupting it.
+  - title: Your neighbours may already have a view
+    body: >-
+      Iowa is not encountering this for the first time. Several rural communities
+      pushed back on new development during 2026, with residents saying decisions
+      were being made without them. If you go forward you are stepping into a
+      conversation that is already running, and it is better to know that now.
+  - title: What gets built is industrial
+    body: >-
+      Large low buildings, a substation, security fencing, and lighting through
+      the night. We will not pretend it recedes into the section. Quieter than a
+      highway and a great deal busier than corn.
+  - title: The cost to other ratepayers gets argued here too
+    body: >-
+      Whether large new loads shift costs onto everybody else is a live question
+      in Iowa as elsewhere, and the utilities have published positions on it.
+      Expect it raised at a county meeting, expect it asked in good faith, and
+      look up what your own utility has said before you are standing there.
+
+utilitiesNote: >-
+  MidAmerican Energy serves the largest share of Iowa and is the utility behind
+  much of the wind generation that makes this state's grid what it is. Alliant
+  Energy covers a substantial territory of its own. Beyond those two, Iowa has an
+  unusually large number of municipal electric utilities, town by town, along
+  with rural electric cooperatives supplied by generation and transmission
+  cooperatives. So the answer to who serves you is less predictable here than in
+  most states, and it matters because whoever it is owns the connection and sets
+  the timeline. Your bill names them, and telling us saves a step.
+
+utilities:
+  - name: MidAmerican Energy
+    kind: investor-owned
+    note: >-
+      Serves the largest share of the state and operates a substantial fleet of
+      wind generation across it.
+  - name: Alliant Energy
+    kind: investor-owned
+    note: >-
+      Operating in Iowa as Interstate Power and Light, serving a large territory
+      across the eastern and central parts of the state.
+  - name: Iowa's rural electric cooperatives
+    kind: cooperative
+    note: >-
+      Member-owned cooperatives serving a great deal of the state's rural land
+      area, which is where most farm ground sits.
+  - name: Central Iowa Power Cooperative
+    kind: generation
+    note: >-
+      Generation and transmission for member distribution cooperatives rather
+      than a retailer you would be billed by.
+  - name: Iowa's municipal utilities
+    kind: municipal
+    note: >-
+      Iowa has an unusually large number of town-owned electric utilities, which
+      is a live possibility if your ground sits near a small city.
+
+incentives:
+  summary: >-
+    Iowa exempts qualifying purchases by a data center business from sales tax
+    under section 423.3 of the Iowa Code. The exemption covers computers and
+    equipment necessary to operate the facility.
+
+    What the test is built around is investment and physical size rather than a
+    job count. A business must invest at least 200 million dollars at an Iowa
+    location within the first six years of operating in the state, and the
+    facility has to occupy at least 5,000 square feet to register. Registration
+    with the Department of Revenue is required, and annual reports are due each
+    January to continue claiming the exemption. Where a data center property owner
+    and a tenant each qualify separately, they are not permitted to add their
+    investments together to reach the threshold.
+
+    Two things follow from that for a landowner. The 200 million dollar figure
+    sits at the higher end of what states in this network ask, which pushes
+    interest towards larger sites and more substantial developers. And because
+    the test does not turn on job creation the way Virginia, Missouri or Georgia
+    do, county wage levels and employment do not affect whether your ground works
+    the way they do elsewhere.
+
+    None of this money reaches you. It matters because it explains what size of
+    project is looking at Iowa, and because these exemptions are being scrutinised
+    across a number of states at present.
+  sources:
+    - label: Iowa Department of Revenue, data center sales and use tax incentives
+      url: https://revenue.iowa.gov/taxes/tax-guidance/sales-use-excise-tax/data-centers
+      accessed: '2026-08-04'
+    - label: Iowa Code section 423.3, exemptions
+      url: https://www.legis.iowa.gov/docs/code/423.3.pdf
+      accessed: '2026-08-04'
+    - label: Iowa Administrative Code rule 701-215.12, large data center business exemption
+      url: https://www.law.cornell.edu/regulations/iowa/Iowa-Admin-Code-r-701-215-12
+      accessed: '2026-08-04'
+    - label: KTIV, rural Iowa communities push back on data center expansion
+      url: https://www.ktiv.com/2026/07/24/rural-iowa-communities-push-back-data-center-expansion/
+      accessed: '2026-08-04'
+
+regions:
+  - title: The Council Bluffs corridor and southwest Iowa
+    body: >-
+      Where large scale computing arrived in Iowa first, alongside heavy wind
+      generation and the transmission built for it. The utilities and the local
+      governments here have done this repeatedly, which shows in how quickly
+      things move.
+  - title: The Des Moines ring
+    body: >-
+      West Des Moines, Altoona, Waukee and the counties around them, where the
+      established campuses sit. Land here is priced for its proximity and most of
+      the readily usable ground has been spoken for.
+  - title: The north central wind belt
+    body: >-
+      A broad band of the state where wind development brought transmission into
+      country that would otherwise have had little. Ground here often sits closer
+      to real capacity than its remoteness suggests.
+  - title: Northwest Iowa and the Missouri River counties
+    body: >-
+      Developers have begun looking seriously at this part of the state,
+      including at substantial blocks of agricultural land near small cities. It
+      is the clearest example of the move out of the metros.
+  - title: Eastern Iowa
+    body: >-
+      Alliant territory through the Cedar Rapids corridor and toward the
+      Mississippi, with established industry, existing transmission, and river
+      access that has shaped where heavy load already sits.
+
+faq:
+  - question: Iowa has had these for years. Why would anyone want my farm now?
+    answer: >-
+      Because the sites near the metros are largely taken and the demand has kept
+      growing. Developers are looking further out than they used to, into ordinary
+      row crop country, and the transmission the wind build left behind is what
+      makes a lot of that country connectable. It does not mean your place works,
+      but it means the question is now a real one.
+  - question: My neighbours are against this. Where does that leave me?
+    answer: >-
+      Honestly, it matters. Several rural Iowa communities pushed back publicly
+      during 2026, with residents saying they were left out of decisions. Zoning
+      here runs through counties and townships, which means the people deciding
+      are people you know. We would rather you weighed that at the start than
+      found it out in a full meeting room.
+  - question: I have a wind lease. Does that rule me out?
+    answer: >-
+      Not by itself, and the transmission that came with wind development is
+      often the reason ground is viable at all. What it means is that the existing
+      lease has to be read closely for what it permits, so raise it early rather
+      than after somebody has done work on the assumption it is clear.
+  - question: Who serves my power, and why do you ask?
+    answer: >-
+      In Iowa that is genuinely less predictable than elsewhere. MidAmerican and
+      Alliant cover large territories, but there are also a great many town-owned
+      municipal utilities and a full set of rural cooperatives. Whoever serves you
+      owns the connection and sets the timeline, which is why it is the first
+      thing we look up. Your bill names them.
+  - question: How many acres do you need?
+    answer: >-
+      There is no single number and anybody offering one without seeing your
+      ground is guessing. Whether the acreage is contiguous and what runs near it
+      electrically matter far more than the total. Iowa's higher investment
+      threshold does tend to pull interest towards larger sites than, say,
+      Missouri.
+  - question: Somebody wrote to me about my ground. What should I do?
+    answer: >-
+      Do not sign and do not treat a deadline in the letter as binding. Find out
+      whether they are buying for themselves or for a party they have not named.
+      Have an Iowa attorney read it before you agree to anything, and that applies
+      to a letter from us exactly as much as anyone else.
+  - question: What happens to the rest of the farm?
+    answer: >-
+      Frequently nothing. Plenty of arrangements involve a portion of a place
+      while the rest carries on in production. It is a fair thing to raise in the
+      first conversation and we would far rather you did.
+
+
+# Where the facts on this site actually move. Not rendered anywhere.
+# Checked by: npm run check:sources -- --watch
+watch:
+  - label: Iowa Legislature, bill tracking
+    url: https://www.legis.iowa.gov/legislation/findLegislation
+    kind: legislature
+  - label: Iowa Utilities Commission
+    url: https://iuc.iowa.gov/
+    kind: regulator
+  - label: Iowa Economic Development Authority
+    url: https://www.iowaeda.com/
+    kind: economic-development
+  - label: MidAmerican Energy newsroom
+    url: https://www.midamericanenergy.com/newsroom
+    kind: utility
+  - label: Iowa Capital Dispatch
+    url: https://iowacapitaldispatch.com/
+    kind: news
