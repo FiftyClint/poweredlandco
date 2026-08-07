@@ -1,13 +1,366 @@
 key: ms
-type: parked
+type: state
 domain: mississippidatacenterland.com
 stateName: Mississippi
 stateAbbr: MS
 accent: pine
 status: live
 
-intro: >-
-  Plenty of Mississippi land sits close to the things a computing project
-  needs and plenty of it does not, and the difference is rarely obvious
-  from the road. We would rather look than guess. Tell us where your
-  property is and what is near it, and we will come back to you.
+hero:
+  headline: Mississippi set the lowest bar in the country, and the big money already came.
+  subhead: >-
+    We purchase and option Mississippi land for data center development. The
+    qualifying threshold here is twenty million dollars, far below what
+    neighbouring states ask, which means the projects that follow the headline
+    ones will be a great deal smaller.
+
+directAnswer: >-
+  Two things about Mississippi are worth a landowner's attention and they pull in
+  opposite directions. The first is that the largest projects have already
+  chosen their ground, in Madison County, in Clinton, and near Vicksburg. The
+  second is that Mississippi's certified data center exemption requires only
+  twenty million dollars of investment and twenty jobs, which is the lowest
+  threshold of any state we work in. Kansas asks 250 million. Kentucky's longest
+  term needs 450 million. A twenty million dollar project is a building, not a
+  campus, and it can sit on ground that would never interest a hyperscaler. Tell
+  us your county, roughly your acreage, and which utility bills you. We look at
+  the public record for free and tell you what we find, including when the answer
+  is that your ground does not work.
+
+trustPoints:
+  - title: A low threshold changes who might call you
+    body: >-
+      Most of this network is written for landowners waiting on very large
+      projects. Mississippi is different because the state wrote its rule to
+      catch much smaller ones. That widens the field of parties who could
+      plausibly look at forty or eighty acres rather than four hundred.
+  - title: Which power world you sit in matters here
+    body: >-
+      Mississippi is split three ways electrically. The northeast buys from the
+      Tennessee Valley Authority through local distributors, the centre and west
+      are Entergy Mississippi, and the southeast is Mississippi Power. Those are
+      three genuinely different processes for answering the same question.
+  - title: We are the buyer and most answers are no
+    body: >-
+      We sit across the table from you rather than beside you, and anything we
+      put in front of you should go to your own attorney first. The majority of
+      Mississippi ground we look at will not suit this, and when that is the
+      answer we say it rather than going quiet.
+
+pageCopy:
+  howItWorks:
+    intro: >-
+      Announcements in this state have been large enough that a good many
+      Mississippi landowners have started wondering about their own place. That
+      is a reasonable thing to wonder and it has a specific answer. This is how
+      we go about finding it.
+    steps:
+      - >-
+        Give us the county, roughly the acreage, and the name on your power bill.
+        In Mississippi that last item tells us which of three completely
+        different systems your ground sits inside, so it is not a formality.
+      - >-
+        We look at what transmission runs near you, what the utility serving your
+        area has already been asked to do, and how your county has handled
+        industrial permitting before. Nearly all of that is public and none of it
+        costs you anything.
+      - >-
+        You get the reasoning back, not a verdict. When the answer is no we name
+        the specific thing that rules it out, which is worth having the next time
+        somebody writes to you about your place.
+      - >-
+        Paperwork is last and your attorney reads it before you do anything with
+        it. Up to that point the only thing we have asked you for is a
+        description of your ground.
+    closing: >-
+      None of that asks you for money or asks you to stop talking to anybody
+      else. If a party wants either of those from a Mississippi landowner before
+      showing you what they have actually looked at, slow down.
+  articles:
+    intro: >-
+      Plain writing for Mississippi landowners about how the three power systems
+      in this state differ, what a twenty million dollar project actually looks
+      like on the ground, and what to ask when somebody approaches you.
+    empty: >-
+      The Mississippi pieces are still being written. Until they are posted, the
+      questions page covers most of what landowners here ask, and the form below
+      reaches a person rather than a queue.
+  qualify:
+    intro: >-
+      Two farms in the same Mississippi county can be entirely different
+      propositions for this, and the difference is usually not the one people
+      expect. These are the things that decide it.
+    criteria:
+      - >-
+        Transmission you can reach. High voltage lines crossing or bordering the
+        ground, or a substation close by, are what make a site possible. The line
+        along the road is distribution and will not carry a project of this kind
+        no matter how many acres sit behind it.
+      - >-
+        Which utility holds your area and what it is already carrying. Entergy
+        Mississippi is in the middle of very large commitments. Mississippi Power
+        serves the southeast. In the northeast the answer runs through TVA and
+        your local distributor together. Each of those is a different
+        conversation.
+      - >-
+        Ground that drains. A great deal of Mississippi land is flat, which is
+        the easy part, and a great deal of it is also wet, which is not. Delta
+        gumbo, bottomland, and anything mapped in a floodplain give engineers
+        real difficulty regardless of how level it looks.
+      - >-
+        A single block rather than pieces. Contiguous ground under one ownership
+        beats the same total acreage split by a road, a slough, or a neighbour's
+        tract sitting in the middle of it.
+      - >-
+        Access that heavy equipment can use, and a county with some appetite for
+        industrial development. Some Mississippi counties have handled this
+        recently and know exactly what it involves. Others would be starting from
+        nothing.
+    closing: >-
+      No property clears all of that and none needs to. What we are working out
+      is whether the gaps can be closed, and that is a judgement about your
+      specific ground rather than a rule about Mississippi.
+
+value:
+  intro: >-
+    This is the first thing every landowner asks and it deserves a real answer
+    rather than a deflection. No per acre number appears on this page for
+    Mississippi. In a state where the difference between good ground and
+    unusable ground is often a matter of two feet of elevation and how the water
+    leaves, a figure named before anybody has looked would mislead you. What can
+    be stated plainly is which characteristics move it.
+  points:
+    - title: Dry, level, contiguous ground is what is scarce
+      body: >-
+        Flat land is not scarce in Mississippi. Flat land that drains, sits out
+        of the floodplain, and holds a foundation without extraordinary work is a
+        much shorter list. That distinction does far more to set value here than
+        total acreage does.
+    - title: Distance to real transmission
+      body: >-
+        Ground within reach of high voltage capacity is a different asset to
+        ground that is not, and the deed says nothing about which one you own.
+        This is usually the first thing that separates two neighbouring farms
+        that otherwise look identical.
+    - title: Being near a committed project cuts both ways
+      body: >-
+        Land close to what has already been announced in central Mississippi
+        draws more attention, which raises interest and also raises what everyone
+        involved expects. It does not automatically make your ground more useful,
+        because the electrical capacity in an area is finite and some of it is
+        now spoken for.
+    - title: An option and a sale carry different risk
+      body: >-
+        An option pays you for exclusivity while a project works out whether it
+        can actually build, and you generally keep farming through it. A sale is
+        final. Read carefully what any option says about what happens if the
+        project does not proceed, and have a Mississippi attorney read it too.
+
+livingWithIt:
+  - title: The place keeps working during an option
+    body: >-
+      An option period commonly runs a year or more and the ground almost always
+      stays in row crop or pasture through it. Survey crews and soil borings turn
+      up occasionally and work around what you have going.
+  - title: Water use is a real question in this state
+    body: >-
+      Cooling needs water, and in a state with active conversation about aquifer
+      levels and Delta irrigation that is not a small point. The larger projects
+      here have made public commitments about it. Whether a project near you does
+      the same is a fair thing to ask before you agree to anything.
+  - title: What gets built is industrial
+    body: >-
+      Large low buildings, a substation, security fencing, and lighting through
+      the night. There is no softer way to describe it. Quieter than a highway
+      and a great deal busier than a soybean field.
+  - title: Your county and your neighbours weigh in
+    body: >-
+      Permitting happens locally, which means the people considering it are
+      people you know and see. That is worth thinking about at the beginning
+      rather than discovering partway through.
+
+utilitiesNote: >-
+  Mississippi is divided among three quite different power systems and the one
+  you sit in shapes everything that follows. The northeastern counties buy TVA
+  power through municipal systems and electric power associations, so a large new
+  load there is answered by TVA and your local distributor together. Central and
+  western Mississippi is Entergy Mississippi territory, which is where the
+  largest committed projects have landed. The southeast is Mississippi Power.
+  Alongside all of that, roughly two dozen electric power associations serve
+  about half the meters in the state and cover most of the rural land area,
+  drawing wholesale power from Cooperative Energy or from TVA. When you tell us
+  who bills you, that genuinely narrows the question.
+
+utilities:
+  - name: Entergy Mississippi
+    kind: investor-owned
+    note: >-
+      Serves the capital region and much of central and western Mississippi, and
+      holds the territory where the largest announced projects in the state are
+      being built.
+  - name: Mississippi Power
+    kind: investor-owned
+    note: >-
+      A Southern Company utility serving southeast Mississippi across roughly
+      two dozen counties.
+  - name: Tennessee Valley Authority
+    kind: generation
+    note: >-
+      Generates and transmits power across northeastern Mississippi. It does not
+      bill you directly. Local systems buy wholesale from it and distribute.
+  - name: Cooperative Energy
+    kind: generation
+    note: >-
+      The generation and transmission cooperative supplying member electric power
+      associations across much of the state.
+  - name: Mississippi's electric power associations
+    kind: cooperative
+    note: >-
+      Member-owned distributors serving about half the electric meters in
+      Mississippi and covering most of the rural land area, which is where farm
+      ground sits.
+
+incentives:
+  summary: >-
+    Mississippi certifies qualifying data center enterprises through the
+    Mississippi Development Authority, and certification carries exemptions from
+    sales and use tax on computing equipment, software, and construction
+    materials, along with income and franchise tax relief.
+
+    The threshold is the point worth understanding. The programme originally
+    asked for fifty million dollars of investment and fifty jobs at 150 percent
+    of the state average wage. In 2019 the legislature lowered it to twenty
+    million dollars, twenty jobs, and 125 percent of the state average wage. That
+    is the lowest qualifying bar of any state in this network, set against 250
+    million in Kansas, 200 million in Texas and Iowa, and 100 million in
+    Tennessee. A project at that size is one building rather than a campus, and
+    it can work on ground that a hyperscaler would never consider.
+
+    Separately, very large projects have been negotiated individually. Amazon Web
+    Services announced ten billion dollars in Madison County in January 2024 with
+    a state package that included a long-running tax exemption and a rebate on
+    construction materials, tied to job creation and investment commitments. It
+    has since announced further investment in central Mississippi and a project
+    near Vicksburg. Those arrangements were approved separately from the standard
+    certification and are not what a smaller project would receive.
+
+    None of this money reaches you. It matters because the low standing threshold
+    widens the field of parties who could approach a Mississippi landowner, and
+    because the large individually negotiated projects have already claimed a
+    share of the electrical capacity in the middle of the state.
+  sources:
+    - label: Mississippi Development Authority, sales and use tax exemption for data center enterprises
+      url: https://mississippi.org/wp-content/uploads/sales-and-use-tax-exemption-data-centers-1.pdf
+      accessed: '2026-08-07'
+    - label: Mississippi Legislature, Senate Bill 2271, 2019 regular session
+      url: https://billstatus.ls.state.ms.us/documents/2019/html/SB/2200-2299/SB2271PS.htm
+      accessed: '2026-08-07'
+    - label: Mississippi Today, what incentives are available to data centers in Mississippi
+      url: https://mississippitoday.org/2026/07/29/data-centers-incentives-mississippi/
+      accessed: '2026-08-07'
+    - label: Sales Tax Institute, Mississippi amends and creates data center exemptions
+      url: https://www.salestaxinstitute.com/resources/mississippi-amends-and-creates-data-center-exemptions
+      accessed: '2026-08-07'
+
+regions:
+  - title: Madison County and the Jackson metro
+    body: >-
+      Where the largest committed investment in the state has landed, inside
+      Entergy Mississippi territory. Attention here is high and so is competition
+      for the electrical capacity that remains.
+  - title: The Vicksburg and Warren County corridor
+    body: >-
+      River access, existing industry, and a further announced project. Ground
+      here is being looked at more closely than it was two years ago.
+  - title: Northeast Mississippi and the TVA counties
+    body: >-
+      Tupelo, Starkville, Columbus, and the surrounding country buy TVA power
+      through local distributors. Land is generally less expensive and the
+      process for answering a capacity question is different from the rest of the
+      state.
+  - title: The DeSoto County and Memphis edge
+    body: >-
+      Northwest Mississippi sits against a major metropolitan area with real
+      infrastructure while remaining Mississippi ground for tax purposes, which
+      is a combination that gets noticed.
+  - title: The Delta
+    body: >-
+      Very flat, very large tracts, and genuine drainage and soil questions. Some
+      of it works and a good deal of it does not, and telling the difference
+      requires looking rather than assuming.
+  - title: Southeast Mississippi and the Pine Belt
+    body: >-
+      Mississippi Power territory with industrial history along the coast and
+      timber country inland. A different utility and a different set of county
+      expectations from the rest of the state.
+
+faq:
+  - question: Why does twenty million dollars matter to me?
+    answer: >-
+      Because it sets who can qualify. In most states a project has to be very
+      large before the tax treatment applies, which means only a handful of
+      companies are ever looking. Mississippi lowered its bar in 2019, so a
+      single building on a modest parcel can qualify. That does not guarantee
+      anybody wants your ground. It does mean more parties are able to look.
+  - question: The big projects already picked their sites. Am I too late?
+    answer: >-
+      Not necessarily, and the honest answer has two halves. The largest
+      hyperscale campuses in central Mississippi have chosen their ground, and
+      capacity in that immediate area is now partly claimed. At the same time,
+      smaller projects follow large ones, and the state threshold is written low
+      enough to catch them.
+  - question: Which utility serves me and why do you keep asking?
+    answer: >-
+      Because Mississippi has three separate systems. If you are in the
+      northeast you are almost certainly on TVA power through a local
+      distributor. Central and west is Entergy Mississippi. Southeast is
+      Mississippi Power. Many rural landowners are served by an electric power
+      association drawing from one of those. The name on your bill tells us which
+      process would apply to your ground.
+  - question: My land floods or holds water. Does that end it?
+    answer: >-
+      Frequently, and we would rather say so than let you hope otherwise. Level
+      ground is common in Mississippi and level ground that drains properly and
+      sits clear of the floodplain is much less common. That is the single most
+      useful thing to establish about a Mississippi parcel, and it is often
+      answerable from public mapping before anybody drives out.
+  - question: What about water use and the aquifer?
+    answer: >-
+      It is a fair question and a live one in this state. Cooling uses water, and
+      how much depends heavily on the design. The large projects here have made
+      public commitments on the subject. If somebody approaches you about your
+      ground, asking what their water plan is will tell you quickly whether they
+      have done real work.
+  - question: Somebody wrote to me about my land. What should I do?
+    answer: >-
+      Ask two Mississippi-specific questions first: which utility would serve the
+      site, and whether they have talked to that utility about capacity in your
+      area. Anyone who has done real work answers both without hesitating.
+      Anyone who cannot has not looked at your ground in any meaningful way.
+      Then take the letter to a Mississippi attorney, and sign nothing in the
+      meantime, including anything from us.
+  - question: What happens to the rest of the farm?
+    answer: >-
+      Often nothing at all. Many arrangements involve part of a property while
+      the remainder carries on as it was. Raise it in the first conversation
+      instead of assuming either way, and we would much rather you did.
+
+
+# Where the facts on this site actually move. Not rendered anywhere.
+# Checked by: npm run check:sources -- --watch
+watch:
+  - label: Mississippi Legislature bill status
+    url: https://billstatus.ls.state.ms.us/
+    kind: legislature
+  - label: Mississippi Public Service Commission
+    url: https://www.psc.ms.gov/
+    kind: regulator
+  - label: Mississippi Development Authority
+    url: https://mississippi.org/
+    kind: economic-development
+  - label: Entergy Mississippi newsroom
+    url: https://www.entergynewsroom.com/
+    kind: utility
+  - label: Mississippi Today
+    url: https://mississippitoday.org/
+    kind: news
