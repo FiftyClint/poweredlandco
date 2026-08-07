@@ -1,13 +1,340 @@
 key: tn
-type: parked
+type: state
 domain: tennesseedatacenterland.com
 stateName: Tennessee
 stateAbbr: TN
 accent: forest
 status: live
 
-intro: >-
-  If you own land in Tennessee and want to know whether it is the kind
-  these projects look for, the honest answer is that it depends on things
-  most landowners have never had reason to think about. That part is our
-  job. Send us the county and roughly how many acres.
+hero:
+  headline: In Tennessee there is only one seller of power.
+  subhead: >-
+    We purchase and option Tennessee land for data center development. The whole
+    state buys from the Tennessee Valley Authority, and that single fact shapes
+    every conversation about whether your ground can be connected.
+
+directAnswer: >-
+  Tennessee is unlike any other state in this network because it has one power
+  supplier. The Tennessee Valley Authority generates and transmits, and the
+  utility that bills you, whether a city electric department or a rural
+  cooperative, buys wholesale from it and distributes locally. So the question of
+  whether a large new load can be served is answered by TVA and your local
+  distributor together, rather than by an investor-owned utility negotiating for
+  itself. That changes who has to say yes and how long it takes. Send us the
+  county, roughly the acreage, and what runs near you, and we will check public
+  records at no cost and answer either way.
+
+trustPoints:
+  - title: One supplier means one answer, eventually
+    body: >-
+      In most states a landowner has to work out which of several utilities holds
+      their area and what each one's appetite is. Here the generation and
+      transmission question runs through a single federal authority. That is
+      simpler to understand and not necessarily faster, and anybody suggesting it
+      makes approvals quick is overselling it.
+  - title: The threshold here is genuinely reachable
+    body: >-
+      A qualifying project needs 100 million dollars of investment and fifteen
+      jobs, against 250 million in Kansas and 200 million in Texas and Iowa. That
+      is at the accessible end of the range, which widens the field of parties who
+      could look at your ground.
+  - title: We are the buyer and most answers are no
+    body: >-
+      We sit across the table from you, not beside you, and anything we send
+      should go to your own attorney first. Most Tennessee ground we look at will
+      not suit this, and when that is the answer you will get it plainly rather
+      than getting silence.
+
+pageCopy:
+  howItWorks:
+    intro: >-
+      Tennessee has drawn some very visible projects recently, and with them a
+      good deal of local argument. Whether any of that has anything to do with
+      your own ground is a separate and much more specific question. Here is how
+      we go about answering it.
+    steps:
+      - >-
+        Tell us the county, roughly the acreage, and which utility bills you.
+        That last part matters more here than elsewhere, because your local
+        distributor is one of the two parties who would have to serve a project
+        on your land.
+      - >-
+        We check what transmission runs near you, what your distributor has
+        already handled, and what the county has previously permitted. Nearly all
+        of it is public and none of it costs you anything.
+      - >-
+        You get the reasoning rather than a verdict. Where the answer is no, we
+        tell you the specific thing that rules it out, which is information you
+        can use with whoever writes to you next.
+      - >-
+        Paperwork comes last, and your attorney reads it before you act. Until
+        then the only thing we have asked of you is a description of your place.
+    closing: >-
+      Nothing in that involves you paying for anything or agreeing to stop
+      speaking to other parties. If somebody wants either from a Tennessee
+      landowner before showing what they have actually looked at, take your time.
+  articles:
+    intro: >-
+      Plain writing for Tennessee landowners about how buying power from a single
+      federal authority actually works, what your local distributor does and does
+      not decide, and what to ask when an approach arrives.
+    empty: >-
+      The Tennessee pieces are still being written. Until they are up, the
+      questions page covers most of what landowners here ask us, and the form
+      below reaches a person rather than a queue.
+  qualify:
+    intro: >-
+      Two farms in the same Tennessee county can be entirely different
+      propositions for this, and the difference is rarely the pasture or the
+      frontage. These are the things that decide it.
+    criteria:
+      - >-
+        Transmission within reach, which in this state means TVA transmission.
+        High voltage lines on or beside the ground, or a substation nearby, are
+        what make a site possible. The line along the road is a distribution line
+        and will not carry a project of this kind.
+      - >-
+        What your local distributor can actually handle. A small rural
+        cooperative and a large municipal electric department are in quite
+        different positions when a very large new load arrives, and that is worth
+        establishing early rather than late.
+      - >-
+        Terrain, which excludes more ground in Tennessee than most people expect.
+        Middle and East Tennessee are ridge country in large part, and a genuinely
+        flat contiguous block is worth far more than acreage on a slope.
+      - >-
+        A single block rather than pieces. Contiguous ground under one ownership
+        beats the same total divided by a road, a branch, or a neighbour's tract
+        in the middle.
+      - >-
+        Access heavy equipment can use, and a county that has thought about
+        industrial development. Some Tennessee counties have real experience of
+        it. Others are meeting the question fresh, and in a state where this has
+        become publicly contentious that matters.
+    closing: >-
+      No property clears all of that and none has to. What we are working out is
+      whether the gaps can be closed, and that is a judgement about your specific
+      ground rather than a rule about Tennessee.
+
+value:
+  intro: >-
+    Everybody asks this first and it deserves a direct answer. We will not print a
+    per acre figure for Tennessee. A number given before anyone has looked at your
+    ground is a guess, and in a state where two adjacent tracts can differ
+    enormously in how much of them is flat, it would mislead badly. What we can do
+    is be exact about what moves it.
+  points:
+    - title: Buildable acres, not deed acres
+      body: >-
+        Across much of Tennessee the gap between what the deed says and what can
+        be built on is the largest single factor. A hundred flat contiguous acres
+        can be worth more than four hundred acres of hillside, and no assessment
+        reflects that difference.
+    - title: What TVA transmission sits near you
+      body: >-
+        Because there is a single transmission owner here, proximity to its
+        network is the whole electrical question rather than part of it. Ground
+        near real capacity is a different asset to ground that is not, and the
+        deed says nothing about which you own.
+    - title: Your distributor's capability is part of the picture
+      body: >-
+        A project needs both TVA and the local distributor to be able to serve it.
+        Ground in the territory of a distributor already handling substantial
+        industrial load is a simpler proposition than ground served by a small
+        cooperative that has never seen anything of the sort.
+    - title: An option and a sale carry different risk
+      body: >-
+        An option pays you for exclusivity while a project establishes whether it
+        can build, and you generally keep farming. A sale is final. Given how
+        publicly contested some Tennessee projects have become, read what an
+        option says about what happens if local permission does not arrive.
+
+livingWithIt:
+  - title: The place keeps working through an option
+    body: >-
+      An option period commonly runs a year or more and the ground almost always
+      carries on in pasture or crop. Survey and soil crews appear occasionally
+      and work around whatever you have going.
+  - title: Tennessee has had public fights about this
+    body: >-
+      Some projects in this state have drawn substantial and organised local
+      opposition, particularly where on-site generation was involved and air
+      quality became the issue. That is part of the landscape here rather than an
+      aside, and a landowner should know it before rather than after.
+  - title: What gets built is industrial
+    body: >-
+      Large low buildings, a substation, fencing, and lighting through the night.
+      We are not going to describe it as anything softer than it is. Quieter than
+      an interstate and a great deal busier than a hayfield.
+  - title: Your neighbours and your county decide a lot of it
+    body: >-
+      Permitting runs locally, which means the people weighing it are people you
+      know. In a state where this has become a live public argument that carries
+      more weight than usual, and it is worth thinking about early.
+
+utilitiesNote: >-
+  Tennessee works differently from every other state here. The Tennessee Valley
+  Authority, a federal corporation, generates the power and owns the
+  transmission. It does not sell to you directly. Instead around 150 local power
+  companies, some municipal electric departments and some rural cooperatives, buy
+  wholesale from TVA and distribute to homes and businesses. So the utility on
+  your bill is your distributor, and the party who determines whether a large new
+  load can be served is TVA together with that distributor. When you tell us who
+  bills you, that is genuinely useful information rather than a formality.
+
+utilities:
+  - name: Tennessee Valley Authority
+    kind: generation
+    note: >-
+      The federal corporation generating power and owning transmission across the
+      state. It does not bill you directly, but nothing large gets connected
+      without it.
+  - name: Tennessee's municipal electric departments
+    kind: municipal
+    note: >-
+      City-owned distributors buying wholesale from TVA and serving their local
+      areas, including some of the larger systems in the state.
+  - name: Tennessee's rural electric cooperatives
+    kind: cooperative
+    note: >-
+      Member-owned distributors buying wholesale from TVA and covering a great
+      deal of the rural land area, which is where most farm ground sits.
+  - name: Memphis Light, Gas and Water
+    kind: municipal
+    note: >-
+      One of the larger municipal distributors in the country, serving Memphis
+      and Shelby County.
+  - name: Nashville Electric Service
+    kind: municipal
+    note: Serves Nashville and Davidson County as a municipal distributor.
+
+incentives:
+  summary: >-
+    Tennessee exempts qualified data centers from sales and use tax on computer
+    equipment, software, networks and related infrastructure, along with repair
+    parts and service contracts. Electricity used in operating a qualified centre
+    is taxed at a reduced rate rather than exempted outright.
+
+    The qualifying bar is at the accessible end of what states in this network
+    ask. A project needs at least 100 million dollars of capital investment over
+    three years, extendable to four for good cause, and must create fifteen
+    full-time jobs paying 150 percent or more of the state average wage. Set
+    against Kansas at 250 million or Texas and Iowa at 200 million, that widens
+    the field of parties who could plausibly look at a given property. Additional
+    programmes exist through the Department of Economic and Community
+    Development, including grants and job tax credits.
+
+    What shapes development here more than the tax treatment is the power
+    structure. Every project has to be served by the Tennessee Valley Authority
+    and by a local distributor, which is a different negotiation to dealing with
+    an investor-owned utility that answers to shareholders and a state commission.
+    It is simpler to describe and not necessarily quicker.
+
+    None of this money reaches you. It matters because the reachable threshold
+    widens who might approach you, and because the single supplier structure
+    determines how a connection question actually gets answered.
+  sources:
+    - label: Tennessee Department of Revenue, application for qualified data center exemption
+      url: https://www.tn.gov/content/dam/tn/revenue/documents/forms/sales/f1325001.pdf
+      accessed: '2026-08-04'
+    - label: Tennessee Department of Revenue, sales tax exemptions
+      url: https://www.tn.gov/content/dam/tn/revenue/documents/taxpayer_education/tax-workshop/Sales%20Tax%20Exemptions.pdf
+      accessed: '2026-08-04'
+    - label: Development District Association of Appalachia, Tennessee data center sales and use tax exemption
+      url: https://www.appalachiandevelopment.org/rural-broadband-programs/tennessee-data-center-sales-and-use-tax-exemption/
+      accessed: '2026-08-04'
+
+regions:
+  - title: West Tennessee and the Memphis area
+    body: >-
+      Flat ground, river and rail access, substantial transmission, and the
+      state's largest municipal distributor. It is also where the most publicly
+      contested project in Tennessee has been built, which has shaped local
+      expectations considerably.
+  - title: The Clarksville and northern Middle Tennessee corridor
+    body: >-
+      Growing industrial development north of Nashville with real transmission and
+      farm ground still at reachable prices. Counties here have been handling
+      large projects with increasing frequency.
+  - title: The I-40 corridor across Middle Tennessee
+    body: >-
+      Running between Nashville and the Tennessee River, with distribution
+      cooperatives, existing industry, and terrain that varies from workable to
+      impossible within a few miles.
+  - title: East Tennessee and the valley
+    body: >-
+      Long-established TVA country with generation, transmission, and industrial
+      history. Ridge and valley terrain does most of the excluding, so the flat
+      blocks that exist are worth identifying.
+  - title: The rural cooperative counties
+    body: >-
+      Much of Tennessee's farm ground is served by smaller cooperative
+      distributors. Land is less expensive and the question of what the local
+      distributor can serve becomes central rather than incidental.
+
+faq:
+  - question: What is TVA and why does it keep coming up?
+    answer: >-
+      The Tennessee Valley Authority is a federal corporation that generates
+      electricity and owns the transmission network across this state. It does not
+      bill you. Around 150 local power companies buy wholesale from TVA and
+      distribute locally, and one of those is on your bill. For a project of this
+      size both TVA and your distributor have to be able to serve it.
+  - question: Does having one supplier make this faster?
+    answer: >-
+      No, and anybody telling you it does is overselling. It makes the question
+      simpler to describe, because there is one transmission owner rather than
+      several utilities with different appetites. It does not remove the work of
+      establishing whether capacity exists and can be extended.
+  - question: My local co-op is small. Does that hurt me?
+    answer: >-
+      It can matter. A distributor already serving substantial industrial load is
+      in a different position to a small cooperative that has never handled
+      anything of this scale. It does not rule your ground out, but it is a real
+      part of the assessment and it is better raised early than discovered late.
+  - question: My land is hilly. Is that fatal?
+    answer: >-
+      Often, and we would rather say so than let you hope. Terrain excludes more
+      Tennessee ground than any other single factor. What matters is whether there
+      is a genuinely flat contiguous block, and a smaller flat parcel beats a much
+      larger sloping one every time.
+  - question: I have read about opposition to these projects here. Is that fair?
+    answer: >-
+      Some of it is, and it would be dishonest to wave it away. Projects in this
+      state have drawn organised local opposition, particularly where on-site
+      generation raised air quality questions. If you go forward you are stepping
+      into an argument that already exists, and you should know that going in.
+  - question: Somebody wrote to me about my land. What should I do?
+    answer: >-
+      Before anything else, ask them two questions that are specific to this
+      state: which local power company would serve the site, and whether they
+      have talked to TVA about capacity in that area. Anyone who has done real
+      work will answer both without hesitating. Anyone who cannot has not looked
+      at your ground in any meaningful way. After that, take the letter to a
+      Tennessee attorney and sign nothing in the meantime, including anything
+      from us.
+  - question: What happens to the rest of the farm?
+    answer: >-
+      Often nothing. Many arrangements involve part of a property while the
+      remainder carries on as before. Raise it in the first conversation rather
+      than assuming, and we would far rather you did.
+
+
+# Where the facts on this site actually move. Not rendered anywhere.
+# Checked by: npm run check:sources -- --watch
+watch:
+  - label: Tennessee General Assembly
+    url: https://www.capitol.tn.gov/legislation/
+    kind: legislature
+  - label: Tennessee Public Utility Commission
+    url: https://www.tn.gov/tpuc.html
+    kind: regulator
+  - label: Tennessee Department of Economic and Community Development
+    url: https://www.tnecd.com/
+    kind: economic-development
+  - label: Tennessee Valley Authority newsroom
+    url: https://www.tva.com/newsroom
+    kind: utility
+  - label: Tennessee Lookout
+    url: https://tennesseelookout.com/
+    kind: news

@@ -1,13 +1,338 @@
 key: in
-type: parked
+type: state
 domain: indianadatacenterland.com
 stateName: Indiana
 stateAbbr: IN
 accent: olive
 status: live
 
-intro: >-
-  Most questions we get from Indiana landowners start the same way.
-  Somebody got in touch about their ground and they are not sure what to
-  make of it. That is a reasonable place to start. Tell us what you have
-  and what you were told, and we will give you our read.
+hero:
+  headline: Indiana will exempt a project for up to fifty years.
+  subhead: >-
+    We purchase and option Indiana land for data center development. No other
+    state in this network offers a term anywhere close, and that has consequences
+    for what a developer is willing to commit to your ground.
+
+directAnswer: >-
+  Indiana competes on duration rather than on size of threshold, and that is the
+  thing to understand before anybody talks to you about price. A project
+  investing above 750 million dollars can be exempted for as long as fifty years,
+  against ten in Ohio and twenty five here for smaller investments. A commitment
+  measured in decades changes how a developer treats the land underneath it, and
+  it is why very large projects have chosen this state. What we need from you is
+  the county, roughly the acreage, and what runs near you electrically. We check
+  it against public records at no cost and tell you either way, including when
+  the answer is no.
+
+trustPoints:
+  - title: A fifty year exemption buys a fifty year mindset
+    body: >-
+      When a developer expects to hold a site for decades, they care more about
+      getting the land right and less about getting it cheap. That works in
+      favour of a landowner with genuinely good ground, and against anyone hoping
+      a marginal parcel will be taken on enthusiasm.
+  - title: The smaller thresholds are scaled to your county
+    body: >-
+      Below the very large tier, what a project must invest varies with county
+      population and runs from roughly 25 million to 150 million dollars over five
+      years. Rural Indiana sits at the lower end of that range, which is the more
+      accessible end.
+  - title: We are the buyer and most answers are no
+    body: >-
+      We sit across the table from you rather than beside you, and anything we
+      send should go to your own attorney before you act on it. Most Indiana
+      ground we look at will not suit this, and you will hear that from us
+      plainly.
+
+pageCopy:
+  howItWorks:
+    intro: >-
+      Indiana has drawn several very large projects in a short space of time, and
+      a fair number of landowners here have had an approach as a result. Whether
+      your own ground is genuinely of interest is a specific question. This is how
+      we go about answering it.
+    steps:
+      - >-
+        Tell us the county and roughly the acreage, and say whether the ground is
+        one block or several pieces. In Indiana that distinction does more work
+        than usual, because the projects looking here tend to be large.
+      - >-
+        We check who serves your power, what transmission runs near, and where
+        your county sits against the investment tiers. Almost all of it is public
+        record and it costs you nothing at all.
+      - >-
+        You get the reasoning rather than a verdict. Where the answer is no, we
+        name the thing that rules it out, which is worth something to you the next
+        time somebody writes.
+      - >-
+        Documents come last, and your attorney reads them before you do anything.
+        Up to that moment we have asked you for nothing but a description of your
+        place.
+    closing: >-
+      None of that involves money from you or a promise to stop speaking to
+      others. Where a party wants either from an Indiana landowner before showing
+      any of their own work, that is worth a slow and careful reply.
+  articles:
+    intro: >-
+      Plain writing for Indiana landowners about what a very long exemption means
+      for the party across the table, how the county tiers work, and what to ask
+      when an approach arrives.
+    empty: >-
+      The Indiana pieces are still being written. Until they are up, the questions
+      page covers most of what landowners here ask us, and the form below reaches
+      a person rather than a queue.
+  qualify:
+    intro: >-
+      Two farms in the same Indiana county can be entirely different propositions
+      for this, and the difference is rarely the corn suitability rating. These
+      are the things that decide it.
+    criteria:
+      - >-
+        Transmission within reach, before anything else. High voltage lines on or
+        beside the ground, or a substation nearby, are what make a site possible
+        at all. The line along the county road will not carry this.
+      - >-
+        Scale, which matters more in Indiana than elsewhere because the projects
+        drawn here have tended to be very large. A single substantial block is
+        worth disproportionately more than the same acreage in awkward pieces.
+      - >-
+        Your county's population, since the investment threshold below the top
+        tier is scaled to it. Rural counties sit at the accessible end of that
+        range.
+      - >-
+        Ground that drains, which on Indiana farmland means an honest account of
+        how the tile performs. Land that ponds in a wet spring comes out of the
+        buildable count whatever the deed says.
+      - >-
+        Access heavy equipment can use and a county that has thought about
+        industrial development. Several Indiana counties have now done this at
+        scale. Others will be deciding for the first time.
+    closing: >-
+      No property meets all of that and none has to. What we are working out is
+      whether the gaps can be closed, which is a judgement about your ground
+      rather than a rule about Indiana.
+
+value:
+  intro: >-
+    Everybody asks this first and it deserves a real answer. We will not print a
+    per acre figure for Indiana. A number quoted before anybody has looked at your
+    ground is a guess, and quoting one would only distort what you expect from
+    the next conversation. What we can do is be exact about what moves it.
+  points:
+    - title: Headroom, not just proximity
+      body: >-
+        The question is never simply whether a line runs past you. It is what
+        that line can carry and whether the substation on it has room left. In
+        Indiana, where several of the parties looking are planning loads at the
+        top of the range, that headroom test is stricter than it would be for a
+        smaller project in a smaller state.
+    - title: A long horizon favours good ground
+      body: >-
+        A party planning to hold a site for decades is buying certainty as much as
+        acreage. Clean title, one contiguous block, a settled county position, and
+        real transmission access are worth more to them than a discount, which is
+        a better position for a landowner with a genuinely good place.
+    - title: Indiana farmland has a firm floor
+      body: >-
+        Productive ground here has an established market and a strong alternative
+        use, which means a project has to beat the farm rather than merely offer
+        something. That floor protects you and it also weeds out unserious
+        approaches.
+    - title: An option and a sale carry different risk
+      body: >-
+        An option pays for exclusivity while a project works out whether it can
+        build, and you generally keep farming. A sale is final. Given the length
+        of commitment developers contemplate in this state, read carefully what
+        an option says about extensions and what triggers them.
+
+livingWithIt:
+  - title: Farming carries on through an option
+    body: >-
+      An option period commonly runs a year or more, and Indiana ground almost
+      always keeps producing through it. Survey crews and soil borings turn up
+      occasionally and work around the operation rather than displacing it.
+  - title: What gets built here tends to be large
+    body: >-
+      Because Indiana has attracted projects at the top end, what appears is often
+      a campus rather than a building: several structures, a substation, fencing,
+      and lighting through the night. We would rather you pictured it accurately.
+  - title: The subsidy has become a public argument
+    body: >-
+      Indiana has disclosed substantial forgone sales tax revenue from this
+      programme, and reporting has noted how concentrated the benefit has been
+      among very few recipients. That argument is live and it will be raised at a
+      county meeting near you.
+  - title: Your neighbours decide this locally
+    body: >-
+      Zoning runs through county and township government, which means the people
+      deciding are people you know by name. Worth thinking about before you are
+      the item on an agenda rather than afterwards.
+
+utilitiesNote: >-
+  Indiana is divided among several investor-owned utilities with distinct
+  territories: AES Indiana around Indianapolis, Duke Energy Indiana across a wide
+  central and southern stretch, Indiana Michigan Power in the northeast, NIPSCO
+  in the northwest, and CenterPoint in the southwest. Rural electric membership
+  corporations serve a great deal of the countryside, supplied by generation and
+  transmission cooperatives. Which one serves you determines who owns the
+  connection and how fast capacity can be added, so it is the first thing we look
+  up. Your bill names them.
+
+utilities:
+  - name: AES Indiana
+    kind: investor-owned
+    note: Serves Indianapolis and the surrounding central Indiana counties.
+  - name: Duke Energy Indiana
+    kind: investor-owned
+    note: >-
+      Serves a large territory across central and southern Indiana, including a
+      great deal of rural country.
+  - name: Indiana Michigan Power
+    kind: investor-owned
+    note: >-
+      An American Electric Power company serving the northeast of the state
+      around Fort Wayne.
+  - name: NIPSCO
+    kind: investor-owned
+    note: Serves northwestern Indiana including the counties near Lake Michigan.
+  - name: CenterPoint Energy Indiana
+    kind: investor-owned
+    note: Serves the southwest of the state around Evansville.
+  - name: Indiana's electric membership corporations
+    kind: cooperative
+    note: >-
+      Member-owned cooperatives serving much of rural Indiana, supplied by
+      generation and transmission cooperatives rather than billing you directly
+      for generation.
+
+incentives:
+  summary: >-
+    Indiana exempts qualifying data center equipment and the energy used to run
+    it from sales and use tax, under Indiana Code chapter 6-2.5-15, with the
+    Indiana Economic Development Corporation awarding the exemption rather than
+    it applying automatically.
+
+    The distinguishing feature is duration. For investments below 750 million
+    dollars the exemption may run up to 25 years. Above that figure, the
+    corporation may award a term of up to 50 years. Nothing else in this network
+    comes close: Ohio has commonly run fifteen years, Illinois ten, Virginia to a
+    fixed 2035 date. A commitment measured in half a century is a different
+    proposition for the party across the table from you.
+
+    Below the top tier, what a project has to invest is scaled to the population
+    of the county, running from roughly 25 million to 150 million dollars over
+    five years, so rural counties sit at the more accessible end. The facility
+    must be at least 20,000 square feet and primarily used to house servers.
+
+    It is also contested. The state has disclosed several hundred million dollars
+    of forgone sales and use tax revenue from the programme since 2019, and
+    reporting has noted how heavily concentrated the benefit has been among very
+    few recipients. You will hear that argument locally and it is a fair one.
+
+    None of this money reaches you as a landowner. It matters because a fifty
+    year horizon changes what a developer is prepared to commit to, and because
+    the county tiers decide what size of project can consider your ground.
+  sources:
+    - label: Indiana Economic Development Corporation, data center sales tax exemption
+      url: https://www.iedc.in.gov/indiana-advantages/investments/data-center-sales-tax-exemption/overview
+      accessed: '2026-08-04'
+    - label: Data Center Dynamics, Indiana makes data center tax exemptions law
+      url: https://www.datacenterdynamics.com/en/news/indiana-data-center-tax-exemptions-law/
+      accessed: '2026-08-04'
+    - label: CNBC, state tax revenue forgone to attract data centers
+      url: https://www.cnbc.com/2025/06/20/tax-breaks-for-tech-giants-data-centers-mean-less-income-for-states.html
+      accessed: '2026-08-04'
+
+regions:
+  - title: The northwest and the New Carlisle area
+    body: >-
+      Where some of the state's largest projects have gone, with NIPSCO and
+      Indiana Michigan Power territory, rail and interstate access, and
+      transmission built for a long industrial history. Local government here has
+      handled projects at this scale recently.
+  - title: The northeast around Fort Wayne
+    body: >-
+      Indiana Michigan Power country with established transmission and a
+      workforce used to manufacturing. Farm ground beyond the city has drawn real
+      interest.
+  - title: Central Indiana beyond Indianapolis
+    body: >-
+      AES and Duke territory in the counties an hour or so out, with genuine
+      transmission and land that has not been priced for this use. County
+      populations vary enough here that the investment tier differs from one to
+      the next.
+  - title: The Ohio River counties
+    body: >-
+      Southern Indiana along the river, with existing generation, heavy industry,
+      and barge access. Terrain does more of the deciding here than in the flat
+      north of the state.
+  - title: The rural counties in between
+    body: >-
+      Much of Indiana is farm country served by electric membership corporations,
+      sitting at the lower end of the investment tiers. Transmission varies
+      sharply county by county, so this is ground to check rather than assume
+      about.
+
+faq:
+  - question: Why does a fifty year exemption matter to me?
+    answer: >-
+      Because it changes the behaviour of the party across the table. A developer
+      planning to hold a site for decades cares far more about getting the land
+      right than about getting it cheaply, which favours a landowner with a
+      genuinely good place. It also means the commitments they ask for tend to be
+      longer, so read the documents accordingly.
+  - question: Does my county's population affect this?
+    answer: >-
+      Below the very largest tier, yes. What a project has to invest scales with
+      county population, running from roughly 25 million to 150 million dollars
+      over five years. Rural Indiana sits at the accessible end of that range.
+  - question: How many acres do you need?
+    answer: >-
+      There is no fixed number, but Indiana is a state where scale matters more
+      than most, because the projects that have chosen it have tended to be very
+      large. A single substantial contiguous block is worth disproportionately
+      more here than the same acreage in pieces.
+  - question: Who serves my power and why do you ask?
+    answer: >-
+      Indiana is divided among five investor-owned utilities with distinct
+      territories, plus electric membership corporations across much of the
+      countryside. Whoever serves you owns the connection and controls how fast
+      capacity can be added, which is why it is the first thing we look up. Your
+      bill names them.
+  - question: I have heard the tax break is controversial. Is it?
+    answer: >-
+      Yes, and we would rather you heard it from us. The state has disclosed
+      substantial forgone revenue since 2019 and reporting has noted how
+      concentrated the benefit has been. That argument is live and it will come up
+      at a county meeting whether or not anybody warns you first.
+  - question: Somebody wrote to me about my ground. What should I do?
+    answer: >-
+      Do not sign and do not treat a deadline in the letter as binding. Establish
+      whether they are buying for themselves or for a party they have not named.
+      Have an Indiana attorney read it before you agree to anything, which applies
+      to a letter from us just as much as anyone else.
+  - question: What happens to the rest of the farm?
+    answer: >-
+      Frequently nothing. Many arrangements involve a portion of a property while
+      the remainder carries on in production. Raise it in the first conversation
+      rather than assuming, and we would far rather you did.
+
+
+# Where the facts on this site actually move. Not rendered anywhere.
+# Checked by: npm run check:sources -- --watch
+watch:
+  - label: Indiana General Assembly
+    url: https://iga.in.gov/
+    kind: legislature
+  - label: Indiana Utility Regulatory Commission
+    url: https://www.in.gov/iurc/
+    kind: regulator
+  - label: Indiana Economic Development Corporation
+    url: https://www.iedc.in.gov/
+    kind: economic-development
+  - label: Duke Energy Indiana news
+    url: https://news.duke-energy.com/
+    kind: utility
+  - label: Indiana Capital Chronicle
+    url: https://indianacapitalchronicle.com/
+    kind: news
