@@ -1,14 +1,349 @@
 key: ga
-type: parked
+type: state
 domain: georgiadatacenterland.com
 stateName: Georgia
 stateAbbr: GA
 accent: pine
 status: live
 
-intro: >-
-  Landowners across Georgia have started getting letters about their ground
-  from people building large computing facilities. If one has arrived in
-  your mailbox, or you simply want to know whether your property is the
-  kind they come looking for, tell us where it is and we will look at it
-  properly.
+hero:
+  headline: Own rural Georgia ground? The rules favour your county.
+  subhead: >-
+    We purchase and option Georgia property for data center development. Georgia
+    sets a lower bar for projects in less populated counties, which puts rural
+    ground in the conversation rather than out of it.
+
+directAnswer: >-
+  Find out two things before you talk price with anybody: who serves your power,
+  and how many people live in your county. Most rural Georgia land is served by
+  an electric membership corporation rather than Georgia Power, and that changes
+  who a developer has to deal with. County population matters because Georgia
+  scales its data center tax exemption to it, and the threshold in a county under
+  30,000 people is well under half what it is in a large one. Send us the county,
+  a rough acreage, and anything you have noticed nearby. We check it against
+  public records at no cost and tell you either way.
+
+trustPoints:
+  - title: Rural Georgia is not the leftover option here
+    body: >-
+      Georgia wrote its incentive so that a project needs a smaller investment
+      and fewer jobs to qualify in a lightly populated county than in a busy one.
+      That is unusual, and it means ground in middle and south Georgia can be
+      easier for a developer to justify than land closer to Atlanta, not harder.
+  - title: We are buying, not representing you
+    body: >-
+      We sit across the table from you rather than beside you, and we would
+      rather be plain about that now. Take anything we send to your own attorney.
+      We would be uncomfortable if you did not.
+  - title: We say no clearly
+    body: >-
+      Most Georgia property we look at will not suit this, usually for reasons a
+      landowner has no way of knowing from walking the place. When that is the
+      answer we give it and stop, rather than keeping you hopeful about something
+      that is not going to happen.
+
+pageCopy:
+  howItWorks:
+    intro: >-
+      Georgia has had this industry for years, but for most of that time it sat
+      around Atlanta and left the rest of the state alone. That is changing, and
+      the tax rules were written in a way that actively pushes projects outward.
+      Here is what the process looks like from where we sit.
+    steps:
+      - >-
+        Send us the county, roughly the acreage, and whatever you have noticed
+        around the place. Where you are unsure, say so. An honest gap helps us
+        more than a confident guess that turns out wrong.
+      - >-
+        We look up your EMC or utility, what transmission runs nearby, and where
+        your county sits against the population thresholds. Public records carry
+        most of it. This costs you nothing.
+      - >-
+        If it looks workable we tell you what we found and what we would want to
+        do next. If it does not, we say that and explain the reason rather than
+        simply not replying.
+      - >-
+        Only then does anything become a document, and only after your attorney
+        has read it. Nothing before that asks you for money, a signature, or an
+        exclusive arrangement.
+    closing: >-
+      None of that asks you to spend anything or to stop speaking to other
+      parties. If somebody approaches your Georgia land wanting either of those
+      up front, before showing you what they have actually looked at, take your
+      time.
+  articles:
+    intro: >-
+      Plain writing for Georgia landowners about EMCs and how they differ from
+      Georgia Power, why county population decides more than you would expect,
+      and what to do when a letter turns up about your place.
+    empty: >-
+      The Georgia pieces are still being written. Until they appear, the
+      questions page covers most of what landowners here ask, and the form below
+      reaches a person rather than a queue.
+  qualify:
+    intro: >-
+      Two farms in the same part of Georgia can sit on opposite sides of this,
+      and what separates them is rarely the soil, the frontage, or anything a
+      landowner has previously had reason to care about. These are the things
+      that decide it.
+    criteria:
+      - >-
+        Transmission within reach, ahead of everything else. High voltage lines
+        crossing or bordering the property, or a substation nearby, are what make
+        a site possible at all. The distribution line along your road is a
+        different thing entirely and will not carry this.
+      - >-
+        Which county you are in, because Georgia keys its exemption to
+        population. Under 30,000 people the bar is materially lower than it is in
+        a county over 50,000, and that shows up directly in whether a project
+        pencils on your ground.
+      - >-
+        Acreage that holds together as one block. A single contiguous piece beats
+        the same total split by a road, a creek, or somebody else's parcel in the
+        middle of it.
+      - >-
+        Ground that drains. Georgia has a great deal of land that is beautiful
+        and unbuildable, and wetland, floodplain, and steep terrain all take
+        acreage out of the count regardless of what the deed says.
+      - >-
+        Access a construction convoy can use, and a county government that has
+        thought about industrial development before. Some Georgia counties are
+        practised at this. Others will need to work it out while you wait.
+    closing: >-
+      No property meets all of that and none needs to. What we are working out is
+      whether the gaps can be closed, which is a question about your specific
+      ground rather than about Georgia, and it is why we would rather look than
+      generalise.
+
+value:
+  intro: >-
+    Everyone asks this first and it deserves a real answer. We will not print a
+    per acre number for Georgia, because a figure offered before anybody has
+    looked at your particular place is not a figure, it is a guess, and quoting
+    one would only set you up to be disappointed or taken advantage of. What we
+    can do is be specific about what moves it.
+  points:
+    - title: What the wires nearby can carry
+      body: >-
+        The electrical picture around your property does more to this than
+        acreage, soil, or road frontage combined. Land beside a substation with
+        capacity to spare is a different asset to land twenty miles from
+        anything, and nothing in your deed distinguishes the two.
+    - title: Your county's population, oddly enough
+      body: >-
+        Because Georgia scales the qualifying threshold to county population, the
+        same project is easier to justify in a smaller county. A landowner in a
+        county under 30,000 people is competing on better terms than one an hour
+        outside Atlanta, which is the reverse of what most people assume.
+    - title: One block, one owner
+      body: >-
+        Contiguous ground under a single ownership is worth more than the same
+        acreage assembled from pieces. Buying up neighbours afterwards is slow,
+        uncertain, and every party involved knows it, so it gets priced in.
+    - title: An option and a sale are not the same offer
+      body: >-
+        Some landowners take a payment for a period of exclusivity while a
+        project establishes whether it can build, and keep farming throughout.
+        Others sell outright. The money, the certainty, and the tax treatment all
+        differ, and which suits you is about your circumstances rather than your
+        acreage.
+
+livingWithIt:
+  - title: The place keeps working during an option
+    body: >-
+      An option period commonly runs a year or more, and the ground generally
+      carries on being farmed, hayed, or planted exactly as before. Survey and
+      soil crews appear occasionally and work around you.
+  - title: What gets built is industrial
+    body: >-
+      Large low buildings, a substation, fencing, and lighting through the night.
+      We are not going to tell you it disappears into the treeline. It is quieter
+      than an interstate and a great deal busier than pasture.
+  - title: Ask about water early
+    body: >-
+      Cooling approaches differ enormously and so does how much water they need.
+      It is a fair question to put to any developer at the first conversation,
+      and how willingly they answer tells you something about the rest of it.
+  - title: Transmission may arrive whether or not you sell
+    body: >-
+      Georgia is in the middle of a large grid expansion, and eminent domain has
+      been used to route new lines. That is worth understanding as its own
+      subject, because a landowner in the path of a line faces a different
+      situation to one being asked about a site, and the two get confused.
+
+utilitiesNote: >-
+  Georgia is a cooperative state to a degree most people underestimate. Forty one
+  electric membership corporations serve roughly half the population and around
+  three quarters of the land area, so if your ground is rural the odds are you
+  are on an EMC rather than on Georgia Power. That matters because the EMC, its
+  generation partner, and its transmission partner are the parties a project has
+  to work with, and they are a different set of relationships to the ones a
+  developer would have with the investor-owned utility. Your bill names your
+  provider, and telling us which it is saves a step.
+
+utilities:
+  - name: Georgia Power
+    kind: investor-owned
+    note: >-
+      The investor-owned utility, a Southern Company subsidiary, serving much of
+      the state including the larger population centres.
+  - name: Georgia's electric membership corporations
+    kind: cooperative
+    note: >-
+      Forty one member-owned cooperatives serving around three quarters of
+      Georgia's land area and roughly half its people, which is most rural
+      ground in the state.
+  - name: Oglethorpe Power
+    kind: generation
+    note: >-
+      Generation for its member EMCs rather than a retail provider you would be
+      billed by.
+  - name: Georgia Transmission Corporation
+    kind: generation
+    note: >-
+      Owns and operates transmission on behalf of the EMCs, so it is often the
+      party that matters for getting power to a new site.
+  - name: MEAG Power
+    kind: municipal
+    note: Wholesale power for Georgia's municipal electric communities.
+  - name: Carroll EMC
+    kind: cooperative
+    note: Serves Carroll, Haralson, Heard, Paulding, Polk, Floyd and Troup counties.
+  - name: Sawnee EMC
+    kind: cooperative
+    note: Serves Cherokee, Dawson, Forsyth, Fulton, Gwinnett, Hall and Lumpkin counties.
+
+incentives:
+  summary: >-
+    Georgia exempts qualifying high-technology data center equipment and certain
+    building materials from sales and use tax under O.C.G.A. section
+    48-8-3(68.1). The part that matters to a rural landowner is that the
+    qualifying bar is scaled to county population, and it falls as the county
+    gets smaller. In a county over 50,000 people a project needs 250 million
+    dollars of investment and 25 new quality jobs. Between 30,000 and 50,000 it
+    is 150 million dollars and 10 jobs. Under 30,000 people it is 100 million
+    dollars and 5 jobs. A quality job is defined as regular employment of thirty
+    hours a week or more paying at least 110 percent of the average wage in that
+    county. The exemption has been in place since 2018 and has been extended to
+    2033.
+
+    It is also contested, and you should know that rather than find out later. In
+    2024 the legislature passed House Bill 1192, which would have suspended new
+    certificates of exemption for two years, and the governor vetoed it in May of
+    that year. Further bills aimed at curbing the exemption have been proposed
+    since. The incentive is current, but it is the subject of an active argument
+    and it may not look the same in five years.
+
+    None of this money reaches you. It matters because the population tiers push
+    projects towards exactly the counties where ordinary rural land sits, and
+    because the argument over the exemption is part of why a developer might move
+    sooner rather than later.
+  sources:
+    - label: Georgia Department of Revenue, high-technology data center equipment exemption
+      url: https://dor.georgia.gov/high-technology-data-center-equipment-exemption
+      accessed: '2026-08-04'
+    - label: Georgia Department of Audits, high-tech data center sales tax exemption summary
+      url: https://www.audits2.ga.gov/wp-content/uploads/2023/01/Data-Center-Sales-Tax-Exemption-Summary.pdf
+      accessed: '2026-08-04'
+    - label: Georgia Public Broadcasting, the governor's veto of the data center tax break pause
+      url: https://www.gpb.org/news/2024/05/09/georgia-lawmakers-vowed-restrain-tax-breaks-the-governors-veto-saved-data-center
+      accessed: '2026-08-04'
+    - label: Alston and Bird, Georgia bills proposing to curb data center sales tax exemptions
+      url: https://www.alston.com/en/insights/publications/2026/02/georgia-sales-tax-exemptions-data-centers
+      accessed: '2026-08-04'
+
+regions:
+  - title: The counties beyond the Atlanta ring
+    body: >-
+      Douglas, Coweta, Newton, Walton, Bartow and their neighbours have land,
+      existing transmission, and proximity to the corridor without the prices
+      inside it. Many of these sit above the population thresholds, so a project
+      here has a higher bar to clear than one further out.
+  - title: Middle Georgia
+    body: >-
+      The stretch around Macon and the counties surrounding it, much of it EMC
+      territory, with real transmission and county populations that often fall
+      into the more favourable tiers. This is where the incentive structure and
+      the land supply line up most neatly.
+  - title: South Georgia and the smaller counties
+    body: >-
+      A great many counties below 30,000 people, which is the tier where a
+      project needs the least investment and the fewest jobs to qualify. Ground
+      here has historically been overlooked for this use, and the arithmetic
+      argues it should not be.
+  - title: The I-16 corridor toward Savannah
+    body: >-
+      Industrial development along this route has drawn transmission and
+      workforce with it, and the counties on either side carry the kind of large
+      agricultural parcels these projects want.
+  - title: Northwest Georgia
+    body: >-
+      Carroll, Polk, Floyd and the counties around them, largely EMC served, with
+      transmission from long established industry. Terrain does more of the
+      deciding here than in the south of the state.
+
+faq:
+  - question: Am I on Georgia Power or an EMC, and does it matter?
+    answer: >-
+      If your land is rural, an EMC is more likely. Georgia's forty one electric
+      membership corporations cover around three quarters of the state's land
+      area. It matters because the EMC and its transmission partner are the
+      parties a developer has to work with, which is a different set of
+      relationships to dealing with Georgia Power. Your bill names your provider.
+  - question: Why do you keep asking about my county's population?
+    answer: >-
+      Because Georgia scales the tax exemption to it. Under 30,000 people a
+      project needs 100 million dollars of investment and 5 quality jobs. Over
+      50,000 it needs 250 million and 25. That is a large difference, and it means
+      a smaller county is often an easier place for a project to work, not a
+      harder one.
+  - question: How many acres do you need?
+    answer: >-
+      There is no single number and anyone offering you one without seeing your
+      ground is guessing. Whether the acreage is contiguous, and what runs near it
+      electrically, matters far more than the total. A smaller place next to real
+      capacity beats a larger one that is not.
+  - question: I heard the tax break might go away. Is that right?
+    answer: >-
+      It has been argued about. The legislature voted in 2024 to pause new
+      certificates and the governor vetoed that, and further bills have been
+      proposed since. As things stand the exemption runs to 2033. We would rather
+      you heard that from us than assumed the position is settled.
+  - question: What about the new power lines and eminent domain?
+    answer: >-
+      Georgia is expanding its grid substantially and eminent domain has been used
+      to route new transmission. That is a separate situation to being asked about
+      your land as a site, and the two often get confused. If a line is proposed
+      across your property, that is a conversation with the utility and your own
+      attorney, not with us.
+  - question: Somebody wrote to me about my land. What now?
+    answer: >-
+      Do not sign, and do not treat a deadline in the letter as real. Find out
+      whether they are buying for themselves or for a party they have not named.
+      Have a Georgia attorney read anything before you agree to it. That holds for
+      a letter from us just as much as from anyone else.
+  - question: Would I have to sell the whole place?
+    answer: >-
+      Often not. Plenty of arrangements involve a portion of a property while the
+      rest carries on as it was. It is a fair thing to raise in the first
+      conversation, and we would rather you did than leave it until late.
+
+
+# Where the facts on this site actually move. Not rendered anywhere.
+# Checked by: npm run check:sources -- --watch
+watch:
+  - label: Georgia General Assembly, legislation search
+    url: https://www.legis.ga.gov/legislation
+    kind: legislature
+  - label: Georgia Public Service Commission
+    url: https://psc.ga.gov/
+    kind: regulator
+  - label: Georgia Department of Revenue, data center exemption
+    url: https://dor.georgia.gov/high-technology-data-center-equipment-exemption
+    kind: economic-development
+  - label: Georgia Power newsroom
+    url: https://www.georgiapower.com/company/news-center.html
+    kind: utility
+  - label: Georgia Recorder
+    url: https://georgiarecorder.com/
+    kind: news
