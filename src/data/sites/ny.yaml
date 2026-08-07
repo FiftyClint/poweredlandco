@@ -1,13 +1,366 @@
 key: ny
-type: parked
+type: state
 domain: newyorkdatacenterland.com
 stateName: New York
 stateAbbr: NY
 accent: slate
 status: live
 
-intro: >-
-  Getting power to a new site is the hard part in New York, and it is
-  usually what decides whether a property is worth pursuing. That is a
-  question about your land specifically, not about the state. Send us the
-  county and roughly how many acres and we will give you a straight answer.
+hero:
+  headline: New York paused this in July 2026. That is the first thing to know.
+  subhead: >-
+    We purchase and option New York land for data center development. The state
+    put a temporary hold on permitting for the largest projects while it studies
+    them, so anybody approaching a New York landowner with urgency right now
+    should be asked about it directly.
+
+directAnswer: >-
+  New York is the only state in this network where the government has actively
+  stepped in front of this. In July 2026 the governor signed Executive Order 62,
+  which halts new discretionary state environmental permits for data centers
+  drawing 50 megawatts or more while the state prepares a generic environmental
+  impact statement on the industry. Projects already deemed complete before the
+  order can carry on. Everything else waits, for roughly a year by the
+  administration's own description, though the order sets no fixed end date. At
+  the same time, demand has not gone anywhere: the queue of large new electric
+  loads waiting to connect to New York's grid grew from about one gigawatt across
+  six projects in 2022 to nearly twelve gigawatts across forty-eight by early
+  2026. So the honest position for a New York landowner is that interest is real,
+  the door is temporarily shut on the largest projects, and this is a good moment
+  to find out exactly what you have rather than a moment to sign anything. Tell
+  us your county, roughly your acreage, and who bills you for power. We check the
+  public record at no cost and tell you what we find either way.
+
+trustPoints:
+  - title: Ask anybody who contacts you about Executive Order 62
+    body: >-
+      It is the cleanest test available to a New York landowner right now. A
+      party who has done real work here will explain immediately how the pause
+      affects their timeline. A party who has not will either not know about it
+      or will talk around it.
+  - title: A pause is not the same as a stop
+    body: >-
+      Projects under 50 megawatts are not caught by the order, and permits deemed
+      complete beforehand continue. The state has said it is developing standards
+      rather than ending the practice. What that means for your ground depends
+      entirely on your ground.
+  - title: We are the buyer and most answers are no
+    body: >-
+      We sit across the table from you rather than beside you, and anything we
+      hand you should go to your own attorney before you act on it. Most New York
+      ground we look at will not suit this, and when that is the answer you get
+      it plainly rather than getting silence.
+
+pageCopy:
+  howItWorks:
+    intro: >-
+      The state pausing permits does not stop a landowner from understanding
+      their own property, and it is arguably the best time to do it. Here is how
+      we go about answering the question for a specific piece of New York ground.
+    steps:
+      - >-
+        Send us the county, roughly the acreage, and which utility bills you.
+        Upstate that is usually National Grid or NYSEG, and knowing which one
+        changes what we go looking at first.
+      - >-
+        We check what transmission runs near you, what is already sitting in the
+        interconnection queue in your area, and how your town and county have
+        handled industrial proposals before. In New York the local land use
+        answer often matters as much as the electrical one.
+      - >-
+        You get the reasoning rather than a verdict, and in this state the
+        reasoning includes where things currently stand with the pause. When the
+        answer is no we name the specific reason, which is useful to you the next
+        time somebody writes.
+      - >-
+        Paperwork comes last and your attorney reads it before you do anything.
+        Up to that point the only thing we have asked of you is a description of
+        your place.
+    closing: >-
+      Nothing there costs you money or asks you to stop speaking with other
+      parties. Given that state permitting is on hold, anybody pressing a New
+      York landowner to commit quickly is worth a very careful second look.
+  articles:
+    intro: >-
+      Plain writing for New York landowners about what the permitting pause
+      actually covers, how the interconnection queue works, and what to ask when
+      an approach arrives during a moratorium.
+    empty: >-
+      The New York pieces are still being written. Until they are posted, the
+      questions page covers most of what landowners here ask, and the form below
+      reaches a person rather than a queue.
+  qualify:
+    intro: >-
+      Two farms in the same New York county can be completely different
+      propositions, and in this state the difference is as often about the town
+      as about the soil. These are the things that decide it.
+    criteria:
+      - >-
+        Transmission within reach. High voltage lines on or beside the ground, or
+        a substation nearby, are what make a site possible at all. The line along
+        the road is distribution and will not carry a project of this kind.
+      - >-
+        Where things stand in the interconnection queue near you. New York's
+        queue for large loads has grown enormously in a short time, and capacity
+        in a given area is not unlimited. What is already waiting ahead of you
+        affects what is realistically available.
+      - >-
+        Terrain that works. A great deal of upstate New York is hill country, and
+        a genuinely flat contiguous block is scarcer than the acreage figures
+        suggest. Wetlands are extensively mapped here and take ground out of play
+        quickly.
+      - >-
+        The town you are in. New York gives municipalities real authority over
+        land use, and a town board's disposition toward industrial development is
+        a live factor rather than a formality. Some towns have adopted their own
+        restrictions on this specifically.
+      - >-
+        A single block with usable access. Contiguous ground under one ownership
+        with a road heavy equipment can travel beats the same total acreage split
+        across parcels or reached by a seasonal road.
+    closing: >-
+      No property clears every one of those and none has to. What we are working
+      out is whether the gaps can be closed, and with the state pause in effect
+      there is time to work that out properly.
+
+value:
+  intro: >-
+    Every landowner asks this first and it deserves a real answer rather than a
+    dodge. There is no per acre figure printed here for New York. With state
+    permitting for large projects currently paused and local authority varying
+    from town to town, a number named in the abstract would be worse than
+    useless. What can be described exactly is what moves it.
+  points:
+    - title: Flat, dry, contiguous acres rather than deed acres
+      body: >-
+        Across most of upstate the gap between what the deed records and what can
+        actually be built on is the largest single factor. Slope and mapped
+        wetland remove ground quickly, and no assessment on your tax bill
+        reflects that difference.
+    - title: What transmission sits near you and what is queued ahead
+      body: >-
+        Proximity to high voltage capacity is the first electrical question and
+        the second is what is already waiting to use it. In a state where the
+        large load queue has grown roughly twelvefold in four years, the second
+        question has real weight.
+    - title: Your town's posture is part of the value
+      body: >-
+        New York towns hold genuine authority over what gets built. Ground in a
+        municipality that has considered industrial development and is open to it
+        is a different proposition from identical ground in a town that has
+        already moved to restrict it.
+    - title: An option and a sale carry different risk, and the pause matters here
+      body: >-
+        An option pays you for exclusivity while a project establishes whether it
+        can build, and you usually keep farming through it. A sale is final. With
+        state permitting temporarily suspended, read very carefully what any
+        option says about extensions and about what happens if approvals do not
+        arrive, and have a New York attorney read it too.
+
+livingWithIt:
+  - title: The land keeps working during an option
+    body: >-
+      An option period commonly runs a year or more, and in the current
+      environment it could run longer. The ground almost always stays in crop,
+      pasture or hay throughout, with survey and soil crews appearing
+      occasionally.
+  - title: Who pays for grid upgrades is being decided right now
+    body: >-
+      The Public Service Commission opened a proceeding in February 2026 on
+      making large new electric loads carry the costs they impose rather than
+      spreading them to other customers. That is unsettled, it is public, and it
+      affects the economics of any project that might approach you.
+  - title: What gets built is industrial
+    body: >-
+      Large low buildings, a substation, security fencing, and lighting through
+      the night. We are not going to describe it as anything gentler. Quieter
+      than a highway and far busier than a hayfield.
+  - title: Your town and your neighbours have more say here than most places
+    body: >-
+      New York land use runs through local boards, and in this state the public
+      argument about data centers is already well underway. The people weighing a
+      proposal near you would be people you know. Think about that at the start
+      rather than partway through.
+
+utilitiesNote: >-
+  Most rural New York land sits with one of two large investor-owned utilities.
+  NYSEG covers close to forty percent of upstate across roughly 18,000 square
+  miles, taking in the Southern Tier, Finger Lakes, Catskills and North Country,
+  which is where a great deal of the farm ground is. National Grid covers the
+  corridor through Buffalo, Syracuse, Utica and the Capital Region and much of
+  the Hudson Valley above Westchester. RG&E holds a tighter area around
+  Rochester and Central Hudson serves the mid-Hudson valley. A small number of
+  rural electric cooperatives serve pockets of the state. Above all of them the
+  New York Independent System Operator runs the grid and the queue that any large
+  new load has to enter, which is why the name on your bill is only half the
+  answer here.
+
+utilities:
+  - name: NYSEG
+    kind: investor-owned
+    note: >-
+      New York State Electric and Gas, covering close to forty percent of upstate
+      across the Southern Tier, Finger Lakes, Catskills and North Country. Most
+      of its territory is rural.
+  - name: National Grid
+    kind: investor-owned
+    note: >-
+      Serves Buffalo, Syracuse, Utica, the Capital Region and much of the Hudson
+      Valley north of Westchester, with the largest electric customer count
+      upstate.
+  - name: Rochester Gas and Electric
+    kind: investor-owned
+    note: A tighter multi-county territory centred on Rochester.
+  - name: Central Hudson
+    kind: investor-owned
+    note: Serves the mid-Hudson valley between the New York City suburbs and Albany.
+  - name: New York Power Authority
+    kind: generation
+    note: >-
+      A state public power authority that generates and transmits, and supplies
+      certain large customers directly rather than serving households generally.
+  - name: New York's rural electric cooperatives
+    kind: cooperative
+    note: >-
+      A small number of member-owned distributors serving pockets of rural New
+      York, considerably fewer than in most states in this network.
+
+incentives:
+  summary: >-
+    New York's situation is unlike any other state here, and the incentive
+    picture is the smaller half of the story.
+
+    In July 2026 the governor signed Executive Order 62, establishing a temporary
+    statewide moratorium on new discretionary state environmental permits for
+    data centers drawing 50 megawatts or more. The pause holds while the
+    Department of Public Service prepares a generic environmental impact
+    statement examining effects on the grid, water, air quality and host
+    communities. Permits deemed complete before the order may proceed. The
+    administration has described the review as taking about a year, and the order
+    itself sets no fixed end date. Separately, both houses of the state
+    legislature passed their own moratorium bill in June 2026.
+
+    Alongside that, the Public Service Commission opened a proceeding in February
+    2026 on how large new electric loads should interconnect and who should bear
+    the resulting costs, with the stated aim of keeping those costs off other
+    customers.
+
+    Underneath all of it the demand is plainly there. The interconnection queue
+    for large new loads in New York went from roughly one gigawatt across six
+    projects in 2022 to close to twelve gigawatts across forty-eight projects by
+    early 2026.
+
+    New York does exempt certain internet data center equipment and services from
+    sales tax, and general economic development programmes exist. Those matter
+    far less right now than the permitting position does.
+
+    None of this money reaches you. It matters because it sets the timeline any
+    party approaching you is actually working with, and because it gives you a
+    very effective question to ask them.
+  sources:
+    - label: Governor of New York, Executive Order No. 62 establishing a temporary moratorium on data centers
+      url: https://www.governor.ny.gov/executive-order/no-62-establishing-temporary-moratorium-data-centers-new-york-while-state-develops
+      accessed: '2026-08-07'
+    - label: Governor of New York, PSC proceeding on data centers paying their share for grid upgrades
+      url: https://www.governor.ny.gov/news/governor-hochul-announces-psc-proceeding-her-plan-ensure-data-centers-pay-their-fair-share
+      accessed: '2026-08-07'
+    - label: Harter Secrest and Emery, data center development in New York faces immediate pause under Executive Order 62
+      url: https://hselaw.com/news-and-information/legalcurrents/data-center-development-in-new-york-faces-immediate-pause-under-executive-order-62/
+      accessed: '2026-08-07'
+    - label: New York State Department of Taxation and Finance, internet data centers
+      url: https://tax.ny.gov/pubs_and_bulls/tg_bulletins/st/internet_data_centers.htm
+      accessed: '2026-08-07'
+
+regions:
+  - title: The Southern Tier
+    body: >-
+      NYSEG country, with farm ground at prices well below the rest of the state
+      and a long industrial history in places. Terrain and distance to
+      transmission do most of the deciding.
+  - title: The Mohawk Valley and Capital Region
+    body: >-
+      Existing transmission, established industrial development, and towns that
+      have handled large projects before. Ground here is looked at more closely
+      than most of upstate.
+  - title: Western New York and the Niagara corridor
+    body: >-
+      Substantial generation and transmission history and a real industrial base.
+      Flat ground exists here in a way it does not in much of the state.
+  - title: The North Country
+    body: >-
+      Large parcels, low land prices, and hydro generation in the region. The
+      constraint is usually distance from the transmission that matters and the
+      length of the winter construction season.
+  - title: The Finger Lakes and central New York
+    body: >-
+      Productive farmland, a mix of utilities, and towns that vary widely in how
+      they view industrial proposals. Two adjacent municipalities can give
+      genuinely different answers.
+
+faq:
+  - question: Does the moratorium mean my land is worthless for this?
+    answer: >-
+      No, and it does not mean the opposite either. The order pauses new
+      discretionary state environmental permits for data centers at 50 megawatts
+      and above while the state completes a study. Smaller projects are not
+      caught by it, and permits deemed complete before the order continue. What
+      it changes is timing, and it gives you a straightforward question to put to
+      anybody who contacts you.
+  - question: How long does the pause last?
+    answer: >-
+      The administration has described the review as taking roughly a year, and
+      the executive order itself contains no fixed end date. It runs until the
+      state completes its generic environmental impact statement. Anyone telling
+      a New York landowner they know exactly when it lifts is guessing.
+  - question: Somebody is pressing me to sign quickly. Is that normal?
+    answer: >-
+      In New York right now that deserves real scrutiny. State permitting for
+      large projects is on hold, which makes urgency harder to justify. Ask what
+      permits they hold, whether anything of theirs was deemed complete before
+      July 2026, and how the order affects their schedule. Then take it to a New
+      York attorney and sign nothing in the meantime, including anything from us.
+  - question: What is the interconnection queue and why does it matter to me?
+    answer: >-
+      Any large new electric load has to get in line to connect to the grid, and
+      that line is managed by the New York Independent System Operator. It grew
+      from about one gigawatt across six projects in 2022 to nearly twelve
+      gigawatts across forty-eight by early 2026. What is already queued in your
+      area affects how much capacity is realistically available near your ground.
+  - question: My land is hilly or has wetland on it. Does that end it?
+    answer: >-
+      Often, and we would rather say so than let you hope. Slope and mapped
+      wetland remove more upstate ground than anything else. What matters is
+      whether a genuinely flat, dry, contiguous block exists. A smaller clean
+      parcel beats a much larger complicated one every time.
+  - question: How much does my town matter?
+    answer: >-
+      A great deal, more than in most states in this network. New York
+      municipalities hold real authority over land use, and some towns have
+      already adopted their own restrictions on this kind of development. The
+      posture of your town board is a genuine part of the assessment rather than
+      a footnote.
+  - question: What happens to the rest of the farm?
+    answer: >-
+      Frequently nothing. Many arrangements cover part of a property while the
+      remainder carries on as before. Ask about it in the first conversation
+      rather than assuming, and we would much prefer that you did.
+
+
+# Where the facts on this site actually move. Not rendered anywhere.
+# Checked by: npm run check:sources -- --watch
+watch:
+  - label: New York State Senate legislation search
+    url: https://www.nysenate.gov/legislation
+    kind: legislature
+  - label: New York State Department of Public Service
+    url: https://dps.ny.gov/
+    kind: regulator
+  - label: Empire State Development
+    url: https://esd.ny.gov/
+    kind: economic-development
+  - label: New York Independent System Operator newsroom
+    url: https://www.nyiso.com/newsroom
+    kind: utility
+  - label: New York Focus
+    url: https://nysfocus.com/
+    kind: news
