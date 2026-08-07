@@ -1,13 +1,352 @@
 key: pa
-type: parked
+type: state
 domain: pennsylvaniadatacenterland.com
 stateName: Pennsylvania
 stateAbbr: PA
 accent: slate
 status: live
 
-intro: >-
-  Pennsylvania ground can be close to serious power and still be awkward to
-  build on, or the other way round entirely. That is not something anybody
-  can tell from a map, and working it out is most of what we do. Tell us
-  where your land is and we will check it.
+hero:
+  headline: Pennsylvania makes power. That changes what your ground competes on.
+  subhead: >-
+    We purchase and option Pennsylvania land for data center development. In most
+    states the question is whether a line reaches you. Here it is often whether
+    you are near where the electricity is generated.
+
+directAnswer: >-
+  Pennsylvania is a generating state rather than an importing one, and that
+  changes the question a landowner should be asking. Elsewhere the test is
+  distance to transmission. Here, proximity to generation matters in its own
+  right, because projects have been built around existing power stations,
+  retired plants, and gas supply rather than around a line running past a field.
+  So we want to know your county, roughly the acreage, what runs near you, and
+  whether there is any gas infrastructure or a former industrial site nearby.
+  Send that over and we will check it against public records at no cost, and tell
+  you either way.
+
+trustPoints:
+  - title: Old industrial ground is an asset here, not a liability
+    body: >-
+      The largest project in this state is being built on a retired coal fired
+      power station in Indiana County, because what a closed plant leaves behind
+      is exactly what a data center needs: interconnection, water, road and rail,
+      and a community familiar with heavy industry. Pennsylvania has a good deal
+      of ground in that category.
+  - title: Smaller counties clear a lower bar
+    body: >-
+      Pennsylvania keys its exemption to county population. Below 250,000 people
+      a project needs 75 million dollars and 25 jobs. Above that it is 100
+      million and 45. So the rural half of this state is not the harder place to
+      make a project work, it is the easier one.
+  - title: We are the buyer and we tell you when it is no
+    body: >-
+      We sit across the table from you rather than beside you, and we would
+      rather say that at the outset. Take anything we send to your own attorney.
+      Most Pennsylvania ground we look at will not work, and when that is the
+      answer you will get it plainly.
+
+pageCopy:
+  howItWorks:
+    intro: >-
+      A great deal is happening in Pennsylvania at the moment, most of it
+      reported in terms of billions of dollars and gigawatts, none of which tells
+      a landowner whether their own place is relevant. That is a specific
+      question with a specific answer. Here is how we work through it.
+    steps:
+      - >-
+        Send us the county, roughly the acreage, and what you have noticed
+        around the place. Mention any gas well, pipeline, or old industrial site
+        nearby. Where you are not certain, say so rather than guessing.
+      - >-
+        We look up who serves you, what transmission and generation sit near, and
+        what the county has already done with projects of this kind. Almost all
+        of it is public record and it costs you nothing.
+      - >-
+        Where it looks promising you get our actual reasoning rather than a
+        summary of it. Where it does not, you get the specific thing that rules
+        it out, because being told your ground sits four miles from the nearest
+        substation with capacity is worth something, and being told it is not a
+        fit is worth nothing at all.
+      - >-
+        Documents come at the end. Your attorney reads anything before you act on
+        it, and up to that point we have asked you for nothing beyond a
+        description of your place.
+    closing: >-
+      None of that involves you paying for anything or agreeing to stop speaking
+      to other parties. Where somebody wants either from a Pennsylvania landowner
+      before they have shown their own work, take your time over it.
+  articles:
+    intro: >-
+      Plain writing for Pennsylvania landowners about why generation matters more
+      here than transmission alone, what a gas lease means for a surface deal,
+      and what to do when an approach arrives.
+    empty: >-
+      The Pennsylvania pieces are still being written. Until they are up, the
+      questions page covers most of what landowners here ask us, and the form
+      below reaches a person rather than a queue.
+  qualify:
+    intro: >-
+      Two farms in the same Pennsylvania county can be entirely different
+      propositions for this, and what separates them is rarely the soil or the
+      road frontage. These are the things that decide it.
+    criteria:
+      - >-
+        Access to power, which here means transmission or generation or both.
+        High voltage lines and a nearby substation matter as they do everywhere.
+        What is different in Pennsylvania is that proximity to a generating
+        station, including a retired one, can matter just as much.
+      - >-
+        Your county's population, because the exemption is tiered to it. At or
+        below 250,000 people the investment and job bar is materially lower,
+        which works in favour of rural counties rather than against them.
+      - >-
+        Terrain that is genuinely usable. This is the constraint that catches
+        more Pennsylvania ground than any other. Ridge and valley country is
+        beautiful and largely unbuildable at this scale, and a flat contiguous
+        block is worth far more than acreage on a slope.
+      - >-
+        A single block under one ownership. Contiguous ground beats the same
+        total divided by a road, a run, or a neighbouring parcel in the middle.
+      - >-
+        Road access heavy equipment can use, and a county and township that have
+        considered industrial development. Much of this state has industrial
+        history and the institutional memory that comes with it. Some of it does
+        not.
+    closing: >-
+      No property clears all of that and none has to. What we are working out is
+      whether the gaps can be closed, which is a judgement about your specific
+      ground rather than a rule about Pennsylvania.
+
+value:
+  intro: >-
+    Everybody asks this first and it deserves a straight answer. We are not going
+    to print a per acre number for Pennsylvania. A figure quoted before anybody
+    has walked your ground is a guess, and in a state where two adjacent parcels
+    can differ enormously in how much of them is flat, it would mislead badly.
+    What we can do is be exact about what moves it.
+  points:
+    - title: Buildable acres, not deed acres
+      body: >-
+        In much of Pennsylvania the gap between what the deed says and what can
+        actually be built on is the largest single factor. A hundred flat
+        contiguous acres can be worth more than four hundred acres of ridge, and
+        no tax assessment reflects that difference.
+    - title: What the site is already connected to
+      body: >-
+        Ground near meaningful transmission is valuable everywhere. In
+        Pennsylvania, ground near generation, or near a plant that has closed and
+        left its interconnection behind, carries an advantage that does not exist
+        in most states.
+    - title: Gas infrastructure cuts both ways and usually helps
+      body: >-
+        Existing wells, gathering lines, and pipeline rights of way complicate
+        title and constrain what can be committed. They also frequently mean fuel
+        and infrastructure are close, which in this state is a genuine part of
+        the proposition rather than an afterthought.
+    - title: An option is not a sale
+      body: >-
+        Some landowners take payment for a period of exclusivity while a project
+        works out whether it can build, and keep farming throughout. Others sell.
+        The money, the certainty, and the tax treatment differ, and which fits
+        depends on your circumstances rather than your acreage.
+
+livingWithIt:
+  - title: Farming carries on during an option
+    body: >-
+      An option period commonly runs a year or more and the ground generally
+      keeps being farmed or hayed exactly as before. Survey and soil crews appear
+      occasionally and work around whatever you have going.
+  - title: What gets built is industrial, and here it may include generation
+    body: >-
+      Large low buildings, a substation, fencing, and lighting at night. In
+      Pennsylvania a campus may also sit alongside a power station, which is a
+      larger proposition again. We would rather be plain about that than let you
+      picture something smaller.
+  - title: Air permits and generation draw formal opposition
+    body: >-
+      Where a project involves new gas fired generation, the permits are
+      appealable and groups in this state do appeal them. That is a real feature
+      of the timeline here rather than an aside, and it is worth understanding
+      before you are asked to commit to dates.
+  - title: Your minerals and your surface are separate questions
+    body: >-
+      Pennsylvania has a long history of severed estates, and a surface
+      arrangement does not convey what is underneath. It also does not
+      automatically resolve what an existing lessee is entitled to do on your
+      ground. That is a conversation for your attorney, early.
+
+utilitiesNote: >-
+  Pennsylvania is inside PJM, the grid operator covering a large part of the
+  eastern United States, and the state generates considerably more electricity
+  than it consumes. Distribution is split among several investor-owned utilities:
+  PPL Electric through the centre and northeast, PECO around Philadelphia, Duquesne
+  Light around Pittsburgh, and the FirstEnergy operating companies across a wide
+  stretch of the west and north. Rural electric cooperatives serve a meaningful
+  share of the countryside. Which serves you determines who owns the connection,
+  and your bill names them.
+
+utilities:
+  - name: PPL Electric Utilities
+    kind: investor-owned
+    note: >-
+      Serves central and northeastern Pennsylvania across a large and largely
+      rural territory.
+  - name: PECO
+    kind: investor-owned
+    note: An Exelon company serving Philadelphia and the surrounding counties.
+  - name: Duquesne Light
+    kind: investor-owned
+    note: Serves Pittsburgh and Allegheny County and their immediate surrounds.
+  - name: FirstEnergy Pennsylvania
+    kind: investor-owned
+    note: >-
+      Operating companies serving western, northern and parts of southern
+      Pennsylvania.
+  - name: Pennsylvania's rural electric cooperatives
+    kind: cooperative
+    note: >-
+      Member-owned cooperatives serving rural country across the state, including
+      much of the north and the ridge and valley counties.
+  - name: PJM Interconnection
+    kind: generation
+    note: >-
+      The regional grid operator rather than a utility you are billed by, but the
+      party whose interconnection process governs how quickly a large new load
+      can be connected.
+
+incentives:
+  summary: >-
+    Pennsylvania exempts computer data center equipment from sales and use tax
+    through the Computer Data Center Equipment Program, which has applied since
+    January 2022. The exemption runs to owners, operators and qualified tenants
+    holding a certificate issued by the Department of Revenue.
+
+    The qualifying bar is keyed to county population, and it favours the rural
+    half of the state. In a county of 250,000 people or fewer, a project needs at
+    least 75 million dollars of investment and 25 new jobs. Above 250,000 people
+    it needs 100 million dollars and 45 jobs. There is also an ongoing test:
+    after the fourth anniversary of certification, the site has to pay at least
+    one million dollars in aggregate annual compensation to remain certified.
+    Certificates run for 25 full calendar years. The exemption covers equipment
+    and does not extend to labour, maintenance contracts, offsite storage, or
+    tools.
+
+    The reason this state is drawing the attention it is has more to do with
+    electricity than with tax. Pennsylvania generates well beyond what it uses,
+    sits inside PJM, and has both a substantial nuclear fleet and abundant
+    natural gas. The consequence is that projects here are being built around
+    power rather than merely near it. The clearest example is the retired Homer
+    City coal station in Indiana County, where a campus of more than three
+    thousand acres is being developed alongside new gas fired generation, on a
+    site that already holds interconnection to two regional grids.
+
+    None of this money reaches you as a landowner. It matters because it explains
+    what developers are actually looking for here, which is not simply a field
+    beside a transmission line.
+  sources:
+    - label: Pennsylvania Department of Revenue, Computer Data Center Equipment Program
+      url: https://www.pa.gov/agencies/revenue/business-tax-credits-and-economic-development-programs/business-tax-credits-and-incentives/computer-data-center-equipment-program
+      accessed: '2026-08-04'
+    - label: Pennsylvania Department of Revenue, Computer Data Center Equipment Program report
+      url: https://www.pa.gov/content/dam/copapwp-pagov/en/revenue/documents/news-and-statistics/reportsstats/taxcredits/computerdatactrequipprogram/documents/2023_computer_data_ctr_equip_pgm.pdf
+      accessed: '2026-08-04'
+    - label: Data Center Frontier, the Homer City energy campus
+      url: https://www.datacenterfrontier.com/site-selection/article/55281341/pennsylvanias-homer-city-energy-campus-a-brownfield-transformed-for-data-center-innovation
+      accessed: '2026-08-04'
+    - label: The Allegheny Front, appeal of the Homer City gas plant permit
+      url: https://www.alleghenyfront.org/pennsylvania-homer-city-data-center-power-plant-permit-appeal/
+      accessed: '2026-08-04'
+
+regions:
+  - title: Indiana County and the western coal country
+    body: >-
+      The retired Homer City station is being redeveloped as a very large campus
+      with its own generation, about fifty miles east of Pittsburgh. Counties
+      around it have industrial history, existing interconnection, and workforces
+      used to plants of this kind, which is a combination that does not exist in
+      most farm country.
+  - title: The Marcellus counties of the north and west
+    body: >-
+      Where gas production has already brought infrastructure, roads, and
+      compression into rural country. Fuel proximity matters more here than in
+      any other state we work in, and ground near it reads differently.
+  - title: The central ridge and valley
+    body: >-
+      Beautiful country and difficult ground. Usable flat blocks exist but they
+      are the exception rather than the rule, which makes the ones that do exist
+      worth identifying rather than assuming about.
+  - title: The Lehigh Valley and the eastern corridor
+    body: >-
+      Established warehouse and industrial development with real transmission and
+      proximity to eastern population. Land prices reflect all of that, and the
+      county populations put most of this area in the higher exemption tier.
+  - title: The northern tier
+    body: >-
+      Thinly populated, largely cooperative and PPL territory, with land at a
+      fraction of eastern prices. The transmission picture varies sharply from one
+      valley to the next, so this is country to check rather than generalise
+      about.
+
+faq:
+  - question: Why do you ask about generation rather than just power lines?
+    answer: >-
+      Because Pennsylvania produces far more electricity than it consumes, and
+      projects here are increasingly built around where power is made rather than
+      simply near a line. A retired plant, an operating station, or gas supply
+      nearby can matter as much as transmission, which is not true in most states.
+  - question: Does my county's population really affect this?
+    answer: >-
+      Yes, and in your favour if it is rural. At 250,000 people or fewer, a
+      project needs 75 million dollars and 25 jobs to qualify. Above that it needs
+      100 million and 45. The rural half of Pennsylvania is the easier half to
+      make a project work in, which is the opposite of what most landowners
+      assume.
+  - question: I have a gas lease and a pipeline crossing. Am I out?
+    answer: >-
+      Not necessarily, and in this state that infrastructure can genuinely help,
+      since fuel and access are part of what makes a site attractive here. What it
+      does mean is that the existing agreements have to be read carefully to see
+      what they permit. Raise them at the start.
+  - question: My ground is hilly. Is that fatal?
+    answer: >-
+      Often, yes, and we would rather say so than have you hope otherwise.
+      Terrain excludes more Pennsylvania ground than any other factor. What
+      matters is whether there is a genuinely flat contiguous block, and a smaller
+      flat parcel beats a much larger one on a slope.
+  - question: How long do these take here?
+    answer: >-
+      Longer than the announcements suggest, particularly where new generation is
+      involved, because air permits are appealable and groups in this state do
+      appeal them. Anyone promising you a fast timeline on a project with a
+      generating component is not being straight with you.
+  - question: Somebody wrote to me about my land. What should I do?
+    answer: >-
+      Do not sign and do not treat a deadline in the letter as binding on you.
+      Find out whether they are buying for themselves or for a party they have not
+      named. Have a Pennsylvania attorney read it first, which applies to a letter
+      from us just as much as from anyone else.
+  - question: What happens to the rest of the farm?
+    answer: >-
+      Frequently nothing. Many arrangements involve part of a property while the
+      remainder carries on as before. It is a fair thing to raise in the first
+      conversation and we would rather you did than leave it late.
+
+
+# Where the facts on this site actually move. Not rendered anywhere.
+# Checked by: npm run check:sources -- --watch
+watch:
+  - label: Pennsylvania General Assembly
+    url: https://www.legis.state.pa.us/
+    kind: legislature
+  - label: Pennsylvania Public Utility Commission
+    url: https://www.puc.pa.gov/
+    kind: regulator
+  - label: Pennsylvania Department of Revenue, computer data center equipment program
+    url: https://www.pa.gov/agencies/revenue/business-tax-credits-and-economic-development-programs/business-tax-credits-and-incentives/computer-data-center-equipment-program
+    kind: economic-development
+  - label: PJM Interconnection newsroom
+    url: https://insidelines.pjm.com/
+    kind: utility
+  - label: The Allegheny Front
+    url: https://www.alleghenyfront.org/
+    kind: news
