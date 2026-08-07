@@ -1,14 +1,347 @@
 key: oh
-type: parked
+type: state
 domain: ohiodatacenterland.com
 stateName: Ohio
 stateAbbr: OH
 accent: slate
 status: live
 
-intro: >-
-  Ohio has seen enough of this activity that most landowners here have
-  heard a story about somebody down the road. What is worth knowing is
-  whether your own ground is in the running, which turns on specifics
-  rather than on the county. Send us the details and we will give you a
-  straight answer.
+hero:
+  headline: Own Ohio ground away from the Columbus corridor?
+  subhead: >-
+    We purchase and option Ohio property for data center development. The
+    transmission being built into the southern and eastern counties is changing
+    which ground is worth looking at, and it is not the ground everybody assumes.
+
+directAnswer: >-
+  Two things settle most of it in Ohio. Who serves your power, which for rural
+  ground is often one of the twenty four member cooperatives rather than AEP Ohio
+  or AES Ohio, and what transmission is near you or being built toward you. That
+  second part has changed recently: substantial new high voltage capacity is
+  going into southern and Appalachian Ohio, and land there reads differently now
+  than it did five years ago. Send us the county, a rough acreage, and anything
+  you have noticed nearby. We check it against public records at no cost and give
+  you a straight answer either way.
+
+trustPoints:
+  - title: The map is being redrawn away from Columbus
+    body: >-
+      For most of this industry's time in Ohio the answer was Licking County and
+      the ring around Columbus. New transmission investment is now going into the
+      southern and eastern counties on a scale those areas have not seen in
+      generations, and ground that was too far from capacity is no longer
+      automatically out.
+  - title: We are the buyer and we will not pretend otherwise
+    body: >-
+      Our interests are not your interests, and saying so at the start is
+      cheaper for everyone than you working it out later. Take anything we put in
+      front of you to your own attorney before you agree to it.
+  - title: A plain no is part of the service
+    body: >-
+      Most Ohio property we look at does not suit this, usually for reasons that
+      have nothing to do with the quality of the farm. When that is the case we
+      tell you so and stop, instead of leaving you waiting on something that was
+      never going to happen.
+
+pageCopy:
+  howItWorks:
+    intro: >-
+      Ohio landowners have watched this arrive in one part of the state and
+      wondered whether it reaches theirs. That question has a real answer for any
+      specific property, and getting it does not require you to commit to
+      anything. Here is how we work.
+    steps:
+      - >-
+        Send us the county, roughly the acreage, and whatever you have noticed
+        around the place. If you are unsure of something, say so plainly. A gap
+        you flag is worth more than a guess we act on.
+      - >-
+        We look up which cooperative or utility serves you, what transmission is
+        nearby, and what is being built toward your area. Most of that is public
+        record and none of it costs you anything.
+      - >-
+        If it looks workable we tell you what we found and what we would want to
+        do next. If it does not, we say so and explain why, rather than simply
+        not getting back to you.
+      - >-
+        Only after that does anything become a document, and only once your
+        attorney has read it. Nothing before that point asks you for money, a
+        signature, or exclusivity.
+    closing: >-
+      None of that requires you to spend anything or to stop talking to anybody
+      else. If a party approaches your Ohio land and wants either of those before
+      showing you what they have looked at, that is worth slowing down over.
+  articles:
+    intro: >-
+      Plain writing for Ohio landowners about how the cooperatives differ from
+      AEP Ohio, what the new transmission into the southern counties actually
+      means, and what to do when a letter arrives about your farm.
+    empty: >-
+      The Ohio pieces are still being written. Until they are up, the questions
+      page covers most of what landowners here ask us, and the form below reaches
+      a person rather than a queue.
+  qualify:
+    intro: >-
+      Two farms in the same Ohio township can sit on opposite sides of this, and
+      what separates them is rarely the tile, the yields, or anything a landowner
+      has previously had cause to think about. These are the things that decide
+      it.
+    criteria:
+      - >-
+        Transmission first, and by a distance. High voltage lines on or beside
+        the property, or a substation within reach, are what make a site
+        possible. The distribution line along the township road is a different
+        animal and will not carry this.
+      - >-
+        Whether new capacity is being built toward you. Ohio is in the middle of
+        a significant transmission expansion into its southern and eastern
+        counties, and ground that fails today can be viable once a line lands.
+        That is worth knowing rather than guessing at.
+      - >-
+        A block that holds together. Contiguous acreage under one ownership beats
+        the same total split by a road, a creek, or a neighbour's field in the
+        middle of it.
+      - >-
+        Ground that drains, which in much of Ohio means asking honestly how the
+        tile performs in a wet spring. Land that ponds is land that comes out of
+        the count.
+      - >-
+        Road access a construction convoy can use, and a county and township that
+        have thought about industrial development. Some Ohio counties handle this
+        routinely now. Others will be working it out for the first time.
+    closing: >-
+      Nothing meets all of that and nothing has to. What we are working out is
+      whether the gaps close, and that is a judgement about your specific ground
+      rather than about Ohio, which is why we would rather look than talk in
+      generalities.
+
+value:
+  intro: >-
+    This is the first thing everyone asks and it deserves an answer rather than a
+    deflection. We are not going to print a per acre number for Ohio. A figure
+    given before anyone has looked at your particular ground is not information,
+    it is a guess, and the main thing it would do is set your expectations badly.
+    What we can do is be specific about what actually moves it.
+  points:
+    - title: What the wires near you can carry
+      body: >-
+        The electrical picture around the property does more here than acreage,
+        soil rating, or frontage. Land beside a substation with headroom is a
+        different asset to land fifteen miles from anything, and nothing in the
+        deed or the auditor's record tells the two apart.
+    - title: Whether capacity is coming to you
+      body: >-
+        Ohio's transmission build is not evenly spread. A property that is
+        marginal today and sits near where new high voltage is landing is worth
+        more than one that is marginal today and always will be. That distinction
+        is knowable and it is the sort of thing we check.
+    - title: One block under one name
+      body: >-
+        Contiguous ground held by a single owner is worth more than the same
+        acreage assembled from three farms. Buying up the neighbours afterwards
+        is slow and uncertain, and everybody involved understands that, so it
+        gets priced in from the start.
+    - title: An option is a different thing to a sale
+      body: >-
+        Some landowners take payment for a period of exclusivity while a project
+        works out whether it can build, and keep farming the whole time. Others
+        sell. The money, the certainty, and the tax treatment differ, and which
+        fits is about your family rather than your acreage.
+
+livingWithIt:
+  - title: The crop goes in as normal during an option
+    body: >-
+      An option period commonly runs a year or more, and the ground almost always
+      keeps being farmed through it. Survey crews and soil borings turn up
+      occasionally and work around the operation rather than interrupting it.
+  - title: What actually gets built
+    body: >-
+      Large low buildings, a substation, security fencing, and lighting at night.
+      It is an industrial site and we are not going to describe it as anything
+      softer. Quieter than a highway, considerably busier than a field.
+  - title: The electric bill argument will come up locally
+    body: >-
+      Ohio has had a public fight about whether data centers raise everybody
+      else's rates, and it produced real changes in how large users are billed
+      here. Expect the question at a township or county meeting, and expect it to
+      be asked in good faith.
+  - title: Your neighbours get a say and will use it
+    body: >-
+      Zoning in Ohio runs through townships and counties, which means the people
+      deciding are people you know. That cuts both ways, and it is better to have
+      thought about it before you are sitting in the room.
+
+utilitiesNote: >-
+  Ohio splits three ways and rural ground usually falls on the third. AEP Ohio
+  serves around 1.5 million customers across 61 counties, taking in Columbus,
+  Canton, Chillicothe and Newark along with a good deal of countryside. AES Ohio
+  covers the Dayton area. Then there are twenty four member-owned cooperatives,
+  supplied by Buckeye Power, reaching more than 400,000 homes and businesses
+  across 77 of Ohio's 88 counties. If your land is rural there is a fair chance a
+  cooperative serves it, and that changes who a project has to work with. Your
+  bill names your provider and telling us which it is saves a step.
+
+utilities:
+  - name: AEP Ohio
+    kind: investor-owned
+    note: >-
+      Serves roughly 1.5 million customers across 61 counties, including Columbus,
+      Canton, Chillicothe and Newark and much of the rural land around them.
+  - name: AES Ohio
+    kind: investor-owned
+    note: The investor-owned utility serving the Dayton area and its surrounds.
+  - name: Ohio's electric cooperatives
+    kind: cooperative
+    note: >-
+      Twenty four member-owned cooperatives serving more than 400,000 homes and
+      businesses across 77 of Ohio's 88 counties, which covers most rural ground.
+  - name: Buckeye Power
+    kind: generation
+    note: >-
+      The not-for-profit generation and transmission cooperative supplying Ohio's
+      member cooperatives, rather than a retailer you would be billed by.
+  - name: FirstEnergy
+    kind: investor-owned
+    note: Serves northern and eastern Ohio through its operating companies.
+  - name: Duke Energy Ohio
+    kind: investor-owned
+    note: Serves the southwestern corner of the state around Cincinnati.
+
+incentives:
+  summary: >-
+    Ohio waives state and local sales and use tax on qualifying data center
+    equipment under section 122.175 of the Revised Code. A project generally has
+    to make at least 100 million dollars of capital investment over three years
+    and pay at least 1.5 million dollars a year in compensation. Agreements are
+    approved by the Ohio Tax Credit Authority rather than granted automatically,
+    and terms have commonly run fifteen years, with longer terms available to
+    projects investing at a far larger scale.
+
+    Two things about Ohio are worth understanding beyond the exemption itself.
+
+    The first is that Ohio has had a serious public argument about whether large
+    data centers push up everybody else's electricity bills, and it produced
+    actual change. AEP Ohio proposed and the Public Utilities Commission adopted
+    an arrangement putting more of the cost of serving very large loads onto
+    those loads. Buckeye Power has done something comparable for the
+    cooperatives, treating energy-intensive data centers as their own category
+    and assigning infrastructure costs to them directly. That is the answer to
+    the question your neighbours will ask.
+
+    The second is that the exemption itself is contested. Legislation has been
+    introduced to end it, and the debate has stalled other data center bills at
+    the Statehouse. The incentive is current, but nobody should assume it is
+    permanent.
+
+    None of this is money that reaches you. It matters because it explains why
+    developers want Ohio ground, and because how the state resolves the cost
+    argument will shape how welcome these projects are in your county.
+  sources:
+    - label: Ohio Revised Code section 122.175, data center sales tax exemption
+      url: https://codes.ohio.gov/ohio-revised-code/section-122.175
+      accessed: '2026-08-04'
+    - label: AEP Ohio, data center proposal adopted by the Public Utilities Commission of Ohio
+      url: https://www.aep.com/news/stories/view/10327/
+      accessed: '2026-08-04'
+    - label: AEP Ohio, new electric infrastructure in Appalachian Ohio
+      url: https://www.aep.com/news/stories/view/10823/
+      accessed: '2026-08-04'
+    - label: Ohio Farm Bureau, the state's electric cooperatives and data centers
+      url: https://ofbf.org/2026/05/25/states-electric-co-ops-are-ready-for-data-centers/
+      accessed: '2026-08-04'
+
+regions:
+  - title: Southern and Appalachian Ohio
+    body: >-
+      A major transmission investment is going into this part of the state to
+      serve development at the former gaseous diffusion plant site at Piketon,
+      including new 765 kilovolt capacity. Counties here have not seen
+      infrastructure spending like it in generations, and ground that was too far
+      from capacity is being reconsidered as a result.
+  - title: The counties around Licking
+    body: >-
+      Where Ohio's data center development concentrated first, and where the
+      county governments have the most experience of it. Land prices here reflect
+      that, and much of the readily usable ground is spoken for.
+  - title: The rural ring beyond Columbus
+    body: >-
+      Fairfield, Madison, Union, Pickaway and their neighbours, mostly within AEP
+      Ohio territory, close enough to the corridor to matter and far enough out
+      that farms are still farms.
+  - title: Northwest Ohio
+    body: >-
+      Flat, large fielded, and well served by transmission built for industry and
+      for the wind development along the western counties. Drainage is the
+      question that decides most sites here.
+  - title: Eastern Ohio and the river counties
+    body: >-
+      Existing generation and heavy transmission from a long industrial history
+      along the Ohio River, with land prices well below the centre of the state.
+      Terrain does more of the deciding here than elsewhere.
+
+faq:
+  - question: Am I on AEP Ohio or a cooperative, and does it matter?
+    answer: >-
+      If your ground is rural there is a good chance a cooperative serves you.
+      Ohio has twenty four of them reaching 77 of the state's 88 counties, and
+      they are supplied by Buckeye Power. It matters because the cooperative and
+      Buckeye Power are the parties a project has to work with, which is a
+      different set of conversations to dealing with AEP Ohio. Your bill names
+      your provider.
+  - question: Will a data center push up my electric bill?
+    answer: >-
+      That question got asked hard in Ohio and it changed things. AEP Ohio
+      proposed and the state commission adopted an arrangement putting more of
+      the cost of serving very large loads onto those loads rather than onto
+      everybody else, and Buckeye Power has done something similar for the
+      cooperatives. It is a legitimate question and there is now a real answer to
+      it, which is worth having before a township meeting rather than after.
+  - question: My land is nowhere near Licking County. Is it worth asking?
+    answer: >-
+      Yes, and more so than a year or two ago. Substantial transmission is being
+      built into southern and Appalachian Ohio, and that changes what is possible
+      in counties that were previously too far from capacity. Distance from
+      Columbus is not the disqualifier it used to be.
+  - question: How many acres do you need?
+    answer: >-
+      There is no single number and anybody who gives you one without seeing your
+      ground is guessing. Whether it is contiguous, and what runs near it
+      electrically, matters far more than the total. A smaller farm near real
+      capacity beats a larger one that is not.
+  - question: Somebody wrote to me about my farm. What should I do?
+    answer: >-
+      Do not sign, and do not treat a deadline in the letter as binding on you.
+      Establish whether they are buying for themselves or for somebody they have
+      not named. Have an Ohio attorney read it before you agree to anything. That
+      applies to a letter from us exactly as much as from anyone else.
+  - question: Could the tax exemption disappear?
+    answer: >-
+      It might change. Legislation has been introduced to end it and the argument
+      has held up other data center bills at the Statehouse. As things stand it is
+      in force, but we would rather you knew the position was live than assumed
+      it was settled.
+  - question: What happens to the rest of the farm?
+    answer: >-
+      Frequently nothing. Plenty of arrangements involve part of a property while
+      the remainder carries on being farmed as before. It is a reasonable thing to
+      raise in the first conversation and we would far rather you did.
+
+
+# Where the facts on this site actually move. Not rendered anywhere.
+# Checked by: npm run check:sources -- --watch
+watch:
+  - label: Ohio General Assembly, legislation search
+    url: https://www.legislature.ohio.gov/legislation
+    kind: legislature
+  - label: Public Utilities Commission of Ohio
+    url: https://puco.ohio.gov/
+    kind: regulator
+  - label: Ohio Department of Development, incentives
+    url: https://development.ohio.gov/business/state-incentives
+    kind: economic-development
+  - label: AEP Ohio news
+    url: https://www.aep.com/news
+    kind: utility
+  - label: Ohio Capital Journal
+    url: https://ohiocapitaljournal.com/
+    kind: news
