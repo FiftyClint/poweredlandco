@@ -1,13 +1,351 @@
 key: il
-type: parked
+type: state
 domain: illinoisdatacenterland.com
 stateName: Illinois
 stateAbbr: IL
 accent: olive
 status: live
 
-intro: >-
-  Illinois has a great deal of farmland sitting within reach of strong
-  transmission lines, which is the combination these projects need. Whether
-  your ground is one of those places depends on your parcel rather than on
-  the state. Tell us where it is and we will check it.
+hero:
+  headline: Illinois closed its data center incentive to new applicants in July 2026.
+  subhead: >-
+    We purchase and option Illinois land for data center development. The state
+    exemption is paused for two years. That does not stop projects, but it does
+    change what any developer talking to you is actually working with.
+
+directAnswer: >-
+  The single most useful thing an Illinois landowner can know right now is that
+  the state's Data Center Investment Program stopped accepting new agreements on
+  1 July 2026, on the governor's direction, for a period of two years. Agreements
+  already in place are being honoured. What that means for you is practical: a
+  developer approaching you either signed before the cutoff, is planning without
+  the state exemption, or is working from information that is out of date. It is
+  a fair and revealing question to put to them. On the ground itself, send us your
+  county, a rough acreage, and what runs near you electrically. We check public
+  records at no cost and answer either way.
+
+trustPoints:
+  - title: Ask whoever writes to you about the pause
+    body: >-
+      It is the cleanest test of whether a party actually knows this state. Anyone
+      still describing the Illinois exemption as available for a new project has
+      either not kept up or is hoping you have not. The answer you get tells you
+      a great deal about who you are dealing with.
+  - title: Without the exemption, your site has to carry more of the case
+    body: >-
+      When a tax break covers part of the arithmetic, a merely adequate site can
+      work. When it does not, the ground itself has to justify the project. That
+      makes genuine transmission access worth more in Illinois now, not less, and
+      it narrows interest to properties that are actually good.
+  - title: We are the buyer and most answers are no
+    body: >-
+      We sit across the table from you rather than beside you, and you should
+      take anything we send to your own attorney. Most Illinois ground we look at
+      will not suit this, and when that is the answer you will get it plainly
+      rather than getting nothing.
+
+pageCopy:
+  howItWorks:
+    intro: >-
+      Illinois is in an unusual position: real transmission, real demand, and a
+      state incentive that has just been switched off for new entrants. That
+      combination makes site quality matter more than it did a year ago. Here is
+      how we work out whether a particular place clears that higher bar.
+    steps:
+      - >-
+        Tell us the county, roughly the acreage, and whether anyone has already
+        approached you about it. Given the timing, when an approach happened is
+        nearly as informative as what it said.
+      - >-
+        We check who serves your power, which grid region you sit in, and what
+        transmission runs near you. Northern and southern Illinois answer to
+        different grid operators, so this is not a formality here.
+      - >-
+        You get the reasoning rather than a verdict. Where the answer is no, we
+        name the specific thing that rules it out, so it is worth something to
+        you next time somebody writes.
+      - >-
+        Paperwork comes last and your attorney sees it before you act on it.
+        Until that point the only thing we have asked you for is a description of
+        your ground.
+    closing: >-
+      At no stage does any of that involve you paying for something or agreeing to
+      stop talking to other parties. Anybody wanting either from an Illinois
+      landowner before showing their own work should be treated accordingly.
+  articles:
+    intro: >-
+      Plain writing for Illinois landowners about what the incentive pause
+      actually changes, why northern and southern Illinois are on different
+      grids, and what to ask a developer who approaches you now.
+    empty: >-
+      The Illinois pieces are still being written. Until they are up, the
+      questions page covers most of what landowners here ask us, and the form
+      below reaches a person rather than a queue.
+  qualify:
+    intro: >-
+      Two farms in the same Illinois county can be entirely different
+      propositions for this, and the difference is almost never the productivity
+      index. These are the things that decide it, and they matter more here now
+      than they did before the pause.
+    criteria:
+      - >-
+        Transmission within reach, which in Illinois now carries more weight than
+        anywhere else in this network. Without a state exemption filling part of
+        the gap, a site has to be genuinely good rather than merely acceptable.
+        High voltage lines on or beside the ground, or a nearby substation, are
+        the test.
+      - >-
+        Which grid region you sit in. Northern Illinois is inside PJM and central
+        and southern Illinois is inside MISO. They have different interconnection
+        processes, different queues, and different timescales, and advice about
+        one does not transfer to the other.
+      - >-
+        A contiguous block. Ground that holds together beats the same acreage
+        split by a road, a ditch, or a neighbour's field in the middle of it.
+      - >-
+        Land that drains. Illinois has a great deal of extremely productive
+        ground that is productive precisely because it is tiled, and how that
+        tile performs in a wet spring decides how much of a place is buildable.
+      - >-
+        Access heavy equipment can use, and a county board that has considered
+        industrial development. Some Illinois counties have done this repeatedly.
+        Others will be deciding their position for the first time, with the
+        state's own pause in the background of that conversation.
+    closing: >-
+      Nothing satisfies all of that and nothing needs to. What we are working out
+      is whether the gaps can be closed, and that judgement is about your ground
+      rather than about Illinois.
+
+value:
+  intro: >-
+    Everybody asks this first and it deserves a straight answer. We will not
+    print a per acre figure for Illinois, and in this state there is an extra
+    reason for that beyond the usual one. The economics have genuinely shifted
+    with the incentive pause, and any number you were quoted a year ago was
+    calculated against a different set of rules. What we can do is be exact about
+    what moves it now.
+  points:
+    - title: Good farmland already has a strong price
+      body: >-
+        Illinois row crop ground has one of the most established land markets in
+        the country, which sets a real floor. A project has to be worth more than
+        the farm rather than merely worth something, and that has always been
+        true here.
+    - title: The exemption pause raises the bar on site quality
+      body: >-
+        Where a state tax exemption covered part of a project's arithmetic, a
+        marginal site could work. With that paused, the ground has to carry more
+        of the case, which concentrates interest on properties with genuine
+        transmission access rather than spreading it thinly.
+    - title: Which grid you are on affects the timeline
+      body: >-
+        A site in PJM territory and a site in MISO territory face different
+        interconnection queues, and time to connect is part of what a developer
+        is buying. Two otherwise similar farms on opposite sides of that line are
+        not equivalent assets.
+    - title: An option here now has a policy question inside it
+      body: >-
+        An option buys a developer exclusivity while they establish whether they
+        can build. In Illinois that window may well straddle the end of the
+        two year pause, so the rules could move while your ground is committed.
+        Ask what happens to the arrangement if they do, and make sure the answer
+        is written down rather than described to you.
+
+livingWithIt:
+  - title: Row crop continues, and the tile is worth settling early
+    body: >-
+      An option rarely interrupts farming, so the corn and beans go in much as
+      they would anyway. What is worth agreeing up front on Illinois ground is
+      who carries the cost if survey or boring work disturbs tile. On land this
+      heavily drained that is a practical question rather than a hypothetical
+      one, and it is far easier settled before somebody puts a rig in a field.
+  - title: What gets built is industrial
+    body: >-
+      Large low buildings, a substation, security fencing, and lighting through
+      the night. We will not describe it as anything gentler. Quieter than an
+      interstate, considerably busier than corn.
+  - title: Energy bills are the reason the state paused this
+    body: >-
+      The governor's stated grounds for the pause included the effect of data
+      center demand on household energy costs, along with water use and community
+      impact. That is not a fringe objection here, it is the official position of
+      the state, and you will hear it repeated at a county board meeting.
+  - title: The pause is two years, not forever
+    body: >-
+      The programme is suspended rather than abolished, and existing agreements
+      are being honoured. What replaces it, and on what conditions, is not settled.
+      Anybody telling you confidently what Illinois will look like in 2028 is
+      guessing.
+
+utilitiesNote: >-
+  Illinois is split between two grid regions, which is unusual and consequential.
+  Northern Illinois, largely ComEd territory, sits inside PJM. Central and
+  southern Illinois, largely Ameren Illinois territory, sits inside MISO. Those
+  are separate interconnection processes with separate queues and separate
+  timescales, so which side of that line your ground falls on genuinely affects
+  how quickly a project could connect. Beyond the two large utilities, rural
+  electric cooperatives and municipal utilities serve a considerable share of the
+  countryside. Your bill names your provider, and it is the first thing we check.
+
+utilities:
+  - name: ComEd
+    kind: investor-owned
+    note: >-
+      An Exelon company serving northern Illinois including Chicago and a wide
+      band of surrounding country, inside the PJM region.
+  - name: Ameren Illinois
+    kind: investor-owned
+    note: >-
+      Serves central and southern Illinois across a large and largely rural
+      territory, inside the MISO region.
+  - name: Illinois electric cooperatives
+    kind: cooperative
+    note: >-
+      Member-owned cooperatives serving a substantial share of the state's rural
+      land area, which is where most farm ground sits.
+  - name: Illinois municipal utilities
+    kind: municipal
+    note: >-
+      City-owned utilities serve a number of smaller communities, which is a live
+      possibility if your ground sits near one.
+  - name: MISO and PJM
+    kind: generation
+    note: >-
+      The two regional grid operators covering different halves of Illinois,
+      rather than utilities you are billed by, but the parties whose
+      interconnection processes govern how quickly a large load can connect.
+
+incentives:
+  summary: >-
+    The important fact about Illinois is that its data center incentive is
+    currently closed to new applicants.
+
+    The Data Center Investment Program, administered by the Department of
+    Commerce and Economic Opportunity, exempted qualifying data center equipment
+    from state and local sales tax for ten years. To qualify, a project and its
+    tenants had collectively to invest at least 250 million dollars over sixty
+    months and create at least twenty full-time jobs paying 120 percent or more
+    of the county median wage. Unusually among the states in this network, it also
+    required the facility to be carbon neutral or certified under a recognised
+    green building standard. A separate credit covered a share of construction
+    wages in underserved areas.
+
+    On 5 June 2026 the governor directed the department to stop processing new
+    agreements from 1 July 2026, for two years, after the legislature did not act
+    on a framework. The stated reasons were the effect of data center demand on
+    household energy costs, water use, and the impact on local communities.
+    Agreements entered into before that date are being honoured.
+
+    Three things follow for a landowner. A developer approaching you is either
+    grandfathered, planning without the state exemption, or out of date, and
+    asking which is a fair question. Site quality now carries more of the
+    argument, because the ground has to justify a project that no longer gets
+    help from the state. And the pause is a suspension rather than a repeal, so
+    what the rules look like after it is genuinely unknown, and anyone telling
+    you otherwise is guessing.
+  sources:
+    - label: Office of the Governor of Illinois, pause on new data center tax incentives
+      url: https://gov-pritzker-newsroom.prezly.com/gov-pritzker-pauses-new-data-center-tax-incentives
+      accessed: '2026-08-04'
+    - label: Illinois Department of Commerce and Economic Opportunity, data center investment tax exemptions and credits
+      url: https://dceo.illinois.gov/expandrelocate/incentives/datacenters.html
+      accessed: '2026-08-04'
+    - label: Croke Fairchild Duarte and Beres, on the direction to pause programme agreements
+      url: https://crokefairchild.com/2026/06/governor-pritzker-directs-dceo-to-pause-data-center-investment-program-agreements-effective-july-1-2026/
+      accessed: '2026-08-04'
+    - label: Illinois Department of Commerce and Economic Opportunity, Data Center Investment Program 2025 annual report
+      url: https://dceo.illinois.gov/content/dam/soi/en/web/dceo/aboutdceo/reportsrequiredbystatute/2025-data-centers-annual-report.pdf
+      accessed: '2026-08-04'
+
+regions:
+  - title: The collar counties and northern Illinois
+    body: >-
+      ComEd territory inside PJM, where most existing Illinois development sits,
+      with real transmission and proximity to Chicago. Land here is priced for
+      that and the readily usable ground has largely been taken.
+  - title: The I-39 and I-88 corridors
+    body: >-
+      Running west and south from the Chicago area through DeKalb, Lee, Ogle and
+      their neighbours, with strong transmission, generation nearby, and farm
+      ground at a fraction of collar county prices.
+  - title: Central Illinois
+    body: >-
+      Ameren territory inside MISO, through the counties around Bloomington,
+      Decatur and Champaign. Very productive farmland with an established market,
+      which sets a firm floor under what a project has to beat.
+  - title: The Illinois River and Mississippi corridors
+    body: >-
+      Existing heavy industry, barge access, and generation along both rivers,
+      with transmission built for loads that in some cases no longer exist. Sites
+      of that kind are worth identifying rather than assuming about.
+  - title: Southern Illinois
+    body: >-
+      Coal country with generation history, cooperative and Ameren territory,
+      lower land prices, and a transmission picture that varies sharply county by
+      county. The economics changed here with the pause more than anywhere else,
+      because these are exactly the sites the incentive was helping.
+
+faq:
+  - question: Does the incentive pause mean nothing will get built in Illinois?
+    answer: >-
+      No. It means projects have to work without the state exemption, which
+      narrows interest to genuinely good sites rather than eliminating it. Illinois
+      still has substantial transmission, generation, and demand. What has changed
+      is that a marginal site is now much less likely to attract anybody.
+  - question: Somebody told me about the Illinois tax exemption last month. Were they wrong?
+    answer: >-
+      Possibly, and it is worth asking directly. New agreements stopped on 1 July
+      2026. If they hold an agreement entered into before that date it is being
+      honoured. If they do not, and they are describing the exemption as available
+      to them, they are either mistaken or hoping you will not check.
+  - question: Why does it matter whether I am on ComEd or Ameren?
+    answer: >-
+      Because they sit in different grid regions. Northern Illinois is inside PJM
+      and central and southern Illinois is inside MISO, and those are separate
+      interconnection processes with separate queues and timescales. Two similar
+      farms on opposite sides of that boundary are not equivalent for this
+      purpose.
+  - question: Will the incentive come back in 2028?
+    answer: >-
+      Nobody knows, including us. It is a two year suspension rather than a
+      repeal, and what replaces it, if anything, will depend on the legislature.
+      Anybody telling you confidently what the rules will be is guessing, and you
+      should treat a plan that depends on that guess accordingly.
+  - question: How many acres do you need?
+    answer: >-
+      There is no fixed number and anyone offering one without seeing your ground
+      is guessing. Contiguity and what runs near you electrically matter far more
+      than the total, and in Illinois right now the electrical question carries
+      more weight than it did a year ago.
+  - question: Somebody wrote to me about my farm. What should I do?
+    answer: >-
+      Do not sign and do not treat a deadline in the letter as binding. Ask
+      whether they hold a pre-existing agreement under the state programme, and
+      whether they are buying for themselves or for a party they have not named.
+      Have an Illinois attorney read it. That applies to a letter from us as much
+      as from anyone.
+  - question: What happens to the rest of the farm?
+    answer: >-
+      Frequently nothing. Plenty of arrangements involve part of a property while
+      the remainder carries on in production. Raise it in the first conversation
+      rather than assuming, and we would far rather you did.
+
+
+# Where the facts on this site actually move. Not rendered anywhere.
+# Checked by: npm run check:sources -- --watch
+watch:
+  - label: Illinois General Assembly
+    url: https://www.ilga.gov/
+    kind: legislature
+  - label: Illinois Commerce Commission
+    url: https://www.icc.illinois.gov/
+    kind: regulator
+  - label: Illinois DCEO, data center incentives
+    url: https://dceo.illinois.gov/expandrelocate/incentives/datacenters.html
+    kind: economic-development
+  - label: ComEd newsroom
+    url: https://www.comed.com/news
+    kind: utility
+  - label: Capitol News Illinois
+    url: https://capitolnewsillinois.com/
+    kind: news
