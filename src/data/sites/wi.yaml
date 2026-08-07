@@ -1,13 +1,346 @@
 key: wi
-type: parked
+type: state
 domain: wisconsindatacenterland.com
 stateName: Wisconsin
 stateAbbr: WI
 accent: pine
 status: live
 
-intro: >-
-  Wisconsin landowners tend to ask us two things: whether their ground is
-  even a candidate, and what happens to the rest of the farm if it is. Both
-  are fair questions and both have real answers. Tell us where the property
-  is and we will work through them with you.
+hero:
+  headline: Wisconsin landowners have earned the right to be sceptical.
+  subhead: >-
+    We purchase and option Wisconsin land for data center development. This state
+    has already watched farm ground get assembled for a project that did not
+    arrive as promised. Anyone approaching you here should expect hard questions.
+
+directAnswer: >-
+  Start from a position of doubt, because Wisconsin has more reason for it than
+  most places. Farm ground in Mount Pleasant was assembled for a manufacturing
+  project that never materialised at the scale announced, and part of that land
+  was later developed as data centers by a different company entirely. So the
+  useful questions here are about substance rather than promises: who is actually
+  buying, what have they already looked at, and what happens if the project does
+  not proceed. On the ground itself we want your county, roughly the acreage, and
+  what runs near you electrically. We check public records at no cost and answer
+  either way.
+
+trustPoints:
+  - title: Ask us what happens if it does not go ahead
+    body: >-
+      That is the question Wisconsin taught everybody to ask, and any party
+      unwilling to answer it plainly has told you something. An option that
+      expires should return your ground to you unencumbered, and you should be
+      able to read exactly how in the document rather than take somebody's word.
+  - title: Smaller counties clear a much lower bar here
+    body: >-
+      Wisconsin scales its exemption in three steps. A county of 50,000 people or
+      fewer needs 50 million dollars of investment, against 150 million in a
+      county over 100,000. The rural end of this state is a materially easier
+      place for a project to work.
+  - title: We are the buyer, and most answers are no
+    body: >-
+      We sit across the table from you rather than beside you. Take anything we
+      send to your own attorney. And most Wisconsin ground we look at will not
+      suit this, in which case you will hear that from us rather than nothing at
+      all.
+
+pageCopy:
+  howItWorks:
+    intro: >-
+      Wisconsin has both real projects and a real memory of one that went
+      differently to the announcement. Both are worth holding at once. Here is
+      how we actually go about deciding whether a specific place is of interest.
+    steps:
+      - >-
+        Tell us the county and roughly the acreage, and tell us what you have
+        already been asked. A fair number of Wisconsin landowners have fielded an
+        approach before, and knowing what was said to you shapes what is worth
+        checking first.
+      - >-
+        We look up who serves your power, what transmission is near, and what
+        your county has already done with projects of this kind. It is nearly all
+        public record and none of it costs you a thing.
+      - >-
+        You get the reasoning, not a verdict. If the answer is no we tell you
+        which specific thing rules it out, because that is information you can
+        use with the next party who writes to you.
+      - >-
+        Paperwork comes last and your attorney reads it before you do anything.
+        Up to that point the only thing we have asked you for is a description of
+        your place.
+    closing: >-
+      Nothing in that sequence involves money from you or a promise to stop
+      talking to anybody else. In this state in particular, a party wanting
+      either before they have shown their own work deserves a very slow reply.
+  articles:
+    intro: >-
+      Plain writing for Wisconsin landowners about what to ask a developer before
+      you commit anything, how the county population tiers change the arithmetic,
+      and what an option should say about the ground going back to you.
+    empty: >-
+      The Wisconsin pieces are still being written. Until they are up, the
+      questions page covers most of what landowners here ask us, and the form
+      below reaches a person rather than a queue.
+  qualify:
+    intro: >-
+      Two farms in the same Wisconsin county can be entirely different
+      propositions for this, and the difference is rarely the soil or the milk
+      house. These are the things that decide it.
+    criteria:
+      - >-
+        Transmission within reach, ahead of everything else. High voltage lines
+        on or beside the ground, or a substation nearby, are what make a site
+        possible at all. The line along the town road is a different thing
+        entirely.
+      - >-
+        Your county's population, because Wisconsin tiers the exemption to it in
+        three steps. At 50,000 people or fewer the bar is a third of what it is in
+        the largest counties, which puts the rural end of the state at a genuine
+        advantage.
+      - >-
+        A contiguous block. Ground that holds together beats the same acreage
+        divided by a road, a creek, or a neighbour's forty in the middle of it.
+      - >-
+        Land that drains. Wisconsin has a great deal of ground that farms well and
+        builds badly, and wetland and low country come out of the usable count
+        regardless of what the deed totals.
+      - >-
+        Access heavy equipment can use, and a county and township that have
+        thought this through. Local government here has strong views on
+        development and uses them, which is neither good nor bad but is real.
+    closing: >-
+      Nothing meets all of that and nothing has to. What we are working out is
+      whether the gaps can be closed, and that is a judgement about your ground
+      rather than a rule about Wisconsin.
+
+value:
+  intro: >-
+    Everybody asks this first and it deserves an answer rather than a deflection.
+    We will not print a per acre figure for Wisconsin. A number given before
+    anybody has looked at your ground is a guess, and this is a state where
+    landowners have already been given numbers that did not survive contact with
+    reality. What we can do is be exact about what moves it.
+  points:
+    - title: What the wires nearby can carry
+      body: >-
+        The electrical picture around the property does more than acreage or soil
+        class. Ground beside a substation with headroom is a different asset to
+        ground fifteen miles from any, and nothing in the deed or the assessment
+        separates them.
+    - title: Certainty is part of what you are being paid for
+      body: >-
+        A buyer pays more for ground where the path is clear: clean title,
+        contiguous acreage, a county that has decided its position. Every
+        unresolved question is a discount, and most of them are resolvable if
+        they are raised early rather than found late.
+    - title: The county tier changes who can afford to look
+      body: >-
+        Where a project needs 150 million dollars to qualify, very few parties can
+        play. At 50 million, considerably more can, and more parties looking at a
+        property is generally better for whoever owns it.
+    - title: An option is not a sale, and the difference matters here
+      body: >-
+        An option pays you for a period of exclusivity while a project works out
+        whether it can build. A sale is final. In this state especially, read what
+        the option says about what happens to your ground if the project does not
+        proceed, because that clause is the whole thing.
+
+livingWithIt:
+  - title: The farm keeps working during an option
+    body: >-
+      An option period commonly runs a year or more and the ground almost always
+      keeps being farmed or grazed through it. Survey crews and soil borings
+      appear occasionally and work around the operation.
+  - title: What gets built is industrial
+    body: >-
+      Large low buildings, a substation, security fencing, and lighting through
+      the night. We are not going to describe it as anything gentler than that.
+      Quieter than a highway and considerably busier than a hayfield.
+  - title: The subsidy argument is live and it is about your county
+    body: >-
+      Local leaders in Wisconsin have welcomed these projects for the revenue,
+      while critics argue the state exemptions undercut the very local benefit
+      being promised. Both arguments get made seriously here, and you will hear
+      them at a town or county meeting rather than in the abstract.
+  - title: Zoning here is genuinely local and genuinely contested
+    body: >-
+      Wisconsin towns and counties take land use decisions seriously and the
+      people making them are people you know. That is worth thinking about
+      before you are the item on the agenda rather than after.
+
+utilitiesNote: >-
+  Wisconsin is served by several investor-owned utilities with distinct
+  territories: We Energies across the southeast, Wisconsin Public Service through
+  the northeast, Alliant Energy in the south and west, and Xcel Energy in the
+  northwest. Beyond those, a set of member-owned rural cooperatives covers a
+  great deal of the countryside, alongside a substantial number of municipal
+  utilities in the smaller cities. Which one serves you determines who owns the
+  connection and how quickly capacity can be added, so it is the first thing we
+  check. Your bill names them.
+
+utilities:
+  - name: We Energies
+    kind: investor-owned
+    note: >-
+      Serves southeastern Wisconsin including Milwaukee and the counties around
+      it.
+  - name: Wisconsin Public Service
+    kind: investor-owned
+    note: Serves northeastern and north central Wisconsin.
+  - name: Alliant Energy
+    kind: investor-owned
+    note: >-
+      Operating in Wisconsin as Wisconsin Power and Light, serving the south and
+      west of the state.
+  - name: Xcel Energy
+    kind: investor-owned
+    note: Serves northwestern Wisconsin.
+  - name: Wisconsin's electric cooperatives
+    kind: cooperative
+    note: >-
+      Member-owned cooperatives serving a large share of the state's rural land
+      area, which is where most farm ground sits.
+  - name: Wisconsin's municipal utilities
+    kind: municipal
+    note: >-
+      A considerable number of city-owned utilities serve smaller communities,
+      which is a live possibility if your ground sits near one.
+
+incentives:
+  summary: >-
+    Wisconsin created a sales and use tax exemption for qualified data centers
+    through 2023 Act 19. It covers server and networking equipment, cooling
+    systems, and property used in building or operating the facility.
+
+    The qualifying investment is tiered by county population in three steps, over
+    a five year period. A county with more than 100,000 people requires 150
+    million dollars. Between 50,000 and 100,000 it is 100 million. At 50,000
+    people or fewer it is 50 million. That last figure is among the lowest
+    thresholds in this network, and it means the rural end of Wisconsin is a
+    materially easier place for a project to make sense than the populated end.
+
+    One feature of this programme matters more than the numbers. The exemption is
+    not an entitlement that applies once a project meets a test. It requires
+    certification by the Wisconsin Economic Development Corporation, and purchases
+    made before the certification date do not qualify at all. That makes the
+    approval itself part of a developer's timeline and part of their risk, which
+    is worth understanding when somebody tells you their schedule.
+
+    The programme is also argued about locally, and the argument is specifically
+    about your county rather than about the state. Local leaders have supported
+    these projects for the revenue they bring, while critics contend that the
+    state level exemptions undercut the local benefit being promised. Both
+    positions get made in earnest.
+
+    None of this money reaches you as a landowner. It matters because the county
+    tiers decide what size of project can look at your ground, and because the
+    certification requirement is a real source of delay.
+  sources:
+    - label: Wisconsin Department of Revenue, sales and use tax exemption for qualified data centers
+      url: https://www.revenue.wi.gov/DOR%20Publications/2114QualifiedDataCenter.pdf
+      accessed: '2026-08-04'
+    - label: Wisconsin Economic Development Corporation, data center sales and use tax exemption
+      url: https://wedc.org/programs/data-center-sales-and-use-tax-exemption/
+      accessed: '2026-08-04'
+    - label: Wisconsin Department of Revenue, qualified data center exemption questions
+      url: https://www.revenue.wi.gov/Pages/FAQS/ExemptionforQualifiedDataCenter.aspx
+      accessed: '2026-08-04'
+    - label: Wisconsin Public Radio, local revenue and subsidy programmes
+      url: https://www.wpr.org/news/wisconsin-data-centers-revenue-tax-subsidy-microsoft
+      accessed: '2026-08-04'
+
+regions:
+  - title: Racine and Kenosha counties
+    body: >-
+      Where farm ground was assembled at scale for a project that did not arrive
+      as announced, and where data center development later took place on part of
+      that same land. The infrastructure put in is real. So is the local memory,
+      and both shape how anything new is received here.
+  - title: The Milwaukee ring and the lakeshore
+    body: >-
+      We Energies territory with genuine transmission and proximity to
+      population. County populations here put most of this area in the highest
+      exemption tier, so a project needs to be substantially larger to qualify.
+  - title: South central Wisconsin
+    body: >-
+      Alliant territory through the counties around Madison and to the west, with
+      good transmission, working farms, and a mix of county sizes that puts some
+      of it in the more favourable tiers.
+  - title: The western counties along the Mississippi
+    body: >-
+      Xcel and cooperative country, thinly populated enough that most counties
+      fall into the lowest investment tier. Terrain does a good deal of the
+      deciding here, since the coulee country is beautiful and short of flat
+      contiguous blocks.
+  - title: The northern counties
+    body: >-
+      Sparsely populated, largely cooperative served, and squarely in the lowest
+      exemption tier. Land is inexpensive and the transmission picture varies
+      considerably from one county to the next, so it is country to check rather
+      than assume about.
+
+faq:
+  - question: Why do you bring up the Mount Pleasant project?
+    answer: >-
+      Because it is the most instructive thing that has happened to Wisconsin
+      landowners in this area, and pretending otherwise would insult you. Farm
+      ground was assembled for a project that did not arrive at the scale
+      announced. It is the reason to ask any party, including us, what happens to
+      your land if the plan changes.
+  - question: What should an option say about the project falling through?
+    answer: >-
+      It should say clearly what happens to your ground when the option expires or
+      is not exercised, that it returns to you unencumbered, and what if anything
+      you keep. If that is not written plainly in the document, that is the thing
+      to take to your attorney first rather than the price.
+  - question: Does my county's population really change the numbers?
+    answer: >-
+      Substantially. At 50,000 people or fewer a project needs 50 million dollars
+      of investment to qualify. Above 100,000 it needs 150 million. That is a
+      threefold difference and it works in favour of rural Wisconsin.
+  - question: What is the certification step and why does it matter to me?
+    answer: >-
+      The exemption does not apply automatically. The Wisconsin Economic
+      Development Corporation has to certify the project, and spending before the
+      certification date does not qualify. It matters to you because it is a real
+      source of delay in a developer's timeline, and it is a fair thing to ask
+      about when somebody quotes you dates.
+  - question: Who serves my power and why does it matter?
+    answer: >-
+      We Energies covers the southeast, Wisconsin Public Service the northeast,
+      Alliant the south and west, Xcel the northwest, with cooperatives and
+      municipal utilities filling in a great deal besides. Whoever it is owns the
+      connection and controls how fast capacity can be added. Your bill names
+      them.
+  - question: Somebody wrote to me about my farm. What now?
+    answer: >-
+      Do not sign and do not treat a deadline in the letter as binding. Establish
+      whether they are buying for themselves or for a party they have not named,
+      and ask what happens if the project does not proceed. Have a Wisconsin
+      attorney read it. All of that applies to a letter from us as much as from
+      anyone.
+  - question: What happens to the rest of the farm?
+    answer: >-
+      Often nothing. Plenty of arrangements involve part of a property while the
+      rest carries on in production. Raise it in the first conversation rather
+      than assuming, and we would rather you did.
+
+
+# Where the facts on this site actually move. Not rendered anywhere.
+# Checked by: npm run check:sources -- --watch
+watch:
+  - label: Wisconsin Legislature
+    url: https://docs.legis.wisconsin.gov/
+    kind: legislature
+  - label: Public Service Commission of Wisconsin
+    url: https://psc.wi.gov/
+    kind: regulator
+  - label: Wisconsin Economic Development Corporation
+    url: https://wedc.org/programs/data-center-sales-and-use-tax-exemption/
+    kind: economic-development
+  - label: We Energies newsroom
+    url: https://www.we-energies.com/news
+    kind: utility
+  - label: Wisconsin Public Radio
+    url: https://www.wpr.org/
+    kind: news
